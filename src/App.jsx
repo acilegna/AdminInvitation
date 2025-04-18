@@ -10,6 +10,14 @@ import MensajeConsola from './components/MensajeConsola';
 import ContadorEfect from './components/ContadorEfect'; */
  import Invitation from './components/Invitation';
 import ViewImport from './views/viewImport';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'; 
+import 'bootstrap-icons/font/bootstrap-icons.css';
+
+
+import ViewConfirmacion from './views/ViewConfirmacion';
+import ViewPanel from './views/ViewPanel';
+ 
 //componente Padre
 //pasar datos de  padre a hijo
 function App() {
@@ -35,7 +43,10 @@ function App() {
       <hr />
       <ContadorEfect /> */}
 {/*   <Invitation/> */}
-  <ViewImport/>  
+  {/* <ViewImport/> */}  
+ {/*  <ViewConfirmacion/> */}
+   <ViewPanel/>  
+ 
  
     </>
   );
