@@ -3,9 +3,11 @@ import ViewDetalles from "./ViewDetalles";
 import ViewInvitados from "./ViewInvitados";
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 
-const ViewPanel = () => {
+ 
+function ViewPanel() {
+/* const ViewPanel = () => { */
     //desestructurando los valores que vienen de   useDatosInvitados, extrayendo  sus propiedades y funciones
-    const { asisten, sinConfirmar, ausentes, todos, allInvitados, totalConfirmados, totalPendientes, totalAusentes, totalInvitados, todosInvitados, showHide, mostrar } = useDatosInvitados();
+    const { asisten, sinConfirmar, ausentes, todos, allInvitados, totalConfirmados, totalPendientes, totalAusentes, totalInvitados, todosInvitados, columns,showHide, mostrar } = useDatosInvitados();
     //declaramos variables para pasar a la funcion showhide y poder alternar mostrar y ocultar 
     const all = "all";
     const detalles = "detalles";
@@ -43,7 +45,7 @@ const ViewPanel = () => {
 
                 {mostrar === "detalles" && <ViewDetalles confirmados={totalConfirmados}
                     pendientes={totalPendientes} ausentes={totalAusentes} total={totalInvitados} />}
-                {mostrar === "all" && <ViewInvitados invitados={todosInvitados} />}
+                {mostrar === "all" && <ViewInvitados invitados={todosInvitados} columnas={columns}/>}
 
 
             </section>

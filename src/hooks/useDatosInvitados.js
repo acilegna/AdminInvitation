@@ -16,6 +16,15 @@ export const useDatosInvitados = () => {
   const [todosInvitados, setTodosInvitados] = useState([]);
   const [mostrar, setMostrar] = useState(false);
 
+  const columns = [
+    { header: "Id", accessorKey: "id" },
+    { header: "Nombre", accessorKey: "name" },
+    { header: "Apellido", accessorKey: "apellido" },
+    { header: "Telefono", accessorKey: "telefono" },
+    { header: "Categoria", accessorKey: "categoria" },
+    { header: "Status", accessorKey: "statu" },
+  ];
+
   // Llamamos a cada función del servicio
   const asisten = async () => {
     const result = await confirmados();
@@ -69,5 +78,6 @@ export const useDatosInvitados = () => {
     totalInvitados,
     mostrar,
     todosInvitados,
+    columns
   };
 };

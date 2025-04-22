@@ -15,7 +15,7 @@ const ViewDetalles = ({ confirmados, pendientes, ausentes, total }) => {
                     <span className='detalles'>{ausentes}</span>
                 </div>
             </div>
-            
+
             <div className='row dos'>
                 <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-6  col-6 d-flex flex-column justify-content-center align-items-center confirmado'>
                     <h3 className="text-capitalize text-center"> confirmados </h3>
