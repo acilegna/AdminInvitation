@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //recibe los datos q envia la vista viewPanel (componente principal-padre)
-const ViewDetalles = ({ confirmados, pendientes, ausentes, total }) => {
+const ViewDetalles = ({ confirmados, pendientes, ausentes, total,errores }) => {
     return (
         <div className="cont-details p-3 bg-primary text-white rounded ">
 
@@ -20,6 +20,7 @@ const ViewDetalles = ({ confirmados, pendientes, ausentes, total }) => {
                 <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-6  col-6 d-flex flex-column justify-content-center align-items-center confirmado'>
                     <h3 className="text-capitalize text-center"> confirmados </h3>
                     <span className='detalles'>{confirmados}</span>
+                    <h1>{errores}</h1>
                 </div>
                 <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-6 d-flex flex-column justify-content-center align-items-center'>
                     <h3 className="text-capitalize"> pendientes </h3>

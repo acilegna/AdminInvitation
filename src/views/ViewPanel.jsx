@@ -1,13 +1,16 @@
 
 import ViewDetalles from "./ViewDetalles";
 import ViewInvitados from "./ViewInvitados";
+import ViewEdit from "./ViewEdit";
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 
- 
+
 function ViewPanel() {
-/* const ViewPanel = () => { */
+    /* const ViewPanel = () => { */
     //desestructurando los valores que vienen de   useDatosInvitados, extrayendo  sus propiedades y funciones
-    const { asisten, sinConfirmar, ausentes, todos, allInvitados, totalConfirmados, totalPendientes, totalAusentes, totalInvitados, todosInvitados, columns,showHide, mostrar } = useDatosInvitados();
+    const { totalConfirmados, totalPendientes, totalAusentes, formulario,
+        handleChange,
+        totalInvitados, todosInvitados, mostrar, error, eliminado, showHide, loadAll, allInvitados, Remove, searchId } = useDatosInvitados();
     //declaramos variables para pasar a la funcion showhide y poder alternar mostrar y ocultar 
     const all = "all";
     const detalles = "detalles";
@@ -27,10 +30,9 @@ function ViewPanel() {
                         <a className="nav-link text-white active" onClick={() => { allInvitados(); showHide(all); }}>  <i className="bi bi-person-vcard"> </i>Invitados</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-white active" onClick={() => {
-                            asisten(); showHide(detalles); sinConfirmar(); ausentes(); todos();
+                        <a className="nav-link text-white active" onClick={() => { loadAll(), showHide(detalles); }}>   <i className="bi bi-person-vcard"> </i>Detalles</a>
 
-                        }} >  <i className="bi bi-person-vcard"> </i>Detalles</a>
+
                     </li>
                     <li className="nav-item mt-3">
                         <a className="nav-link text-white active" href="#">  <i className="bi bi-box-arrow-right"> </i>Salir</a>
@@ -44,9 +46,12 @@ function ViewPanel() {
 
 
                 {mostrar === "detalles" && <ViewDetalles confirmados={totalConfirmados}
-                    pendientes={totalPendientes} ausentes={totalAusentes} total={totalInvitados} />}
-                {mostrar === "all" && <ViewInvitados invitados={todosInvitados} columnas={columns}/>}
+                    pendientes={totalPendientes} ausentes={totalAusentes} total={totalInvitados} errores={error} />}
 
+                {mostrar === "all" && <ViewInvitados data={todosInvitados} delet={Remove} errores={error}
+                    message={eliminado} showHid={showHide} search={searchId} />}
+
+                {mostrar === "edit" && <ViewEdit formulario={formulario} handleChange={handleChange} />}
 
             </section>
 

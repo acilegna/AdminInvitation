@@ -8,16 +8,17 @@ import { useState } from 'react';
 import Sesion from './components/Sesion';
 import MensajeConsola from './components/MensajeConsola';
 import ContadorEfect from './components/ContadorEfect'; */
- import Invitation from './components/Invitation';
+import Invitation from './components/Invitation';
 import ViewImport from './views/viewImport';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'; 
+import './App.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 
 import ViewConfirmacion from './views/ViewConfirmacion';
 import ViewPanel from './views/ViewPanel';
- 
+import ViewEdit from './views/ViewEdit';
+
 //componente Padre
 //pasar datos de  padre a hijo
 function App() {
@@ -42,12 +43,12 @@ function App() {
       <MensajeConsola />
       <hr />
       <ContadorEfect /> */}
-{/*   <Invitation/> */}
-  {/* <ViewImport/> */}  
- {/*  <ViewConfirmacion/> */}
-   <ViewPanel/>  
- 
- 
+      {/*   <Invitation/> */}
+      {/* <ViewImport/> */}
+      {/*  <ViewConfirmacion/> */}
+      <ViewPanel />
+
+
     </>
   );
 }
