@@ -1,21 +1,28 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 //recibe los datos q envia la vista viewPanel (componente principal-padre)
-const ViewInvitados = ({ data, delet, errores, message, search, showHid }) => {
+const ViewInvitados = ({ data, errores, message, showHid, processo, changeTitle }) => {
+    
     const edit = "edit";
-    const process="delete"
+    const process = "delete";
+    const add = "add";
     return (
         <>
-
             <table className="table table-striped table-bordered table-responsive">
-
                 <thead>
+                    <tr>
+                        <th colSpan="6">
+                            <button className="btn btn-primary" onClick={() => { showHid(add), changeTitle() }}>
+                                Agregar Invitado
+                            </button>
+                        </th>
+                    </tr>
                     <tr>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Teléfono</th>
-                        <th>categoria</th>
-                        <th>status</th>
+                        <th>Categoria</th>
+                        <th>Status</th>
                         <th>Operaciones</th>
                     </tr>
                 </thead>
@@ -28,26 +35,26 @@ const ViewInvitados = ({ data, delet, errores, message, search, showHid }) => {
                             <td>{invitados.categoria}</td>
                             <td>{invitados.status}</td>
                             <td>
-                                <a className="icono text-black"><i className="bi bi-pencil-fill" onClick={() => { delet(invitados.id), showHid(edit) }}> </i> </a>
-                                <a className="icono text-black"><i className="bi bi-trash" onClick={() => delet(invitados.id,process)}></i> </a>
+                                <a className="icono text-black"><i className="bi bi-pencil-fill" onClick={() => { processo(invitados.id), showHid(edit) }}> </i> </a>
+                                <a className="icono text-black"><i className="bi bi-trash" onClick={() => processo(invitados.id, process)}></i> </a>
                             </td>
                         </tr>
                     ))}
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="6">
+                        <td colSpan="6">
                             {/*  si message tiene valor entonces renderiza */}
                             {message && (
                                 <h5 className="alert alert-danger mt-3">
                                     {message}
                                 </h5>
                             )}
-                            {errores && (
+                            {/*   {errores && (
                                 <h5 className="alert alert-danger mt-3">
                                     {errores}
                                 </h5>
-                            )}
+                            )} */}
                         </td>
                     </tr>
 

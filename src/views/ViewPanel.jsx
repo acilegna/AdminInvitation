@@ -4,13 +4,13 @@ import ViewInvitados from "./ViewInvitados";
 import ViewEdit from "./ViewEdit";
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 
-
 function ViewPanel() {
     /* const ViewPanel = () => { */
     //desestructurando los valores que vienen de   useDatosInvitados, extrayendo  sus propiedades y funciones
-    const { totalConfirmados, totalPendientes, totalAusentes, formulario,
-        handleChange,
-        totalInvitados, todosInvitados, mostrar, error, eliminado, showHide, loadAll, allInvitados, Remove, searchId } = useDatosInvitados();
+    const {
+        totalConfirmados, totalPendientes, totalAusentes, totalInvitados, todosInvitados,
+        formulario, handleChange, mostrar, error, mensaje, showHide, infoInvitados,
+        allInvitados, ProcessDeleteOrSearch, updateInvitado, addNew, titulo, changeTitle, valida, estado } = useDatosInvitados();
     //declaramos variables para pasar a la funcion showhide y poder alternar mostrar y ocultar 
     const all = "all";
     const detalles = "detalles";
@@ -30,7 +30,7 @@ function ViewPanel() {
                         <a className="nav-link text-white active" onClick={() => { allInvitados(); showHide(all); }}>  <i className="bi bi-person-vcard"> </i>Invitados</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-white active" onClick={() => { loadAll(), showHide(detalles); }}>   <i className="bi bi-person-vcard"> </i>Detalles</a>
+                        <a className="nav-link text-white active" onClick={() => { infoInvitados(), showHide(detalles); }}>   <i className="bi bi-person-vcard"> </i>Detalles</a>
 
 
                     </li>
@@ -45,13 +45,36 @@ function ViewPanel() {
                 {/*   pasar datos a componentes  */}
 
 
-                {mostrar === "detalles" && <ViewDetalles confirmados={totalConfirmados}
-                    pendientes={totalPendientes} ausentes={totalAusentes} total={totalInvitados} errores={error} />}
+                {mostrar === "detalles" && <ViewDetalles
+                    confirmados={totalConfirmados}
+                    pendientes={totalPendientes}
+                    ausentes={totalAusentes}
+                    total={totalInvitados}
+                    errores={error} />}
 
-                {mostrar === "all" && <ViewInvitados data={todosInvitados} delet={Remove} errores={error}
-                    message={eliminado} showHid={showHide} search={searchId} />}
+                {(mostrar === "all" /* || mostrar === "saveChanges" */ || estado === 1 || estado === 2) && <ViewInvitados
+                    data={todosInvitados}
+                    processo={ProcessDeleteOrSearch}
+                    errores={error}
+                    message={mensaje}
+                    showHid={showHide}
+                    changeTitle={changeTitle}
 
-                {mostrar === "edit" && <ViewEdit formulario={formulario} handleChange={handleChange} />}
+                />}
+
+
+
+                {(mostrar === "edit" || mostrar === "add" || mostrar === "save" || mostrar === "saveChanges" ) && <ViewEdit
+                    formulario={formulario}
+                    handleChange={handleChange}
+                    update={updateInvitado}
+                    errores={error}
+                    mensaje={mensaje}
+                    showHides={showHide}
+                    agrega={addNew}
+                    titulo={titulo}
+                    mostrar={mostrar}
+                    valida={valida} />}
 
             </section>
 

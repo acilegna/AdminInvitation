@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 //importar oBjeto Invitados de servcios
-import { Invitados, delet, searchById } from "../services/datosInvitados";
-//import { columns } from "../services/columns";
+import {
+  Invitados,
+  delet,
+  searchById,
+  updateInvitados,
+  saveInvitado,
+} from "../services/datosInvitados";
 
 export const useDatosInvitados = () => {
   const [totalConfirmados, setTotalConfirmados] = useState(0);
@@ -13,7 +18,15 @@ export const useDatosInvitados = () => {
   const [mostrar, setMostrar] = useState(false);
   //hook para manejo de errores
   const [error, setError] = useState(null);
-  const [eliminado, setEliminado] = useState("");
+  //hook para manejo de notificacion
+  const [mensaje, setMensaje] = useState("");
+  //hook para manejo de notificacion de validacion de campos
+  const [valida, setValida] = useState("");
+  //hook para manejo cambio de titulo
+  const [titulo, setTitulo] = useState("Editar Usuario");
+
+  //hook envio de status
+  const [estado, setEstado] = useState(0);
 
   const [formulario, setFormulario] = useState({
     id: "",
@@ -24,40 +37,69 @@ export const useDatosInvitados = () => {
     status: "",
   });
 
-  const handleChange = (e) => {
-    setFormulario({
-      ...formulario,
-      [e.target.name]: e.target.value,
-    });
-    console.log(e.target.value);
+  let result = "";
+
+  const changeTitle = () => {
+    setTitulo("Registrar Invitado");
+  };
+  //agregar nuevo registro
+  const addNew = async () => {
+    result = await saveInvitado(formulario);
+
+    if (result.success === false) {
+      setValida(result.error);
+      clearMensaje(setValida);
+    } else {
+      setMensaje(result.message);
+      setEstado(1);
+
+      clearMensaje(setMensaje);
+
+      setMostrar("");
+    }
   };
 
-  const ejecutar = async (InvitadosFunc, setData, extractKey) => {
-    const result = await InvitadosFunc();
+  //modificar registro
+  const updateInvitado = async (id) => {
+    result = await updateInvitados(id, formulario);
     if (result.success === false) {
-      setError(result.error);
+      //setError(result.error);
+      setValida(result.error);
+      clearMensaje(setValida);
+    } else {
+      setMensaje(result.mensaje);
+      setEstado(2);
+      clearMensaje(setMensaje);
+
+      setMostrar("");
     }
-    setData(result[extractKey]);
+  };
+
+  const handleChange = (e) => {
+    setFormulario({
+      // Copia todo el formulario anterior (...formulario)
+      ...formulario,
+      //Actualiza   el campo que cambió
+      [e.target.name]: e.target.value,
+    });
   };
 
   //MOSTRAR TODOS LOS INVITADOS
   const allInvitados = async () => {
-    const result = await Invitados.guestList();
+    result = await Invitados.guestList();
     setTodosInvitados(result); // Aquí no se extrae ninguna key, se usa todo */
   };
 
   //ELIMINAR O BUSCAR
-  const Remove = async (id, process) => {
-    let result = " ";
+  const ProcessDeleteOrSearch = async (id, process) => {
     if (process === "delete") {
       result = await delet(id);
-      setEliminado(result.message);
-      //EJECUTAR PARA QUE REFRESQUE DESPUES DE ELIMINAR UN REGISTRO
-      allInvitados();
-      clearMensaje(setEliminado);
+      setMensaje(result.message);
+      clearMensaje(setMensaje);
     } else {
       result = await searchById(id);
       setFormulario({
+        id: result.id || "",
         name: result.name || "",
         apellido: result.apellido || "",
         telefono: result.telefono || "",
@@ -65,52 +107,30 @@ export const useDatosInvitados = () => {
         status: result.status || "",
       });
     }
+
     if (result.success === false) {
       setError(result.error);
     }
   };
 
-  //ELIMINAR POR ID
-  const Removes = async (id, process) => {
-    let result = " ";
-    if (process === "delete") {
-      result = await delet(id);
-    } else {
-      result = await searchById(id);
-    }
-
-    if (result.success === false) {
-      setError(result.error);
-    }
-    setEliminado(result.message);
-    //EJECUTAR PARA QUE REFRESQUE DESPUES DE ELIMINAR UN REGISTRO
-    allInvitados();
-    clearMensaje(setEliminado);
-  };
-
-  //BUSCAR POR ID
-  const searchId = async (id) => {
-    const result = await searchById(id);
-    if (result.success === false) {
-      setError(result.error);
-    }
-
-    setFormulario({
-      name: result.name || "",
-      apellido: result.apellido || "",
-      telefono: result.telefono || "",
-      categoria: result.categoria || "",
-      status: result.status || "",
-    });
-  };
-
+  //ocultar notificacion después de 2 segundos
   const clearMensaje = (setValue) => {
     setTimeout(() => {
-      setValue(""); // Limpia el mensaje después de 3 segundos (3000 ms)
-    }, 2000);
+      setValue("");
+      setValida("i");
+    }, 5000);
   };
 
-  const loadAll = async () => {
+  const ejecutar = async (InvitadosFunc, setData, extractKey) => {
+    result = await InvitadosFunc();
+    if (result.success === false) {
+      setError(result.error);
+    }
+    setData(result[extractKey]);
+  };
+
+  //
+  const infoInvitados = async () => {
     //ejecutar múltiples fetch al mismo tiempo
     await Promise.all([
       //manda como parametro las funciones y el objeto json "total_confirmados" q envia desde backend
@@ -121,31 +141,55 @@ export const useDatosInvitados = () => {
     ]);
   };
 
+  //ocultar y/o mostrar vista
   const showHide = (valor) => {
+    console.log(valor);
+    if (valor === "add" || valor === "edit") {
+      clearTask();
+      //resetear estado para q no muestre todos los invitados
+      setEstado(0);
+    }
     setMostrar(valor);
   };
 
-  useEffect(() => {
-    loadAll();
-    allInvitados();
-  }, []);
-  //retornamos funciones y variables
+  //Limpiar campos
+  const clearTask = () => {
+    setFormulario({
+      id: "",
+      name: "",
+      apellido: "",
+      telefono: "",
+      categoria: "",
+      status: "",
+    });
+  };
 
+  useEffect(() => {
+    infoInvitados();
+    allInvitados();
+  }, [mensaje]);
+
+  //retornamos funciones y variables
   return {
-    loadAll,
+    infoInvitados,
     allInvitados,
     showHide,
-    Remove,
-    searchId,
+    ProcessDeleteOrSearch,
+    updateInvitado,
+    addNew,
     totalConfirmados,
     totalPendientes,
     totalAusentes,
     totalInvitados,
     todosInvitados,
     mostrar,
-    eliminado,
+    mensaje,
     error,
     formulario,
     handleChange,
+    titulo,
+    changeTitle,
+    valida,
+    estado,
   };
 };

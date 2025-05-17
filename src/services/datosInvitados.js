@@ -60,3 +60,32 @@ export const searchById = async (id) => {
     }
   }
 };
+
+
+export const updateInvitados = async (id, data) => {
+  try {
+    const res = await axios.put(
+      `http://127.0.0.1:8000/api/invitados/${id}`,
+      data
+    );
+    return res.data;
+  } catch (error) {
+    if (error.response) {
+      return { success: false, error: error.response.data.errors };
+    } else {
+      return { success: false, error: error.message };
+    }
+  }
+};
+
+export const saveInvitado = async (data) => {
+  try {
+    const res = await axios.post("http://127.0.0.1:8000/api/invitados", data);
+    return res.data; // o res.message si lo deseas
+  } catch (error) {
+    if (error.response && error.response.data) {
+      return { success: false, error: error.response.data.errors };
+    }
+    return { success: false, error: error.message };
+  }
+};
