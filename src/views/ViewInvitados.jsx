@@ -36,7 +36,7 @@ const ViewInvitados = ({ data, errores, message, showHid, processo, changeTitle 
                             <td>{invitados.status}</td>
                             <td>
                                 <a className="icono text-black"><i className="bi bi-pencil-fill" onClick={() => { processo(invitados.id), showHid(edit) }}> </i> </a>
-                                <a className="icono text-black"><i className="bi bi-trash" onClick={() => processo(invitados.id, process)}></i> </a>
+                                <a className="icono text-black"><i className="bi bi-trash" onClick={() => {processo(invitados.id, process) }}></i> </a>
                             </td>
                         </tr>
                     ))}

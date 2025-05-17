@@ -63,7 +63,6 @@ function ViewPanel() {
                 />}
 
 
-
                 {(mostrar === "edit" || mostrar === "add" || mostrar === "save" || mostrar === "saveChanges" ) && <ViewEdit
                     formulario={formulario}
                     handleChange={handleChange}

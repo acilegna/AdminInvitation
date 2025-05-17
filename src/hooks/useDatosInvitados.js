@@ -15,7 +15,7 @@ export const useDatosInvitados = () => {
   const [totalInvitados, setTotalInvitados] = useState(0);
   const [todosInvitados, setTodosInvitados] = useState([]);
   //hook para manejar el status de las vistas ocultar y mostrar
-  const [mostrar, setMostrar] = useState(false);
+  const [mostrar, setMostrar] = useState("");
   //hook para manejo de errores
   const [error, setError] = useState(null);
   //hook para manejo de notificacion
@@ -93,8 +93,10 @@ export const useDatosInvitados = () => {
   //ELIMINAR O BUSCAR
   const ProcessDeleteOrSearch = async (id, process) => {
     if (process === "delete") {
+     
       result = await delet(id);
       setMensaje(result.message);
+       allInvitados();
       clearMensaje(setMensaje);
     } else {
       result = await searchById(id);
@@ -117,7 +119,7 @@ export const useDatosInvitados = () => {
   const clearMensaje = (setValue) => {
     setTimeout(() => {
       setValue("");
-      setValida("i");
+      setValida("");
     }, 5000);
   };
 
@@ -150,6 +152,7 @@ export const useDatosInvitados = () => {
       setEstado(0);
     }
     setMostrar(valor);
+    setEstado(0);
   };
 
   //Limpiar campos
@@ -167,7 +170,7 @@ export const useDatosInvitados = () => {
   useEffect(() => {
     infoInvitados();
     allInvitados();
-  }, [mensaje]);
+  }, [mostrar]);
 
   //retornamos funciones y variables
   return {
