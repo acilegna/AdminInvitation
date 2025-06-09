@@ -4,18 +4,28 @@ import {
   Invitados,
   delet,
   searchById,
+  searchByFam,
   updateInvitados,
   saveInvitado,
 } from "../services/datosInvitados";
+import { useNavigate } from "react-router-dom";
 
 export const useDatosInvitados = () => {
   const [totalConfirmados, setTotalConfirmados] = useState(0);
   const [totalPendientes, setTotalPendientes] = useState(0);
   const [totalAusentes, setTotalAusentes] = useState(0);
+  const [totalNiños, setTotalNiños] = useState(0);
+  const [totalAdultos, setTotalAdultos] = useState(0);
   const [totalInvitados, setTotalInvitados] = useState(0);
   const [todosInvitados, setTodosInvitados] = useState([]);
-  //hook para manejar el status de las vistas ocultar y mostrar
-  const [mostrar, setMostrar] = useState("");
+  const [totalNiñosAusentes, setNiñosAusentes] = useState(0);
+  const [totalAdultosAusentes, setAdultosAusentes] = useState(0);
+  const [totalNiñosConfirmados, setNiñosConfirmados] = useState(0);
+  const [totalAdultosConfirmados, setAdultosConfirmados] = useState(0);
+  const [totalNiñosNoConfirmados, setNiñosNoConfirmados] = useState(0);
+  const [totalAdultosNoConfirmados, setAdultosNoConfirmados] = useState(0);
+  const [invitadosFamily, setInvitadosFamily] = useState(0);
+
   //hook para manejo de errores
   const [error, setError] = useState(null);
   //hook para manejo de notificacion
@@ -25,9 +35,10 @@ export const useDatosInvitados = () => {
   //hook para manejo cambio de titulo
   const [titulo, setTitulo] = useState("Editar Usuario");
 
-  //hook envio de status
+  //hook para manejar el status   ocultar y mostrar boton
   const [estado, setEstado] = useState(0);
 
+  const navigate = useNavigate();
   const [formulario, setFormulario] = useState({
     id: "",
     name: "",
@@ -41,7 +52,10 @@ export const useDatosInvitados = () => {
 
   const changeTitle = () => {
     setTitulo("Registrar Invitado");
+    clearTask();
+    setEstado(2);
   };
+
   //agregar nuevo registro
   const addNew = async () => {
     result = await saveInvitado(formulario);
@@ -50,28 +64,34 @@ export const useDatosInvitados = () => {
       setValida(result.error);
       clearMensaje(setValida);
     } else {
+      setTodosInvitados((prev) => [...prev, result.invitado]);
+
       setMensaje(result.message);
       setEstado(1);
-
       clearMensaje(setMensaje);
-
-      setMostrar("");
+      navigate("/invitados");
     }
   };
 
   //modificar registro
   const updateInvitado = async (id) => {
     result = await updateInvitados(id, formulario);
+
     if (result.success === false) {
       //setError(result.error);
       setValida(result.error);
       clearMensaje(setValida);
     } else {
+      //Actualiza el estado todosInvitados, reemplazando el invitado que tiene el mismo id con uno nuevo (el actualizado) que llega en result.invitado.
+      setTodosInvitados((prev) =>
+        prev.map((i) => (i.id === id ? result.info : i))
+      );
+
+      navigate("/invitados");
+
       setMensaje(result.mensaje);
       setEstado(2);
       clearMensaje(setMensaje);
-
-      setMostrar("");
     }
   };
 
@@ -90,13 +110,42 @@ export const useDatosInvitados = () => {
     setTodosInvitados(result); // Aquí no se extrae ninguna key, se usa todo */
   };
 
+  // buscar por id de familya
+  const byFamily = async (id) => {
+    result = await searchByFam(id);
+    const adulto = result.invitados.filter(
+      (invitado) => invitado.categoria === "adulto"
+    ).length;
+    const niño = result.invitados.filter(
+      (invitado) => invitado.categoria === "Niño"
+    ).length;
+    console.log(adulto);
+    console.log(niño);
+    if (result.success === true) {
+      setInvitadosFamily(result);
+      setError("");
+    }
+    if (result.success === false) {
+      setError("registro no encontrado");
+      setInvitadosFamily("");
+    }
+  };
+
+  //detectar cambio de input
+  const handleInput = (e) => {
+    let valorInput = e.target.value;
+    byFamily(valorInput);
+    if (valorInput === "") {
+      setError("No hay invitados cargados");
+    }
+  };
+
   //ELIMINAR O BUSCAR
   const ProcessDeleteOrSearch = async (id, process) => {
     if (process === "delete") {
-     
       result = await delet(id);
       setMensaje(result.message);
-       allInvitados();
+      setTodosInvitados((prev) => prev.filter((i) => i.id !== id));
       clearMensaje(setMensaje);
     } else {
       result = await searchById(id);
@@ -108,6 +157,8 @@ export const useDatosInvitados = () => {
         categoria: result.categoria || "",
         status: result.status || "",
       });
+
+      setEstado(1);
     }
 
     if (result.success === false) {
@@ -137,22 +188,18 @@ export const useDatosInvitados = () => {
     await Promise.all([
       //manda como parametro las funciones y el objeto json "total_confirmados" q envia desde backend
       ejecutar(Invitados.numberOfGuests, setTotalInvitados, "total"),
+      ejecutar(Invitados.allChildren, setTotalNiños, "total"),
       ejecutar(Invitados.absent, setTotalAusentes, "total_ausentes"),
       ejecutar(Invitados.confirmed, setTotalConfirmados, "total_confirmados"),
       ejecutar(Invitados.notConfirmed, setTotalPendientes, "pendientes"),
+      ejecutar(Invitados.allAdult, setTotalAdultos, "totalAdultos"),
+      ejecutar(Invitados.childrenAbsent, setNiñosAusentes, "total"),
+      ejecutar(Invitados.adultAbsent, setAdultosAusentes, "total"),
+      ejecutar(Invitados.childrenConfirmed, setNiñosConfirmados, "total"),
+      ejecutar(Invitados.adultConfirmed, setAdultosConfirmados, "total"),
+      ejecutar(Invitados.childrenNotConfirmed, setNiñosNoConfirmados, "total"),
+      ejecutar(Invitados.adultNotConfirmed, setAdultosNoConfirmados, "total"),
     ]);
-  };
-
-  //ocultar y/o mostrar vista
-  const showHide = (valor) => {
-    console.log(valor);
-    if (valor === "add" || valor === "edit") {
-      clearTask();
-      //resetear estado para q no muestre todos los invitados
-      setEstado(0);
-    }
-    setMostrar(valor);
-    setEstado(0);
   };
 
   //Limpiar campos
@@ -170,13 +217,13 @@ export const useDatosInvitados = () => {
   useEffect(() => {
     infoInvitados();
     allInvitados();
-  }, [mostrar]);
+  }, []);
 
   //retornamos funciones y variables
+
   return {
     infoInvitados,
     allInvitados,
-    showHide,
     ProcessDeleteOrSearch,
     updateInvitado,
     addNew,
@@ -185,7 +232,14 @@ export const useDatosInvitados = () => {
     totalAusentes,
     totalInvitados,
     todosInvitados,
-    mostrar,
+    totalNiños,
+    totalAdultos,
+    totalNiñosAusentes,
+    totalAdultosAusentes,
+    totalAdultosConfirmados,
+    totalNiñosConfirmados,
+    totalNiñosNoConfirmados,
+    totalAdultosNoConfirmados,
     mensaje,
     error,
     formulario,
@@ -194,5 +248,8 @@ export const useDatosInvitados = () => {
     changeTitle,
     valida,
     estado,
+    invitadosFamily,
+
+    handleInput,
   };
 };

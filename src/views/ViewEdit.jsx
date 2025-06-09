@@ -1,6 +1,6 @@
-const ViewEdit = ({ formulario, handleChange, update, errores, showHides, agrega, mensaje, titulo, mostrar, valida }) => {
-    const saveChanges = "saveChanges";
-    const save = "save";
+
+const ViewEdit = ({ formulario, handleChange, update, errores, agrega, mensaje, titulo, valida, estado }) => {
+
     return (<>
 
         <div className="container mt-4">
@@ -46,17 +46,16 @@ const ViewEdit = ({ formulario, handleChange, update, errores, showHides, agrega
 
 
 
-            {(mostrar === "edit" || mostrar === "saveChanges") && <a className="icono text-black"><i className="bi bi-floppy" onClick={() => {
-                update(formulario.id),
-                    showHides(saveChanges)
-            }}> Guardar Cambios</i> </a>}
-
-
-            {(mostrar === "add" || mostrar === "save") && <a className="icono text-black">
-                <i className="bi bi-floppy" onClick={() => { agrega(), showHides(save) }}> Guardar</i> </a>}
-
-
-
+            {(estado === 2) &&
+                <a className="icono text-black"><i className="bi bi-floppy" onClick={() => { agrega() }}> Guardar </i>
+                </a>
+            }
+            {(estado === 1) &&
+                <a className="icono text-black"><i className="bi bi-floppy" onClick={() => {
+                    update(formulario.id)
+                }}> Guardar Cambios</i>
+                </a>
+            }
         </div>
     </>)
 }

@@ -1,20 +1,22 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Link } from 'react-router-dom';
 
 //recibe los datos q envia la vista viewPanel (componente principal-padre)
-const ViewInvitados = ({ data, errores, message, showHid, processo, changeTitle }) => {
-    
-    const edit = "edit";
+const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
     const process = "delete";
-    const add = "add";
+
     return (
         <>
             <table className="table table-striped table-bordered table-responsive">
                 <thead>
                     <tr>
                         <th colSpan="6">
-                            <button className="btn btn-primary" onClick={() => { showHid(add), changeTitle() }}>
-                                Agregar Invitado
-                            </button>
+
+                            <Link className="btn btn-primary" to="/editar" onClick={() => { changeTitle() }}>
+                                <i className="bi bi-person-add text-white"> Agregar Invitado</i>
+                            </Link>
+
+
                         </th>
                     </tr>
                     <tr>
@@ -34,9 +36,11 @@ const ViewInvitados = ({ data, errores, message, showHid, processo, changeTitle 
                             <td>{invitados.telefono}</td>
                             <td>{invitados.categoria}</td>
                             <td>{invitados.status}</td>
-                            <td>
-                                <a className="icono text-black"><i className="bi bi-pencil-fill" onClick={() => { processo(invitados.id), showHid(edit) }}> </i> </a>
-                                <a className="icono text-black"><i className="bi bi-trash" onClick={() => {processo(invitados.id, process) }}></i> </a>
+                            <td className="d-flex gap-2">
+
+                                <Link className="text-white" to="/invitados" onClick={() => { processo(invitados.id, process) }}> <i className="bi bi-trash text-black"  ></i>  </Link>
+                                <Link className="text-white" to="/editar" onClick={() => { processo(invitados.id) }}> <i className="bi bi-pencil-fill text-black"  ></i>  </Link>
+
                             </td>
                         </tr>
                     ))}
@@ -45,11 +49,11 @@ const ViewInvitados = ({ data, errores, message, showHid, processo, changeTitle 
                     <tr>
                         <td colSpan="6">
                             {/*  si message tiene valor entonces renderiza */}
-                            {message && (
+                            {/*   {message && (
                                 <h5 className="alert alert-danger mt-3">
                                     {message}
                                 </h5>
-                            )}
+                            )} */}
                             {/*   {errores && (
                                 <h5 className="alert alert-danger mt-3">
                                     {errores}

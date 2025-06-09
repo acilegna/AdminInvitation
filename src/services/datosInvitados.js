@@ -1,4 +1,5 @@
 import axios from "axios";
+import { Children } from "react";
 
 // mandar url de endpoint a la funcion getdata
 
@@ -12,6 +13,15 @@ export const Invitados = {
   absent: () => getData("http://127.0.0.1:8000/api/no"),
   numberOfGuests: () => getData("http://127.0.0.1:8000/api/total"),
   guestList: () => getData("http://127.0.0.1:8000/api/invitados"),
+  allChildren: () => getData("http://127.0.0.1:8000/api/totalNino"),
+  allAdult: () => getData("http://127.0.0.1:8000/api/totalAdulto"),
+  childrenAbsent: () => getData("http://127.0.0.1:8000/api/niñosAusentes"),
+  adultAbsent: () => getData("http://127.0.0.1:8000/api/adultoAusentes"),
+  adultConfirmed: () => getData("http://127.0.0.1:8000/api/adultoConfirmado"),
+  childrenConfirmed: () => getData("http://127.0.0.1:8000/api/niñoConfirmado"),
+  adultNotConfirmed: () => getData("http://127.0.0.1:8000/api/adultoPendiente"),
+  childrenNotConfirmed: () =>
+    getData("http://127.0.0.1:8000/api/niñoPendiente"),
 };
 
 // funcion  asíncrona que realiza solicitudes HTTP GET a diferentes endpoints
@@ -61,6 +71,21 @@ export const searchById = async (id) => {
   }
 };
 
+
+export const searchByFam = async (id) => {
+  try {
+    const res = await axios.get(`http://127.0.0.1:8000/api/byFamily/${id}`); 
+    return res.data;
+  } catch (error) {
+    if (error.response) {
+      return { success: false, error: "Error en la respuesta" };
+    } else if (error.request) {
+      return { success: false, error: "No se recibió respuesta  del servidor" };
+    } else {
+      return { success: false, error: "Error al configurar la solicitud" };
+    }
+  }
+};
 
 export const updateInvitados = async (id, data) => {
   try {
