@@ -6,6 +6,7 @@ import {
   searchById,
   searchByFam,
   updateInvitados,
+  updateStatus,
   saveInvitado,
 } from "../services/datosInvitados";
 import { useNavigate } from "react-router-dom";
@@ -38,9 +39,16 @@ export const useDatosInvitados = () => {
   //hook para manejar el status   ocultar y mostrar boton
   const [estado, setEstado] = useState(0);
 
+  const [inputValue, setInputValue] = useState("");
+
+  const [seleccion, setSeleccion] = useState({});
+  // hablitar boton
+  const [disable, setDisable] = useState(true);
+
   const navigate = useNavigate();
   const [formulario, setFormulario] = useState({
     id: "",
+    id_familia: "",
     name: "",
     apellido: "",
     telefono: "",
@@ -113,31 +121,48 @@ export const useDatosInvitados = () => {
   // buscar por id de familya
   const byFamily = async (id) => {
     result = await searchByFam(id);
-    const adulto = result.invitados.filter(
-      (invitado) => invitado.categoria === "adulto"
-    ).length;
-    const niño = result.invitados.filter(
-      (invitado) => invitado.categoria === "Niño"
-    ).length;
-    console.log(adulto);
-    console.log(niño);
+
     if (result.success === true) {
       setInvitadosFamily(result);
       setError("");
     }
+
     if (result.success === false) {
-      setError("registro no encontrado");
+      console.log(result.error.error);
+      setError(result.error.error);
+      clearMensaje(setError);
       setInvitadosFamily("");
     }
   };
 
   //detectar cambio de input
   const handleInput = (e) => {
-    let valorInput = e.target.value;
-    byFamily(valorInput);
+    const valorInput = e.target.value;
+    setInputValue(valorInput);
+
     if (valorInput === "") {
-      setError("No hay invitados cargados");
+      setInvitadosFamily("");
     }
+  };
+
+  const handleClick = () => {
+    if (inputValue.trim() !== "") {
+      byFamily(inputValue);
+    }
+  };
+
+  const update = async (id, datos) => {
+    const result = await updateStatus(id, datos);
+  };
+
+  const handleChangeRadio = (e) => {
+    const valor = e.target.value;
+    const id = e.target.id;
+
+    setSeleccion((prev) => ({
+      ...prev,
+      [id]: valor,
+    }));
   };
 
   //ELIMINAR O BUSCAR
@@ -151,6 +176,7 @@ export const useDatosInvitados = () => {
       result = await searchById(id);
       setFormulario({
         id: result.id || "",
+        id_familia: result.id_familia || "",
         name: result.name || "",
         apellido: result.apellido || "",
         telefono: result.telefono || "",
@@ -171,6 +197,8 @@ export const useDatosInvitados = () => {
     setTimeout(() => {
       setValue("");
       setValida("");
+      setMensaje("");
+      setError("");
     }, 5000);
   };
 
@@ -206,6 +234,7 @@ export const useDatosInvitados = () => {
   const clearTask = () => {
     setFormulario({
       id: "",
+      id_familia: "",
       name: "",
       apellido: "",
       telefono: "",
@@ -214,10 +243,35 @@ export const useDatosInvitados = () => {
     });
   };
 
+  const resetRespuestas = () => {
+    setMensaje("Tu confirmación ha sido registrada");
+    setSeleccion({});
+    setInvitadosFamily("");
+    setDisable(true);
+    setInputValue("");
+  };
+
+  const confirmar = () => {
+    Object.entries(seleccion).forEach(([id, valor]) => {
+      update(id, { status: valor });
+    });
+    clearMensaje(setMensaje);
+    resetRespuestas();
+  };
+
   useEffect(() => {
     infoInvitados();
     allInvitados();
-  }, []);
+    if (invitadosFamily) {
+      const totalRespuestas = Object.keys(seleccion).length;
+      const totalInvitado = invitadosFamily.invitados.length;
+      if (totalRespuestas === totalInvitado) {
+        setDisable(false);
+      } else {
+        setDisable(true);
+      }
+    }
+  }, [invitadosFamily, seleccion]);
 
   //retornamos funciones y variables
 
@@ -249,7 +303,11 @@ export const useDatosInvitados = () => {
     valida,
     estado,
     invitadosFamily,
-
+    handleClick,
     handleInput,
+    handleChangeRadio,
+    confirmar,
+    disable,
+    inputValue,
   };
 };

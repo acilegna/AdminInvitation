@@ -6,48 +6,49 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
     const process = "delete";
 
     return (
-        <>
-            <table className="table table-striped table-bordered table-responsive">
+        <div className="table-responsive">
+            <table className="table table-striped table-bordered align-middle text-center">
                 <thead>
                     <tr>
-                        <th colSpan="6">
-
+                        <th colSpan="7">
                             <Link className="btn btn-primary" to="/editar" onClick={() => { changeTitle() }}>
                                 <i className="bi bi-person-add text-white"> Agregar Invitado</i>
                             </Link>
-
-
                         </th>
                     </tr>
                     <tr>
+                        <th>Familia</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Teléfono</th>
-                        <th>Categoria</th>
+                        <th>Categoría</th>
                         <th>Status</th>
                         <th>Operaciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {data.map((invitados) => (
-                        <tr key={invitados.id}>
-                            <td>{invitados.name}</td>
-                            <td>{invitados.apellido}</td>
-                            <td>{invitados.telefono}</td>
-                            <td>{invitados.categoria}</td>
-                            <td>{invitados.status}</td>
-                            <td className="d-flex gap-2">
-
-                                <Link className="text-white" to="/invitados" onClick={() => { processo(invitados.id, process) }}> <i className="bi bi-trash text-black"  ></i>  </Link>
-                                <Link className="text-white" to="/editar" onClick={() => { processo(invitados.id) }}> <i className="bi bi-pencil-fill text-black"  ></i>  </Link>
-
+                    {data.map((invitado) => (
+                        <tr key={invitado.id}>
+                            <td>{invitado.id_familia}</td>
+                            <td>{invitado.name}</td>
+                            <td>{invitado.apellido}</td>
+                            <td>{invitado.telefono}</td>
+                            <td>{invitado.categoria}</td>
+                            <td>{invitado.status}</td>
+                            <td className="d-flex gap-2 justify-content-center">
+                                <Link to="/invitados" onClick={() => processo(invitado.id, process)}>
+                                    <i className="bi bi-trash text-danger"></i>
+                                </Link>
+                                <Link to="/editar" onClick={() => processo(invitado.id)}>
+                                    <i className="bi bi-pencil-fill text-primary"></i>
+                                </Link>
                             </td>
                         </tr>
                     ))}
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colSpan="6">
+                        <td colSpan="7">
                             {/*  si message tiene valor entonces renderiza */}
                             {/*   {message && (
                                 <h5 className="alert alert-danger mt-3">
@@ -61,15 +62,10 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
                             )} */}
                         </td>
                     </tr>
-
-
                 </tfoot>
-
             </table>
+        </div>
 
-
-
-        </>
     )
 }
 //exportamos para llamar a la vista desde el componente padre

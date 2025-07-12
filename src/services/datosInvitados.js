@@ -71,8 +71,7 @@ export const searchById = async (id) => {
   }
 };
 
-
-export const searchByFam = async (id) => {
+/* export const searchByFam = async (id) => {
   try {
     const res = await axios.get(`http://127.0.0.1:8000/api/byFamily/${id}`); 
     return res.data;
@@ -85,6 +84,17 @@ export const searchByFam = async (id) => {
       return { success: false, error: "Error al configurar la solicitud" };
     }
   }
+}; */
+
+export const searchByFam = async (id) => {
+  try {
+    const res = await axios.get(`http://127.0.0.1:8000/api/byFamily/${id}`);
+    return res.data;
+  } catch (error) {
+    if (error.response) {
+      return { success: false, error: error.response.data };
+    }
+  }
 };
 
 export const updateInvitados = async (id, data) => {
@@ -93,6 +103,19 @@ export const updateInvitados = async (id, data) => {
       `http://127.0.0.1:8000/api/invitados/${id}`,
       data
     );
+    return res.data;
+  } catch (error) {
+    if (error.response) {
+      return { success: false, error: error.response.data.errors };
+    } else {
+      return { success: false, error: error.message };
+    }
+  }
+};
+
+export const updateStatus = async (id, data) => {
+  try {
+    const res = await axios.put(`http://127.0.0.1:8000/api/update/${id}`, data);
     return res.data;
   } catch (error) {
     if (error.response) {

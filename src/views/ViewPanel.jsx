@@ -13,31 +13,40 @@ function ViewPanel() {
     const {
         totalConfirmados, totalPendientes, totalAusentes, totalInvitados, todosInvitados,
         totalNiños, totalAdultos, totalNiñosAusentes, totalAdultosAusentes, totalAdultosConfirmados,
-        totalNiñosConfirmados, totalNiñosNoConfirmados, totalAdultosNoConfirmados, formulario,  invitadosFamily,byFamily,handleInput,
-        handleChange, error, mensaje, infoInvitados, allInvitados, ProcessDeleteOrSearch, updateInvitado,
+        totalNiñosConfirmados, totalNiñosNoConfirmados, totalAdultosNoConfirmados, formulario, inputValue,
+        invitadosFamily, byFamily, handleInput, handleClick, confirmar, disable,
+        handleChange, handleChangeRadio, error, mensaje, infoInvitados, allInvitados, ProcessDeleteOrSearch, updateInvitado,
         addNew, titulo, changeTitle, valida, estado } = useDatosInvitados();
 
     return (
         <div className="d-flex" id="main-panel">
             <nav className="bg-dark text-white p-4 p-3" id="menu" aria-label="Menú lateral">
-                <h4 className="text-center mb-4">INVITACIÓN</h4>
+                <h4 className="text-center mb-4">Paulina</h4>
                 <ul className="nav flex-column">
 
                     <li className="nav-item">
-                            <Link className="nav-link text-white active" to="/confirmacion"  > <i className="bi bi-house-door"></i> Inicio</Link>
+                        <Link className="nav-link text-white active" to=""  > <i className="bi bi-house-door"></i> Inicio</Link>
 
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/import"  > <i className="bi bi-person-vcard"></i> Importar</Link>
+                        <Link className="nav-link text-white active" to="/confirmacion"  > 
+                        <i className="bi bi-check2-circle"></i> Confirmar</Link>
+
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link text-white active" to="/import"  > 
+                        <i className="bi bi-file-earmark-excel"></i> Importar</Link>
 
                     </li>
 
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/invitados" onClick={allInvitados}> <i className="bi bi-person-vcard"></i> Invitados</Link>
+                        <Link className="nav-link text-white active" to="/invitados" onClick={allInvitados}> 
+                        <i className="bi bi-person-vcard"></i> Invitados</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/detalles" onClick={infoInvitados}> <i className="bi bi-person-vcard"></i> Detalles</Link>
+                        <Link className="nav-link text-white active" to="/detalles" onClick={infoInvitados}> 
+                        <i className="bi bi-binoculars"></i> Detalles</Link>
                     </li>
 
                     <li className="nav-item mt-3">
@@ -71,9 +80,9 @@ function ViewPanel() {
                         niñosAusentes={totalNiñosAusentes}
                         adultosAusentes={totalAdultosAusentes}
                         niñosConfirmados={totalNiñosConfirmados}
-                        adultosConfirmados={totalAdultosConfirmados}                         
-                        niñosNoConfirmados = { totalNiñosNoConfirmados }
-                        adultosNoConfirmados = { totalAdultosNoConfirmados } />}></Route>
+                        adultosConfirmados={totalAdultosConfirmados}
+                        niñosNoConfirmados={totalNiñosNoConfirmados}
+                        adultosNoConfirmados={totalAdultosNoConfirmados} />}></Route>
 
                     <Route path='/editar' element={<ViewEdit
                         formulario={formulario}
@@ -89,7 +98,10 @@ function ViewPanel() {
                     <Route path='/import' element={<ViewImport
                     />}></Route>
 
-                    <Route path='/confirmacion' element={<ViewConfirmacion mensaje={mensaje} invitado={invitadosFamily} byFamily={handleInput} error={error}
+                    <Route path='/confirmacion' element={<ViewConfirmacion handleClick={handleClick} mensaje={mensaje}
+                        invitado={invitadosFamily} byFamily={handleInput} error={error} handleChangeRadio={handleChangeRadio}
+                        confirmar={confirmar} disable={disable} inputValue={inputValue}
+
                     />}></Route>
                 </Routes>
 

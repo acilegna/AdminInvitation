@@ -9,6 +9,21 @@ const ViewEdit = ({ formulario, handleChange, update, errores, agrega, mensaje, 
             {/*  pasar id y ocultarlo */}
             <input type="hidden" value={formulario.id} onChange={handleChange}></input>
             <div className="mb-3">
+                <label htmlFor="idFam" className="form-label">Id Familia</label>
+                <input
+                    type="text"
+                    className="form-control"
+                    id="id_familia"
+                    name="id_familia"
+                    value={formulario.id_familia}
+                    onChange={handleChange}
+                />
+                {valida?.id_familia && (
+                    <div className="alert alert-danger mt-1">{valida.id_familia[0]}</div>
+                )}
+
+            </div>
+            <div className="mb-3">
                 <label htmlFor="nombre" className="form-label">Nombre</label>
                 <input type="text" className="form-control" id="name" name="name" value={formulario.name}
                     onChange={handleChange} required />
