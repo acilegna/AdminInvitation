@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Italianno&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Italianno&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
 #main-panel {
   background-color: rgba(211, 0, 0, 0.753);
   height: 100vh;
@@ -79,3 +82,11 @@
     width: 300px;
   }
 }
+
+/* body {
+  background-repeat: no-repeat;
+  background-position: unset;
+  background-size: contain;
+  background-attachment: fixed;
+} */
+

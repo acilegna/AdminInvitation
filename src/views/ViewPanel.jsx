@@ -4,6 +4,7 @@ import ViewInvitados from "./ViewInvitados";
 import ViewImport from "./ViewImport";
 import ViewEdit from "./ViewEdit";
 import ViewConfirmacion from "./ViewConfirmacion";
+import ViewInvitation from "./ViewInvitation";
 import { Link, Routes, Route } from 'react-router-dom';
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 
@@ -25,28 +26,28 @@ function ViewPanel() {
                 <ul className="nav flex-column">
 
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to=""  > <i className="bi bi-house-door"></i> Inicio</Link>
+                        <Link className="nav-link text-white active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
 
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/confirmacion"  > 
-                        <i className="bi bi-check2-circle"></i> Confirmar</Link>
+                        <Link className="nav-link text-white active" to="/confirmacion"  >
+                            <i className="bi bi-check2-circle"></i> Confirmar</Link>
 
                     </li>
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/import"  > 
-                        <i className="bi bi-file-earmark-excel"></i> Importar</Link>
+                        <Link className="nav-link text-white active" to="/import"  >
+                            <i className="bi bi-file-earmark-excel"></i> Importar</Link>
 
                     </li>
 
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/invitados" onClick={allInvitados}> 
-                        <i className="bi bi-person-vcard"></i> Invitados</Link>
+                        <Link className="nav-link text-white active" to="/invitados" onClick={allInvitados}>
+                            <i className="bi bi-person-vcard"></i> Invitados</Link>
                     </li>
 
                     <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/detalles" onClick={infoInvitados}> 
-                        <i className="bi bi-binoculars"></i> Detalles</Link>
+                        <Link className="nav-link text-white active" to="/detalles" onClick={infoInvitados}>
+                            <i className="bi bi-binoculars"></i> Detalles</Link>
                     </li>
 
                     <li className="nav-item mt-3">
@@ -102,6 +103,9 @@ function ViewPanel() {
                         invitado={invitadosFamily} byFamily={handleInput} error={error} handleChangeRadio={handleChangeRadio}
                         confirmar={confirmar} disable={disable} inputValue={inputValue}
 
+                    />}></Route>
+
+                    <Route path='/ver' element={<ViewInvitation
                     />}></Route>
                 </Routes>
 
