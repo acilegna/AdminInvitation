@@ -13,8 +13,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-         {/*   <Route path="/*" element={<ViewPanel />} />   */}
-       <Route path="/*" element={<ViewInvitation />} /> 
+           <Route path="/*" element={<ViewPanel />} />   
+{/*        <Route path="/*" element={<ViewInvitation />} />  */}
         </Routes>
       </BrowserRouter>
     </>

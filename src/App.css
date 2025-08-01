@@ -60,6 +60,18 @@
 .icono {
   text-decoration: none;
 }
+.bi-check-circle{
+  color: #00b947;
+  margin: 4px;
+}
+.bi-x-circle{
+  color: rgb(255, 2, 2);
+  margin: 4px;
+}
+.bi-hourglass-split{
+  color:#7d7d7d;
+
+}
 
 .detalles {
   font-size: 30px;

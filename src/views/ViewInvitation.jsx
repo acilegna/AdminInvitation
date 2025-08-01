@@ -1,6 +1,10 @@
 import { useInvitation } from "../hooks/useInvitation";
 
-const ViewInvitation = () => {
+const ViewInvitation = ({ byFamily, invitado, error, mensaje, handleClick, handleChangeRadio, confirmar, disable, inputValue }) => {
+  const invitados = invitado?.invitados || [];
+  const adultos = invitados.filter((inv) => inv.categoria.toLowerCase() === "adulto");
+  const ninos = invitados.filter((inv) => inv.categoria.toLowerCase() === "niño");
+
   const tiempoRestante = useInvitation();
   return (
     <div className="container-fluid sections">
@@ -9,8 +13,8 @@ const ViewInvitation = () => {
         <img src="/sources/11.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
         <div className="couple-name">
-          <h2 className="name-text">Ana &amp; Boris</h2>
-          <h4 className="merried-text">Unimos nuestras vidas</h4>
+          <h2 className="title-name-text ">Ana &amp; Boris</h2>
+          <h4 className="title-merried-text">Unimos nuestras vidas</h4>
         </div>
       </div>
 
@@ -85,13 +89,13 @@ const ViewInvitation = () => {
 
           <h2><span class="text-present">Sugerencias de regalo</span></h2>
           <div className="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
               <i class="bi bi-gift"></i>
               <h4 ><span class="text-present-place">Liverpool</span></h4>
               <i class="bi  bi-binoculars">Ver regalos</i>
 
             </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
               <i class="bi bi-gift"></i>
               <h4 ><span class="text-present-place">Amazon</span></h4>
               <i class="bi  bi-binoculars">Ver regalos</i>
@@ -100,36 +104,101 @@ const ViewInvitation = () => {
 
         </div>
       </div>
-      {/*    <div className="container">
-        <div class="d-flex flex-column align-items-center">
 
-          <h2><span class="text-present">Sugerencias de regalo</span></h2>
-          <div className="row">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
-              <i class="bi bi-gift"></i>
-              <h4 ><span class="text-churp">Liverpool</span></h4>
-              <i class="bi  bi-binoculars">Ver regalos</i>
-
-            </div>
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
-              <i class="bi bi-gift"></i>
-              <h4 ><span class="text-churp">Amazon</span></h4>
-              <i class="bi  bi-binoculars">Ver regalos</i>
-            </div>
-          </div>
-
-        </div>
-      </div>
- */}
 
 
       <div className="container">
-        <div class="d-flex flex-column align-items-center">
+        <div class="cont-confirmation">
+          <h2 class="text-center"><span class="text-confirmation">Confirma tu asistencia</span></h2>
+          <p class="text-msj-confirmation text-center"> Por favor danos tu respuesta antes del 4-05-2025. </p>
+          <div className="row">
+            <div className="col-12 col-md-7">
 
-          <h2><span class="text-confirmation">Confirma tu asistencia</span></h2>
-          <p class="text-msj-confirmation"> Por favor danos tu respuesta antes del 4-05-2025. </p>
-          <i class="bi bi-check-square">Confirmar</i>
+              <input
+                id="search"
+                type="search"
+                className="form-control"
+                onChange={byFamily}
+                value={inputValue}
+                placeholder="Agrega tu ID de invitado"
+              />
+            </div>
+            <div className="col-12 col-md-5 d-grid justify-content-center d-flex flex-column">
+              <i class="bi bi-search" onClick={handleClick}> Buscar</i>
+            </div>
+          </div>
         </div>
+        <hr />
+
+        {adultos.length > 0 && (
+          <>
+            <h4>Adultos</h4>
+            {adultos.map((invitado) => (
+              <div key={invitado.id} className="d-flex align-items-center mb-2">
+                <strong className="me-3">
+                  {invitado.name} {invitado.apellido}
+                </strong>
+
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
+                    value='Si' onChange={handleChangeRadio} />
+                  <label className="form-check-label" htmlFor={`si-${invitado.id}`}>
+                    Sí
+                  </label>
+                </div>
+
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
+                    value='No' onChange={handleChangeRadio} />
+                  <label className="form-check-label" htmlFor={`no-${invitado.id}`}>
+                    No
+                  </label>
+                </div>
+              </div>
+            ))}
+          </>
+        )}
+        {ninos.length > 0 && (
+          <>
+            <h4>Niños</h4>
+            {ninos.map((invitado) => (
+              <div key={invitado.id} className="d-flex align-items-center mb-2">
+
+
+
+                <strong className="me-3">
+                  {invitado.name} {invitado.apellido}
+                </strong>
+
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
+                    value='Si' onChange={handleChangeRadio} />
+                  <label className="form-check-label" htmlFor={`si-${invitado.id}`}>
+                    Sí
+                  </label>
+                </div>
+
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
+                    value='No' onChange={handleChangeRadio} />
+                  <label className="form-check-label" htmlFor={`no-${invitado.id}`}>
+                    No
+                  </label>
+                </div>
+              </div>
+            ))}
+          </>
+        )}
+
+        {mensaje && <h5 className="text-success text-center">{mensaje}</h5>}
+        {error && <h5 className="text-danger text-center">{error}</h5>}
+
+
+        {(adultos.length > 0 || ninos.length > 0) && (
+          <div className="text-center my-4">
+            <button className="btn btn-success px-4" onClick={confirmar} disabled={disable}>CONFIRMAR</button>
+          </div>
+        )}
       </div>
     </div >
   );

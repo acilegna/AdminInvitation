@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 //recibe los datos q envia la vista viewPanel (componente principal-padre)
-const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
+const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirmation }) => {
     const process = "delete";
 
     return (
@@ -10,7 +10,7 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
             <table className="table table-striped table-bordered align-middle text-center">
                 <thead>
                     <tr>
-                        <th colSpan="7">
+                        <th colSpan="8">
                             <Link className="btn btn-primary" to="/editar" onClick={() => { changeTitle() }}>
                                 <i className="bi bi-person-add text-white"> Agregar Invitado</i>
                             </Link>
@@ -23,7 +23,9 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
                         <th>Teléfono</th>
                         <th>Categoría</th>
                         <th>Status</th>
+                        <th>Asistira</th>
                         <th>Operaciones</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -35,20 +37,34 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle }) => {
                             <td>{invitado.telefono}</td>
                             <td>{invitado.categoria}</td>
                             <td>{invitado.status}</td>
-                            <td className="d-flex gap-2 justify-content-center">
-                                <Link to="/invitados" onClick={() => processo(invitado.id, process)}>
-                                    <i className="bi bi-trash text-danger"></i>
+                            <td>
+
+                                <Link to="/invitados" onClick={() => Confirmation(invitado.id, { status: "Si" })}>
+                                    <i className="bi bi-check-circle" title="Sí asistirá"></i>
                                 </Link>
-                                <Link to="/editar" onClick={() => processo(invitado.id)}>
-                                    <i className="bi bi-pencil-fill text-primary"></i>
+
+                                <Link to="/invitados" onClick={() => Confirmation(invitado.id, { status: "No" })}>
+                                    <i className="bi bi-x-circle" title="No asistira"></i>
+                                </Link>
+                                <Link to="/invitados" onClick={() => Confirmation(invitado.id, { status: "Pendiente" })}>
+                                    <i className="bi bi-hourglass-split" title="Pendiente por confirmar"></i>
                                 </Link>
                             </td>
+                            <td className="d-flex gap-2 justify-content-center">
+                                <Link to="/invitados" onClick={() => processo(invitado.id, process)}>
+                                    <i className="bi bi-trash text-danger" title="Eliminar"></i>
+                                </Link>
+                                <Link to="/editar" onClick={() => processo(invitado.id)}>
+                                    <i className="bi bi-pencil-fill text-primary" title="Modificar"></i>
+                                </Link>
+                            </td>
+
                         </tr>
                     ))}
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colSpan="7">
+                        <td colSpan="8">
                             {/*  si message tiene valor entonces renderiza */}
                             {/*   {message && (
                                 <h5 className="alert alert-danger mt-3">

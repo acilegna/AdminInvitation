@@ -67,13 +67,11 @@ export const useDatosInvitados = () => {
   //agregar nuevo registro
   const addNew = async () => {
     result = await saveInvitado(formulario);
-
     if (result.success === false) {
       setValida(result.error);
       clearMensaje(setValida);
     } else {
       setTodosInvitados((prev) => [...prev, result.invitado]);
-
       setMensaje(result.message);
       setEstado(1);
       clearMensaje(setMensaje);
@@ -128,7 +126,6 @@ export const useDatosInvitados = () => {
     }
 
     if (result.success === false) {
-      console.log(result.error.error);
       setError(result.error.error);
       clearMensaje(setError);
       setInvitadosFamily("");
@@ -149,6 +146,18 @@ export const useDatosInvitados = () => {
     if (inputValue.trim() !== "") {
       byFamily(inputValue);
     }
+  };
+
+  // 
+  const Confirmation = (id, status) => {
+    update(id, status);
+    // actualiza solo el elemento modificado en el estado
+
+    setTodosInvitados((prevData) =>
+      prevData.map((item) =>
+        item.id === id ? { ...item, status: status.status } : item
+      )
+    );
   };
 
   const update = async (id, datos) => {
@@ -309,5 +318,7 @@ export const useDatosInvitados = () => {
     confirmar,
     disable,
     inputValue,
+
+    Confirmation,
   };
 };

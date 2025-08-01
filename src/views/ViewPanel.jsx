@@ -17,7 +17,7 @@ function ViewPanel() {
         totalNiñosConfirmados, totalNiñosNoConfirmados, totalAdultosNoConfirmados, formulario, inputValue,
         invitadosFamily, byFamily, handleInput, handleClick, confirmar, disable,
         handleChange, handleChangeRadio, error, mensaje, infoInvitados, allInvitados, ProcessDeleteOrSearch, updateInvitado,
-        addNew, titulo, changeTitle, valida, estado } = useDatosInvitados();
+        addNew, titulo, changeTitle, valida, estado, Confirmation } = useDatosInvitados();
 
     return (
         <div className="d-flex" id="main-panel">
@@ -67,6 +67,8 @@ function ViewPanel() {
                         errores={error}
                         message={mensaje}
                         changeTitle={changeTitle}
+                        Confirmation={Confirmation}
+
 
                     />}></Route>
 
@@ -106,6 +108,10 @@ function ViewPanel() {
                     />}></Route>
 
                     <Route path='/ver' element={<ViewInvitation
+                        handleClick={handleClick} mensaje={mensaje}
+                        invitado={invitadosFamily} byFamily={handleInput} error={error} handleChangeRadio={handleChangeRadio}
+                        confirmar={confirmar} disable={disable} inputValue={inputValue}
+
                     />}></Route>
                 </Routes>
 

@@ -41,13 +41,13 @@
   top: 80%;
   text-shadow: 2px 2px 4px #000;
 }
-.name-text {
+.title-name-text {
   color: white;
   font-size: 6rem;
   font-family: "Italianno", cursive;
   line-height: 60px;
 }
-.merried-text {
+.title-merried-text {
   color: white;
   font-size: 3rem;
   font-family: "Alumni Sans Pinstripe";
@@ -212,7 +212,11 @@ audio {
   color: aliceblue;
 }
 /* seccion */
-
+.cont-confirmation {
+  margin-top: 30px;
+  
+  padding-bottom:  20px;
+}
 .text-confirmation {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
@@ -223,79 +227,150 @@ audio {
   color: rgb(0, 0, 0);
   font-size: 1.8rem;
 }
-/* @media (max-width: 743px) {
-  .name-text {
+
+@media (max-width: 743px) {
+  .title-name-text {
     font-size: 5rem;
   }
-  .merried-text {
+  .title-merried-text {
     font-size: 2.3rem;
   }
-  .text-present {
-    font-size: 5rem;
-  }
-  .text-msj-present {
-    font-size: 1.2rem;
-  }
-
   .text-save-date {
-    font-size: 4.2rem;
-    line-height: 60px;
+    font-size: 3.8rem;
+    line-height: 40px;
   }
   .text-msj {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
+
+  .text-time {
+    font-size: 3.8rem;
+  }
+  .time-values {
+    top: 68%;
+  }
+
+  .time-label {
+    font-size: 10px;
+  }
+
+  .time-box span {
+    font-size: 25px;
+  }
+
   .text-where {
-    font-size: 4.5rem;
+    font-size: 3.8rem;
   }
   .text-date {
     font-size: 2.5rem;
   }
-  .day {
-    font-size: 4.5rem;
+
+  .text-ceremonia,
+  .text-celebration {
+    font-size: 3rem;
   }
-}
-@media (max-width: 457px) {
+
+  .text-churp {
+    font-size: 1.5rem;
+  }
+
   .text-present {
     font-size: 3.8rem;
   }
-  .name-text {
+
+  .text-present-place {
+    font-size: 1.2rem;
+  }
+  .bi-gift {
+    font-size: 2.2rem;
+  }
+
+  .bi-binoculars {
+    font-size: 1rem;
+  }
+
+  .text-confirmation {
     font-size: 3.8rem;
   }
-  .merried-text {
+  .text-msj-confirmation {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 502px) {
+  .title-name-text {
+    font-size: 3.8rem;
+  }
+  .title-merried-text {
     font-size: 1.7rem;
   }
   .text-save-date {
-    font-size: 3.3rem;
-    line-height: 40px;
+    font-size: 3rem;
   }
   .text-msj {
     font-size: 1rem;
   }
+  .cont-msj {
+    top: 63%;
+  }
   .text-where {
-    font-size: 3.8rem;
+    font-size: 3rem;
   }
   .text-date {
-    font-size: 2.3rem;
-  }
-  .day {
-    font-size: 4rem;
-  }
-  .text-ceremonia,
-  .text-celebration {
-    font-size: 2.7rem;
-  }
-}
-
-@media (max-width: 355px) {
-  .text-where {
-    font-size: 2.7rem;
+    font-size: 2rem;
   }
 
   .text-ceremonia,
   .text-celebration {
     font-size: 2.2rem;
   }
+
   .text-churp {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
-} */
+  .cont-ww {
+    margin-bottom: 5cqh;
+  }
+  .text-present {
+    font-size: 3rem;
+  }
+
+  .text-present-place {
+    font-size: 1.1rem;
+  }
+  .bi-gift {
+    font-size: 1.8rem;
+  }
+
+  .bi-binoculars {
+    font-size: 0.8rem;
+  }
+  .cont-presents {
+    margin-top: 40%;
+  }
+  .text-confirmation {
+    font-size: 3rem;
+  }
+  .text-msj-confirmation {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 341px) {
+  .text-present {
+    font-size: 2.4rem;
+  }
+  .cont-presents {
+    margin-top: 55%;
+  }
+  .text-where {
+    font-size: 2.4rem;
+  }
+  .text-save-date {
+    font-size: 2.4rem;
+  }
+  .text-confirmation {
+    font-size: 2.4rem;
+  }
+  .text-msj-confirmation {
+    font-size: 1.1rem;
+  }
+}

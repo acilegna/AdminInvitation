@@ -114,8 +114,10 @@ export const updateInvitados = async (id, data) => {
 };
 
 export const updateStatus = async (id, data) => {
+  
   try {
     const res = await axios.put(`http://127.0.0.1:8000/api/update/${id}`, data);
+
     return res.data;
   } catch (error) {
     if (error.response) {
