@@ -76,6 +76,7 @@
 .detalles {
   font-size: 30px;
 }
+
 @media (max-width: 820px) {
   .cont-details .row {
     width: 500px;

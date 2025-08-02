@@ -2,8 +2,7 @@
 import ViewDetalles from "./ViewDetalles";
 import ViewInvitados from "./ViewInvitados";
 import ViewImport from "./ViewImport";
-import ViewEdit from "./ViewEdit";
-import ViewConfirmacion from "./ViewConfirmacion";
+import ViewEdit from "./ViewEdit"; 
 import ViewInvitation from "./ViewInvitation";
 import { Link, Routes, Route } from 'react-router-dom';
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
@@ -29,11 +28,7 @@ function ViewPanel() {
                         <Link className="nav-link text-white active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
 
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link text-white active" to="/confirmacion"  >
-                            <i className="bi bi-check2-circle"></i> Confirmar</Link>
-
-                    </li>
+                  
                     <li className="nav-item">
                         <Link className="nav-link text-white active" to="/import"  >
                             <i className="bi bi-file-earmark-excel"></i> Importar</Link>
@@ -101,11 +96,7 @@ function ViewPanel() {
                     <Route path='/import' element={<ViewImport
                     />}></Route>
 
-                    <Route path='/confirmacion' element={<ViewConfirmacion handleClick={handleClick} mensaje={mensaje}
-                        invitado={invitadosFamily} byFamily={handleInput} error={error} handleChangeRadio={handleChangeRadio}
-                        confirmar={confirmar} disable={disable} inputValue={inputValue}
-
-                    />}></Route>
+                   
 
                     <Route path='/ver' element={<ViewInvitation
                         handleClick={handleClick} mensaje={mensaje}

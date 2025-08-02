@@ -1,11 +1,13 @@
 import { useInvitation } from "../hooks/useInvitation";
+import { useDatosInvitados } from "../hooks/useDatosInvitados";
+const ViewInvitation = () => {
+  const { invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable, inputValue, handleInput, } = useDatosInvitados();
 
-const ViewInvitation = ({ byFamily, invitado, error, mensaje, handleClick, handleChangeRadio, confirmar, disable, inputValue }) => {
-  const invitados = invitado?.invitados || [];
+  const invitados = invitadosFamily?.invitados || [];
   const adultos = invitados.filter((inv) => inv.categoria.toLowerCase() === "adulto");
   const ninos = invitados.filter((inv) => inv.categoria.toLowerCase() === "niño");
-
   const tiempoRestante = useInvitation();
+
   return (
     <div className="container-fluid sections">
 
@@ -118,7 +120,7 @@ const ViewInvitation = ({ byFamily, invitado, error, mensaje, handleClick, handl
                 id="search"
                 type="search"
                 className="form-control"
-                onChange={byFamily}
+                onChange={handleInput}
                 value={inputValue}
                 placeholder="Agrega tu ID de invitado"
               />
@@ -129,76 +131,93 @@ const ViewInvitation = ({ byFamily, invitado, error, mensaje, handleClick, handl
           </div>
         </div>
         <hr />
+        <div className="row">
+          {adultos.length > 0 && (
+            <>
+              <div className="col-12 col-md-6 ">
+                <h4 className="text-center">Adultos</h4>
+                {adultos.map((invitadosFamily) => (
 
-        {adultos.length > 0 && (
-          <>
-            <h4>Adultos</h4>
-            {adultos.map((invitado) => (
-              <div key={invitado.id} className="d-flex align-items-center mb-2">
-                <strong className="me-3">
-                  {invitado.name} {invitado.apellido}
-                </strong>
+                  <div key={invitadosFamily.id} className="mb-2">
+                    <div className="row">
+                      <div className="col-12 col-md-6 ">
+                        <strong className="me-3 mb-2">
+                          {invitadosFamily.name} {invitadosFamily.apellido}
+                        </strong>
+                      </div>
+                      <div className="col-12 col-md-6 ">
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`} id={invitadosFamily.id}
+                            value='Si' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                            Sí
+                          </label>
+                        </div>
 
-                <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
-                    value='Si' onChange={handleChangeRadio} />
-                  <label className="form-check-label" htmlFor={`si-${invitado.id}`}>
-                    Sí
-                  </label>
-                </div>
-
-                <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
-                    value='No' onChange={handleChangeRadio} />
-                  <label className="form-check-label" htmlFor={`no-${invitado.id}`}>
-                    No
-                  </label>
-                </div>
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`} id={invitadosFamily.id}
+                            value='No' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </>
-        )}
-        {ninos.length > 0 && (
-          <>
-            <h4>Niños</h4>
-            {ninos.map((invitado) => (
-              <div key={invitado.id} className="d-flex align-items-center mb-2">
+            </>
+          )}
+          {ninos.length > 0 && (
+            <>
+              <div className="col-12 col-md-6 ">
+                <h4 className="text-center">Niños</h4>
+                {ninos.map((invitadosFamily) => (
+                  <div key={invitadosFamily.id} className="mb-2">
+                    <div className="row">
+                      <div className="col-12 col-md-6 ">
+                        <strong className="me-3 mb-2">
+                          {invitadosFamily.name} {invitadosFamily.apellido}
+                        </strong>
+                      </div>
+                      <div className="col-12 col-md-6 ">
 
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`} id={invitadosFamily.id}
+                            value='Si' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                            Sí
+                          </label>
+                        </div>
 
-
-                <strong className="me-3">
-                  {invitado.name} {invitado.apellido}
-                </strong>
-
-                <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
-                    value='Si' onChange={handleChangeRadio} />
-                  <label className="form-check-label" htmlFor={`si-${invitado.id}`}>
-                    Sí
-                  </label>
-                </div>
-
-                <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name={`respuesta-${invitado.id}`} id={invitado.id}
-                    value='No' onChange={handleChangeRadio} />
-                  <label className="form-check-label" htmlFor={`no-${invitado.id}`}>
-                    No
-                  </label>
-                </div>
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`} id={invitadosFamily.id}
+                            value='No' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </>
-        )}
+            </>
+          )}
 
-        {mensaje && <h5 className="text-success text-center">{mensaje}</h5>}
-        {error && <h5 className="text-danger text-center">{error}</h5>}
+          {mensaje && <h5 className="text-success text-center">{mensaje}</h5>}
+          {error && <h5 className="text-danger text-center">{error}</h5>}
 
 
-        {(adultos.length > 0 || ninos.length > 0) && (
-          <div className="text-center my-4">
-            <button className="btn btn-success px-4" onClick={confirmar} disabled={disable}>CONFIRMAR</button>
-          </div>
-        )}
+          {(adultos.length > 0 || ninos.length > 0) && (
+            <div className="text-center my-4">
+              <button className="btn px-4" onClick={confirmar} disabled={disable}>
+                <i className="bi bi-check2-circle me-2"></i>
+                Confirmar
+              </button>
+            </div>
+          )}
+        </div>
       </div>
     </div >
   );

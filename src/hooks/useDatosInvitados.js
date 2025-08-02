@@ -318,7 +318,6 @@ export const useDatosInvitados = () => {
     confirmar,
     disable,
     inputValue,
-
     Confirmation,
   };
 };
