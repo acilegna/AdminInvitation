@@ -5,7 +5,7 @@ import './invitation.css'
   import ViewPanel from './views/ViewPanel';  
 import ViewInvitation from './views/ViewInvitation'; 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
+import Variant from './views/variant';
 
 function App() {
 
@@ -13,8 +13,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/*" element={<ViewPanel />} />  
-        <Route path="/*" element={<ViewInvitation />} />   
+        {/*   <Route path="/*" element={<ViewPanel />} />  
+        <Route path="/*" element={<ViewInvitation />} />    */}
+        <Route path="/*" element={<Variant />} />   
         </Routes>
       </BrowserRouter>
     </>

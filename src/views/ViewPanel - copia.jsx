@@ -1,7 +1,8 @@
+
 import ViewDetalles from "./ViewDetalles";
 import ViewInvitados from "./ViewInvitados";
 import ViewImport from "./ViewImport";
-import ViewEdit from "./ViewEdit";
+import ViewEdit from "./ViewEdit"; 
 import ViewInvitation from "./ViewInvitation";
 import { Link, Routes, Route } from 'react-router-dom';
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
@@ -27,7 +28,7 @@ function ViewPanel() {
                         <Link className="nav-link text-white active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
 
                     </li>
-
+                  
                     <li className="nav-item">
                         <Link className="nav-link text-white active" to="/import"  >
                             <i className="bi bi-file-earmark-excel"></i> Importar</Link>
@@ -95,7 +96,7 @@ function ViewPanel() {
                     <Route path='/import' element={<ViewImport
                     />}></Route>
 
-
+                   
 
                     <Route path='/ver' element={<ViewInvitation
                         handleClick={handleClick} mensaje={mensaje}
