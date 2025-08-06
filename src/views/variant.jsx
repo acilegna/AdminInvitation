@@ -2,15 +2,15 @@
 
 import { motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import { Link, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 export default function Variant() {
     const [isOpen, setIsOpen] = useState(false)
     const containerRef = useRef(null)
     const { height } = useDimensions(containerRef)
-
     return (
+
         <div>
             <div >
                 <motion.nav
@@ -27,8 +27,8 @@ export default function Variant() {
             </div>
         </div>
     )
-}
 
+}
 const navVariants = {
     open: {
         transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -197,3 +197,4 @@ const useDimensions = (ref) => {
 
     return dimensions.current
 }
+

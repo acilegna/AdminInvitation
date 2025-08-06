@@ -13,9 +13,9 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-        {/*   <Route path="/*" element={<ViewPanel />} />  
-        <Route path="/*" element={<ViewInvitation />} />    */}
-        <Route path="/*" element={<Variant />} />   
+          <Route path="/*" element={<ViewPanel />} />  
+       {/*  <Route path="/*" element={<ViewInvitation />} />    */}
+        {/* <Route path="/*" element={<Variant />} />   */} 
         </Routes>
       </BrowserRouter>
     </>

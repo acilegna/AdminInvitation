@@ -5,6 +5,7 @@ import ViewEdit from "./ViewEdit";
 import ViewInvitation from "./ViewInvitation";
 import { Link, Routes, Route } from 'react-router-dom';
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
+import Variant from "./variant";
 
 function ViewPanel() {
     /* const ViewPanel = () => { */
@@ -17,9 +18,14 @@ function ViewPanel() {
         handleChange, handleChangeRadio, error, mensaje, infoInvitados, allInvitados, ProcessDeleteOrSearch, updateInvitado,
         addNew, titulo, changeTitle, valida, estado, Confirmation } = useDatosInvitados();
 
+
+
+
+
     return (
         <div className="d-flex" id="main-panel">
-            <nav className="bg-dark text-white p-4 p-3" id="menu" aria-label="Menú lateral">
+<Variant />
+             <nav className="bg-dark text-white p-4 p-3" id="menu" aria-label="Menú lateral">
                 <h4 className="text-center mb-4">Paulina</h4>
                 <ul className="nav flex-column">
 
@@ -50,6 +56,8 @@ function ViewPanel() {
                     </li>
                 </ul>
             </nav>
+
+
             <section className="sections container d-flex justify-content-center align-items-center">
 
                 {/*   pasar datos a componentes  */}
