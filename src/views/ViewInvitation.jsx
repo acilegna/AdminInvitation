@@ -1,18 +1,49 @@
 import { useInvitation } from "../hooks/useInvitation";
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
-const ViewInvitation = () => {
+import { motion, useScroll } from "framer-motion";
+import { animate, inView } from "framer-motion";  
+
+
+
+export default function ViewInvitation() {
+
+  const { scrollYProgress } = useScroll()
+  return (
+    <>
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
+          height: 10,
+          originX: 0,
+          backgroundColor: "#000000ea",
+          zIndex: 9999 // aseguramos que esté encima de todo
+        }}
+      />
+      <Content />
+    </>
+  )
+
+}
+
+function Content() {
+
   const { invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable, inputValue, handleInput, } = useDatosInvitados();
 
   const invitados = invitadosFamily?.invitados || [];
   const adultos = invitados.filter((inv) => inv.categoria.toLowerCase() === "adulto");
   const ninos = invitados.filter((inv) => inv.categoria.toLowerCase() === "niño");
   const tiempoRestante = useInvitation();
-
   return (
     <div className="container-fluid sections">
+      <header id="site-header"></header>
 
       <div className="cont-full">
-        <img src="/sources/11.jpg" alt="Fondo" className="imagen-full" />
+        <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
         <div className="couple-name">
           <h2 className="title-name-text ">Ana &amp; Boris</h2>
@@ -24,7 +55,6 @@ const ViewInvitation = () => {
         <div className="container cont-audio">
           <audio id="audio" controls loop  >
             <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
-            Tu navegador no soporta el elemento de audio.
           </audio>
         </div>
         <div className="cont-msj">
@@ -85,7 +115,7 @@ const ViewInvitation = () => {
       </div>
 
       <div className="cont-full">
-        <img src="/sources/11.jpg" alt="Fondo" className="imagen-full" />
+        <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
         <div class="d-flex flex-column align-items-center cont-presents">
 
@@ -112,7 +142,7 @@ const ViewInvitation = () => {
       <div className="container">
         <div class="cont-confirmation">
           <h2 class="text-center"><span class="text-confirmation">Confirma tu asistencia</span></h2>
-          <p class="text-msj-confirmation text-center"> Por favor danos tu respuesta antes del 4-05-2025. </p>
+          <p class="text-msj-confirmation text-center"> Por favor danos tu respuesta antes del 4-12-2025. </p>
           <div className="row">
             <div className="col-12 col-md-7">
 
@@ -221,7 +251,6 @@ const ViewInvitation = () => {
       </div>
     </div >
   );
+
 }
 
-
-export default ViewInvitation

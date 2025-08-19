@@ -1,3 +1,4 @@
+ 
 .sections {
   --bs-gutter-x: 0rem;
 }
@@ -55,11 +56,9 @@
 
 /* seccion 2 */
 .cont-med {
-  z-index: 1;
   position: relative;
   background-color: #f1f3f4;
   height: 50vh;
-  overflow: hidden;
 }
 
 .cont-audio {
@@ -214,8 +213,8 @@ audio {
 /* seccion */
 .cont-confirmation {
   margin-top: 30px;
-  
-  padding-bottom:  20px;
+
+  padding-bottom: 20px;
 }
 .text-confirmation {
   font-size: 4.2rem;

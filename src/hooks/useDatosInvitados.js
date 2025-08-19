@@ -148,7 +148,7 @@ export const useDatosInvitados = () => {
     }
   };
 
-  // 
+  //
   const Confirmation = (id, status) => {
     update(id, status);
     // actualiza solo el elemento modificado en el estado
@@ -285,8 +285,6 @@ export const useDatosInvitados = () => {
   //retornamos funciones y variables
 
   return {
-    infoInvitados,
-    allInvitados,
     ProcessDeleteOrSearch,
     updateInvitado,
     addNew,

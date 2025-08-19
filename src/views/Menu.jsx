@@ -5,30 +5,31 @@ import { useEffect, useRef, useState } from "react"
 import { Link } from 'react-router-dom';
 
 
-export default function Variant() {
+export default function Menu({ onToggle }) {
     const [isOpen, setIsOpen] = useState(false)
     const containerRef = useRef(null)
     const { height } = useDimensions(containerRef)
-    return (
 
-        <div>
-            <div >
-                <motion.nav
-                    initial={false}
-                    animate={isOpen ? "open" : "closed"}
-                    custom={height}
-                    ref={containerRef}
-                    style={nav}
-                >
-                    <motion.div style={background} variants={sidebarVariants} />
-                    <Navigation />
-                    <MenuToggle toggle={() => setIsOpen(!isOpen)} />
-                </motion.nav>
-            </div>
-        </div>
+
+
+
+
+    return (
+        <motion.nav
+            initial={false}
+            animate={isOpen ? "open" : "closed"}
+            custom={height}
+            ref={containerRef}
+            style={isOpen ? nav : nav3}
+        >
+            <motion.div style={background} variants={sidebarVariants} />
+            <Navigation />
+            <MenuToggle toggle={() => setIsOpen(!isOpen)} />
+        </motion.nav>
     )
 
 }
+
 const navVariants = {
     open: {
         transition: { staggerChildren: 0.07, delayChildren: 0.2 },
@@ -53,6 +54,10 @@ const Navigation = () => (
                 <i className="bi bi-person-vcard"></i> Invitados</Link>
             <Link className="nav-link text-white active" to="/detalles"  >
                 <i className="bi bi-binoculars"></i> Detalles</Link>
+            <li className="nav-item mt-3">
+                <a className="nav-link text-white active" href="#">  <i className="bi bi-box-arrow-right"> </i>Salir</a>
+
+            </li>
 
         </motion.li>
     </motion.ul>
@@ -100,8 +105,9 @@ const sidebarVariants = {
 const Path = (props) => (
     <motion.path
         fill="transparent"
-        strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        strokeWidth="2"
+        //color
+        stroke="hsla(0, 0%, 100%, 1.00)"
         strokeLinecap="round"
         {...props}
     />
@@ -138,18 +144,25 @@ const MenuToggle = ({ toggle }) => (
  * ==============   Styles   ================
  */
 
+const nav3 = {
+    width: 0,
+
+
+}
 
 const nav = {
-    width: 300,
+    width: 170,
+    backgroundColor: "#02034dff",
+
 }
 
 const background = {
-    backgroundColor: "#02074dff",
+    backgroundColor: "#02034dff",
     position: "absolute",
     top: 0,
     left: 0,
     bottom: 0,
-    width: 300,
+    width: 170,
 }
 
 const toggleContainer = {
@@ -172,8 +185,7 @@ const list = {
     padding: 25,
     margin: 0,
     position: "absolute",
-    top: 80,
-    width: 230,
+    top: 60,
 }
 
 
@@ -187,7 +199,6 @@ const list = {
 // It would be safer to  return null for unmeasured states.
 const useDimensions = (ref) => {
     const dimensions = useRef({ width: 0, height: 0 })
-
     useEffect(() => {
         if (ref.current) {
             dimensions.current.width = ref.current.offsetWidth
