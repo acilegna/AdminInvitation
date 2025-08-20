@@ -30,5 +30,5 @@ export const useInvitation = () => {
 
     return () => clearInterval(timer);
   }, [targetDate]);
-  return tiempoRestante; // ✅ necesario
+  return tiempoRestante; 
 };

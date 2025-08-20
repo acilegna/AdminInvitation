@@ -1,31 +1,19 @@
- 
 .sections {
   --bs-gutter-x: 0rem;
 }
-.time-values,
-.text-time,
-.couple-name,
-.cont-audio,
-.cont-msj {
-  position: absolute;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%); /* centra horizontal y vertical */
-  text-align: center;
-}
 
-/* seccion uno */
-.fondo-imagen {
-  background-color: rgba(0, 0, 0, 0.795);
-  position: relative;
-  z-index: 1;
-}
 .cont-full {
   z-index: 1;
   position: relative;
   width: 100%;
   height: 100vh;
   overflow: hidden;
+}
+
+.fondo-imagen {
+  background-color: rgba(0, 0, 0, 0.795);
+  position: relative;
+  z-index: 1;
 }
 
 .imagen-full {
@@ -37,9 +25,22 @@
   object-fit: cover;
   z-index: -1; /* Muy importante para que quede detrás */
 }
+
+/* SECCION UNO */
+.time-values,
+.couple-name,
+.cont-audio,
+.cont-msj {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%); /* centra horizontal y vertical */
+  text-align: center;
+}
+
 .couple-name {
   background-color: rgba(104, 177, 177, 0);
-  top: 80%;
+  top: 75%;
   text-shadow: 2px 2px 4px #000;
 }
 .title-name-text {
@@ -47,6 +48,7 @@
   font-size: 6rem;
   font-family: "Italianno", cursive;
   line-height: 60px;
+  padding-bottom: 20px;
 }
 .title-merried-text {
   color: white;
@@ -54,16 +56,14 @@
   font-family: "Alumni Sans Pinstripe";
 }
 
-/* seccion 2 */
-.cont-med {
-  position: relative;
-  background-color: #f1f3f4;
-  height: 50vh;
+/*SECCION 2 */
+.cont-sound {
+  background-color: #f2f4f1;
 }
 
 .cont-audio {
-  background-color: rgba(131, 177, 104, 0);
-  top: 25%;
+  background-color: rgba(84, 206, 13, 0);
+  top: 35%;
 }
 audio {
   height: 30px;
@@ -71,13 +71,18 @@ audio {
 }
 .cont-msj {
   background-color: rgba(20, 128, 128, 0);
-  top: 57%;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centra en ambos ejes */
+  text-align: center;
 }
 
 .text-save-date {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
+
   line-height: 60px;
 }
 .text-msj {
@@ -86,13 +91,26 @@ audio {
   font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 /* seccion 3 */
-.text-time {
-  top: 50%;
 
+.cont-datos,
+.cont-titleContador {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centra en ambos ejes */
+  text-align: center;
+
+  width: 100%;
+}
+
+.text-time {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
+  line-height: 60px;
   color: rgb(255, 255, 255);
+  text-align: center;
 }
+
 .time-values {
   top: 63%;
 }
@@ -119,22 +137,16 @@ audio {
 }
 
 /* seccion 4 */
-.cont-ww {
-  margin-top: 50px;
-}
+
 .text-where {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
 }
-/* .text-date {
-  top: 85%;
-  color: rgb(0, 0, 0);
-  font-size: 3rem;
-  text-shadow: 2px 2px 4px #000;
-  font-family: "Alumni Sans Pinstripe";
-} */
 
+.cont-date {
+  padding-top: 30px;
+}
 .text-date {
   margin: 0 8px;
   font-weight: bold;
@@ -160,6 +172,7 @@ audio {
 .cont-text-ceremonia,
 .cont-text-celebration {
   padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .text-ceremonia,
@@ -220,6 +233,7 @@ audio {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
+  text-align: center;
 }
 .text-msj-confirmation {
   font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -234,6 +248,14 @@ audio {
   .title-merried-text {
     font-size: 2.3rem;
   }
+
+
+
+
+
+
+
+  
   .text-save-date {
     font-size: 3.8rem;
     line-height: 40px;
@@ -242,9 +264,6 @@ audio {
     font-size: 1.3rem;
   }
 
-  .text-time {
-    font-size: 3.8rem;
-  }
   .time-values {
     top: 68%;
   }
@@ -326,9 +345,7 @@ audio {
   .text-churp {
     font-size: 1.2rem;
   }
-  .cont-ww {
-    margin-bottom: 5cqh;
-  }
+
   .text-present {
     font-size: 3rem;
   }
