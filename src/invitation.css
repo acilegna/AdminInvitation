@@ -314,7 +314,7 @@ audio {
     font-size: 1.5rem;
   }
 }
-@media (max-width: 502px) {
+/* @media (max-width: 502px) {
   .title-name-text {
     font-size: 3.8rem;
   }
@@ -390,3 +390,4 @@ audio {
     font-size: 1.1rem;
   }
 }
+ */
