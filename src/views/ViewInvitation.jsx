@@ -52,6 +52,20 @@ function Content() {
         </div>
       </div>
 
+      <div className="cont-full cont-sound scroll-section">
+
+        <div className="cont-audio">
+          <audio id="audio" controls loop>
+            <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+        <div className="cont-msj">
+          <h2><span class="text-save-date">Estás Invitado!</span></h2>
+          <h5><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
+        </div>
+
+      </div>
+
 
 
     </div >
