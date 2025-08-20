@@ -60,7 +60,7 @@ function Content() {
           </audio>
         </div>
         <div className="cont-msj">
-          <h2><span class="text-save-date">Estás Invitado!</span></h2>
+          <h2><span class="text-save-date">Estás Invitadop!</span></h2>
           <h5><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
