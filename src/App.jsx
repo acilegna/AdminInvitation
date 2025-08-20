@@ -7,7 +7,7 @@ import ViewInvitation from './views/ViewInvitation';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
- import Back from './views/back';
+
 function App() {
 
   return (
