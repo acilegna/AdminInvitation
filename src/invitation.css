@@ -72,12 +72,12 @@ audio {
 .cont-msj {
   background-color: rgba(20, 128, 128, 0);
   position: absolute;
-  top: 52%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); /* centra en ambos ejes */
   text-align: center;
 }
-
+ 
 .text-save-date {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;

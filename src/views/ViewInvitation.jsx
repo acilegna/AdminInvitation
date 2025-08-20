@@ -52,7 +52,7 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full cont-sound scroll-section">
+      <div className="cont-full cont-sound scroll-sections">
 
         <div className="cont-audio">
           <audio id="audio" controls loop>
@@ -60,8 +60,8 @@ function Content() {
           </audio>
         </div>
         <div className="cont-msj">
-          <h2><span class="text-save-date">Estás Invitadop!</span></h2>
-          <h5><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
+          <h2 className="mt-4"><span class="text-save-date">Estás Invitado!</span></h2>
+           <h5 className="mt-4"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
       </div>
