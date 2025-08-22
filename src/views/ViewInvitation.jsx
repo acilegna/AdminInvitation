@@ -93,9 +93,10 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full scroll-section">
-        <div class="cont-datos">
+      <div className="cont-full  cont-info scroll-section">
+        <div >
           <h2><span class="text-where">¿Cuándo y Dónde?</span></h2>
+
           <div class="cont-date">
             <h3>
               <span class="text-date day">10</span>
@@ -125,6 +126,135 @@ function Content() {
 
       </div>
 
+      <div className="cont-full scroll-section cont-presents">
+        <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
+        <div className="fondo-imagen imagen-full"></div>
+
+        <div class="d-flex flex-column align-items-center ">
+
+          <h2><span class="text-present">Sugerencias de regalo</span></h2>
+          <div className="row">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
+              <i class="bi bi-gift"></i>
+              <h4><span class="text-present-place">Liverpool</span></h4>
+              <i class="bi  bi-binoculars">Ver regalos</i>
+
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
+              <i class="bi bi-gift"></i>
+              <h4><span class="text-present-place">Amazon</span></h4>
+              <i class="bi  bi-binoculars">Ver regalos</i>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div className="cont-full scroll-section cont-confirmation">
+        <div class="d-flex flex-column align-items-center ">
+          <h2 class="text-confirmation"> Confirma tu asistencia </h2>
+          <p class="text-msj-confirmation  "> Por favor danos tu respuesta antes del 4-12-2025. </p>
+          <div className="row">
+            <div className="col-12 col-md-6">
+              <input id="search" type="search" className="form-control" onChange={handleInput} value={inputValue}
+                placeholder="Agrega tu ID de invitado" />
+            </div>
+            <div className="col-12 col-md-6 d-grid justify-content-center d-flex flex-column ">
+              <i class="bi bi-search" onClick={handleClick}> Buscar</i>
+            </div>
+              {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
+          {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
+          </div>
+        </div>
+        <hr />
+        <div className="row">
+          {adultos.length > 0 && (
+            <>
+              <div className="col-12 col-md-6 ">
+                <h4 className="text-center">Adultos</h4>
+                {adultos.map((invitadosFamily) => (
+
+                  <div key={invitadosFamily.id} className="mb-2">
+                    <div className="row">
+                      <div className="col-12 col-md-6 ">
+                        <strong className="me-3 mb-2">
+                          {invitadosFamily.name} {invitadosFamily.apellido}
+                        </strong>
+                      </div>
+                      <div className="col-12 col-md-6 ">
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
+                            id={invitadosFamily.id} value='Si' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                            Sí
+                          </label>
+                        </div>
+
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
+                            id={invitadosFamily.id} value='No' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+          {ninos.length > 0 && (
+            <>
+              <div className="col-12 col-md-6 ">
+                <h4 className="text-center">Niños</h4>
+                {ninos.map((invitadosFamily) => (
+                  <div key={invitadosFamily.id} className="mb-2">
+                    <div className="row">
+                      <div className="col-12 col-md-6 ">
+                        <strong className="me-3 mb-2">
+                          {invitadosFamily.name} {invitadosFamily.apellido}
+                        </strong>
+                      </div>
+                      <div className="col-12 col-md-6 ">
+
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
+                            id={invitadosFamily.id} value='Si' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                            Sí
+                          </label>
+                        </div>
+
+                        <div className="form-check form-check-inline">
+                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
+                            id={invitadosFamily.id} value='No' onChange={handleChangeRadio} />
+                          <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                            No
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+
+        
+
+
+          {(adultos.length > 0 || ninos.length > 0) && (
+            <div className="text-center my-4">
+              <button className="btn px-4" onClick={confirmar} disabled={disable}>
+                <i className="bi bi-check2-circle me-2"></i>
+                Confirmar
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
     </div >
   );
 

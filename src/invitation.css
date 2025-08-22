@@ -70,7 +70,7 @@ audio {
 }
 
 .cont-msj {
-  padding-top: 115px;
+  padding-top: 120px;
 }
 
 .text-save-date {
@@ -78,7 +78,7 @@ audio {
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
 
-  line-height: 60px;
+  line-height: 20px;
 }
 .text-msj {
   color: rgb(0, 0, 0);
@@ -88,7 +88,6 @@ audio {
 
 /* SECCION 3 */
 
-.cont-datos,
 .cont-titleContador,
 .time-values {
   position: absolute;
@@ -134,6 +133,12 @@ audio {
 
 /* SECCION 4 */
 
+.cont-info {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; /* centra vertical */
+}
+
 .text-where {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
@@ -143,16 +148,21 @@ audio {
 .cont-date {
   padding-top: 20px;
 }
+.cont-date h3 {
+  text-align: center; /* centra horizontal el texto */
+}
+
 .text-date {
+  justify-content: center; /* centra horizontal */
   margin: 0 8px;
   font-weight: bold;
   font-family: "Alumni Sans Pinstripe";
   font-size: 3rem;
   color: rgb(31, 31, 31);
 }
+
 .day {
   text-decoration: underline rgb(163, 163, 163);
-
   text-decoration-color: #333333; /* color del subrayado */
   text-decoration-thickness: 3px; /* grosor opcional */
   text-decoration-style: solid; /* también: dashed, dotted, wavy */
@@ -160,7 +170,6 @@ audio {
 
 .cont-text-ceremonia,
 .cont-text-celebration {
-  padding-bottom: 20px;
   padding-top: 20px;
 }
 
@@ -170,7 +179,6 @@ audio {
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
 }
-
 .text-churp {
   font-size: 1.6rem;
   font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -181,9 +189,11 @@ audio {
   color: #222222;
 }
 
-/* seccion 5 */
+/************************************SECTION 5 *************************************************************************/
 .cont-presents {
-  margin-top: 25%;
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; /* centra vertical */
 }
 .text-present {
   font-size: 4.2rem;
@@ -212,23 +222,24 @@ audio {
 .bi-binoculars {
   color: aliceblue;
 }
-/* seccion */
-.cont-confirmation {
-  margin-top: 30px;
 
-  padding-bottom: 20px;
+/* SECTION */
+.cont-confirmation {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; /* centra vertical */
 }
 .text-confirmation {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
-  text-align: center;
 }
 .text-msj-confirmation {
   font-family: "Alumni Sans Pinstripe", sans-serif;
   color: rgb(0, 0, 0);
   font-size: 1.8rem;
 }
+
 /* 
 @media (max-width: 743px) {
   .title-name-text {
