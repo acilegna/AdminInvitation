@@ -50,7 +50,7 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full cont-sound scroll-sections">
+      <div className="cont-full cont-sound scroll-section">
 
         <div>
           <audio id="audio" controls loop>

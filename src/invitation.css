@@ -89,14 +89,13 @@ audio {
 
 /* SECCION 3 */
 
-.cont-datos,
-.cont-titleContador {
+/* .cont-datos, */
+.cont-titleContador, .time-values {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%); /* centra en ambos ejes */
   text-align: center;
-
   width: 100%;
 }
 
@@ -109,7 +108,7 @@ audio {
 }
 
 .time-values {
-  top: 63%;
+padding-top: 150px;
 }
 
 .time-box {
