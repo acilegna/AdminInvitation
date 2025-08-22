@@ -40,7 +40,6 @@ function Content() {
   return (
     <div className="container-fluid sections">
 
-
       <div className="cont-full scroll-section">
         <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
@@ -50,20 +49,20 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full cont-sound scroll-section">
 
-        <div>
-          <audio id="audio" controls loop>
-            <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
-          </audio>
+      <div className="cont-full scroll-section cont-sound">
+        <audio id="audio" controls loop>
+          <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
+        </audio>
 
-          <div className="cont-msj">
-            <h2 className="mt-4"><span class="text-save-date">Estás Invitado!</span></h2>
-            <h5 className="mt-4"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
-          </div>
+        <div className="cont-msj">
+          <h2 className="mt-4"><span class="text-save-date">Estás Invitado!</span></h2>
+          <h5 className="mt-4"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
+
       </div>
+
 
       <div className="cont-full scroll-section">
         <img src="/sources/3.jpg" alt="Fondo" className="imagen-full" />
@@ -163,8 +162,8 @@ function Content() {
             <div className="col-12 col-md-6 d-grid justify-content-center d-flex flex-column ">
               <i class="bi bi-search" onClick={handleClick}> Buscar</i>
             </div>
-              {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
-          {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
+            {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
+            {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
           </div>
         </div>
         <hr />
@@ -242,7 +241,7 @@ function Content() {
             </>
           )}
 
-        
+
 
 
           {(adultos.length > 0 || ninos.length > 0) && (
