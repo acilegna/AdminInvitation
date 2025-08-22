@@ -3,8 +3,6 @@ import { useDatosInvitados } from "../hooks/useDatosInvitados";
 import useScrollSections from "../hooks/useScrollSections";
 import { motion, useScroll } from "framer-motion";
 
-
-
 export default function ViewInvitation() {
 
   const { scrollYProgress } = useScroll()
