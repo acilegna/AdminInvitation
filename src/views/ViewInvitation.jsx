@@ -93,6 +93,38 @@ function Content() {
         </div>
       </div>
 
+      <div className="cont-full scroll-section">
+        <div class="cont-datos">
+          <h2><span class="text-where">¿Cuándo y Dónde?</span></h2>
+          <div class="cont-date">
+            <h3>
+              <span class="text-date day">10</span>
+              <span class="text-date">12</span>
+              <span class="text-date">26</span>
+            </h3>
+          </div>
+          <div class="row ">
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6  cont-text-ceremonia">
+              <h3><span class="text-ceremonia">Ceremonia</span></h3>
+              <h4><span class="text-churp">Parroquia San José</span></h4>
+              <i class="bi bi-geo-alt ms-1 icon-color"></i>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-6 col-lg-6 cont-text-celebration">
+              <h3><span class="text-celebration">Celebración</span></h3>
+              <h4><span class="text-churp">Hacienda Guadalupe</span></h4>
+              <i class="bi bi-geo-alt ms-1 icon-color"></i>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+      </div>
+
     </div >
   );
 
