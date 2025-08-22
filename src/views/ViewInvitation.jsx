@@ -65,7 +65,33 @@ function Content() {
 
       </div>
 
+      <div className="cont-full scroll-section">
+        <img src="/sources/3.jpg" alt="Fondo" className="imagen-full" />
+        <div className="fondo-imagen imagen-full"></div>
 
+        <div class="cont-titleContador">
+          <h2><span className="text-time">Faltan</span></h2>
+        </div>
+
+        <div className="time-values d-flex justify-content-center">
+          <div className="time-box ">
+            <span className="time-number">{tiempoRestante.dias}</span>
+            <div className="time-label">Días</div>
+          </div>
+          <div className="time-box">
+            <span className="time-number">{tiempoRestante.horas}</span>
+            <div className="time-label">Horas</div>
+          </div>
+          <div className="time-box">
+            <span className="time-number">{tiempoRestante.minutos}</span>
+            <div className="time-label">Minutos</div>
+          </div>
+          <div className="time-box">
+            <span className="time-number">{tiempoRestante.segundos}</span>
+            <div className="time-label">Segundos</div>
+          </div>
+        </div>
+      </div>
 
     </div >
   );
