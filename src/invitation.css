@@ -137,12 +137,17 @@
 }
 
 /* SECCION 4 */
-
+.r{
+  background-color: blue;
+   width: 90%;
+}
 .cont-info {
   background-color: #f0f2f3;
   display: flex;
   justify-content: center; /* centra horizontal */
   align-items: center; /* centra vertical */
+  flex-direction: column;
+   /* d-flex justify-content-center flex-column align-items-center */
 }
 
 .text-where {
@@ -153,6 +158,9 @@
 
 .cont-date {
   padding-top: 20px;
+ 
+ 
+    
 }
 .cont-date h3 {
   text-align: center; /* centra horizontal el texto */
@@ -176,9 +184,20 @@
 
 .cont-text-ceremonia,
 .cont-text-celebration {
-  padding-top: 20px;
-}
+  padding-top: 40px;
+ 
+ 
 
+}
+.cont-text-celebration {
+ 
+  background-color: rgba(255, 255, 255, 0);
+ 
+
+}
+.cont-text-ceremonia{
+  background-color: rgba(255, 255, 255, 0);
+}
 .text-ceremonia,
 .text-celebration {
   font-size: 3.2rem;

@@ -74,11 +74,11 @@ function Content() {
         <img src="/sources/3.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
 
-           <div class="cont-titleContador">
+        <div class="cont-titleContador">
           <h2><span className="text-time">Faltan</span></h2>
-        </div>  
+        </div>
 
-         <div className="time-values d-flex justify-content-center">
+        <div className="time-values d-flex justify-content-center">
           <div className="time-box ">
             <span className="time-number">{tiempoRestante.dias}</span>
             <div className="time-label">Días</div>
@@ -95,34 +95,39 @@ function Content() {
             <span className="time-number">{tiempoRestante.segundos}</span>
             <div className="time-label">Segundos</div>
           </div>
-        </div>  
+        </div>
       </div>
 
-      <div className="cont-full cont-info seccion ">
-        <div >
-          <h2><span class="text-where">¿Cuándo y Dónde?</span></h2>
+      <div className="cont-full cont-info   seccion">
 
-          <div class="cont-date">
-            <h3>
-              <span class="text-date day">10</span>
-              <span class="text-date">12</span>
-              <span class="text-date">26</span>
-            </h3>
-          </div>
-          <div class="row ">
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6  cont-text-ceremonia">
-              <h3><span class="text-ceremonia">Ceremonia</span></h3>
-              <h4><span class="text-churp">Parroquia San José</span></h4>
-              <i class="bi bi-geo-alt ms-1 icon-color"></i>
+        <h2><span className="text-where d-flex justify-content-center  align-items-center">¿Cuándo y Dónde?</span></h2>
+
+
+        <div class="cont-date ">
+          <h3>
+            <span class="text-date day">10</span>
+            <span class="text-date">12</span>
+            <span class="text-date">26</span>
+          </h3>
+        </div>
+
+        {/* Contenedor de fila */}
+        <div className="container">
+          <div className="row g-3 mx-3">
+            <div className="col-12 col-sm-6 cont-text-ceremonia d-flex justify-content-center flex-column align-items-center">
+              <h3><span className="text-ceremonia">Ceremonia</span></h3>
+              <h4><span className="text-churp">Parroquia San José</span></h4>
+              <i className="bi bi-geo-alt ms-1 icon-color"></i>
             </div>
 
-            <div class="col-12 col-sm-6 col-md-6 col-lg-6 cont-text-celebration">
-              <h3><span class="text-celebration">Celebración</span></h3>
-              <h4><span class="text-churp">Hacienda Guadalupe</span></h4>
-              <i class="bi bi-geo-alt ms-1 icon-color"></i>
+            <div className="col-12 col-sm-6 cont-text-celebration d-flex justify-content-center flex-column align-items-center">
+              <h3><span className="text-celebration">Celebración</span></h3>
+              <h4><span className="text-churp">Hacienda Guadalupe</span></h4>
+              <i className="bi bi-geo-alt ms-1 icon-color"></i>
             </div>
           </div>
         </div>
+
 
 
 
@@ -135,17 +140,17 @@ function Content() {
         <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
 
-        <div class="d-flex flex-column align-items-center ">
+        <div class="d-flex flex-column align-items-center">
 
           <h2><span class="text-present">Sugerencias de regalo</span></h2>
           <div className="row">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
               <i class="bi bi-gift"></i>
               <h4><span class="text-present-place">Liverpool</span></h4>
               <i class="bi  bi-binoculars">Ver regalos</i>
 
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6 cont-text-celebration d-flex flex-column align-items-center">
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
               <i class="bi bi-gift"></i>
               <h4><span class="text-present-place">Amazon</span></h4>
               <i class="bi  bi-binoculars">Ver regalos</i>
@@ -157,22 +162,22 @@ function Content() {
 
 
       <div className="cont-full seccion  cont-confirmation">
-       <div class="d-flex flex-column align-items-center text-center confir"> 
+        <div class="d-flex flex-column align-items-center text-center confir">
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
           <p class="text-msj-confirmation"> Por favor danos tu respuesta antes del 4-12-2025. </p>
-            <div className="row g-3 mx-3">
+          <div className="row g-3 mx-3">
             <div className="col-8 col-sm-8 col-md-6 col-lg-6">
               <input id="search" type="search" className="form-control me-2" onChange={handleInput} value={inputValue}
                 placeholder="Agrega ID de invitado" />
             </div>
-           
-              <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start ">
+
+            <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start ">
 
               <i class="bi bi-search" onClick={handleClick}> Buscar</i>
             </div>
             {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
-          </div>  
+          </div>
         </div>
         <hr />
         <div className="row">
