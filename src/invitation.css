@@ -230,16 +230,25 @@
 }
 
 /* SECTION */
+
+.confir{
+
+  width: 100%;
+}
 .cont-confirmation {
   background-color: #f0f2f3;
   display: flex;
-  justify-content: center; /* centra horizontal */
+/*   justify-content: center;  */ 
   align-items: center; /* centra vertical */
+
+  
 }
 .text-confirmation {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
+
+   
 }
 .text-msj-confirmation {
   font-family: "Alumni Sans Pinstripe", sans-serif;

@@ -157,20 +157,22 @@ function Content() {
 
 
       <div className="cont-full seccion  cont-confirmation">
-        <div class="d-flex flex-column align-items-center ">
+       <div class="d-flex flex-column align-items-center text-center confir"> 
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
-          <p class="text-msj-confirmation  "> Por favor danos tu respuesta antes del 4-12-2025. </p>
-          <div className="row">
+          <p class="text-msj-confirmation"> Por favor danos tu respuesta antes del 4-12-2025. </p>
+            <div className="row g-3 mx-3">
             <div className="col-8 col-sm-8 col-md-6 col-lg-6">
-              <input id="search" type="search" className="form-control" onChange={handleInput} value={inputValue}
-                placeholder="Agrega tu ID de invitado" />
+              <input id="search" type="search" className="form-control me-2" onChange={handleInput} value={inputValue}
+                placeholder="Agrega ID de invitado" />
             </div>
-            <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-grid justify-content-center d-flex flex-column ">
+           
+              <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start ">
+
               <i class="bi bi-search" onClick={handleClick}> Buscar</i>
             </div>
             {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
-          </div>
+          </div>  
         </div>
         <hr />
         <div className="row">
