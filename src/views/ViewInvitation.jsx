@@ -74,11 +74,11 @@ function Content() {
         <img src="/sources/3.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
 
-        {/*  <div class="cont-titleContador">
+           <div class="cont-titleContador">
           <h2><span className="text-time">Faltan</span></h2>
-        </div> */}
+        </div>  
 
-        {/* <div className="time-values d-flex justify-content-center">
+         <div className="time-values d-flex justify-content-center">
           <div className="time-box ">
             <span className="time-number">{tiempoRestante.dias}</span>
             <div className="time-label">Días</div>
@@ -95,7 +95,7 @@ function Content() {
             <span className="time-number">{tiempoRestante.segundos}</span>
             <div className="time-label">Segundos</div>
           </div>
-        </div> */}
+        </div>  
       </div>
 
       <div className="cont-full cont-info seccion ">
