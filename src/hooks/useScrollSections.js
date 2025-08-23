@@ -4,7 +4,7 @@ import { animate, inView } from "framer-motion";
 export default function useScrollSections() {
   useEffect(() => {
     // Detecta cuando un <pre> entra en vista
-    inView(".scroll-section h2", (element) => {
+    inView(".seccion h2", (element) => {
       animate(
         element,
         { opacity: 1, x: [-100, 0] },

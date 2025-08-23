@@ -39,7 +39,6 @@
 }
 
 .couple-name {
-  
   top: 75%;
   text-shadow: 2px 2px 4px #000;
 }
@@ -57,15 +56,16 @@
 }
 
 /*SECCION 2 */
-.cont-sound{
-  background-color: #f0f2f3;
-}
-audio {
-  height: 30px;
-  width: 200px;
+.cont-sound {
+  background-color: #f1f3f4;
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center; /* centra vertical */
 }
 
 #audio {
+  height: 30px;
+  width: 200px;
   position: absolute; /* Para poder moverlo libremente */
   top: 35%; /* Se baja un 30% desde arriba */
   left: 50%; /* Punto central horizontal */
@@ -139,7 +139,6 @@ audio {
 /* SECCION 4 */
 
 .cont-info {
-  
   background-color: #f0f2f3;
   display: flex;
   justify-content: center; /* centra horizontal */
@@ -232,7 +231,6 @@ audio {
 
 /* SECTION */
 .cont-confirmation {
-  
   background-color: #f0f2f3;
   display: flex;
   justify-content: center; /* centra horizontal */

@@ -1,27 +1,34 @@
 import { useInvitation } from "../hooks/useInvitation";
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 import useScrollSections from "../hooks/useScrollSections";
-import { motion, useScroll } from "framer-motion";
+import { motion, useSpring, useScroll } from "framer-motion";
 
 export default function ViewInvitation() {
-
+  /* 
+  marca arrib */
   const { scrollYProgress } = useScroll()
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  })
   return (
     <>
       <motion.div
         id="scroll-indicator"
         style={{
-          scaleX: scrollYProgress,
+          scaleX,
           position: "fixed",
           top: 0,
           left: 0,
           right: 0,
           height: 10,
           originX: 0,
-          backgroundColor: "#000000ea",
+          backgroundColor: "#000000ff",
           zIndex: 9999 // aseguramos que esté encima de todo
         }}
       />
+
       <Content />
     </>
   )
@@ -40,7 +47,7 @@ function Content() {
   return (
     <div className="container-fluid sections">
 
-      <div className="cont-full scroll-section">
+      <div className="cont-full seccion">
         <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
         <div className="couple-name">
@@ -50,7 +57,7 @@ function Content() {
       </div>
 
 
-     {/*  <div className="cont-full scroll-section cont-sound">
+      <div className="cont-full cont-sound seccion">
         <audio id="audio" controls loop>
           <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
         </audio>
@@ -60,19 +67,18 @@ function Content() {
           <h5 className="mt-4"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
+      </div>
 
-      </div> */}
 
-
-      <div className="cont-full scroll-section">
+      <div className="cont-full seccion ">
         <img src="/sources/3.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
 
-        <div class="cont-titleContador">
+        {/*  <div class="cont-titleContador">
           <h2><span className="text-time">Faltan</span></h2>
-        </div>
+        </div> */}
 
-        <div className="time-values d-flex justify-content-center">
+        {/* <div className="time-values d-flex justify-content-center">
           <div className="time-box ">
             <span className="time-number">{tiempoRestante.dias}</span>
             <div className="time-label">Días</div>
@@ -89,10 +95,10 @@ function Content() {
             <span className="time-number">{tiempoRestante.segundos}</span>
             <div className="time-label">Segundos</div>
           </div>
-        </div>
+        </div> */}
       </div>
 
-      <div className="cont-full  cont-info scroll-section">
+      <div className="cont-full cont-info seccion ">
         <div >
           <h2><span class="text-where">¿Cuándo y Dónde?</span></h2>
 
@@ -125,7 +131,7 @@ function Content() {
 
       </div>
 
-      <div className="cont-full scroll-section cont-presents">
+      <div className="cont-full seccion cont-presents">
         <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
 
@@ -150,7 +156,7 @@ function Content() {
       </div>
 
 
-      <div className="cont-full scroll-section cont-confirmation">
+      <div className="cont-full seccion  cont-confirmation">
         <div class="d-flex flex-column align-items-center ">
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
           <p class="text-msj-confirmation  "> Por favor danos tu respuesta antes del 4-12-2025. </p>
