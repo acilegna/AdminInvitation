@@ -161,11 +161,11 @@ function Content() {
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
           <p class="text-msj-confirmation  "> Por favor danos tu respuesta antes del 4-12-2025. </p>
           <div className="row">
-            <div className="col-12 col-md-6">
+            <div className="col-8 col-sm-8 col-md-6 col-lg-6">
               <input id="search" type="search" className="form-control" onChange={handleInput} value={inputValue}
                 placeholder="Agrega tu ID de invitado" />
             </div>
-            <div className="col-12 col-md-6 d-grid justify-content-center d-flex flex-column ">
+            <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-grid justify-content-center d-flex flex-column ">
               <i class="bi bi-search" onClick={handleClick}> Buscar</i>
             </div>
             {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
