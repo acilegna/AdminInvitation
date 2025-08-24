@@ -137,17 +137,17 @@
 }
 
 /* SECCION 4 */
-.r{
+.r {
   background-color: blue;
-   width: 90%;
+  width: 90%;
 }
 .cont-info {
   background-color: #f0f2f3;
   display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center; /* centra vertical */
+  justify-content: center; 
+  align-items: center;  
   flex-direction: column;
-   /* d-flex justify-content-center flex-column align-items-center */
+  /* d-flex justify-content-center flex-column align-items-center */
 }
 
 .text-where {
@@ -158,9 +158,6 @@
 
 .cont-date {
   padding-top: 20px;
- 
- 
-    
 }
 .cont-date h3 {
   text-align: center; /* centra horizontal el texto */
@@ -185,17 +182,11 @@
 .cont-text-ceremonia,
 .cont-text-celebration {
   padding-top: 40px;
- 
- 
-
 }
 .cont-text-celebration {
- 
   background-color: rgba(255, 255, 255, 0);
- 
-
 }
-.cont-text-ceremonia{
+.cont-text-ceremonia {
   background-color: rgba(255, 255, 255, 0);
 }
 .text-ceremonia,
@@ -250,24 +241,19 @@
 
 /* SECTION */
 
-.confir{
-
+.confir {
   width: 100%;
 }
 .cont-confirmation {
   background-color: #f0f2f3;
   display: flex;
-/*   justify-content: center;  */ 
+  /*   justify-content: center;  */
   align-items: center; /* centra vertical */
-
-  
 }
 .text-confirmation {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
-
-   
 }
 .text-msj-confirmation {
   font-family: "Alumni Sans Pinstripe", sans-serif;
@@ -323,11 +309,11 @@
     font-size: 1.4rem;
   }
 
-   /* cinco */
+  /* cinco */
   .text-present {
     font-size: 3.2rem;
   }
-   
+
   .text-present-place {
     font-size: 1.5rem;
   }
@@ -336,14 +322,10 @@
   }
 
   /*   seis */
-.text-confirmation {
-  font-size: 3.2rem;
-   
-}
-.text-msj-confirmation {
-  
-  font-size: 1.4rem;
-}
-
-  
+  .text-confirmation {
+    font-size: 3.2rem;
+  }
+  .text-msj-confirmation {
+    font-size: 1.4rem;
+  }
 }
