@@ -141,10 +141,7 @@
    width: 100%;
     height: auto;
  }
-.r {
-  background-color: blue;
-  width: 90%;
-}
+ 
 .cont-info {
   background-color: #f0f2f3;
   display: flex;
