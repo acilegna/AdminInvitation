@@ -48,7 +48,7 @@ function Content() {
     <div className="container-fluid sections">
 
       <div className="cont-full seccion">
-        <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
+        <img src="/sources/m.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
         <div className="couple-name">
           <h2 className="title-name-text ">Ana &amp; Boris</h2>
@@ -98,21 +98,25 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full cont-info   seccion">
-
+      <div className="cont-full cont-info seccion">
         <h2><span className="text-where d-flex justify-content-center  align-items-center">¿Cuándo y Dónde?</span></h2>
+        <div class="row">
+          <div class="col-4">  <img src="/sources/izquierda.jpg" alt="Fondo" className="" /></div>
+          <div class="col-4"><img src="/sources/centro.jpg" alt="Fondo" className=" " /></div>
+          <div class="col-4"><img src="/sources/derecha.jpg" alt="Fondo" className=" " /></div>
+        </div>
+        {/*   <h2><span className="text-where d-flex justify-content-center  align-items-center">¿Cuándo y Dónde?</span></h2>
+         */}
 
-
-        <div class="cont-date ">
+        {/* <div class="cont-date ">
           <h3>
             <span class="text-date day">10</span>
             <span class="text-date">12</span>
             <span class="text-date">26</span>
           </h3>
-        </div>
+        </div> */}
 
-        {/* Contenedor de fila */}
-        <div className="container">
+        {/*  <div className="container">
           <div className="row g-3 mx-3">
             <div className="col-12 col-sm-6 cont-text-ceremonia d-flex justify-content-center flex-column align-items-center">
               <h3><span className="text-ceremonia">Ceremonia</span></h3>
@@ -126,15 +130,9 @@ function Content() {
               <i className="bi bi-geo-alt ms-1 icon-color"></i>
             </div>
           </div>
-        </div>
+        </div> */}
 
-
-
-
-
-
-
-      </div>
+      </div >
 
       <div className="cont-full seccion cont-presents">
         <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
