@@ -98,7 +98,7 @@ function Content() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="ccont-full cont-info seccion">
         <h2><span className="text-where  ">¿Cuándo y Dónde?</span></h2>
 
 
