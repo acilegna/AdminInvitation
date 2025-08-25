@@ -100,10 +100,18 @@ function Content() {
 
       <div className="cont-full cont-info seccion">
         <h2><span className="text-where d-flex justify-content-center  align-items-center">¿Cuándo y Dónde?</span></h2>
+
+
         <div class="row">
-          <div class="col-4">  <img src="/sources/izquierda.jpg" alt="Fondo" className="" /></div>
-          <div class="col-4"><img src="/sources/centro.jpg" alt="Fondo" className=" " /></div>
-          <div class="col-4"><img src="/sources/derecha.jpg" alt="Fondo" className=" " /></div>
+          <div class="col-4">
+            <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid ims"  />
+          </div>
+          <div class="col-4">
+            <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid ims"  />
+          </div>
+          <div class="col-4">
+            <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid ims"   />
+          </div>
         </div>
         {/*   <h2><span className="text-where d-flex justify-content-center  align-items-center">¿Cuándo y Dónde?</span></h2>
          */}

@@ -137,7 +137,10 @@
 }
 
 /* SECCION 4 */
- 
+ .ims{
+   width: 100%;
+    height: auto;
+ }
 .r {
   background-color: blue;
   width: 90%;
