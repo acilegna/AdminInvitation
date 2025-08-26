@@ -100,29 +100,16 @@ function Content() {
 
       <div className="cont-full seccion">
         <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
-
-        {/*   <div className="cont-info">
-          <div class="row s">
-            <div class="col-4">
-              <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
-            </div>
-            <div class="col-4" id="centrada">
-              <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid image" />
-            </div>
-            <div class="col-4">
-              <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid image" />
-            </div>
-          </div>
-        </div> */}
+ 
         {/* d-flex justify-content-space-between flex-column align-items-center */}
 
 
         <div class=" flex  ">
-          <div class="col">  <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
+          <div class="col u">  <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
           </div>
           <div class="col middle"> <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid image" />
           </div>
-          <div class="col"> <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid image" />
+          <div class="col u"> <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid image" />
           </div>
         </div>
 
