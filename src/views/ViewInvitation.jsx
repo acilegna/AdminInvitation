@@ -99,12 +99,11 @@ function Content() {
       </div>
 
       <div className="cont-full seccion">
-        <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
-
-        {/* d-flex justify-content-space-between flex-column align-items-center */}
 
 
-        <div class=" flex  ">
+        <h2 className="text-center text-where"> ¿Cuándo  Dónde? </h2>
+        {/*  <div class="d-flex justify-content-space-between flex "></div> */}
+        <div className="d-flex justify-content-center align-items-center flex">
           <div class="col">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
           </div>
           <div class="col"> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />

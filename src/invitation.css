@@ -138,24 +138,23 @@
 
 /* SECCION 4 */
 .flex {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
+  gap: 7px;
 
+  /* d-flex justify-content-space-between flex-column align-items-center */
+}
+/* 
 .col {
   flex: 1;
-/*   background: #861313; */
- /*  padding:  10px; */
-  text-align: center;
+   background: #861313;  
+    padding:  10px; 
+  text-align: center; 
  
-}
+} */
 
- 
-.row {
+/* .row {
   position: relative;
 }
- 
+  */
 
 .image {
   width: 100%;
