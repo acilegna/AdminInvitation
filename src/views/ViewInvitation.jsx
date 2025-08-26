@@ -101,8 +101,8 @@ function Content() {
       <div className="cont-full seccion">
         <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
 
-        <div className="cont-info">
-          <div class="row ">
+      {/*   <div className="cont-info">
+          <div class="row s">
             <div class="col-4">
               <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
             </div>
@@ -113,8 +113,13 @@ function Content() {
               <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid image" />
             </div>
           </div>
-        </div>
+        </div> */}
 
+<div class="flex">
+  <div class="col">Columna 1</div>
+  <div class="col middle">Columna 2</div>
+  <div class="col">Columna 3</div>
+</div>
 
 
       </div >
