@@ -137,18 +137,18 @@
 }
 
 /* SECCION 4 */
- .flex {
+.flex {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap:  0px;
 }
 
 .col {
   flex: 1;
-  background: #ddd;
-  padding: 20px;
+  background: #861313;
+  padding:  0px;
   text-align: center;
-  border-radius: 10px;
+  border-radius:  Opx;
 }
 
 .middle {
@@ -157,17 +157,16 @@
 .row {
   position: relative;
 }
-
+.middle .image  {
+  margin-top: 52px; /* baja la columna del medio */
+}
 #centrada {
- 
-  
-  
 }
 
 .image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+    object-fit: contain;  
 }
 .s {
   padding-right: 0 !important;
@@ -238,16 +237,6 @@
 .icon-color {
   font-size: 2rem;
   color: #222222;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .flex {
-    flex-direction: column;
-  }
-  .middle {
-    margin-top: 0;
-  }
 }
 
 /************************************SECTION 5 *************************************************************************/
