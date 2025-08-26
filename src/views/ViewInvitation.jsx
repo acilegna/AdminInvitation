@@ -98,47 +98,24 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full cont-info seccion">
-        <h2><span className="text-where  ">¿Cuándo y Dóndee?</span></h2>
+      <div className="cont-full seccion">
+        <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
 
-
-        <div class="row">
-          <div class="col-4">
-            <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid ims" />
-          </div>
-          <div class="col-4">
-            <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid ims" />
-          </div>
-          <div class="col-4">
-            <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid ims" />
+        <div className="cont-info">
+          <div class="row ">
+            <div class="col-4">
+              <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
+            </div>
+            <div class="col-4">
+              <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid image" />
+            </div>
+            <div class="col-4">
+              <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid image" />
+            </div>
           </div>
         </div>
-        {/*   <h2><span className="text-where d-flex justify-content-center  align-items-center">¿Cuándo y Dónde?</span></h2>
-         */}
 
-        {/* <div class="cont-date ">
-          <h3>
-            <span class="text-date day">10</span>
-            <span class="text-date">12</span>
-            <span class="text-date">26</span>
-          </h3>
-        </div> */}
 
-        {/*  <div className="container">
-          <div className="row g-3 mx-3">
-            <div className="col-12 col-sm-6 cont-text-ceremonia d-flex justify-content-center flex-column align-items-center">
-              <h3><span className="text-ceremonia">Ceremonia</span></h3>
-              <h4><span className="text-churp">Parroquia San José</span></h4>
-              <i className="bi bi-geo-alt ms-1 icon-color"></i>
-            </div>
-
-            <div className="col-12 col-sm-6 cont-text-celebration d-flex justify-content-center flex-column align-items-center">
-              <h3><span className="text-celebration">Celebración</span></h3>
-              <h4><span className="text-churp">Hacienda Guadalupe</span></h4>
-              <i className="bi bi-geo-alt ms-1 icon-color"></i>
-            </div>
-          </div>
-        </div> */}
 
       </div >
 

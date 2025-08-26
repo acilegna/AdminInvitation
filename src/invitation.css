@@ -137,17 +137,18 @@
 }
 
 /* SECCION 4 */
- .ims{
-   width: 100%;
-    height: auto;
- }
- 
+.image {
+  width: 100%;
+  height: auto;
+}
+
 .cont-info {
   background-color: #f0f2f3;
   display: flex;
-  justify-content: center; 
-  align-items: center;  
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+   
   /* d-flex justify-content-center flex-column align-items-center */
 }
 
@@ -155,7 +156,8 @@
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
- 
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .cont-date {
