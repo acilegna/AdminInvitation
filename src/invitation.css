@@ -137,9 +137,14 @@
 }
 
 /* SECCION 4 */
+#centrada {
+  margin-top: 110px; /* ajusta el valor según lo que necesites */
+}
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+
 }
 
 .cont-info {

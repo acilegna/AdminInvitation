@@ -106,7 +106,7 @@ function Content() {
             <div class="col-4">
               <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
             </div>
-            <div class="col-4">
+            <div class="col-4" id="centrada">
               <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid image" />
             </div>
             <div class="col-4">
