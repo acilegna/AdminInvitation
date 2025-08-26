@@ -105,11 +105,11 @@ function Content() {
 
 
         <div class=" flex  ">
-          <div class="col u">  <img src="/sources/izquierda.jpg" alt="Fondo" class="img-fluid image" />
+          <div class="col">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
           </div>
-          <div class="col middle"> <img src="/sources/centro.jpg" alt="Fondo" class="img-fluid image" />
+          <div class="col middle"> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
           </div>
-          <div class="col u"> <img src="/sources/derecha.jpg" alt="Fondo" class="img-fluid image" />
+          <div class="col"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
           </div>
         </div>
 
