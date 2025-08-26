@@ -140,7 +140,7 @@
 .flex {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 10px;
 }
 
 .col {
@@ -150,9 +150,7 @@
   text-align: center;
  
 }
-.middle {
-/*   margin-top: 40px;   */
-}
+
  
 .row {
   position: relative;

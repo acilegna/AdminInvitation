@@ -100,14 +100,14 @@ function Content() {
 
       <div className="cont-full seccion">
         <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
- 
+
         {/* d-flex justify-content-space-between flex-column align-items-center */}
 
 
         <div class=" flex  ">
           <div class="col">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
           </div>
-          <div class="col middle"> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
+          <div class="col"> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
           </div>
           <div class="col"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
           </div>
