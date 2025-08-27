@@ -142,21 +142,8 @@
 
   /* d-flex justify-content-space-between flex-column align-items-center */
 }
-/* 
-.col {
-  flex: 1;
-   background: #861313;  
-    padding:  10px; 
-  text-align: center; 
- 
-} */
 
-/* .row {
-  position: relative;
-}
-  */
-
-.image {
+/* .image {
   width: 100%;
   height: 100%;
   object-fit: contain;
@@ -168,10 +155,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
   /* d-flex justify-content-center flex-column align-items-center */
+/*} */
+.image{
+width: 250px;
+height: auto;
 }
-
 .text-where {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
@@ -180,6 +169,12 @@
   padding-top: 20px;
 }
 
+.cont-date {
+  padding-top: 20px;
+}
+.cont-date h3 {
+  text-align: center; /* centra horizontal el texto */
+}
 /************************************SECTION 5 *************************************************************************/
 .cont-presents {
   display: flex;

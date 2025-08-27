@@ -100,15 +100,24 @@ function Content() {
 
       <div className="cont-full seccion">
 
-
-        <h2 className="text-center text-where"> ¿Cuándo  Dónde? </h2>
-        {/*  <div class="d-flex justify-content-space-between flex "></div> */}
-        <div className="d-flex justify-content-center align-items-center flex">
-          <div class="col">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
+        <div class="d-flex flex-column align-items-center">
+          <h2 className="text-center text-where"> ¿Cuándo  Dónde? </h2>
+          {/* Contenedor para las imágenes */}
+          <div className="d-flex justify-content-center align-items-center flex">
+            <div class="col">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
+            </div>
+            <div class="col"> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
+            </div>
+            <div class="col"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
+            </div>
           </div>
-          <div class="col"> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
-          </div>
-          <div class="col"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
+          {/*      Contenedor para la fecha */}
+          <div class="cont-date">
+            <h3>
+              <span class="text-date day">10</span>
+              <span class="text-date">12</span>
+              <span class="text-date">26</span>
+            </h3>
           </div>
         </div>
 
