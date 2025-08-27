@@ -23,7 +23,7 @@ export default function useScrollSections() {
         element,
         { opacity: 1, y: [-100, 0] }, // 👈 de arriba hacia abajo
         {
-          duration: 0.9,
+          duration: 3,
           easing: [0.17, 0.55, 0.55, 1],
         }
       );
@@ -47,7 +47,7 @@ export default function useScrollSections() {
         animate(
           element,
           { opacity: 1, y: 80 }, //   vuelve hacia abajo (simétrico)
-          { duration: 0.9 }
+          { duration: 2 }
         );
     });
   }, []);

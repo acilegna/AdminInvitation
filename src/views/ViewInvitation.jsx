@@ -1,7 +1,7 @@
 import { useInvitation } from "../hooks/useInvitation";
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 import useScrollSections from "../hooks/useScrollSections";
- 
+
 import { motion, useSpring, useScroll } from "framer-motion";
 
 export default function ViewInvitation() {
@@ -45,7 +45,7 @@ function Content() {
   const ninos = invitados.filter((inv) => inv.categoria.toLowerCase() === "niño");
   const tiempoRestante = useInvitation();
   const animate = useScrollSections();
- 
+
   return (
     <div className="container-fluid sections">
 
@@ -100,10 +100,10 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full seccion">
+      <div className="cont-full seccion d-flex justify-content-center align-items-center">
 
         <div class="d-flex flex-column align-items-center">
-          <h2 className="text-center text-where"> ¿Cuándo  Dónde? </h2>
+          <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
             <div class="col img ">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
