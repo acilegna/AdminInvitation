@@ -165,8 +165,7 @@ height: auto;
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
-  padding-bottom: 20px;
-  padding-top: 20px;
+   
 }
 
 .cont-date {
@@ -176,7 +175,7 @@ height: auto;
   text-align: center; /* centra horizontal el texto */
 }
 /************************************SECTION 5 *************************************************************************/
-.cont-presents {
+.cont-centrado {
   display: flex;
   justify-content: center; /* centra horizontal */
   align-items: center; /* centra vertical */

@@ -100,7 +100,7 @@ function Content() {
         </div>
       </div>
 
-      <div className="cont-full seccion d-flex justify-content-center align-items-center">
+      <div className="cont-full seccion cont-centrado">
 
         <div class="d-flex flex-column align-items-center">
           <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
@@ -126,7 +126,7 @@ function Content() {
 
       </div >
 
-      <div className="cont-full seccion cont-presents">
+      <div className="cont-full seccion cont-centrado">
         <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
         <div className="fondo-imagen imagen-full"></div>
 
