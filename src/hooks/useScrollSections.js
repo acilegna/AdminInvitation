@@ -21,18 +21,36 @@ export default function useScrollSections() {
     inView(".seccion .img", (element) => {
       animate(
         element,
-        { opacity: 1, y: [-100, 0] }, // 👈 de arriba hacia abajo
+        { opacity: 1, y: [-100, 0] }, //   de arriba hacia abajo
         {
           duration: 3,
           easing: [0.17, 0.55, 0.55, 1],
         }
       );
 
-      // cleanup: cuando sale de vista
+       
       return () => animate(element, { opacity: 0, y: -100 });
     });
 
-    inView(".seccion .centro", (element) => {
+     inView(".seccion .centro", (element) => {
+    // Animar el "recorte" de arriba hacia abajo
+    animate(
+      element,
+      { 
+        clipPath: ["inset(0 0 100% 0)", "inset(0 0 0% 0)"], // 👈 se revela de arriba a abajo
+        opacity: [0, 1] 
+      },
+      {
+        duration: 2,
+        easing: [0.17, 0.55, 0.55, 1],
+      }
+    );
+
+    // cleanup: si quieres ocultarla al salir
+    return () => animate(element, { clipPath: "inset(0 0 100% 0)", opacity: 0 });
+  });
+
+    inView(".seccion .centros", (element) => {
       animate(
         element,
         { opacity: 1, y: [80, 0] }, //   de arriba hacia abajo

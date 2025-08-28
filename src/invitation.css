@@ -160,21 +160,19 @@ margin-left: 30px;
 }
 
 .inicial {
-  font-family: "Miss Fajardose", cursive;
-  font-weight: 400;
-  font-size: 3.2em;
+  /*  font-family: "Miss Fajardose", cursive; */
+  font-size: 4em;
+  font-family: "Italianno", cursive;
 }
 
 .novia {
   position: absolute;
   top: 20px; /* mueve hacia abajo */
-  left: 25px; /* mueve hacia la derecha */
-   
+  left: 5px; /* mueve hacia la derecha */
 }
 
 .flex {
   gap: 7px;
-
   /* d-flex justify-content-space-between flex-column align-items-center */
 }
 
@@ -204,14 +202,17 @@ margin-left: 30px;
 .text-date {
   justify-content: center; /* centra horizontal */
   margin: 0 8px;
-  font-weight: bold;
-  font-family: "Alumni Sans Pinstripe";
-  font-size: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
   color: rgb(31, 31, 31);
+
+  font-family: "Sirivennela", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .cont-date {
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 .cont-date h3 {
   text-align: center; /* centra horizontal el texto */

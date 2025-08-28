@@ -105,8 +105,8 @@ function Content() {
         <div class="d-flex flex-column align-items-center">
           {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
           <div className="iniciales-container">
-            <h3 className="inicial">B</h3>
-            <h4 className="inicial novia">A</h4>
+            <h3 className="inicial img ">B</h3>
+            <h4 className="inicial novia centros">A</h4>
           </div>
 
 
@@ -119,7 +119,9 @@ function Content() {
               <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
             </div>
             <div class="col img"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
+            
             </div>
+            
           </div>
           {/*      Contenedor para la fecha */}
           <div class="cont-date">
