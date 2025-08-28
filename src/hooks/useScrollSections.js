@@ -18,7 +18,7 @@ export default function useScrollSections() {
       return () => animate(element, { opacity: 0, x: -100 });
     });
 
-    inView(".seccion .img", (element) => {
+    inView(".seccion .lados", (element) => {
       animate(
         element,
         { opacity: 1, y: [-100, 0] }, //   de arriba hacia abajo

@@ -54,7 +54,7 @@ function Content() {
         <div className="fondo-imagen imagen-full"></div>
         <div className="couple-name">
           <h2 className="title-name-text ">Ana &amp; Boris</h2>
-          <h4 className="title-merried-text">Unimos nuestras vidas</h4>
+          <h4 className="title-merried-text centros">Unimos nuestras vidas</h4>
         </div>
       </div>
 
@@ -66,7 +66,7 @@ function Content() {
 
         <div className="cont-msj">
           <h2 ><span class="text-save-date">Estás Invitado!</span></h2>
-          <h5 className="mt-4"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
+          <h5 className="mt-4 centros"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
       </div>
@@ -112,20 +112,20 @@ function Content() {
 
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
-            <div class="col img ">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col lados ">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
             </div>
             <div class="col centro ">
 
               <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
             </div>
-            <div class="col img"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col lados"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
             
             </div>
             
           </div>
           {/*      Contenedor para la fecha */}
           <div class="cont-date">
-            <h3 class="text-date ">
+            <h3 class="text-date centros">
               10.12.2026
             </h3>
           </div>
@@ -135,8 +135,7 @@ function Content() {
       </div >
 
       <div className="cont-full seccion cont-centrado">
-        <img src="/sources/1.jpg" alt="Fondo" className="imagen-full" />
-        <div className="fondo-imagen imagen-full"></div>
+         <div className="fondo-imagen imagen-full"></div>
 
         <div class="d-flex flex-column align-items-center">
 
@@ -162,7 +161,7 @@ function Content() {
       <div className="cont-full seccion  cont-confirmation">
         <div class="d-flex flex-column align-items-center text-center confir">
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
-          <p class="text-msj-confirmation"> Por favor danos tu respuesta antes del 4-12-2025. </p>
+          <p class="text-msj-confirmation centros"> Por favor danos tu respuesta antes del 4-12-2025. </p>
           <div className="row g-3 mx-3">
             <div className="col-8 col-sm-8 col-md-6 col-lg-6">
               <input id="search" type="search" className="form-control me-2" onChange={handleInput} value={inputValue}
