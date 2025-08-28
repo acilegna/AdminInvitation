@@ -137,6 +137,41 @@
 }
 
 /* SECCION 4 */
+/* .iniciales{
+   font-family: "Miss Fajardose", cursive;
+  font-weight: 400;
+  font-size: 3em;
+  font-style: normal;
+  margin: 0; 
+  padding: 0;  
+  display: inline-block;   
+} */
+
+/* #novia{
+margin-left: 30px;
+ 
+}
+  */
+
+.iniciales-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.inicial {
+  font-family: "Miss Fajardose", cursive;
+  font-weight: 400;
+  font-size: 3.2em;
+}
+
+.novia {
+  position: absolute;
+  top: 20px; /* mueve hacia abajo */
+  left: 25px; /* mueve hacia la derecha */
+   
+}
+
 .flex {
   gap: 7px;
 
@@ -157,15 +192,22 @@
   flex-direction: column;
   /* d-flex justify-content-center flex-column align-items-center */
 /*} */
-.image{
-width: 200px;
-height: auto;
+.image {
+  width: 200px;
+  height: auto;
 }
 .text-where {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
-   
+}
+.text-date {
+  justify-content: center; /* centra horizontal */
+  margin: 0 8px;
+  font-weight: bold;
+  font-family: "Alumni Sans Pinstripe";
+  font-size: 2rem;
+  color: rgb(31, 31, 31);
 }
 
 .cont-date {

@@ -103,22 +103,28 @@ function Content() {
       <div className="cont-full seccion cont-centrado">
 
         <div class="d-flex flex-column align-items-center">
-          <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2>
+          {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
+          <div className="iniciales-container">
+            <h3 className="inicial">B</h3>
+            <h4 className="inicial novia">A</h4>
+          </div>
+
+
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
             <div class="col img ">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
             </div>
-            <div class="col centro "> <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col centro ">
+
+              <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
             </div>
             <div class="col img"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
             </div>
           </div>
           {/*      Contenedor para la fecha */}
           <div class="cont-date">
-            <h3>
-              <span class="text-date day">10</span>
-              <span class="text-date">12</span>
-              <span class="text-date">26</span>
+            <h3 class="text-date ">
+              10.12.2026
             </h3>
           </div>
         </div>
