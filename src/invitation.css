@@ -18,17 +18,15 @@
 .imagenes-container {
   display: flex;
   justify-content: center; /* centra en horizontal */
-  align-items: center;     /* centra en vertical */
-  height: 100vh;           /* ocupa toda la altura de la pantalla */
+  align-items: center; /* centra en vertical */
+  height: 100vh; /* ocupa toda la altura de la pantalla */
 }
 
-.imagenes{
-   width: 65%;
+.imagenes {
+  width: 85%;
   height: 80%;
-  
-   object-fit: cover;
-   
- 
+
+  object-fit: cover;
 }
 .imagen-full {
   position: absolute;
