@@ -116,8 +116,10 @@
 }
 
 .text-time {
-  font-size: 4.2rem;
-  font-family: "Italianno", cursive;
+  font-size: 2.5rem;
+
+  font-family: "Suranna", serif;
+  letter-spacing: 7px;
   line-height: 60px;
   color: rgb(255, 255, 255);
   text-align: center;
@@ -128,12 +130,13 @@
 }
 
 .time-box {
-  background-color: rgba(0, 0, 0, 0.589);
+  background-color: rgba(0, 0, 0, 0.404);
   color: white;
-  padding: 3px;
-  margin: 4px;
+  padding: 7px;
+  margin: 7px;
   border-radius: 10px;
   text-align: center;
+  font-family: "Suranna", serif;
 }
 
 .time-label {

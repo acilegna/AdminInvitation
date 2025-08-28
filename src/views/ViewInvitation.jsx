@@ -51,7 +51,7 @@ function Content() {
 
       <div className="cont-full seccion">
 
-        <div className="imagenes-container updown">
+        <div className="imagenes-container downup">
           <img src="/sources/11.jpg" alt="Fondo" className="imagenes" />
         </div>
 
@@ -75,33 +75,7 @@ function Content() {
       </div>
 
 
-      <div className="cont-full seccion ">
-        <img src="/sources/3.jpg" alt="Fondo" className="imagen-full" />
-        <div className="fondo-imagen imagen-full"></div>
-
-        <div class="cont-titleContador">
-          <h2><span className="text-time">Faltan</span></h2>
-        </div>
-
-        <div className="time-values d-flex justify-content-center">
-          <div className="time-box ">
-            <span className="time-number">{tiempoRestante.dias}</span>
-            <div className="time-label">Días</div>
-          </div>
-          <div className="time-box">
-            <span className="time-number">{tiempoRestante.horas}</span>
-            <div className="time-label">Horas</div>
-          </div>
-          <div className="time-box">
-            <span className="time-number">{tiempoRestante.minutos}</span>
-            <div className="time-label">Minutos</div>
-          </div>
-          <div className="time-box">
-            <span className="time-number">{tiempoRestante.segundos}</span>
-            <div className="time-label">Segundos</div>
-          </div>
-        </div>
-      </div>
+     
 
       <div className="cont-full seccion cont-centrado">
 
@@ -136,14 +110,40 @@ function Content() {
 
 
       </div >
+ <div className="cont-full seccion ">
+        <img src="/sources/11.jpg" alt="Fondo" className="imagen-full" />
+        <div className="fondo-imagen imagen-full"></div>
 
+        <div class="cont-titleContador">
+          <h2><span className="text-time"> SAVE THE DATE</span></h2>
+        </div>
+
+        <div className="time-values d-flex justify-content-center ">
+          <div className="time-box ">
+            <span className="time-number">{tiempoRestante.dias}</span>
+            <div className="time-label">Días</div>
+          </div>
+          <div className="time-box">
+            <span className="time-number">{tiempoRestante.horas}</span>
+            <div className="time-label">Horas</div>
+          </div>
+          <div className="time-box">
+            <span className="time-number">{tiempoRestante.minutos}</span>
+            <div className="time-label">Minutos</div>
+          </div>
+          <div className="time-box">
+            <span className="time-number">{tiempoRestante.segundos}</span>
+            <div className="time-label">Segundos</div>
+          </div>
+        </div>
+      </div>
       <div className="cont-full seccion cont-centrado">
         <div className="fondo-imagen imagen-full"></div>
 
         <div class="d-flex flex-column align-items-center">
 
           <h2><span class="text-present">Sugerencias de regalo</span></h2>
-          <div className="row">
+          <div className="row downup">
             <div class="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
               <i class="bi bi-gift"></i>
               <h4><span class="text-present-place">Liverpool</span></h4>
