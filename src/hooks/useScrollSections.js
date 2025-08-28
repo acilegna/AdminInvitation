@@ -3,7 +3,7 @@ import { animate, inView } from "framer-motion";
 
 export default function useScrollSections() {
   useEffect(() => {
-    // Detecta cuando un <pre> entra en vista
+    // animacion pra titulo
     inView(".seccion h2", (element) => {
       animate(
         element,
@@ -32,8 +32,9 @@ export default function useScrollSections() {
       return () => animate(element, { opacity: 0, y: -100 });
     });
 
-     inView(".seccion .centro", (element) => {
-    // Animar el "recorte" de arriba hacia abajo
+    //reveal de arriba hacia abajo
+     inView(".seccion  .updown", (element) => {
+    
     animate(
       element,
       { 
@@ -50,7 +51,7 @@ export default function useScrollSections() {
     return () => animate(element, { clipPath: "inset(0 0 100% 0)", opacity: 0 });
   });
 
-    inView(".seccion .centros", (element) => {
+    inView(".seccion .downup", (element) => {
       animate(
         element,
         { opacity: 1, y: [80, 0] }, //   de arriba hacia abajo

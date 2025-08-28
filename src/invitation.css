@@ -1,4 +1,4 @@
-.sections {
+.section-invi {
   --bs-gutter-x: 0rem;
 }
 
@@ -15,7 +15,21 @@
   position: relative;
   z-index: 1;
 }
+.imagenes-container {
+  display: flex;
+  justify-content: center; /* centra en horizontal */
+  align-items: center;     /* centra en vertical */
+  height: 100vh;           /* ocupa toda la altura de la pantalla */
+}
 
+.imagenes{
+   width: 65%;
+  height: 80%;
+  
+ 
+   
+ 
+}
 .imagen-full {
   position: absolute;
   top: 0;
