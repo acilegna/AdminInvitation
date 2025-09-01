@@ -61,7 +61,6 @@ function Content() {
         </div>
       </div>
 
-
       <div className="cont-full cont-sound seccion">
         <audio id="audio" controls loop>
           <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
@@ -73,9 +72,6 @@ function Content() {
         </div>
 
       </div>
-
-
-     
 
       <div className="cont-full seccion cont-centrado">
 
@@ -110,8 +106,9 @@ function Content() {
 
 
       </div >
- <div className="cont-full seccion ">
-        <img src="/sources/11.jpg" alt="Fondo" className="imagen-full" />
+
+      <div className="cont-full seccion ">
+        <img src="/sources/11.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
         <div class="cont-titleContador">
@@ -119,7 +116,7 @@ function Content() {
         </div>
 
         <div className="time-values d-flex justify-content-center ">
-          <div className="time-box ">
+          <div className="time-box">
             <span className="time-number">{tiempoRestante.dias}</span>
             <div className="time-label">Días</div>
           </div>
@@ -137,6 +134,7 @@ function Content() {
           </div>
         </div>
       </div>
+
       <div className="cont-full seccion cont-centrado">
         <div className="fondo-imagen imagen-full"></div>
 
@@ -161,17 +159,55 @@ function Content() {
       </div>
 
 
+
+      <div className="cont-full seccion cont-centrado" id="itinerario">
+
+
+        <div class="d-flex flex-column align-items-center">
+
+          <h2 className="text-center"><span class="title-itinerario">Itinerario</span></h2>
+
+          <div class="">
+            <div className="row ">
+              <div className="col-6 icons-itinerario izqicon"><img src="/sources/iglesia.png" alt="Fondo" className="img-itinerario" /></div>
+              <div className="col-6 text-itinerario der"><span>Celebracion Religiosa</span> <span className="span-hora"> 9:20 PM</span></div>
+            </div>
+
+            <div className="row">
+              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/brindis.png" alt="Fondo" className="img-itinerario3" /></div>
+              <div className="col-6 text-itinerario der"><span className=" ">Recepcion</span> <span className="span-hora"> 9:20 PM</span></div>
+            </div>
+            <div className="row">
+              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/brides.png" alt="Fondo" className="img-itinerario" /></div>
+              <div className="col-6 text-itinerario der"><span className=" ">Entrada Esposos</span><span className="span-hora"> 9:20 PM</span></div>
+            </div>
+            <div className="row">
+              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/cena.png" alt="Fondo" className="img-itinerario2" /></div>
+              <div className="col-6 text-itinerario der"><span className=" ">Cena</span> <span className="span-hora"> 9:20 PM</span></div>
+            </div>
+            <div className="row">
+              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/bals.png" alt="Fondo" className="img-itinerario3" /></div>
+              <div className="col-6 text-itinerario der"><span className=" ">Vals Esposos</span> <span className="span-hora"> 9:20 PM</span></div>
+            </div>
+            <div className="row">
+              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/damcin.png" alt="Fondo" className="img-itinerario" /></div>
+              <div className="col-6 text-itinerario der"><span className=" "> A bailar</span> <span className="span-hora"> 9:20 PM</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="cont-full seccion  cont-confirmation">
         <div class="d-flex flex-column align-items-center text-center confir">
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
           <p class="text-msj-confirmation downup"> Por favor danos tu respuesta antes del 4-12-2025. </p>
-          <div className="row g-3 mx-3">
-            <div className="col-8 col-sm-8 col-md-6 col-lg-6">
+          <div className="row g-3 mx-3 ">
+            <div className="col-8 col-sm-8 col-md-6 col-lg-6  izq">
               <input id="search" type="search" className="form-control me-2" onChange={handleInput} value={inputValue}
                 placeholder="Agrega ID de invitado" />
             </div>
 
-            <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start ">
+            <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start   der">
 
               <i class="bi bi-search" onClick={handleClick}> Buscar</i>
             </div>
@@ -267,6 +303,7 @@ function Content() {
           )}
         </div>
       </div>
+      <footer><h3 className="text-center">Entheos</h3></footer>
     </div >
   );
 
