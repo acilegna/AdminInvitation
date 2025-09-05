@@ -50,17 +50,15 @@ function Content() {
     <div className="container-fluid section-invi">
 
       <div className="cont-full seccion">
-
         <div className="imagenes-container downup">
           <img src="/sources/11.jpg" alt="Fondo" className="imagenes" />
         </div>
-
         <div className="couple-name">
           <h2 className="title-name-text ">Ana &amp; Boris</h2>
-          <h4 className="title-merried-text downup">Unimos nuestras vidas</h4>
+          <h4 className="title-merried-text der">Unimos nuestras vidas</h4>
         </div>
       </div>
-
+      {/* FIN SECCION 1 */}
       <div className="cont-full cont-sound seccion">
         <audio id="audio" controls loop>
           <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
@@ -68,11 +66,11 @@ function Content() {
 
         <div className="cont-msj">
           <h2 ><span class="text-save-date">Estás Invitado!</span></h2>
-          <h5 className="mt-4 downup"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
+          <h5 className="mt-4 updown"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
       </div>
-
+      {/* FIN SECCION 2 */}
       <div className="cont-full seccion cont-centrado">
 
         <div class="d-flex flex-column align-items-center">
@@ -98,7 +96,7 @@ function Content() {
           </div>
           {/*      Contenedor para la fecha */}
           <div class="cont-date">
-            <h3 class="text-date downup">
+            <h3 class="text-date updown">
               10.12.2026
             </h3>
           </div>
@@ -106,7 +104,7 @@ function Content() {
 
 
       </div >
-
+      {/* FIN SECCION 3*/}
       <div className="cont-full seccion ">
         <img src="/sources/11.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
@@ -115,27 +113,29 @@ function Content() {
           <h2><span className="text-time"> SAVE THE DATE</span></h2>
         </div>
 
-        <div className="time-values d-flex justify-content-center ">
-          <div className="time-box">
+        <div className="time-values d-flex justify-content-center  ">
+          <div className="time-box updown">
             <span className="time-number">{tiempoRestante.dias}</span>
             <div className="time-label">Días</div>
           </div>
-          <div className="time-box">
+          <div className="time-box  updown">
             <span className="time-number">{tiempoRestante.horas}</span>
             <div className="time-label">Horas</div>
           </div>
-          <div className="time-box">
+          <div className="time-box  updown">
             <span className="time-number">{tiempoRestante.minutos}</span>
             <div className="time-label">Minutos</div>
           </div>
-          <div className="time-box">
+          <div className="time-box  updown">
             <span className="time-number">{tiempoRestante.segundos}</span>
             <div className="time-label">Segundos</div>
           </div>
         </div>
       </div>
+      {/* FIN SECCION 4*/}
 
       <div className="cont-full seccion cont-centrado">
+         <img src="/sources/11.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
         <div class="d-flex flex-column align-items-center">
@@ -157,7 +157,7 @@ function Content() {
 
         </div>
       </div>
-
+      {/* FIN SECCION 5*/}
 
 
       <div className="cont-full seccion cont-centrado" id="itinerario">
@@ -196,7 +196,7 @@ function Content() {
           </div>
         </div>
       </div>
-
+      {/* FIN SECCION 6*/}
       <div className="cont-full seccion  cont-confirmation">
         <div class="d-flex flex-column align-items-center text-center confir">
           <h2 class="text-confirmation"> Confirma tu asistencia </h2>
@@ -303,7 +303,11 @@ function Content() {
           )}
         </div>
       </div>
-      <footer><h3 className="text-center">Entheos</h3></footer>
+      {/* FIN SECCION 7*/}
+      <footer>
+        <p className="text-center">&copy; 2025 Invitacion B & A | Powered by Entheos</p>
+      </footer>
+
     </div >
   );
 

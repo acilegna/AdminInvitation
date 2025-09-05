@@ -59,7 +59,7 @@ export default function useScrollSections() {
         { opacity: 1, x: [-100, 0] },
         {
           duration: 0.9,
-          
+
           easing: [0.17, 0.55, 0.55, 1],
         }
       );
@@ -88,19 +88,21 @@ export default function useScrollSections() {
         { opacity: 1, y: [-100, 0] }, //   de arriba hacia abajo
         {
           duration: 3,
-          easing: [0.17, 0.55, 0.55, 1],
+         // easing: [0.75],
+          easing: "linear"
         }
       );
 
-      return () => animate(element, { opacity: 0, y: -100 });
+      return () => animate(element, { opacity: 0, y: -100 }, { duration: 0.5 }, { threshold: 0.5 }); 
+      
     });
 
     //reveal de arriba hacia abajo
-    inView(".seccion  .updown", (element) => {
+    inView(".seccion .updown", (element) => {
       animate(
         element,
         {
-          clipPath: ["inset(0 0 100% 0)", "inset(0 0 0% 0)"], // 👈 se revela de arriba a abajo
+          clipPath: ["inset(0 0 100% 0)", "inset(0 0 0% 0)"],
           opacity: [0, 1],
         },
         {
@@ -109,10 +111,14 @@ export default function useScrollSections() {
         }
       );
 
-      // cleanup: si quieres ocultarla al salir
+      // Reset opcional, pero más suave (sin parpadeo)
       return () =>
-        animate(element, { clipPath: "inset(0 0 100% 0)", opacity: 0 });
-    });
+        animate(
+          element,
+          { clipPath: "inset(0 0 100% 0)", opacity: 0 },
+          { duration: 0.5 } //  
+        );
+    },  { threshold: 0.5 }); //  se ejecuta al 50% de visibilidad);
 
     inView(".seccion .downup", (element) => {
       animate(

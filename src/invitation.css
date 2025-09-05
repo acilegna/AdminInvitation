@@ -188,7 +188,7 @@ margin-left: 30px;
 }
 
 .flex {
-  gap: 5px;
+  gap: 1px;
   /* d-flex justify-content-space-between flex-column align-items-center */
 }
 
@@ -255,7 +255,8 @@ margin-left: 30px;
 .text-present {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
-  color: rgb(24, 24, 24);
+ 
+   color: #f0f2f3;
   letter-spacing: 3px;
 }
 .text-msj-present {
@@ -377,7 +378,7 @@ margin-left: 30px;
   /* cinco */
   .text-present {
     font-size: 3.2rem;
-  }
+   
 
   .text-present-place {
     font-size: 1.5rem;

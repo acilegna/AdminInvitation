@@ -34,9 +34,10 @@ const getData = async (url) => {
     if (err.response) {
       return { success: false, error: "Error en la respuesta" };
     } else if (err.request) {
-      return { success: false, error: "No se recibió respuesta  del servidor" };
-    } else {
-      return { success: false, error: "Error al configurar la solicitud" };
+      return {
+        success: false,
+        error: "Error del servidor, contacta al administrador",
+      };
     }
   }
 };
@@ -92,7 +93,8 @@ export const searchByFam = async (id) => {
     return res.data;
   } catch (error) {
     if (error.response) {
-      return { success: false, error: error.response.data };
+      console.log(error.response.data);
+      //return { success: false, error: error.response.data };
     }
   }
 };
@@ -114,7 +116,6 @@ export const updateInvitados = async (id, data) => {
 };
 
 export const updateStatus = async (id, data) => {
-  
   try {
     const res = await axios.put(`http://127.0.0.1:8000/api/update/${id}`, data);
 
