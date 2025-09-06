@@ -102,7 +102,8 @@ export default function useScrollSections() {
       animate(
         element,
         {
-          clipPath: ["inset(0 0 100% 0)", "inset(0 0 0% 0)"],
+          transform: ["translateY(100%)", "translateY(0)"], 
+         
           opacity: [0, 1],
         },
         {

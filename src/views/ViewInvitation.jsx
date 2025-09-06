@@ -83,12 +83,12 @@ function Content() {
 
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
-            <div class="col lados">  <img src="/sources/z1.jpg" alt="Fondo" class="img-fluid image"/>
+            <div class="col lados">  <img src="/sources/z1.jpg" alt="Fondo" class="image"/>
             </div>
             <div class="col updown">
-              <img src="/sources/z2.jpg" alt="Fondo" class="img-fluid image"/>
+              <img src="/sources/z2.jpg" alt="Fondo" class="image"/>
             </div>
-            <div class="col lados"> <img src="/sources/z3.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col lados"> <img src="/sources/z3.jpg" alt="Fondo" class="image" />
 
             </div>
 
