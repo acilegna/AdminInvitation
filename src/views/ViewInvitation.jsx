@@ -51,7 +51,7 @@ function Content() {
 
       <div className="cont-full seccion">
         <div className="imagenes-container downup">
-          <img src="/sources/11.jpg" alt="Fondo" className="imagenes" />
+          <img src="/sources/pareja1.jpg" alt="Fondo" className="imagenes" />
         </div>
         <div className="couple-name">
           <h2 className="title-name-text ">Ana &amp; Boris</h2>
@@ -83,13 +83,12 @@ function Content() {
 
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
-            <div class="col lados ">  <img src="/sources/1.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col lados">  <img src="/sources/z1.jpg" alt="Fondo" class="img-fluid image"/>
             </div>
-            <div class="col updown ">
-
-              <img src="/sources/2.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col updown">
+              <img src="/sources/z2.jpg" alt="Fondo" class="img-fluid image"/>
             </div>
-            <div class="col lados"> <img src="/sources/3.jpg" alt="Fondo" class="img-fluid image" />
+            <div class="col lados"> <img src="/sources/z3.jpg" alt="Fondo" class="img-fluid image" />
 
             </div>
 
@@ -135,7 +134,7 @@ function Content() {
       {/* FIN SECCION 4*/}
 
       <div className="cont-full seccion cont-centrado">
-         <img src="/sources/11.jpg" alt="Fondo" className="imagen-full scale" />
+         <img src="/sources/pareja.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
         <div class="d-flex flex-column align-items-center">
@@ -305,7 +304,7 @@ function Content() {
       </div>
       {/* FIN SECCION 7*/}
       <footer>
-        <p className="text-center">&copy; 2025 Invitacion B & A | Powered by Entheos</p>
+        <p className="text-center">&copy; 2025 Invitacion B&A | Powered by Entheos</p>
       </footer>
 
     </div >
