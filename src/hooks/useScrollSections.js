@@ -88,38 +88,48 @@ export default function useScrollSections() {
         { opacity: 1, y: [-100, 0] }, //   de arriba hacia abajo
         {
           duration: 3,
-         // easing: [0.75],
-          easing: "linear"
+          // easing: [0.75],
+          easing: "linear",
         }
       );
 
-      return () => animate(element, { opacity: 0, y: -100 }, { duration: 0.5 }, { threshold: 0.5 }); 
-      
-    });
-
-    //reveal de arriba hacia abajo
-    inView(".seccion .updown", (element) => {
-      animate(
-        element,
-        {
-          transform: ["translateY(100%)", "translateY(0)"], 
-         
-          opacity: [0, 1],
-        },
-        {
-          duration: 2,
-          easing: [0.17, 0.55, 0.55, 1],
-        }
-      );
-
-      // Reset opcional, pero más suave (sin parpadeo)
       return () =>
         animate(
           element,
-          { clipPath: "inset(0 0 100% 0)", opacity: 0 },
-          { duration: 0.5 } //  
+          { opacity: 0, y: -100 },
+          { duration: 0.5 },
+          { threshold: 0.5 }
         );
-    },  { threshold: 0.5 }); //  se ejecuta al 50% de visibilidad);
+    });
+
+    //reveal de arriba hacia abajo
+ inView(".seccion .updown", (element) => {
+  // ANIMACIÓN DE ENTRADA
+  animate(
+    element,
+    {
+      transform: ["translateY(100%)", "translateY(0)"], // de abajo hacia arriba
+      opacity: [0, 1],
+    },
+    {
+      duration: 2,
+      easing: [0.17, 0.55, 0.55, 1],
+    }
+  );
+
+  // RESET CUANDO SALE DE VISTA
+  return () =>
+    animate(
+      element,
+      {
+        transform: "translateY(100%)", // vuelve a bajar
+        opacity: 0,
+      },
+      {
+        duration: 0.5,
+      }
+    );
+}, { threshold: 0.5 });
 
     inView(".seccion .downup", (element) => {
       animate(
