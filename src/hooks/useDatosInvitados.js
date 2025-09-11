@@ -35,16 +35,12 @@ export const useDatosInvitados = () => {
   const [valida, setValida] = useState("");
   //hook para manejo cambio de titulo
   const [titulo, setTitulo] = useState("Editar Usuario");
-
   //hook para manejar el status   ocultar y mostrar boton
   const [estado, setEstado] = useState(0);
-
   const [inputValue, setInputValue] = useState("");
-
   const [seleccion, setSeleccion] = useState({});
   // hablitar boton
   const [disable, setDisable] = useState(true);
-
   const navigate = useNavigate();
   const [formulario, setFormulario] = useState({
     id: "",
