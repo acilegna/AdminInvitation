@@ -32,7 +32,8 @@ const getData = async (url) => {
     return res.data;
   } catch (err) {
     if (err.response) {
-      return { success: false, error: "Error en la respuesta" };
+      //return { success: false, error: "Error en la respuesta" };
+      console.log(err.response);
     } else if (err.request) {
       return {
         success: false,
