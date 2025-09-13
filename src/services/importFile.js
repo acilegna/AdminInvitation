@@ -2,10 +2,13 @@ import axios from "axios";
 export async function importFile(file) {
   const formData = new FormData();
   formData.append("file", file);
-  const api = "http://127.0.0.1:8000/api/import";
+// const api = "http://127.0.0.1:8000/api/";
+  const api = " http://apiexcel.ladoobscurodelaluna.com/public/api/";
+ 
+
   try {
     const response = await axios.post(
-      "http://127.0.0.1:8000/api/import", // La URL de tu API
+      api, // La URL de tu API
       formData,
       {
         headers: {
