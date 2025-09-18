@@ -56,7 +56,7 @@
 }
 .title-name-text {
   color: white;
-  font-size: 6rem;
+  font-size: 5.7rem;
   font-family: "Italianno", cursive;
   line-height: 60px;
   padding-bottom: 20px;
@@ -192,7 +192,6 @@ margin-left: 30px;
   /* d-flex justify-content-space-between flex-column align-items-center */
 }
 
-
 /* .image {
   width: 100%;
   height: 100%;
@@ -256,8 +255,8 @@ margin-left: 30px;
 .text-present {
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
- 
-   color: #f0f2f3;
+
+  color: #f0f2f3;
   letter-spacing: 3px;
 }
 .text-msj-present {
@@ -291,7 +290,7 @@ margin-left: 30px;
 }
 .span-hora {
   color: rgb(0, 0, 0);
- 
+
   font-weight: 500;
 }
 .text-itinerario span {
@@ -302,8 +301,8 @@ margin-left: 30px;
 .text-itinerario {
   margin: auto;
 }
-.title-itinerario{
-    font-size: 4.2rem;
+.title-itinerario {
+  font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(24, 24, 24);
   letter-spacing: 3px;
@@ -332,69 +331,20 @@ margin-left: 30px;
 
 @media (max-width: 743px) {
   .title-name-text {
-    font-size: 5rem;
+    font-size: 4.5rem;
+    line-height: 40px;
+  }
+
+  .title-merried-text {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .title-name-text {
+    font-size: 3.7rem;
+    line-height: 30px;
   }
   .title-merried-text {
-    font-size: 2.3rem;
-  }
-  /* dos */
-  .text-save-date {
-    font-size: 3.2rem;
-
-    line-height: 20px;
-  }
-  .text-msj {
-    font-size: 1.5rem;
-  }
-  /*   tres */
-
-  .text-time {
-    font-size: 3.2rem;
-
-    line-height: 60px;
-  }
-
-  .time-label {
-    font-size: 0.9rem;
-    margin-bottom: 3px;
-  }
-
-  .time-box span {
-    font-size: 1.5rem;
-  }
-  /*   cuatro */
-  .text-where {
-    font-size: 3.2rem;
-  }
-  .text-date {
-    margin: 0 8px;
-    font-size: 2.6rem;
-  }
-  .text-ceremonia,
-  .text-celebration {
-    font-size: 2.7rem;
-  }
-  .text-churp {
-    font-size: 1.4rem;
-  }
-
-  /* cinco */
-  .text-present {
-    font-size: 3.2rem;
-   
-
-  .text-present-place {
-    font-size: 1.5rem;
-  }
-  .bi-gift {
-    font-size: 1.5rem;
-  }
-
-  /*   seis */
-  .text-confirmation {
-    font-size: 3.2rem;
-  }
-  .text-msj-confirmation {
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 }
