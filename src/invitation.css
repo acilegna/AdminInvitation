@@ -78,7 +78,7 @@
 #audio {
   height: 30px;
   width: 200px;
-  padding-bottom: 20px;
+  
   position: absolute; /* Para poder moverlo libremente */
   top: 35%; /* Se baja un 30% desde arriba */
   left: 50%; /* Punto central horizontal */
