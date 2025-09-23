@@ -83,10 +83,10 @@ function Content() {
 
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
-            <div class="col lados">  <img src="/sources/z1.jpg" alt="Fondo" class="image"/>
+            <div class="col lados">  <img src="/sources/z1.jpg" alt="Fondo" class="image" />
             </div>
             <div class="col updown">
-              <img src="/sources/z2.jpg" alt="Fondo" class="image"/>
+              <img src="/sources/z2.jpg" alt="Fondo" class="image" />
             </div>
             <div class="col lados"> <img src="/sources/z3.jpg" alt="Fondo" class="image" />
 
@@ -134,7 +134,7 @@ function Content() {
       {/* FIN SECCION 4*/}
 
       <div className="cont-full seccion cont-centrado">
-         <img src="/sources/pareja.jpg" alt="Fondo" className="imagen-full scale" />
+        <img src="/sources/pareja.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
         <div class="d-flex flex-column align-items-center">
@@ -168,29 +168,29 @@ function Content() {
 
           <div class="">
             <div className="row ">
-              <div className="col-6 icons-itinerario izqicon"><img src="/sources/iglesia.png" alt="Fondo" className="img-itinerario" /></div>
-              <div className="col-6 text-itinerario der"><span>Celebracion Religiosa</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon"><img src="/sources/iglesia.png" alt="Fondo" className="img-itinerario" /></div>
+              <div className="col-8 text-itinerario der"><span>Celebracion Religiosa</span> <span className="span-hora"> 9:20 PM</span></div>
             </div>
 
             <div className="row">
-              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/brindis.png" alt="Fondo" className="img-itinerario3" /></div>
-              <div className="col-6 text-itinerario der"><span className=" ">Recepcion</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/brindis.png" alt="Fondo" className="img-itinerario3" /></div>
+              <div className="col-8 text-itinerario der"><span className=" ">Recepcion</span> <span className="span-hora"> 9:20 PM</span></div>
             </div>
             <div className="row">
-              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/brides.png" alt="Fondo" className="img-itinerario" /></div>
-              <div className="col-6 text-itinerario der"><span className=" ">Entrada Esposos</span><span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/brides.png" alt="Fondo" className="img-itinerario" /></div>
+              <div className="col-8 text-itinerario der"><span className=" ">Entrada Esposos</span><span className="span-hora"> 9:20 PM</span></div>
             </div>
             <div className="row">
-              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/cena.png" alt="Fondo" className="img-itinerario2" /></div>
-              <div className="col-6 text-itinerario der"><span className=" ">Cena</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/cena.png" alt="Fondo" className="img-itinerario2" /></div>
+              <div className="col-8 text-itinerario der"><span className=" ">Cena</span> <span className="span-hora"> 9:20 PM</span></div>
             </div>
             <div className="row">
-              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/bals.png" alt="Fondo" className="img-itinerario3" /></div>
-              <div className="col-6 text-itinerario der"><span className=" ">Vals Esposos</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/bals.png" alt="Fondo" className="img-itinerario3" /></div>
+              <div className="col-8 text-itinerario der"><span className=" ">Vals Esposos</span> <span className="span-hora"> 9:20 PM</span></div>
             </div>
             <div className="row">
-              <div className="col-6 icons-itinerario izqicon"> <img src="/sources/damcin.png" alt="Fondo" className="img-itinerario" /></div>
-              <div className="col-6 text-itinerario der"><span className=" "> A bailar</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/damcin.png" alt="Fondo" className="img-itinerario" /></div>
+              <div className="col-8 text-itinerario der"><span className=" "> A bailar</span> <span className="span-hora"> 9:20 PM</span></div>
             </div>
           </div>
         </div>
