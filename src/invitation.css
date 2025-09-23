@@ -392,6 +392,7 @@ margin-left: 30px;
   
   font-size: 1.4rem;
 }
+
 }
 @media (max-width: 500px) {
   .title-name-text {
@@ -428,5 +429,11 @@ margin-left: 30px;
 .text-msj-confirmation {
    
   font-size: 1.3rem;
+}
+
+.cont-msj {
+  
+  top: 45%; /* Se baja un 30% desde arriba */
+
 }
 }

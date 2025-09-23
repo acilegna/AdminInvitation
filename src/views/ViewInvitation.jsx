@@ -304,7 +304,7 @@ function Content() {
       </div>
       {/* FIN SECCION 7*/}
       <footer>
-        <p className="text-center">&copy; 2025 Invitacion B&A | Powered by Entheos</p>
+        <p className="text-center">&copy; 2025 Invitacion B&A | Creado por Entheosmultimedia</p>
       </footer>
 
     </div >
