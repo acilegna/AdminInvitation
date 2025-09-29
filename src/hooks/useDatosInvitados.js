@@ -139,6 +139,7 @@ export const useDatosInvitados = () => {
   };
 
   const handleClick = () => {
+     setSeleccion({});
     if (inputValue.trim() !== "") {
       byFamily(inputValue);
     }
@@ -161,13 +162,27 @@ export const useDatosInvitados = () => {
   };
 
   const handleChangeRadio = (e) => {
-    const valor = e.target.value;
-    const id = e.target.id;
+    // const valor = e.target.value;
+    const { id, value } = e.target;
+    //const id = e.target.id;
 
     setSeleccion((prev) => ({
-      ...prev,
-      [id]: valor,
+      ...prev, // Copia todos los valores anteriores del estado
+      [id]: value, // Reemplaza o agrega la propiedad con el id del input y le asigna el valor
     }));
+
+    /*  setTimeout(() => {
+      valor="Pendiente";
+    }, 6000); */
+  };
+
+  const confirmar = () => {
+    Object.entries(seleccion).forEach(([id, valor]) => {
+      update(id, { status: valor });
+    });
+    clearMensaje(setMensaje);
+
+    resetRespuestas();
   };
 
   //ELIMINAR O BUSCAR
@@ -256,17 +271,7 @@ export const useDatosInvitados = () => {
     setInputValue("");
   };
 
-  const confirmar = () => {
-    Object.entries(seleccion).forEach(([id, valor]) => {
-      update(id, { status: valor });
-    });
-    clearMensaje(setMensaje);
-    resetRespuestas();
-  };
-
-  useEffect(() => {
-    infoInvitados();
-    allInvitados();
+  const comparar = () => {
     if (invitadosFamily) {
       const totalRespuestas = Object.keys(seleccion).length;
       const totalInvitado = invitadosFamily.invitados.length;
@@ -276,6 +281,11 @@ export const useDatosInvitados = () => {
         setDisable(true);
       }
     }
+  };
+  useEffect(() => {
+    infoInvitados();
+    allInvitados();
+    comparar();
   }, [invitadosFamily, seleccion]);
 
   //retornamos funciones y variables
@@ -313,5 +323,6 @@ export const useDatosInvitados = () => {
     disable,
     inputValue,
     Confirmation,
+    seleccion,
   };
 };

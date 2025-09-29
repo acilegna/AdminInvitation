@@ -38,7 +38,7 @@ export default function ViewInvitation() {
 
 function Content() {
 
-  const { invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable, inputValue, handleInput, } = useDatosInvitados();
+  const { invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable, inputValue, handleInput, seleccion } = useDatosInvitados();
 
   const invitados = invitadosFamily?.invitados || [];
   const adultos = invitados.filter((inv) => inv.categoria.toLowerCase() === "adulto");
@@ -65,15 +65,15 @@ function Content() {
         </audio>
 
         <div className="cont-msj">
-          <h2 ><span class="text-save-date">Estás Invitado!</span></h2>
-          <h5 className="mt-4 updown"><span class="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
+          <h2 ><span className="text-save-date">Estás Invitado!</span></h2>
+          <h5 className="mt-4 updown"><span className="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
         </div>
 
       </div>
       {/* FIN SECCION 2 */}
       <div className="cont-full seccion cont-centrado">
 
-        <div class="d-flex flex-column align-items-center">
+        <div className="d-flex flex-column align-items-center">
           {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
           <div className="iniciales-container">
             <h3 className="inicial img ">B</h3>
@@ -83,19 +83,19 @@ function Content() {
 
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
-            <div class="col lados">  <img src="/sources/z1.jpg" alt="Fondo" class="image" />
+            <div className="col lados">  <img src="/sources/z1.jpg" alt="Fondo" className="image" />
             </div>
-            <div class="col updown">
-              <img src="/sources/z2.jpg" alt="Fondo" class="image" />
+            <div className="col updown">
+              <img src="/sources/z2.jpg" alt="Fondo" className="image" />
             </div>
-            <div class="col lados"> <img src="/sources/z3.jpg" alt="Fondo" class="image" />
+            <div className="col lados"> <img src="/sources/z3.jpg" alt="Fondo" className="image" />
 
             </div>
 
           </div>
           {/*      Contenedor para la fecha */}
-          <div class="cont-date">
-            <h3 class="text-date updown">
+          <div className="cont-date">
+            <h3 className="text-date updown">
               10.12.2026
             </h3>
           </div>
@@ -108,7 +108,7 @@ function Content() {
         <img src="/sources/11.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
-        <div class="cont-titleContador">
+        <div className="cont-titleContador">
           <h2><span className="text-time"> SAVE THE DATE</span></h2>
         </div>
 
@@ -137,20 +137,20 @@ function Content() {
         <img src="/sources/pareja.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
-        <div class="d-flex flex-column align-items-center">
+        <div className="d-flex flex-column align-items-center">
 
-          <h2><span class="text-present">Sugerencias de regalo</span></h2>
+          <h2><span className="text-present">Sugerencias de regalo</span></h2>
           <div className="row downup">
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
-              <i class="bi bi-gift"></i>
-              <h4><span class="text-present-place">Liverpool</span></h4>
-              <i class="bi  bi-binoculars">Ver regalos</i>
+            <div className="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
+              <i className="bi bi-gift"></i>
+              <h4><span className="text-present-place">Liverpool</span></h4>
+              <i className="bi  bi-binoculars">Ver regalos</i>
 
             </div>
-            <div class="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
-              <i class="bi bi-gift"></i>
-              <h4><span class="text-present-place">Amazon</span></h4>
-              <i class="bi  bi-binoculars">Ver regalos</i>
+            <div className="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
+              <i className="bi bi-gift"></i>
+              <h4><span className="text-present-place">Amazon</span></h4>
+              <i className="bi  bi-binoculars">Ver regalos</i>
             </div>
           </div>
 
@@ -162,11 +162,11 @@ function Content() {
       <div className="cont-full seccion cont-centrado" id="itinerario">
 
 
-        <div class="d-flex flex-column align-items-center">
+        <div className="d-flex flex-column align-items-center">
 
-          <h2 className="text-center"><span class="title-itinerario">Itinerario</span></h2>
+          <h2 className="text-center"><span className="title-itinerario">Itinerario</span></h2>
 
-          <div class="">
+          <div className="">
             <div className="row ">
               <div className="col-4 icons-itinerario izqicon"><img src="/sources/iglesia.png" alt="Fondo" className="img-itinerario" /></div>
               <div className="col-8 text-itinerario der"><span>Celebracion Religiosa</span> <span className="span-hora"> 9:20 PM</span></div>
@@ -197,9 +197,9 @@ function Content() {
       </div>
       {/* FIN SECCION 6*/}
       <div className="cont-full seccion  cont-confirmation">
-        <div class="d-flex flex-column align-items-center text-center confir">
-          <h2 class="text-confirmation"> Confirma tu asistencia </h2>
-          <p class="text-msj-confirmation downup"> Por favor danos tu respuesta antes del 4-12-2025. </p>
+        <div className="d-flex flex-column align-items-center text-center confir">
+          <h2 className="text-confirmation"> Confirma tu asistencia </h2>
+          <p className="text-msj-confirmation downup"> Por favor danos tu respuesta antes del 4-12-2025. </p>
           <div className="row g-3 mx-3 ">
             <div className="col-8 col-sm-8 col-md-6 col-lg-6  izq">
               <input id="search" type="search" className="form-control me-2" onChange={handleInput} value={inputValue}
@@ -207,99 +207,104 @@ function Content() {
             </div>
 
             <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start   der">
-
-              <i class="bi bi-search" onClick={handleClick}> Buscar</i>
+              <i className="bi bi-search" onClick={handleClick}> Buscar</i>
             </div>
             {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
           </div>
         </div>
         <hr />
-        <div className="row">
-          {adultos.length > 0 && (
-            <>
-              <div className="col-12 col-md-6 ">
-                <h4 className="text-center">Adultos</h4>
-                {adultos.map((invitadosFamily) => (
+        <div className="d-flex flex-column align-items-center text-center confir">
+          <div className="row">
+            {adultos.length > 0 && (
+              <>
+                <div className="col-12 col-md-6 ">
+                  <h4 className="text-center">Adultos</h4>
+                  {adultos.map((invitadosFamily) => (
 
-                  <div key={invitadosFamily.id} className="mb-2">
-                    <div className="row">
-                      <div className="col-12 col-md-6 ">
-                        <strong className="me-3 mb-2">
-                          {invitadosFamily.name} {invitadosFamily.apellido}
-                        </strong>
-                      </div>
-                      <div className="col-12 col-md-6 ">
-                        <div className="form-check form-check-inline">
-                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
-                            id={invitadosFamily.id} value='Si' onChange={handleChangeRadio} />
-                          <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
-                            Sí
-                          </label>
+                    <div key={invitadosFamily.id} className="mb-2">
+                      <div className="row">
+                        <div className="col-12 col-md-6 ">
+                          <strong className="me-3 mb-2">
+                            {invitadosFamily.name} {invitadosFamily.apellido}
+                          </strong>
                         </div>
+                        <div className="col-12 col-md-6 ">
+                          <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
+                              id={invitadosFamily.id} value='Si' onChange={handleChangeRadio}
+                               />
+                            <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                              Sí
+                            </label>
+                          </div>
 
-                        <div className="form-check form-check-inline">
-                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
-                            id={invitadosFamily.id} value='No' onChange={handleChangeRadio} />
-                          <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
-                            No
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
-          {ninos.length > 0 && (
-            <>
-              <div className="col-12 col-md-6 ">
-                <h4 className="text-center">Niños</h4>
-                {ninos.map((invitadosFamily) => (
-                  <div key={invitadosFamily.id} className="mb-2">
-                    <div className="row">
-                      <div className="col-12 col-md-6 ">
-                        <strong className="me-3 mb-2">
-                          {invitadosFamily.name} {invitadosFamily.apellido}
-                        </strong>
-                      </div>
-                      <div className="col-12 col-md-6 ">
-
-                        <div className="form-check form-check-inline">
-                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
-                            id={invitadosFamily.id} value='Si' onChange={handleChangeRadio} />
-                          <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
-                            Sí
-                          </label>
-                        </div>
-
-                        <div className="form-check form-check-inline">
-                          <input className="form-check-input" type="radio" name={`respuesta-${invitadosFamily.id}`}
-                            id={invitadosFamily.id} value='No' onChange={handleChangeRadio} />
-                          <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
-                            No
-                          </label>
+                          <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
+                              id={invitadosFamily.id} value='No' onChange={handleChangeRadio}
+                               />
+                            <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+              </>
+            )}
+            {ninos.length > 0 && (
+              <>
+                <div className="col-12 col-md-6 ">
+                  <h4 className="text-center">Niños</h4>
+                  {ninos.map((invitadosFamily) => (
+                    <div key={invitadosFamily.id} className="mb-2">
+                      <div className="row">
+                        <div className="col-12 col-md-6 ">
+                          <strong className="me-3 mb-2">
+                            {invitadosFamily.name} {invitadosFamily.apellido}
+                          </strong>
+                        </div>
+                        <div className="col-12 col-md-6 ">
+
+                          <div className="form-check form-check-inline">
+                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
+                              id={invitadosFamily.id} value='Si' onChange={handleChangeRadio}
+                               />
+                            <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                              Sí
+                            </label>
+                          </div>
+
+                          <div className="form-check form-check-inline">
+
+
+
+                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
+                              id={invitadosFamily.id} value='No' onChange={handleChangeRadio}
+                               />
+                            <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </>
+            )}
+
+            {(adultos.length > 0 || ninos.length > 0) && (
+              <div className="text-center my-4">
+                <button className="btn px-4" onClick={confirmar} disabled={disable}>
+                  <i className="bi bi-check2-circle me-2"></i>
+                  Confirmar
+                </button>
               </div>
-            </>
-          )}
-
-
-
-
-          {(adultos.length > 0 || ninos.length > 0) && (
-            <div className="text-center my-4">
-              <button className="btn px-4" onClick={confirmar} disabled={disable}>
-                <i className="bi bi-check2-circle me-2"></i>
-                Confirmar
-              </button>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
       {/* FIN SECCION 7*/}
