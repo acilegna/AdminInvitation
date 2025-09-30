@@ -214,12 +214,13 @@ function Content() {
           </div>
         </div>
         <hr />
-        <div className="d-flex flex-column align-items-center text-center confir">
+        {/*  <div className="d-flex flex-column align-items-center text-center confir">*/}
+        <div className="confir text-center">
           <div className="row">
             {adultos.length > 0 && (
               <>
-                <div className="col-12 col-md-6 ">
-                  <h4 className="text-center">Adultos</h4>
+                <div className="col-12 col-md-6">
+                  <h4 className="text-center clasificacion">Adultos</h4>
                   {adultos.map((invitadosFamily) => (
 
                     <div key={invitadosFamily.id} className="mb-2">
@@ -233,7 +234,7 @@ function Content() {
                           <div className="form-check form-check-inline">
                             <input className="form-check-input" type="radio" name={invitadosFamily.id}
                               id={invitadosFamily.id} value='Si' onChange={handleChangeRadio}
-                               />
+                            />
                             <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
                               Sí
                             </label>
@@ -242,7 +243,7 @@ function Content() {
                           <div className="form-check form-check-inline">
                             <input className="form-check-input" type="radio" name={invitadosFamily.id}
                               id={invitadosFamily.id} value='No' onChange={handleChangeRadio}
-                               />
+                            />
                             <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
                               No
                             </label>
@@ -257,7 +258,7 @@ function Content() {
             {ninos.length > 0 && (
               <>
                 <div className="col-12 col-md-6 ">
-                  <h4 className="text-center">Niños</h4>
+                  <h4 className="text-center clasificacion">Niños</h4>
                   {ninos.map((invitadosFamily) => (
                     <div key={invitadosFamily.id} className="mb-2">
                       <div className="row">
@@ -271,7 +272,7 @@ function Content() {
                           <div className="form-check form-check-inline">
                             <input className="form-check-input" type="radio" name={invitadosFamily.id}
                               id={invitadosFamily.id} value='Si' onChange={handleChangeRadio}
-                               />
+                            />
                             <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
                               Sí
                             </label>
@@ -283,7 +284,7 @@ function Content() {
 
                             <input className="form-check-input" type="radio" name={invitadosFamily.id}
                               id={invitadosFamily.id} value='No' onChange={handleChangeRadio}
-                               />
+                            />
                             <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
                               No
                             </label>

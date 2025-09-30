@@ -313,6 +313,11 @@ margin-left: 30px;
 .confir {
   width: 100%;
 }
+.clasificacion{ 
+  line-height: 50px;
+  margin-bottom: 20px;
+  color: #202020;
+}
 .cont-confirmation {
   background-color: #ffffff;
   flex-direction: column;
