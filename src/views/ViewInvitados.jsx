@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
 
 //recibe los datos q envia la vista viewPanel (componente principal-padre)
-const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirmation }) => {
+const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirmation, handleInputChange, inputValue }) => {
     const process = "delete";
 
     return (
@@ -11,9 +11,23 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirma
                 <thead>
                     <tr>
                         <th colSpan="8">
-                            <Link className="btn btn-primary" to="/editar" onClick={() => { changeTitle() }}>
-                                <i className="bi bi-person-add text-white"> Agregar Invitado</i>
-                            </Link>
+                            <div className="row g-2">
+                                <div className="col">
+                                    <input
+                                        id="filter"
+                                        type="search"
+                                        className="form-control"
+                                        placeholder="Buscar"
+                                        onChange={handleInputChange}
+                                        value={inputValue}
+                                    />
+                                </div>
+                                <div className="col-auto">
+                                    <Link className="btn btn-primary" to="/editar" onClick={() => changeTitle()}>
+                                        <i className="bi bi-person-add text-white"> Agregar Invitado</i>
+                                    </Link>
+                                </div>
+                            </div>
                         </th>
                     </tr>
                     <tr>

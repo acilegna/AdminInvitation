@@ -5,14 +5,12 @@ import { useEffect, useRef, useState } from "react"
 import { Link } from 'react-router-dom';
 
 
-export default function Menu({ onToggle }) {
+export default function Menu({ onToggle,resumen  }) {
     const [isOpen, setIsOpen] = useState(false)
     const containerRef = useRef(null)
     const { height } = useDimensions(containerRef)
 
-
-
-
+    
 
     return (
         <motion.nav
@@ -23,7 +21,7 @@ export default function Menu({ onToggle }) {
             style={isOpen ? nav : nav3}
         >
             <motion.div style={background} variants={sidebarVariants} />
-            <Navigation />
+            <Navigation resumen={resumen} />
             <MenuToggle toggle={() => setIsOpen(!isOpen)} />
         </motion.nav>
     )
@@ -31,6 +29,7 @@ export default function Menu({ onToggle }) {
 }
 
 const navVariants = {
+
     open: {
         transition: { staggerChildren: 0.07, delayChildren: 0.2 },
     },
@@ -39,25 +38,26 @@ const navVariants = {
     },
 }
 
-const Navigation = () => (
+const Navigation = ( {resumen}) => (
+
+
     <motion.ul style={list} variants={navVariants}>
         <motion.li
             variants={itemVariants}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="nav-item"
-        >
+        > 
             <Link className="nav-link text-white active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
             <Link className="nav-link text-white active" to="/import"  >
                 <i className="bi bi-file-earmark-excel"></i> Importar</Link>
             <Link className="nav-link text-white active" to="/invitados"  >
                 <i className="bi bi-person-vcard"></i> Invitados</Link>
-            <Link className="nav-link text-white active" to="/detalles"  >
+            <Link className="nav-link text-white active" to="/detalles"onClick={resumen} >
                 <i className="bi bi-binoculars"></i> Detalles</Link>
-            <li className="nav-item mt-3">
-                <a className="nav-link text-white active" href="#">  <i className="bi bi-box-arrow-right"> </i>Salir</a>
-
-            </li>
+            <Link className="nav-item mt-3 nav-link text-white active">
+                <i className="bi bi-box-arrow-right"> </i>Salir
+            </Link>
 
         </motion.li>
     </motion.ul>

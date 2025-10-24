@@ -2,13 +2,12 @@ import axios from "axios";
 export async function importFile(file) {
   const formData = new FormData();
   formData.append("file", file);
-//   const api = "http://127.0.0.1:8000/api/";
-const api = "https://backapi.ladoobscurodelaluna.com/public/api/";
- 
+  //const api = "http://127.0.0.1:8000/api/import";
+  const api = "https://backapi.ladoobscurodelaluna.com/public/api/";
 
   try {
     const response = await axios.post(
-      api, // La URL de tu API
+    api,
       formData,
       {
         headers: {
@@ -26,6 +25,7 @@ const api = "https://backapi.ladoobscurodelaluna.com/public/api/";
   } catch (error) {
     return {
       success: false,
+
       data: error.response.data.errors,
     };
   }

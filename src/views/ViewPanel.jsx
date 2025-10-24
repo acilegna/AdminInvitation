@@ -2,7 +2,7 @@ import ViewDetalles from "./ViewDetalles";
 import ViewInvitados from "./ViewInvitados";
 import ViewImport from "./ViewImport";
 import ViewEdit from "./ViewEdit";
-import ViewInvitation from "./ViewInvitation";
+
 import { Routes, Route } from 'react-router-dom';
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 import Menu from "./Menu";
@@ -16,13 +16,13 @@ function ViewPanel() {
         totalNiños, totalAdultos, totalNiñosAusentes, totalAdultosAusentes, totalAdultosConfirmados,
         totalNiñosConfirmados, totalNiñosNoConfirmados, totalAdultosNoConfirmados, formulario,
         handleChange, error, mensaje, ProcessDeleteOrSearch, updateInvitado, addNew, titulo,
-        changeTitle, valida, estado, Confirmation } = useDatosInvitados();
+        changeTitle, valida, estado, Confirmation, resumen,handleInputChange,inputValue,filtro} = useDatosInvitados();
 
 
     return (
         <div className="d-flex"   >
 
-            <Menu />
+            <Menu resumen={resumen} />
             <section className="sections d-flex justify-content-center align-items-center"  >
                 {/*   pasar datos a componentes  */}
 
@@ -34,9 +34,13 @@ function ViewPanel() {
                         message={mensaje}
                         changeTitle={changeTitle}
                         Confirmation={Confirmation}
+                        handleInputChange={handleInputChange}
+                        inputValue={inputValue}
+                        filtro={filtro}
                     />}></Route>
 
                     <Route path='/detalles' element={<ViewDetalles
+                        resumen={resumen}
                         confirmados={totalConfirmados}
                         pendientes={totalPendientes}
                         ausentes={totalAusentes}
@@ -49,7 +53,10 @@ function ViewPanel() {
                         niñosConfirmados={totalNiñosConfirmados}
                         adultosConfirmados={totalAdultosConfirmados}
                         niñosNoConfirmados={totalNiñosNoConfirmados}
-                        adultosNoConfirmados={totalAdultosNoConfirmados} />}></Route>
+                        adultosPendientes={totalAdultosNoConfirmados} />}></Route>
+                    {/* 
+                        const ViewDetalles = ({ confirmados, pendientes, ausentes, total, errores, niños, adultos,
+    niñosAusentes, adultosAusentes, niñosConfirmados, adultosConfirmados, adultosNoConfirmados, niñosNoConfirmados })   */}
 
                     <Route path='/editar' element={<ViewEdit
                         formulario={formulario}
@@ -65,7 +72,6 @@ function ViewPanel() {
 
                     <Route path='/import' element={<ViewImport />}></Route>
 
-                    {/*  <Route path='/ver' element={<ViewInvitation/>}></Route> */}
                 </Routes>
 
             </section>

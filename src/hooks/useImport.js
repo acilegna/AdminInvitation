@@ -17,7 +17,7 @@ export function useImport() {
   const handleFile = async (selectedFile) => {
     setFile(selectedFile); // Guardamos el archivo en el estado
     const result = await importFile(selectedFile); // Llamamos a la función del servicio
-    //console.log(result);
+    //  console.log(result);
     if (result.success == true) {
       setMessage("Archivo importado con éxito");
     } else {

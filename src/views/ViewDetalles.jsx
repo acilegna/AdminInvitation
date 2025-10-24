@@ -1,8 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { useState, useEffect } from "react";
 //recibe los datos q envia la vista viewPanel (componente principal-padre)
 const ViewDetalles = ({ confirmados, pendientes, ausentes, total, errores, niños, adultos,
-    niñosAusentes, adultosAusentes, niñosConfirmados, adultosConfirmados, adultosNoConfirmados, niñosNoConfirmados }) => {
+    niñosAusentes, adultosAusentes, niñosConfirmados, adultosConfirmados, adultosPendientes, niñosNoConfirmados  }) => {
+
+ 
     return (
         <div className="cont-details p-3 text-white rounded d-flex flex-column justify-content-center align-items-center ">
             <div className='row justify-content-center'>
@@ -35,7 +37,7 @@ const ViewDetalles = ({ confirmados, pendientes, ausentes, total, errores, niño
                     <h3 className="text-capitalize"> pendientes </h3>
                     <span className='detalles' >{pendientes}</span>
                     <div className="d-flex gap-2">
-                        <span>Niños: {niñosNoConfirmados}</span> <span>Adultos: {adultosNoConfirmados} </span>
+                        <span>Niños: {niñosNoConfirmados}</span> <span>Adultos: {adultosPendientes} </span>
                     </div>
                 </div>
 

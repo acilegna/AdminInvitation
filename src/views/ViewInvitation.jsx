@@ -1,5 +1,5 @@
 import { useInvitation } from "../hooks/useInvitation";
-import { useDatosInvitados } from "../hooks/useDatosInvitados";
+//import { useDatosInvitados } from "../hooks/useDatosInvitados";
 import useScrollSections from "../hooks/useScrollSections";
 
 import { motion, useSpring, useScroll } from "framer-motion";
@@ -38,12 +38,12 @@ export default function ViewInvitation() {
 
 function Content() {
 
-  const { invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable, inputValue, handleInput, seleccion } = useDatosInvitados();
+  const { tiempoRestante, invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable,
+    inputValue, handleInput, seleccion } = useInvitation();
 
   const invitados = invitadosFamily?.invitados || [];
   const adultos = invitados.filter((inv) => inv.categoria.toLowerCase() === "adulto");
   const ninos = invitados.filter((inv) => inv.categoria.toLowerCase() === "niño");
-  const tiempoRestante = useInvitation();
   const animate = useScrollSections();
 
   return (

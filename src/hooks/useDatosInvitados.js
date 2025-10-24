@@ -1,14 +1,16 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 //importar oBjeto Invitados de servcios
 import {
   Invitados,
   delet,
   searchById,
-  searchByFam,
   updateInvitados,
   updateStatus,
   saveInvitado,
+  filter,
 } from "../services/datosInvitados";
+
 import { useNavigate } from "react-router-dom";
 
 export const useDatosInvitados = () => {
@@ -19,13 +21,13 @@ export const useDatosInvitados = () => {
   const [totalAdultos, setTotalAdultos] = useState(0);
   const [totalInvitados, setTotalInvitados] = useState(0);
   const [todosInvitados, setTodosInvitados] = useState([]);
+  const [invitadosOriginales, setInvitadosOriginales] = useState([]);
   const [totalNiñosAusentes, setNiñosAusentes] = useState(0);
   const [totalAdultosAusentes, setAdultosAusentes] = useState(0);
   const [totalNiñosConfirmados, setNiñosConfirmados] = useState(0);
   const [totalAdultosConfirmados, setAdultosConfirmados] = useState(0);
   const [totalNiñosNoConfirmados, setNiñosNoConfirmados] = useState(0);
   const [totalAdultosNoConfirmados, setAdultosNoConfirmados] = useState(0);
-  const [invitadosFamily, setInvitadosFamily] = useState(0);
 
   //hook para manejo de errores
   const [error, setError] = useState(null);
@@ -38,9 +40,8 @@ export const useDatosInvitados = () => {
   //hook para manejar el status   ocultar y mostrar boton
   const [estado, setEstado] = useState(0);
   const [inputValue, setInputValue] = useState("");
-  const [seleccion, setSeleccion] = useState({});
-  // hablitar boton
-  const [disable, setDisable] = useState(true);
+  const [filtro, setFiltro] = useState([]);
+
   const navigate = useNavigate();
   const [formulario, setFormulario] = useState({
     id: "",
@@ -109,40 +110,10 @@ export const useDatosInvitados = () => {
   //MOSTRAR TODOS LOS INVITADOS
   const allInvitados = async () => {
     result = await Invitados.guestList();
+
     setTodosInvitados(result); // Aquí no se extrae ninguna key, se usa todo */
-  };
-
-  // buscar por id de familya
-  const byFamily = async (id) => {
-    result = await searchByFam(id);
-
-    if (result.success === true) {
-      setInvitadosFamily(result);
-      setError("");
-    }
-
-    if (result.success === false) {
-      setError(result.error.error);
-      clearMensaje(setError);
-      setInvitadosFamily("");
-    }
-  };
-
-  //detectar cambio de input
-  const handleInput = (e) => {
-    const valorInput = e.target.value;
-    setInputValue(valorInput);
-
-    if (valorInput === "") {
-      setInvitadosFamily("");
-    }
-  };
-
-  const handleClick = () => {
-     setSeleccion({});
-    if (inputValue.trim() !== "") {
-      byFamily(inputValue);
-    }
+    //Guardar una copia de los invitados para hacer filtro
+    setInvitadosOriginales(result);
   };
 
   //
@@ -158,31 +129,7 @@ export const useDatosInvitados = () => {
   };
 
   const update = async (id, datos) => {
-    const result = await updateStatus(id, datos);
-  };
-
-  const handleChangeRadio = (e) => {
-    // const valor = e.target.value;
-    const { id, value } = e.target;
-    //const id = e.target.id;
-
-    setSeleccion((prev) => ({
-      ...prev, // Copia todos los valores anteriores del estado
-      [id]: value, // Reemplaza o agrega la propiedad con el id del input y le asigna el valor
-    }));
-
-    /*  setTimeout(() => {
-      valor="Pendiente";
-    }, 6000); */
-  };
-
-  const confirmar = () => {
-    Object.entries(seleccion).forEach(([id, valor]) => {
-      update(id, { status: valor });
-    });
-    clearMensaje(setMensaje);
-
-    resetRespuestas();
+    result = await updateStatus(id, datos);
   };
 
   //ELIMINAR O BUSCAR
@@ -222,32 +169,20 @@ export const useDatosInvitados = () => {
     }, 5000);
   };
 
-  const ejecutar = async (InvitadosFunc, setData, extractKey) => {
-    result = await InvitadosFunc();
-    if (result.success === false) {
-      setError(result.error);
-    }
-    setData(result[extractKey]);
-  };
-
-  //
-  const infoInvitados = async () => {
-    //ejecutar múltiples fetch al mismo tiempo
-    await Promise.all([
-      //manda como parametro las funciones y el objeto json "total_confirmados" q envia desde backend
-      ejecutar(Invitados.numberOfGuests, setTotalInvitados, "total"),
-      ejecutar(Invitados.allChildren, setTotalNiños, "total"),
-      ejecutar(Invitados.absent, setTotalAusentes, "total_ausentes"),
-      ejecutar(Invitados.confirmed, setTotalConfirmados, "total_confirmados"),
-      ejecutar(Invitados.notConfirmed, setTotalPendientes, "pendientes"),
-      ejecutar(Invitados.allAdult, setTotalAdultos, "totalAdultos"),
-      ejecutar(Invitados.childrenAbsent, setNiñosAusentes, "total"),
-      ejecutar(Invitados.adultAbsent, setAdultosAusentes, "total"),
-      ejecutar(Invitados.childrenConfirmed, setNiñosConfirmados, "total"),
-      ejecutar(Invitados.adultConfirmed, setAdultosConfirmados, "total"),
-      ejecutar(Invitados.childrenNotConfirmed, setNiñosNoConfirmados, "total"),
-      ejecutar(Invitados.adultNotConfirmed, setAdultosNoConfirmados, "total"),
-    ]);
+  const resumen = async () => {
+    result = await Invitados.resumen();
+    setTotalInvitados(result.todos);
+    setTotalNiños(result.total_niño);
+    setTotalAusentes(result.total_ausentes);
+    setTotalConfirmados(result.total_confirmados);
+    setTotalPendientes(result.pendientes);
+    setTotalAdultos(result.totalAdultos);
+    setNiñosAusentes(result.niño_ausente);
+    setAdultosAusentes(result.adulto_ausente);
+    setNiñosConfirmados(result.total_niño_confirmado);
+    setAdultosConfirmados(result.total_adulto_confirmado);
+    setNiñosNoConfirmados(result.niño_pendiente);
+    setAdultosNoConfirmados(result.adultos_pendiente);
   };
 
   //Limpiar campos
@@ -263,31 +198,46 @@ export const useDatosInvitados = () => {
     });
   };
 
-  const resetRespuestas = () => {
-    setMensaje("Tu confirmación ha sido registrada");
-    setSeleccion({});
-    setInvitadosFamily("");
-    setDisable(true);
-    setInputValue("");
+  const handleInputChange = (e) => {
+    const valorInput = e.target.value;
+    setInputValue(valorInput);
+
+    if (valorInput.trim() === "") {
+      // Si el input está vacío, restaurar lista completa
+      //  setTodosInvitados(invitadosOriginales);
+      allInvitados();
+    } else {
+      const filteredItems = invitadosOriginales.filter(
+        (user) =>
+          user.name.toLowerCase().includes(valorInput.toLowerCase()) ||
+          user.id_familia.toLowerCase().includes(valorInput.toLowerCase())
+      );
+
+      setTodosInvitados(filteredItems);
+    }
+
+    filters(valorInput);
   };
 
-  const comparar = () => {
-    if (invitadosFamily) {
-      const totalRespuestas = Object.keys(seleccion).length;
-      const totalInvitado = invitadosFamily.invitados.length;
-      if (totalRespuestas === totalInvitado) {
-        setDisable(false);
-      } else {
-        setDisable(true);
-      }
+  const filters = async (datos) => {
+    result = await filter(datos);
+
+    if (result.success != false) {
+      //console.log(result);
+      setFiltro(result);
+    } else {
+      setError(result.error);
+      //console.log(result.error);
     }
   };
-  useEffect(() => {
-    infoInvitados();
-    allInvitados();
-    comparar();
-  }, [invitadosFamily, seleccion]);
 
+  const location = useLocation();
+  useEffect(() => {
+    if (location.pathname === "/detalles") {
+      resumen();
+    }
+    allInvitados();
+  }, []);
   //retornamos funciones y variables
 
   return {
@@ -315,14 +265,10 @@ export const useDatosInvitados = () => {
     changeTitle,
     valida,
     estado,
-    invitadosFamily,
-    handleClick,
-    handleInput,
-    handleChangeRadio,
-    confirmar,
-    disable,
-    inputValue,
     Confirmation,
-    seleccion,
+    resumen,
+    handleInputChange,
+    inputValue,
+    filtro,
   };
 };

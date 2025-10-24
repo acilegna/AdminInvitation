@@ -1,30 +1,14 @@
 import axios from "axios";
-import { Children } from "react";
-
 // mandar url de endpoint a la funcion getdata
-
 //creando un objeto API que tiene varias funciones para hacer peticiones.
 //export const confirmed = () => getData("http://127.0.0.1:8000/api/asistiran");
-  //const api = "http://127.0.0.1:8000/api/";
- 
+//const api = "http://127.0.0.1:8000/api/";
 const api = "https://backapi.ladoobscurodelaluna.com/public/api/";
-
 
 export const Invitados = {
   // Usas dos puntos : para decir “esta propiedad-funcion (confirmed)   tiene este valor getData”.
-  confirmed: () => getData(api + "asistiran"),
-  notConfirmed: () => getData(api + "pendientes"),
-  absent: () => getData(api + "no"),
-  numberOfGuests: () => getData(api + "total"),
   guestList: () => getData(api + "invitados"),
-  allChildren: () => getData(api + "totalNino"),
-  allAdult: () => getData(api + "totalAdulto"),
-  childrenAbsent: () => getData(api + "niñosAusentes"),
-  adultAbsent: () => getData(api + "adultoAusentes"),
-  adultConfirmed: () => getData(api +"adultoConfirmado"),
-  childrenConfirmed: () => getData(api + "niñoConfirmado"),
-  adultNotConfirmed: () => getData(api + "adultoPendiente"),
-  childrenNotConfirmed: () => getData(api + "niñoPendiente"),
+  resumen: () => getData(api + "resumen"),
 };
 
 // funcion  asíncrona que realiza solicitudes HTTP GET a diferentes endpoints
@@ -36,7 +20,6 @@ const getData = async (url) => {
   } catch (err) {
     if (err.response) {
       return { success: false, error: "Error en la respuesta" };
-       
     } else if (err.request) {
       return {
         success: false,
@@ -50,7 +33,7 @@ const getData = async (url) => {
 
 export const delet = async (id) => {
   try {
-    const res = await axios.delete(api + "invitados" + id);
+    const res = await axios.delete(api + "invitados/" + id);
     return res.data;
   } catch (error) {
     if (error.response) {
@@ -65,7 +48,7 @@ export const delet = async (id) => {
 
 export const searchById = async (id) => {
   try {
-    const res = await axios.get(api + "invitados" + id);
+    const res = await axios.get(api + "invitados/" + id);
     return res.data;
   } catch (error) {
     if (error.response) {
@@ -140,5 +123,16 @@ export const saveInvitado = async (data) => {
       return { success: false, error: error.response.data.errors };
     }
     return { success: false, error: error.message };
+  }
+};
+
+export const filter = async (datos) => {
+  try {
+    const res = await axios.get(api + "filters/" + datos);
+    return res.data;
+  } catch (error) {
+    if (error.response && error.response.data) {
+      return { success: false, error: error.response.data.error };
+    }
   }
 };

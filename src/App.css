@@ -51,7 +51,7 @@
 
 
 .sections {
-  background-color: rgb(48, 109, 145);
+  background-color: rgb(250, 250, 250);
   height: 100vh;
   width: 100%;
 }
@@ -60,24 +60,24 @@
 }
 
 .cont-details {
-  background-color: rgb(117, 14, 100);
+ background-color: rgb(250, 250, 250);
   height: 100vh;
   width: 100%;
 }
 .pendientes {
-  background-color: #f6c23e;
+  background-color: #4b3b13;
   height: 235px;
 }
 .invitados {
-  background-color: #4e73df;
+  background-color: #1f2949;
   height: 235px;
 }
 .confirmado {
-  background-color: #1cc88a;
+  background-color: #184b38;
   height: 235px;
 }
 .confirmados {
-  background-color: #e74a3b;
+  background-color: #581d18;
   height: 235px;
 }
 .icono {
