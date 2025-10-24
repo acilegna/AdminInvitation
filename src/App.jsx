@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<ViewPanel />} />
-           <Route path="/bya" element={<ViewInvitation />} />     
+          <Route path="/bya" element={<ViewInvitation />} />
           {/*   <Route path="/*" element={<Back />} />     */}
 
         </Routes>
