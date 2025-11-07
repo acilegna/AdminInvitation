@@ -7,7 +7,7 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirma
 
     return (
         <div className="table-responsive">
-            <table className="table table-striped table-bordered align-middle text-center">
+            <table className="table table-striped table-bordered align-middle">
                 <thead>
                     <tr>
                         <th colSpan="8">
@@ -31,14 +31,14 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirma
                         </th>
                     </tr>
                     <tr>
-                        <th>Familia</th>
+                        <th>Codigo</th>
                         <th>Nombre</th>
                         <th>Apellido</th>
-                        <th>Teléfono</th>
-                        <th>Categoría</th>
+                        {/*  <th>Cel</th> */}
+                        <th>Grupo</th>
                         <th>Status</th>
                         <th>Asistira</th>
-                        <th>Operaciones</th>
+                        <th>Acciones</th>
 
                     </tr>
                 </thead>
@@ -48,9 +48,23 @@ const ViewInvitados = ({ data, errores, message, processo, changeTitle, Confirma
                             <td>{invitado.id_familia}</td>
                             <td>{invitado.name}</td>
                             <td>{invitado.apellido}</td>
-                            <td>{invitado.telefono}</td>
+                            {/* <td>{invitado.telefono}</td> */}
                             <td>{invitado.categoria}</td>
-                            <td>{invitado.status}</td>
+                            <td
+                                style={{
+                                    backgroundColor:
+                                        invitado.status === "Pendiente"
+                                            ? " #fcf186"
+                                            : invitado.status === "No"
+                                                ? "#fc8686"
+                                                : invitado.status === "Sí"
+                                                    ? "#47de81"
+                                                    : "#47de81",
+                                }}
+                            >
+                                {invitado.status}
+                            </td>
+
                             <td>
 
                                 <Link to="/invitados" onClick={() => Confirmation(invitado.id, { status: "Si" })}>
