@@ -5,12 +5,12 @@ import { useEffect, useRef, useState } from "react"
 import { Link } from 'react-router-dom';
 
 
-export default function Menu({ onToggle,resumen  }) {
+export default function Menu({ onToggle, resumen }) {
     const [isOpen, setIsOpen] = useState(false)
     const containerRef = useRef(null)
     const { height } = useDimensions(containerRef)
 
-    
+
 
     return (
         <motion.nav
@@ -38,7 +38,7 @@ const navVariants = {
     },
 }
 
-const Navigation = ( {resumen}) => (
+const Navigation = ({ resumen }) => (
 
 
     <motion.ul style={list} variants={navVariants}>
@@ -47,13 +47,13 @@ const Navigation = ( {resumen}) => (
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="nav-item"
-        > 
+        >
             <Link className="nav-link text-white active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
             <Link className="nav-link text-white active" to="/import"  >
                 <i className="bi bi-file-earmark-excel"></i> Importar</Link>
             <Link className="nav-link text-white active" to="/invitados"  >
                 <i className="bi bi-person-vcard"></i> Invitados</Link>
-            <Link className="nav-link text-white active" to="/detalles"onClick={resumen} >
+            <Link className="nav-link text-white active" to="/detalles" onClick={resumen} >
                 <i className="bi bi-binoculars"></i> Detalles</Link>
             <Link className="nav-item mt-3 nav-link text-white active">
                 <i className="bi bi-box-arrow-right"> </i>Salir
@@ -153,6 +153,7 @@ const nav3 = {
 const nav = {
     width: 170,
     backgroundColor: "#02034dff",
+    zIndex: 5,
 
 }
 
@@ -163,9 +164,13 @@ const background = {
     left: 0,
     bottom: 0,
     width: 170,
+
+
+
 }
 
 const toggleContainer = {
+    zIndex: 5,
     outline: "none",
     border: "none",
     WebkitUserSelect: "none",
@@ -178,6 +183,7 @@ const toggleContainer = {
     height: 50,
     borderRadius: "50%",
     background: "transparent",
+
 }
 
 const list = {
