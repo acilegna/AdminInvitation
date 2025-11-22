@@ -1,6 +1,6 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { color, motion } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,11 @@ export default function Menu({ onToggle, resumen }) {
             animate={isOpen ? "open" : "closed"}
             custom={height}
             ref={containerRef}
-            style={isOpen ? nav : nav3}
+
+            /* Si el menú está abierto (isOpen === true), usa los estilos del objeto nav.            
+            Si está cerrado (isOpen === false), usa los estilos del objeto nav3. */
+
+            style={nav}
         >
             <motion.div style={background} variants={sidebarVariants} />
             <Navigation resumen={resumen} />
@@ -27,6 +31,18 @@ export default function Menu({ onToggle, resumen }) {
     )
 
 }
+
+const nav3 = {
+    width: 0,
+
+}
+
+const nav = {
+    width: 170,
+    backgroundColor: "#da8f05ff",
+    zIndex: 5,
+}
+
 
 const navVariants = {
 
@@ -47,15 +63,16 @@ const Navigation = ({ resumen }) => (
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             className="nav-item"
+            style={opc}
         >
-            <Link className="nav-link text-white active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
-            <Link className="nav-link text-white active" to="/import"  >
+            <Link className="nav-link active" to="/ver"  > <i className="bi bi-house-door"></i> Inicio</Link>
+            <Link className="nav-link active" to="/import"  >
                 <i className="bi bi-file-earmark-excel"></i> Importar</Link>
-            <Link className="nav-link text-white active" to="/invitados"  >
+            <Link className="nav-link active" to="/invitados"  >
                 <i className="bi bi-person-vcard"></i> Invitados</Link>
-            <Link className="nav-link text-white active" to="/detalles" onClick={resumen} >
+            <Link className="nav-link active" to="/detalles" onClick={resumen} >
                 <i className="bi bi-binoculars"></i> Detalles</Link>
-            <Link className="nav-item mt-3 nav-link text-white active">
+            <Link className="nav-item mt-3 nav-link   active">
                 <i className="bi bi-box-arrow-right"> </i>Salir
             </Link>
 
@@ -144,29 +161,15 @@ const MenuToggle = ({ toggle }) => (
  * ==============   Styles   ================
  */
 
-const nav3 = {
-    width: 0,
 
-
-}
-
-const nav = {
-    width: 170,
-    backgroundColor: "#02034dff",
-    zIndex: 5,
-
-}
 
 const background = {
-    backgroundColor: "#02034dff",
+    /*   backgroundColor: "#c5065fff", */
     position: "absolute",
     top: 0,
     left: 0,
     bottom: 0,
     width: 170,
-
-
-
 }
 
 const toggleContainer = {
@@ -182,7 +185,7 @@ const toggleContainer = {
     width: 50,
     height: 50,
     borderRadius: "50%",
-    background: "transparent",
+    background: "green",
 
 }
 
@@ -191,9 +194,12 @@ const list = {
     padding: 25,
     margin: 0,
     position: "absolute",
-    top: 60,
+    top: 80,
 }
+const opc = {
 
+    color: "red"
+}
 
 /**
  * ==============   Utils   ================
