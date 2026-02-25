@@ -2,8 +2,8 @@ import axios from "axios";
 // mandar url de endpoint a la funcion getdata
 //creando un objeto API que tiene varias funciones para hacer peticiones.
 //export const confirmed = () => getData("http://127.0.0.1:8000/api/asistiran");
-const api = "http://127.0.0.1:8000/api/";
-//const api = "https://backapi.ladoobscurodelaluna.com/public/api/";
+//const api = "http://127.0.0.1:8000/api/";
+const api = "https://backapi.ladoobscurodelaluna.com/public/api/";
 
 export const Invitados = {
   // Usas dos puntos : para decir “esta propiedad-funcion (confirmed)   tiene este valor getData”.
