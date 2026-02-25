@@ -45,8 +45,8 @@ const Navigation = ({ resumen }) => (
   <motion.ul style={list} variants={navVariants}>
     <motion.li
       variants={itemVariants}
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
+      /* whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }} */
       className="nav-item"
       style={opc}
     >

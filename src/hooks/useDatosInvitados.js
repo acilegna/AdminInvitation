@@ -210,6 +210,7 @@ export const useDatosInvitados = () => {
       const filteredItems = invitadosOriginales.filter(
         (user) =>
           user.name.toLowerCase().includes(valorInput.toLowerCase()) ||
+         user.categoria.toLowerCase().includes(valorInput.toLowerCase()) ||
           user.id_familia.toLowerCase().includes(valorInput.toLowerCase())
       );
 

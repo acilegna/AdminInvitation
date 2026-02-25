@@ -21,9 +21,11 @@
 }
 
 .nav-link:hover {
-  background-color: #1b1b2b;
+  background-color: #ffffff;
 }
-
+ a.nav-link.active:hover{
+color: rgb(0, 0, 15);
+}
 .nav-link.active {
   font-weight: bold;
 }
