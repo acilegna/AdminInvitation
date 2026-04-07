@@ -7,12 +7,12 @@ import { motion, useSpring, useScroll } from "framer-motion";
 export default function ViewInvitation() {
   /* 
   marca arrib */
-  const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
     restDelta: 0.001,
-  })
+  });
   return (
     <>
       <motion.div
@@ -26,29 +26,41 @@ export default function ViewInvitation() {
           height: 10,
           originX: 0,
           backgroundColor: "#000000ff",
-          zIndex: 9999 // aseguramos que esté encima de todo
+          zIndex: 9999, // aseguramos que esté encima de todo
         }}
       />
 
       <Content />
     </>
-  )
-
+  );
 }
 
 function Content() {
-
-  const { tiempoRestante, invitadosFamily, error, handleChangeRadio, handleClick, mensaje, confirmar, disable,
-    inputValue, handleInput, seleccion } = useInvitation();
+  const {
+    tiempoRestante,
+    invitadosFamily,
+    error,
+    handleChangeRadio,
+    handleClick,
+    mensaje,
+    confirmar,
+    disable,
+    inputValue,
+    handleInput,
+    seleccion,
+  } = useInvitation();
 
   const invitados = invitadosFamily?.invitados || [];
-  const adultos = invitados.filter((inv) => inv.categoria.toLowerCase() === "adulto");
-  const ninos = invitados.filter((inv) => inv.categoria.toLowerCase() === "niño");
+  const adultos = invitados.filter(
+    (inv) => inv.categoria.toLowerCase() === "adulto",
+  );
+  const ninos = invitados.filter(
+    (inv) => inv.categoria.toLowerCase() === "niño",
+  );
   const animate = useScrollSections();
 
   return (
     <div className="container-fluid section-invi">
-
       <div className="cont-full seccion">
         <div className="imagenes-container downup">
           <img src="/sources/pareja1.jpg" alt="Fondo" className="imagenes" />
@@ -61,18 +73,25 @@ function Content() {
       {/* FIN SECCION 1 */}
       <div className="cont-full cont-sound seccion">
         <audio id="audio" controls loop>
-          <source src="https://acilegna.github.io/audio.github.io/noc.mp3" type="audio/mp3" />
+          <source
+            src="https://acilegna.github.io/audio.github.io/noc.mp3"
+            type="audio/mp3"
+          />
         </audio>
 
         <div className="cont-msj">
-          <h2 ><span className="text-save-date">Estás Invitado!</span></h2>
-          <h5 className="mt-4 updown"><span className="text-msj">Queremos que seas parte de este momento tan especial</span></h5>
+          <h2>
+            <span className="text-save-date">Estás Invitado!</span>
+          </h2>
+          <h5 className="mt-4 updown">
+            <span className="text-msj">
+              Queremos que seas parte de este momento tan especial
+            </span>
+          </h5>
         </div>
-
       </div>
       {/* FIN SECCION 2 */}
       <div className="cont-full seccion cont-centrado">
-
         <div className="d-flex flex-column align-items-center">
           {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
           <div className="iniciales-container">
@@ -80,36 +99,35 @@ function Content() {
             <h4 className="inicial novia downup">A</h4>
           </div>
 
-
           {/* Contenedor para las imágenes */}
           <div className="d-flex justify-content-center align-items-center flex">
-            <div className="col lados">  <img src="/sources/z1.jpg" alt="Fondo" className="image" />
+            <div className="col lados">
+              {" "}
+              <img src="/sources/z1.jpg" alt="Fondo" className="image" />
             </div>
             <div className="col updown">
               <img src="/sources/z2.jpg" alt="Fondo" className="image" />
             </div>
-            <div className="col lados"> <img src="/sources/z3.jpg" alt="Fondo" className="image" />
-
+            <div className="col lados">
+              {" "}
+              <img src="/sources/z3.jpg" alt="Fondo" className="image" />
             </div>
-
           </div>
           {/*      Contenedor para la fecha */}
           <div className="cont-date">
-            <h3 className="text-date updown">
-              10.12.2026
-            </h3>
+            <h3 className="text-date updown">10.12.2026</h3>
           </div>
         </div>
-
-
-      </div >
+      </div>
       {/* FIN SECCION 3*/}
       <div className="cont-full seccion ">
         <img src="/sources/11.jpg" alt="Fondo" className="imagen-full scale" />
         <div className="fondo-imagen imagen-full"></div>
 
         <div className="cont-titleContador">
-          <h2><span className="text-time"> SAVE THE DATE</span></h2>
+          <h2>
+            <span className="text-time"> SAVE THE DATE</span>
+          </h2>
         </div>
 
         <div className="time-values d-flex justify-content-center  ">
@@ -134,63 +152,127 @@ function Content() {
       {/* FIN SECCION 4*/}
 
       <div className="cont-full seccion cont-centrado">
-        <img src="/sources/pareja.jpg" alt="Fondo" className="imagen-full scale" />
+        <img
+          src="/sources/pareja.jpg"
+          alt="Fondo"
+          className="imagen-full scale"
+        />
         <div className="fondo-imagen imagen-full"></div>
 
         <div className="d-flex flex-column align-items-center">
-
-          <h2><span className="text-present">Sugerencias de regalo</span></h2>
+          <h2>
+            <span className="text-present">Sugerencias de regalo</span>
+          </h2>
           <div className="row downup">
             <div className="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
               <i className="bi bi-gift"></i>
-              <h4><span className="text-present-place">Liverpool</span></h4>
+              <h4>
+                <span className="text-present-place">Liverpool</span>
+              </h4>
               <i className="bi  bi-binoculars">Ver regalos</i>
-
             </div>
             <div className="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
               <i className="bi bi-gift"></i>
-              <h4><span className="text-present-place">Amazon</span></h4>
+              <h4>
+                <span className="text-present-place">Amazon</span>
+              </h4>
               <i className="bi  bi-binoculars">Ver regalos</i>
             </div>
           </div>
-
         </div>
       </div>
       {/* FIN SECCION 5*/}
 
-
       <div className="cont-full seccion cont-centrado" id="itinerario">
-
-
         <div className="d-flex flex-column align-items-center">
-
-          <h2 className="text-center"><span className="title-itinerario">Itinerario</span></h2>
+          <h2 className="text-center">
+            <span className="title-itinerario">Itinerario</span>
+          </h2>
 
           <div className="">
             <div className="row ">
-              <div className="col-4 icons-itinerario izqicon"><img src="/sources/iglesia.png" alt="Fondo" className="img-itinerario" /></div>
-              <div className="col-8 text-itinerario der"><span>Celebracion Religiosa</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon">
+                <img
+                  src="/sources/iglesia.png"
+                  alt="Fondo"
+                  className="img-itinerario"
+                />
+              </div>
+              <div className="col-8 text-itinerario der">
+                <span>Celebracion Religiosa</span>{" "}
+                <span className="span-hora"> 9:20 PM</span>
+              </div>
             </div>
 
             <div className="row">
-              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/brindis.png" alt="Fondo" className="img-itinerario3" /></div>
-              <div className="col-8 text-itinerario der"><span className=" ">Recepcion</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon">
+                {" "}
+                <img
+                  src="/sources/brindis.png"
+                  alt="Fondo"
+                  className="img-itinerario3"
+                />
+              </div>
+              <div className="col-8 text-itinerario der">
+                <span className=" ">Recepcion</span>{" "}
+                <span className="span-hora"> 9:20 PM</span>
+              </div>
             </div>
             <div className="row">
-              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/brides.png" alt="Fondo" className="img-itinerario" /></div>
-              <div className="col-8 text-itinerario der"><span className=" ">Entrada Esposos</span><span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon">
+                {" "}
+                <img
+                  src="/sources/brides.png"
+                  alt="Fondo"
+                  className="img-itinerario"
+                />
+              </div>
+              <div className="col-8 text-itinerario der">
+                <span className=" ">Entrada Esposos</span>
+                <span className="span-hora"> 9:20 PM</span>
+              </div>
             </div>
             <div className="row">
-              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/cena.png" alt="Fondo" className="img-itinerario2" /></div>
-              <div className="col-8 text-itinerario der"><span className=" ">Cena</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon">
+                {" "}
+                <img
+                  src="/sources/cena.png"
+                  alt="Fondo"
+                  className="img-itinerario2"
+                />
+              </div>
+              <div className="col-8 text-itinerario der">
+                <span className=" ">Cena</span>{" "}
+                <span className="span-hora"> 9:20 PM</span>
+              </div>
             </div>
             <div className="row">
-              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/bals.png" alt="Fondo" className="img-itinerario3" /></div>
-              <div className="col-8 text-itinerario der"><span className=" ">Vals Esposos</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon">
+                {" "}
+                <img
+                  src="/sources/bals.png"
+                  alt="Fondo"
+                  className="img-itinerario3"
+                />
+              </div>
+              <div className="col-8 text-itinerario der">
+                <span className=" ">Vals Esposos</span>{" "}
+                <span className="span-hora"> 9:20 PM</span>
+              </div>
             </div>
             <div className="row">
-              <div className="col-4 icons-itinerario izqicon"> <img src="/sources/damcin.png" alt="Fondo" className="img-itinerario" /></div>
-              <div className="col-8 text-itinerario der"><span className=" "> A bailar</span> <span className="span-hora"> 9:20 PM</span></div>
+              <div className="col-4 icons-itinerario izqicon">
+                {" "}
+                <img
+                  src="/sources/damcin.png"
+                  alt="Fondo"
+                  className="img-itinerario"
+                />
+              </div>
+              <div className="col-8 text-itinerario der">
+                <span className=" "> A bailar</span>{" "}
+                <span className="span-hora"> 9:20 PM</span>
+              </div>
             </div>
           </div>
         </div>
@@ -199,17 +281,31 @@ function Content() {
       <div className="cont-full seccion  cont-confirmation">
         <div className="d-flex flex-column align-items-center text-center confir">
           <h2 className="text-confirmation"> Confirma tu asistencia </h2>
-          <p className="text-msj-confirmation downup"> Por favor danos tu respuesta antes del 4-12-2025. </p>
+          <p className="text-msj-confirmation downup">
+            {" "}
+            Por favor danos tu respuesta antes del 4-12-2025.{" "}
+          </p>
           <div className="row g-3 mx-3 ">
             <div className="col-8 col-sm-8 col-md-6 col-lg-6  izq">
-              <input id="search" type="search" className="form-control me-2" onChange={handleInput} value={inputValue}
-                placeholder="Agrega ID de invitado" />
+              <input
+                id="search"
+                type="search"
+                className="form-control me-2"
+                onChange={handleInput}
+                value={inputValue}
+                placeholder="ID de familia"
+              />
             </div>
 
             <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start   der">
-              <i className="bi bi-search" onClick={handleClick}> Buscar</i>
+              <i className="bi bi-search" onClick={handleClick}>
+                {" "}
+                Buscar
+              </i>
             </div>
-            {mensaje && <h5 className="text-success text-center ">{mensaje}</h5>}
+            {mensaje && (
+              <h5 className="text-success text-center ">{mensaje}</h5>
+            )}
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
           </div>
         </div>
@@ -222,7 +318,6 @@ function Content() {
                 <div className="col-12 col-md-6">
                   <h4 className="text-center clasificacion">Adultos</h4>
                   {adultos.map((invitadosFamily) => (
-
                     <div key={invitadosFamily.id} className="mb-2">
                       <div className="row">
                         <div className="col-12 col-md-6 ">
@@ -232,19 +327,35 @@ function Content() {
                         </div>
                         <div className="col-12 col-md-6 ">
                           <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
-                              id={invitadosFamily.id} value='Si' onChange={handleChangeRadio}
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name={invitadosFamily.id}
+                              id={invitadosFamily.id}
+                              value="Si"
+                              onChange={handleChangeRadio}
                             />
-                            <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                            <label
+                              className="form-check-label"
+                              htmlFor={`si-${invitadosFamily.id}`}
+                            >
                               Sí
                             </label>
                           </div>
 
                           <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
-                              id={invitadosFamily.id} value='No' onChange={handleChangeRadio}
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name={invitadosFamily.id}
+                              id={invitadosFamily.id}
+                              value="No"
+                              onChange={handleChangeRadio}
                             />
-                            <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                            <label
+                              className="form-check-label"
+                              htmlFor={`no-${invitadosFamily.id}`}
+                            >
                               No
                             </label>
                           </div>
@@ -268,24 +379,36 @@ function Content() {
                           </strong>
                         </div>
                         <div className="col-12 col-md-6 ">
-
                           <div className="form-check form-check-inline">
-                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
-                              id={invitadosFamily.id} value='Si' onChange={handleChangeRadio}
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name={invitadosFamily.id}
+                              id={invitadosFamily.id}
+                              value="Si"
+                              onChange={handleChangeRadio}
                             />
-                            <label className="form-check-label" htmlFor={`si-${invitadosFamily.id}`}>
+                            <label
+                              className="form-check-label"
+                              htmlFor={`si-${invitadosFamily.id}`}
+                            >
                               Sí
                             </label>
                           </div>
 
                           <div className="form-check form-check-inline">
-
-
-
-                            <input className="form-check-input" type="radio" name={invitadosFamily.id}
-                              id={invitadosFamily.id} value='No' onChange={handleChangeRadio}
+                            <input
+                              className="form-check-input"
+                              type="radio"
+                              name={invitadosFamily.id}
+                              id={invitadosFamily.id}
+                              value="No"
+                              onChange={handleChangeRadio}
                             />
-                            <label className="form-check-label" htmlFor={`no-${invitadosFamily.id}`}>
+                            <label
+                              className="form-check-label"
+                              htmlFor={`no-${invitadosFamily.id}`}
+                            >
                               No
                             </label>
                           </div>
@@ -299,7 +422,11 @@ function Content() {
 
             {(adultos.length > 0 || ninos.length > 0) && (
               <div className="text-center my-4">
-                <button className="btn px-4" onClick={confirmar} disabled={disable}>
+                <button
+                  className="btn px-4"
+                  onClick={confirmar}
+                  disabled={disable}
+                >
                   <i className="bi bi-check2-circle me-2"></i>
                   Confirmar
                 </button>
@@ -309,12 +436,43 @@ function Content() {
         </div>
       </div>
       {/* FIN SECCION 7*/}
-      <footer>
-        <p className="text-center">&copy; 2025 Invitacion B&A | Creado por Entheosmultimedia</p>
+      {/* <footer>
+        <p className="text-center">
+          &copy; 2025 Invitacion B&A | Creado por Entheosmultimedia
+        </p>
+          <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark ">
+       
+      </footer> */}
+
+      <footer className="d-flex flex-wrap justify-content-between align-items-center    border-top bg-dark ">
+        <div className="col-md-4 d-flex align-items-center p-3 mb-2 bg-dark text-white">
+          <span className="mb-3 mb-md-0 ">
+            © 2027 Invitacion B&A | Entheosmultimedia
+          </span>
+        </div>
+        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex p-3 mb-2">
+          <li className="ms-3">
+            <a
+              className="text-white"
+              href="https://www.instagram.com/entheosmultimedia?igsh=MTA3Nmp4cXJza3B3eg=="
+              aria-label="Instagram"
+              target="_blank"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+          </li>
+          <li className="ms-3">
+            <a
+              className="text-white"
+              href="https://www.facebook.com/Enthe0sMultimedia"
+              aria-label="Facebook"
+              target="_blank"
+            >
+              <i className="bi bi-facebook"></i>
+            </a>
+          </li>
+        </ul>
       </footer>
-
-    </div >
+    </div>
   );
-
 }
-

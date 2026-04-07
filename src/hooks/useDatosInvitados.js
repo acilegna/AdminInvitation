@@ -87,7 +87,7 @@ export const useDatosInvitados = () => {
     } else {
       //Actualiza el estado todosInvitados, reemplazando el invitado que tiene el mismo id con uno nuevo (el actualizado) que llega en result.invitado.
       setTodosInvitados((prev) =>
-        prev.map((i) => (i.id === id ? result.info : i))
+        prev.map((i) => (i.id === id ? result.info : i)),
       );
 
       navigate("/invitados");
@@ -123,8 +123,8 @@ export const useDatosInvitados = () => {
 
     setTodosInvitados((prevData) =>
       prevData.map((item) =>
-        item.id === id ? { ...item, status: status.status } : item
-      )
+        item.id === id ? { ...item, status: status.status } : item,
+      ),
     );
   };
 
@@ -210,8 +210,8 @@ export const useDatosInvitados = () => {
       const filteredItems = invitadosOriginales.filter(
         (user) =>
           user.name.toLowerCase().includes(valorInput.toLowerCase()) ||
-         user.categoria.toLowerCase().includes(valorInput.toLowerCase()) ||
-          user.id_familia.toLowerCase().includes(valorInput.toLowerCase())
+          user.categoria.toLowerCase().includes(valorInput.toLowerCase()) ||
+          user.id_familia.toLowerCase().includes(valorInput.toLowerCase()),
       );
 
       setTodosInvitados(filteredItems);
@@ -237,8 +237,11 @@ export const useDatosInvitados = () => {
     if (location.pathname === "/detalles") {
       resumen();
     }
-    allInvitados();
-  }, []);
+    if (location.pathname === "/invitados") {
+      allInvitados();
+    }
+      
+  }, [location.pathname]);
   //retornamos funciones y variables
 
   return {

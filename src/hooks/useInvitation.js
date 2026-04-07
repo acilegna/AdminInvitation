@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { searchByFam,  updateStatus, } from "../services/datosInvitados";
- 
+import { searchByFam, updateStatus } from "../services/datosInvitados";
 
 export const useInvitation = () => {
   const [seleccion, setSeleccion] = useState({});
@@ -75,7 +74,7 @@ export const useInvitation = () => {
       valor="Pendiente";
     }, 6000); */
   };
- const update = async (id, datos) => {
+  const update = async (id, datos) => {
     result = await updateStatus(id, datos);
   };
   const confirmar = () => {
