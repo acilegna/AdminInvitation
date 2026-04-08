@@ -158,7 +158,7 @@ const MenuToggle = ({ toggle }) => (
  */
 
 const background = {
-  position: "absolute",
+ /*  position: "absolute", */
   width: 65,
 };
 
