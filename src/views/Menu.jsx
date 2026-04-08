@@ -20,15 +20,14 @@ export default function Menu({ resumen }) {
 
       <Navigation resumen={resumen} />
       <MenuToggle toggle={() => setIsOpen((prev) => !prev)} />
-     {/*     toma el valor anterior (prev) Lo invierte (true → false, false → true) Actualiza el estado isOpen */}
+      {/*     toma el valor anterior (prev) Lo invierte (true → false, false → true) Actualiza el estado isOpen */}
     </motion.nav>
   );
 }
 
-
 const nav = {
-  width: 170,
-  backgroundColor: "#0d0c23",
+  width: 65,
+  backgroundColor: "#0c022e",
   zIndex: 5,
 };
 
@@ -50,21 +49,22 @@ const Navigation = ({ resumen }) => (
       className="nav-item"
       style={opc}
     >
-      <Link className="nav-link active" to="/ver">
+      <Link className="nav-link active" title="Home" to="/ver">
         {" "}
-        <i className="bi bi-house-door"></i> Inicio
+        <i className="bi bi-house-door"></i>
       </Link>
-      <Link className="nav-link active" to="/import">
-        <i className="bi bi-file-earmark-excel"></i> Importar
+
+      <Link className="nav-link active"  title="Importar" to="/import">
+        <i className="bi bi-file-earmark-excel"></i>
       </Link>
-      <Link className="nav-link active" to="/invitados">
-        <i className="bi bi-person-vcard"></i> Invitados
+      <Link className="nav-link active"  title="Invitados" to="/invitados">
+        <i className="bi bi-person-vcard"></i>
       </Link>
-      <Link className="nav-link active" to="/detalles" onClick={resumen}>
-        <i className="bi bi-binoculars"></i> Detalles
+      <Link className="nav-link active"  title="Detalles" to="/detalles" onClick={resumen}>
+        <i className="bi bi-binoculars"></i>
       </Link>
-      <Link className="nav-item mt-3 nav-link   active">
-        <i className="bi bi-box-arrow-right"> </i>Salir
+      <Link className="nav-item mt-3 nav-link   active"  title="Salir">
+        <i className="bi bi-box-arrow-right"> </i>
       </Link>
     </motion.li>
   </motion.ul>
@@ -97,7 +97,7 @@ const sidebarVariants = {
     },
   }),
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
+    clipPath: "circle(25px at 30px 40px)",
     transition: {
       delay: 0.2,
       type: "spring",
@@ -112,7 +112,7 @@ const Path = (props) => (
     fill="transparent"
     strokeWidth="2"
     //color
-    stroke="hsla(0, 0%, 100%, 1.00)"
+    stroke="rgb(255, 255, 255)"
     strokeLinecap="round"
     {...props}
   />
@@ -147,15 +147,19 @@ const MenuToggle = ({ toggle }) => (
 
 /**
  * ==============   Styles   ================
- */
-
-const background = {
-  /*   backgroundColor: "#c5065fff", */
+ * const background = {
+   backgroundColor: "#c5065fff", 
   position: "absolute",
   top: 0,
   left: 0,
   bottom: 0,
-  width: 170,
+  width:170,
+};
+ */
+
+const background = {
+  position: "absolute",
+  width: 65,
 };
 
 const toggleContainer = {
@@ -166,17 +170,18 @@ const toggleContainer = {
   MozUserSelect: "none",
   cursor: "pointer",
   position: "absolute",
-  top: 18,
-  left: 15,
-  width: 50,
-  height: 50,
+  top: 20,
+  left: 10,
+  width: 40,
+  height: 40,
   borderRadius: "50%",
-  background: "#0d0c23",
+  backgroundColor: "#0c022e",
 };
 
 const list = {
   listStyle: "none",
-  padding: 25,
+  padding: 15,
+
   margin: 0,
   position: "absolute",
   top: 80,
