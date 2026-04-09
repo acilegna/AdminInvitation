@@ -9,7 +9,7 @@ const ViewDetalles = ({ confirmados, pendientes, ausentes, total, errores, niño
         <div className="cont-details p-3 text-white rounded d-flex flex-column justify-content-center align-items-center ">
             <div className='row justify-content-center'>
                 <div className='col-xxl-6 col-xl-6 col-lg-6 col-md-6  col-12 d-flex flex-column justify-content-center align-items-center invitados'>
-                    <h3 className="text-capitalize text-center"> Invitados </h3>
+                    <h3 className="text-capitalize text-center"> Total Invitados </h3>
                     <span className='detalles'>{total}</span>
                     <div className="d-flex gap-2">
                         <span>Niños: {niños}</span> <span>Adultos: {adultos}</span>

@@ -71,7 +71,7 @@ const Navigation = ({ resumen }) => (
       <Link
         className="nav-item mt-3 nav-link   active"
         title="Ver Invitación"
-        to="http://localhost:5173/bya"
+        to="https://admin-invitation-lac.vercel.app/bya"
       >
         <i className="bi bi-box-arrow-right"> </i>
       </Link>
