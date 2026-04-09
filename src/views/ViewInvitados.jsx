@@ -45,7 +45,7 @@ const ViewInvitados = ({
                   ? "#fc8686" // Rojo
                   : row.status === "Sí"
                     ? "#47de81" // Verde
-                    : "#cccccc", // Gris por defecto
+                    : "#47de81", // Gris por defecto
             borderRadius: "8px",
             padding: "4px 8px",
             textAlign: "center",
@@ -80,7 +80,7 @@ const ViewInvitados = ({
             onClick={() => Confirmation(row.id, { status: "Pendiente" })}
           >
             <i
-              className="bi bi-hourglass-split"
+              className="bi bi-hourglass-split   "
               title="Pendiente por confirmar"
             ></i>
           </Link>

@@ -69,22 +69,22 @@ a.nav-link.active:hover {
 }
 
 .pendientes {
-  background-color: #4b3b13;
+  background-color:#e7da61;
   height: 235px;
 }
 
 .invitados {
-  background-color: #1f2949;
+  background-color: #596caa;
   height: 235px;
 }
 
 .confirmado {
-  background-color: #184b38;
+  background-color:  #47de81;
   height: 235px;
 }
 
 .confirmados {
-  background-color: #581d18;
+  background-color: #fc8686;
   height: 235px;
 }
 
@@ -102,7 +102,7 @@ a.nav-link.active:hover {
 
 .bi-check-circle {
   color: #00b947;
-  margin-left:-10px
+  
 }
 
 .bi-x-circle {
@@ -111,7 +111,7 @@ a.nav-link.active:hover {
 }
 
 .bi-hourglass-split {
-  color: #7a6f0a;
+  color:rgb(238, 214, 3)
 }
 
 .detalles {
