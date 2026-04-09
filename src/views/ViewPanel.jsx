@@ -3,6 +3,7 @@ import ViewInvitados from "./ViewInvitados";
 import ViewImport from "./ViewImport";
 import ViewEdit from "./ViewEdit";
 
+
 import { Routes, Route } from 'react-router-dom';
 import { useDatosInvitados } from "../hooks/useDatosInvitados";
 import Menu from "./Menu";
@@ -71,6 +72,7 @@ function ViewPanel() {
                     </Route>
 
                     <Route path='/import' element={<ViewImport />}></Route>
+  
 
                 </Routes>
 

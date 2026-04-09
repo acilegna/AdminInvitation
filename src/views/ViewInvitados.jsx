@@ -17,8 +17,9 @@ const ViewInvitados = ({
 
   const columns = [
     {
-      name: "Codigo",
+         name: <span className="fw-bold text-primary">Código</span>,
       selector: (row) => row.id_familia,
+      
     },
     {
       name: "Nombre",

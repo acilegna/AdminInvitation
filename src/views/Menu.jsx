@@ -54,16 +54,25 @@ const Navigation = ({ resumen }) => (
         <i className="bi bi-house-door"></i>
       </Link>
 
-      <Link className="nav-link active"  title="Importar" to="/import">
+      <Link className="nav-link active" title="Importar" to="/import">
         <i className="bi bi-file-earmark-excel"></i>
       </Link>
-      <Link className="nav-link active"  title="Invitados" to="/invitados">
+      <Link className="nav-link active" title="Invitados" to="/invitados">
         <i className="bi bi-person-vcard"></i>
       </Link>
-      <Link className="nav-link active"  title="Detalles" to="/detalles" onClick={resumen}>
+      <Link
+        className="nav-link active"
+        title="Detalles"
+        to="/detalles"
+        onClick={resumen}
+      >
         <i className="bi bi-binoculars"></i>
       </Link>
-      <Link className="nav-item mt-3 nav-link   active"  title="Salir">
+      <Link
+        className="nav-item mt-3 nav-link   active"
+        title="Salir"
+        to="http://localhost:5173/bya"
+      >
         <i className="bi bi-box-arrow-right"> </i>
       </Link>
     </motion.li>
@@ -158,7 +167,7 @@ const MenuToggle = ({ toggle }) => (
  */
 
 const background = {
- /*  position: "absolute", */
+  /*  position: "absolute", */
   width: 65,
 };
 
