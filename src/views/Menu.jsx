@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Menu({ resumen }) {
-  const [isOpen, setIsOpen] = useState(false);
+ const [isOpen, setIsOpen] = useState(true);
   const containerRef = useRef(null);
 
   return (
@@ -49,7 +49,7 @@ const Navigation = ({ resumen }) => (
       className="nav-item"
       style={opc}
     >
-      <Link className="nav-link active" title="Home" to="/ver">
+      <Link className="nav-link active" title="Home" to="/Home">
         {" "}
         <i className="bi bi-house-door"></i>
       </Link>
@@ -70,7 +70,7 @@ const Navigation = ({ resumen }) => (
       </Link>
       <Link
         className="nav-item mt-3 nav-link   active"
-        title="Salir"
+        title="Ver Invitación"
         to="http://localhost:5173/bya"
       >
         <i className="bi bi-box-arrow-right"> </i>

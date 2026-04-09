@@ -22,19 +22,23 @@ const ViewInvitados = ({
       
     },
     {
-      name: "Nombre",
+          name: <span className="fw-bold text-primary">Nombre</span>,
+      
       selector: (row) => row.name,
     },
     {
-      name: "Apellido",
+       
+      name: <span className="fw-bold text-primary">Apellido</span>,
       selector: (row) => row.apellido,
     },
     {
-      name: "Grupo",
+     
+       name: <span className="fw-bold text-primary">Grupo</span>,
       selector: (row) => row.categoria,
     },
     {
-      name: "Status",
+      
+       name: <span className="fw-bold text-primary">Status</span>,
       selector: (row) => row.status,
       cell: (row) => (
         <div
@@ -59,7 +63,8 @@ const ViewInvitados = ({
       ),
     },
     {
-      name: "Asistira",
+     
+       name: <span className="fw-bold text-primary">Asistira</span>,
       selector: (row) => row.id,
       cell: (row) => (
         <div>
@@ -89,7 +94,7 @@ const ViewInvitados = ({
       ),
     },
     {
-      name: "Acciones",
+    name: <span className="fw-bold text-primary">Acciones</span>,
       selector: (row) => row.id,
       cell: (row) => (
         <div className="d-flex justify-content-center gap-3">
