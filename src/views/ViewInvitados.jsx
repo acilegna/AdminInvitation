@@ -127,7 +127,16 @@ const ViewInvitados = ({
         </div>
       </div>
 
-      <DataTable columns={columns} data={data} />
+       
+       
+        <DataTable
+  columns={columns}
+  data={data}
+  responsive
+  highlightOnHover
+  striped
+/>
+       
     </div>
   );
 };

@@ -35,8 +35,11 @@ a.nav-link.active:hover {
 .sections {
   transition: all 0.3s ease;
   flex: 1;
-  background-color: aqua;
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 50%;
 }
+
 
 .with-menu {
   width: calc(100% - 250px);
@@ -53,11 +56,7 @@ a.nav-link.active:hover {
   right: 10px;
 }
 
-.sections {
-  background-color: rgb(250, 250, 250);
-  height: 100vh;
-  width: 100%;
-}
+
 
 .cont-details .row {
   width: 600px;
