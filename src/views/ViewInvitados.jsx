@@ -91,10 +91,11 @@ const ViewInvitados = ({
       name: "Acciones",
       selector: (row) => row.id,
       cell: (row) => (
-        <div>
+        <div className="d-flex justify-content-center gap-3">
           <Link to="/invitados" onClick={() => processo(row.id, process)}>
             <i className="bi bi-trash text-danger" title="Eliminar"></i>
           </Link>
+
           <Link to="/editar" onClick={() => processo(row.id)}>
             <i className="bi bi-pencil-fill text-primary" title="Modificar"></i>
           </Link>
@@ -127,16 +128,13 @@ const ViewInvitados = ({
         </div>
       </div>
 
-       
-       
-        <DataTable
-  columns={columns}
-  data={data}
-  responsive
-  highlightOnHover
-  striped
-/>
-       
+      <DataTable
+        columns={columns}
+        data={data}
+        responsive
+        highlightOnHover
+        striped
+      />
     </div>
   );
 };

@@ -92,14 +92,22 @@ a.nav-link.active:hover {
   text-decoration: none;
 }
 
+.bi-trash,
+.bi-pencil-fill,
+.bi-check-circle,
+.bi-x-circle,
+.bi-hourglass-split {
+  font-size: 20px;
+}
+
 .bi-check-circle {
   color: #00b947;
-  margin: 4px;
+  margin-left:-10px
 }
 
 .bi-x-circle {
   color: rgb(255, 2, 2);
-  margin: 4px;
+  margin: 15px;
 }
 
 .bi-hourglass-split {
