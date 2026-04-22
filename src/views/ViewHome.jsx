@@ -1,7 +1,12 @@
 const ViewHome = () => {
   return (
     <>
-      <div className="container mt-4 text-center">Foto aqui... Esto es una Prueba </div>
+      <div className="container-fluid">
+        {" "}
+        <div className="cont-details p-3 text-white rounded d-flex flex-column justify-content-center align-items-center">
+          <img src="/sources/IMG_1150.jpg" alt="Fondo" className="imagenes2" />
+        </div>{" "}
+      </div>
     </>
   );
 };

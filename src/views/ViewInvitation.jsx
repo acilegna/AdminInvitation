@@ -63,7 +63,7 @@ function Content() {
     <div className="container-fluid section-invi">
       <div className="cont-full seccion">
         <div className="imagenes-container downup">
-          <img src="/sources/pareja1.jpg" alt="Fondo" className="imagenes" />
+          <img src="/sources/pareja.jpg" alt="Fondo" className="imagenes" />
         </div>
         <div className="couple-name">
           <h2 className="title-name-text ">Ana &amp; Boris</h2>
