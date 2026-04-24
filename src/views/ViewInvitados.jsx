@@ -81,6 +81,22 @@ const ViewInvitados = ({
           >
             <i className="bi bi-x-circle" title="No asistira"></i>
           </Link>
+          
+        </div>
+      ),
+    },
+
+
+
+
+ {
+     
+       name: <span className="fw-bold text-primary">Reiniciar-Status</span>,
+      selector: (row) => row.id,
+      cell: (row) => (
+        <div>
+          
+ 
           <Link
             to="/invitados"
             onClick={() => Confirmation(row.id, { status: "Pendiente" })}
@@ -93,6 +109,11 @@ const ViewInvitados = ({
         </div>
       ),
     },
+
+
+
+
+
     {
     name: <span className="fw-bold text-primary">Acciones</span>,
       selector: (row) => row.id,
