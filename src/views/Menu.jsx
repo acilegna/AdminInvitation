@@ -27,7 +27,7 @@ export default function Menu({ resumen }) {
 
 const nav = {
   width: 65,
-  backgroundColor: "rgb(89 117 149)",
+  backgroundColor: "rgb(48, 83, 123)",
   zIndex: 5,
 };
 
@@ -49,7 +49,7 @@ const Navigation = ({ resumen }) => (
       className="nav-item"
       style={opc}
     >
-      <Link className="nav-link active" title="Home" to="/Home">
+      <Link className="nav-link active" title="Home" to="/">
         {" "}
         <i className="bi bi-house-door"></i>
       </Link>
@@ -184,7 +184,7 @@ const toggleContainer = {
   width: 40,
   height: 40,
   borderRadius: "50%",
-  backgroundColor: "rgb(89 117 149)",
+  backgroundColor: "rgb(48, 83, 123)",
 };
 
 const list = {
