@@ -91,7 +91,7 @@ const ViewInvitados = ({
 
  {
      
-       name: <span className="fw-bold text-primary">Reiniciar-Status</span>,
+       name: <span className="fw-bold text-primary">Reiniciar Status</span>,
       selector: (row) => row.id,
       cell: (row) => (
         <div>
