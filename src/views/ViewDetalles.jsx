@@ -43,6 +43,7 @@ const ViewDetalles = ({
          <i className="bi bi-person-check-fill"></i>
           <h3 className="text-capitalize text-center"> confirmados </h3>
           <span className="detalles">{confirmados}</span>
+         
           <div className="d-flex gap-2">
             <span>Niños: {niñosConfirmados}</span>{" "}
             <span>Adultos: {adultosConfirmados} </span>
@@ -50,11 +51,15 @@ const ViewDetalles = ({
         </div>
         <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5 col-12 d-flex flex-column justify-content-center align-items-center pendientes">
          <i className="bi bi-clock"></i>
-          <h3 className="text-capitalize"> pendientes </h3>
-          <span className="detalles">{pendientes}</span>
+          <h3 className="text-capitalize title-pendiente"> pendientes </h3>
+          
+          <span className="detalles number-pendiente">{pendientes}</span>
           <div className="d-flex gap-2">
-            <span>Niños: {niñosNoConfirmados}</span>{" "}
-            <span>Adultos: {adultosPendientes} </span>
+            <i className="bi bi-emoji-smile"></i>
+            <span className="text-pendiente"> {niñosNoConfirmados} Niños</span>{" "}
+             <span className="border-start"></span>
+            <i className="bi bi-person-fill"></i>
+            <span className="text-pendiente">  {adultosPendientes} Adultos</span>
           </div>
         </div>
       </div>

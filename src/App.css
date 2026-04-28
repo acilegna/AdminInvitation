@@ -59,23 +59,56 @@ a.nav-link.active:hover {
 
 
 .cont-details .row {
- /* width: 600px;*/
-  
- width: 100%;
-  
-   
+  /* width: 600px;*/
+
+  width: 100%;
+
+
 }
 
 .cont-details {
   background-color: #f5f7fa;
   height: 100vh;
   width: 100%;
+
+}
+
+.title-pendiente {
+  font-size: 18px;
+}
+
+.bi-clock,
+.number-pendiente,
+.bi-emoji-smile,
+.bi-person-fill,
+.title-pendiente {
+  color: #f59e0b;
+}
+
+.text-pendiente {
+  color: rgb(84, 84, 84);
+}
+
+.bi-clock {
+  background-color: rgba(255, 234, 3, 0.316);
+  padding: 10px 16px;
+  font-size: 25px;
   
+  border-radius: 15px;
 }
 
 .pendientes {
-  background-color:#f4c542;
+
   height: 235px;
+  border-radius: 10px;
+  border-left: 6px solid #f59e0b;
+
+
+  background: #fffbf2;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 185, 71, 0.1);
+
 }
 
 .invitados {
@@ -84,7 +117,7 @@ a.nav-link.active:hover {
 }
 
 .confirmado {
-  background-color:  #34c759;
+  background-color: #34c759;
   height: 235px;
 }
 
@@ -107,7 +140,7 @@ a.nav-link.active:hover {
 
 .bi-check-circle {
   color: #00b947;
-  
+
 }
 
 .bi-x-circle {
@@ -116,13 +149,13 @@ a.nav-link.active:hover {
 }
 
 .bi-hourglass-split {
-  color:rgb(238, 214, 3)
+  color: rgb(238, 214, 3)
 }
 
 .detalles {
   font-size: 35px;
   font-weight: 600;
-  color: rgb(255, 255, 255);
+
 }
 
 th {
