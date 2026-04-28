@@ -59,13 +59,18 @@ a.nav-link.active:hover {
 
 
 .cont-details .row {
-  width: 600px;
+ /* width: 600px;*/
+  
+ width: 100%;
+  
+   
 }
 
 .cont-details {
   background-color: #f5f7fa;
   height: 100vh;
   width: 100%;
+  
 }
 
 .pendientes {
@@ -74,7 +79,7 @@ a.nav-link.active:hover {
 }
 
 .invitados {
-  background-color: #4f6bed;
+  background-color: #c0c0c0;
   height: 235px;
 }
 
