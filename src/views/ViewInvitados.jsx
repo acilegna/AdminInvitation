@@ -17,28 +17,24 @@ const ViewInvitados = ({
 
   const columns = [
     {
-         name: <span className="fw-bold text-primary">Código</span>,
+      name: <span className="fw-bold text-primary">Código</span>,
       selector: (row) => row.id_familia,
-      
     },
     {
-          name: <span className="fw-bold text-primary">Nombre</span>,
-      
+      name: <span className="fw-bold text-primary">Nombre</span>,
+
       selector: (row) => row.name,
     },
     {
-       
       name: <span className="fw-bold text-primary">Apellido</span>,
       selector: (row) => row.apellido,
     },
     {
-     
-       name: <span className="fw-bold text-primary">Grupo</span>,
+      name: <span className="fw-bold text-primary">Grupo</span>,
       selector: (row) => row.categoria,
     },
     {
-      
-       name: <span className="fw-bold text-primary">Status</span>,
+      name: <span className="fw-bold text-primary">Status</span>,
       selector: (row) => row.status,
       cell: (row) => (
         <div
@@ -63,8 +59,7 @@ const ViewInvitados = ({
       ),
     },
     {
-     
-       name: <span className="fw-bold text-primary">Asistira</span>,
+      name: <span className="fw-bold text-primary">Asistira</span>,
       selector: (row) => row.id,
       cell: (row) => (
         <div>
@@ -81,22 +76,15 @@ const ViewInvitados = ({
           >
             <i className="bi bi-x-circle" title="No asistira"></i>
           </Link>
-          
         </div>
       ),
     },
 
-
-
-
- {
-     
-       name: <span className="fw-bold text-primary">Reiniciar Status</span>,
+    {
+      name: <span className="fw-bold text-primary">Reiniciar Status</span>,
       selector: (row) => row.id,
       cell: (row) => (
         <div>
-          
- 
           <Link
             to="/invitados"
             onClick={() => Confirmation(row.id, { status: "Pendiente" })}
@@ -110,12 +98,8 @@ const ViewInvitados = ({
       ),
     },
 
-
-
-
-
     {
-    name: <span className="fw-bold text-primary">Acciones</span>,
+      name: <span className="fw-bold text-primary">Acciones</span>,
       selector: (row) => row.id,
       cell: (row) => (
         <div className="d-flex justify-content-center gap-3">
