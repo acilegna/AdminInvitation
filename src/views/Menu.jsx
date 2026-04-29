@@ -27,7 +27,7 @@ export default function Menu({ resumen }) {
 
 const nav = {
   width: 65,
-  backgroundColor: "rgb(48, 83, 123)",
+  backgroundColor: "#203e64",
   zIndex: 5,
 };
 
@@ -184,7 +184,7 @@ const toggleContainer = {
   width: 40,
   height: 40,
   borderRadius: "50%",
-  backgroundColor: "rgb(48, 83, 123)",
+  backgroundColor: "#203e64",
 };
 
 const list = {

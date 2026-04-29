@@ -73,35 +73,82 @@ a.nav-link.active:hover {
 
 }
 
-.title-pendiente {
+.title-pendiente, .title-ausentes, .title-confirmado, .title-invitados {
   font-size: 18px;
+}
+
+
+
+
+ .bi-people-fill,
+.number-invitados,
+.invitados .bi-emoji-smile,
+.invitados .bi-person-fill,
+.title-invitados {
+  color: #2e61bd;
+}
+
+
+ .bi-person-check-fill,
+.number-confirmado,
+.confirmado .bi-emoji-smile,
+.confirmado .bi-person-fill,
+.title-confirmado {
+  color: #0e9751;
+}
+
+.bi-person-dash-fill,
+.number-ausentes,
+.ausentes .bi-emoji-smile,
+.ausentes .bi-person-fill,
+.title-ausentes {
+  color:#df423d;
 }
 
 .bi-clock,
 .number-pendiente,
-.bi-emoji-smile,
-.bi-person-fill,
+.pendientes .bi-emoji-smile,
+.pendientes .bi-person-fill,
 .title-pendiente {
-  color: #f59e0b;
+  color: #ffb602;
 }
 
-.text-pendiente {
+.text-status {
   color: rgb(84, 84, 84);
 }
 
 .bi-clock {
-  background-color: rgba(255, 234, 3, 0.316);
+  background-color: #fef3dd;
   padding: 10px 16px;
   font-size: 25px;
-  
   border-radius: 15px;
 }
 
+.bi-person-dash-fill{
+  background-color:#fddedc;
+  padding: 10px 16px;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+.bi-person-check-fill {
+  background-color:#d9f1e4;
+  padding: 10px 16px;
+  font-size: 25px;
+  border-radius: 15px;
+}
+
+.bi-people-fill {
+  background-color:#dee9ff;
+  padding: 10px 16px;
+  font-size: 25px;
+  border-radius: 15px;
+}
 .pendientes {
 
   height: 235px;
   border-radius: 10px;
-  border-left: 6px solid #f59e0b;
+  border-left: 6px solid #ffb602;
 
 
   background: #fffbf2;
@@ -112,18 +159,37 @@ a.nav-link.active:hover {
 }
 
 .invitados {
-  background-color: #c0c0c0;
   height: 235px;
+  border-radius: 10px;
+  border-left: 6px solid #2f62be;
+
+
+  background: #fffbf2;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 185, 71, 0.1);
 }
 
 .confirmado {
-  background-color: #34c759;
   height: 235px;
+  border-radius: 10px;
+  border-left: 6px solid #1bc408;
+
+  background: #fffbf2;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 185, 71, 0.1);
 }
 
-.confirmados {
-  background-color: #ff6b6b;
-  height: 235px;
+.ausentes {
+   height: 235px;
+  border-radius: 10px;
+  border-left: 6px solid #df423d;
+
+  background: #fffbf2;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 185, 71, 0.1);
 }
 
 .icono {
@@ -163,7 +229,7 @@ th {
   color: red;
 }
 
-@media (max-width: 820px) {
+/* @media (max-width: 820px) {
   .cont-details .row {
     width: 500px;
   }
@@ -171,7 +237,7 @@ th {
 
 @media (max-width: 768px) {
 
-  .confirmados,
+  .ausentes,
   .confirmado,
   .invitados,
   .pendientes {
@@ -181,4 +247,4 @@ th {
   .cont-details .row {
     width: 300px;
   }
-}
+} */
