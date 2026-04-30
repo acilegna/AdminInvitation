@@ -73,14 +73,17 @@ a.nav-link.active:hover {
 
 }
 
-.title-pendiente, .title-ausentes, .title-confirmado, .title-invitados {
+.title-pendiente,
+.title-ausentes,
+.title-confirmado,
+.title-invitados {
   font-size: 18px;
 }
 
 
 
 
- .bi-people-fill,
+.bi-people-fill,
 .number-invitados,
 .invitados .bi-emoji-smile,
 .invitados .bi-person-fill,
@@ -89,7 +92,7 @@ a.nav-link.active:hover {
 }
 
 
- .bi-person-check-fill,
+.bi-person-check-fill,
 .number-confirmado,
 .confirmado .bi-emoji-smile,
 .confirmado .bi-person-fill,
@@ -102,7 +105,7 @@ a.nav-link.active:hover {
 .ausentes .bi-emoji-smile,
 .ausentes .bi-person-fill,
 .title-ausentes {
-  color:#df423d;
+  color: #df423d;
 }
 
 .bi-clock,
@@ -124,26 +127,27 @@ a.nav-link.active:hover {
   border-radius: 15px;
 }
 
-.bi-person-dash-fill{
-  background-color:#fddedc;
+.bi-person-dash-fill {
+  background-color: #fddedc;
   padding: 10px 16px;
   font-size: 25px;
   border-radius: 15px;
 }
 
 .bi-person-check-fill {
-  background-color:#d9f1e4;
+  background-color: #d9f1e4;
   padding: 10px 16px;
   font-size: 25px;
   border-radius: 15px;
 }
 
 .bi-people-fill {
-  background-color:#dee9ff;
+  background-color: #dee9ff;
   padding: 10px 16px;
   font-size: 25px;
   border-radius: 15px;
 }
+
 .pendientes {
 
   height: 235px;
@@ -182,7 +186,7 @@ a.nav-link.active:hover {
 }
 
 .ausentes {
-   height: 235px;
+  height: 235px;
   border-radius: 10px;
   border-left: 6px solid #df423d;
 
@@ -241,10 +245,11 @@ th {
   .confirmado,
   .invitados,
   .pendientes {
-    height: auto;
+    height: 100%;
   }
 
   .cont-details .row {
     width: 300px;
+    background-color: red;
   }
-} 
+}
