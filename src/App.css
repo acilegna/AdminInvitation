@@ -3,6 +3,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Almendra+Display&family=Ballet:opsz@16..72&family=Cherish&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Grey+Qo&family=Italianno&family=Miss+Fajardose&family=Suranna&family=Tangerine:wght@400;700&family=Updock&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Almendra+Display&family=Ballet:opsz@16..72&family=Cherish&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Great+Vibes&family=Grey+Qo&family=Inconsolata:wght@200..900&family=Italianno&family=Libertinus+Serif+Display&family=Miss+Fajardose&family=Sirivennela&family=Suranna&family=Tangerine:wght@400;700&family=Updock&display=swap");
 
+.btn.upFile {
+  background-color: rgb(3, 79, 180);
+  color: #ffffff;
+  font-weight: bold
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+}
+
+.upload-box {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border: 1px dashed #3b82f6;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #f9fafb;
+}
+
+.upload-box:hover {
+  background-color: #eef2ff;
+  border-color: #2563eb;
+}
+
+
+
+.bi-cloud-arrow-up {
+  background-color: #3ba3e55d;
+  padding: 10px 16px;
+  font-size: 25px;
+
+  border-radius: 15px;
+  color: #2e61bd;
+}
+
+
+.cont-import {
+
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+
+  background: #f7f7f7;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 185, 71, 0.1);
+
+}
+
+
 #main-panel {
   background-color: rgba(5, 187, 35, 0.753);
   height: 100vh;
@@ -55,9 +109,12 @@ a.nav-link.active:hover {
   top: 10px;
   right: 10px;
 }
-.title-resumen-invitados{
-  color: rgb(72, 72, 72);
+
+.title-resumen-invitados {
+  color: rgb(75, 75, 75);
   font-size: 22px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 
@@ -142,6 +199,7 @@ a.nav-link.active:hover {
   background-color: #dee9ff;
 
 }
+
 
 .bi-clock,
 .bi-person-dash-fill,

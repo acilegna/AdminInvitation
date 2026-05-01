@@ -41,12 +41,12 @@ const ViewInvitados = ({
           style={{
             backgroundColor:
               row.status === "Pendiente"
-                ? "#ffb602" // Amarillo
+                ? "#fcf186" // Amarillo
                 : row.status === "No"
-                  ? "#df423d" // Rojo
+                  ? "#fc8686" // Rojo
                   : row.status === "Sí"
-                    ? "#0e9751" // Verde
-                    : "#0e9751", // Gris por defecto
+                    ? "#2dd47e" // Verde
+                    : "#2ccd7a", // Gris por defecto
             borderRadius: "8px",
             padding: "4px 8px",
             textAlign: "center",

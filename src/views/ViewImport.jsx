@@ -6,28 +6,54 @@ const ViewImport = () => {
 
   return (
     <div className="container my-4">
-      <label htmlFor="formFileSm" className="form-label">
-        Subir Archivo de Invitados
-      </label>
-
-      <div className="row g-2 align-items-center">
-        <div className="col-12 col-md-8">
-          <input
-            className="form-control form-control-sm"
-            id="formFileSm"
-            type="file"
-            accept=".xlsx, .xls, .csv"
-            onChange={handleFileChange}
-          />
-        </div>
-        <div className="col-12 col-md-4 d-grid">
-          <button
-            className="btn btn-primary btn-sm"
-            onClick={onClick}
-            disabled={!onClick}
+      <div className="cont-import ">
+        <div className="text-center">
+          {/* <i className="bi bi-cloud-arrow-up"></i> */}
+          <p
+            htmlFor="formFileSm"
+            className="form-label title-resumen-invitados"
           >
-            Subir
-          </button>
+            Subir Archivo de Invitados
+          </p>
+        </div>
+
+        <div className="row g-2 align-items-center">
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            {/*  <input
+              className="form-control form-control-sm"
+              id="formFileSm"
+              type="file"
+              accept=".xlsx, .xls, .csv"
+              onChange={handleFileChange}
+            /> */}
+
+            <div className="upload-container">
+              <label htmlFor="fileUpload" className="upload-box">
+                <i className="bi bi-cloud-arrow-up upload-icon"></i>
+
+                <p className="mb-1 fw-semibold mt-3">Arrastra tu archivo aquí</p>
+                <small className="text-muted">
+                  o haz clic para seleccionar
+                </small>
+
+                <input
+                  id="fileUpload"
+                  type="file"
+                  accept=".xlsx, .xls, .csv"
+                  onChange={handleFileChange}
+                  hidden
+                />
+              </label>
+            </div>
+            <button
+              className="btn upFile btn-sm mt-3 mb-3"
+              onClick={onClick}
+              disabled={!onClick}
+            >
+              {" "}
+              <i className="bi bi-upload"> Subir Archivo</i>
+            </button>
+          </div>
         </div>
       </div>
 
