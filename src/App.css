@@ -210,52 +210,34 @@ a.nav-link.active:hover {
   border-radius: 15px;
 }
 
-.pendientes {
-
-  height: 200px;
-  border-radius: 10px;
-  border-left: 6px solid #ffb602;
 
 
-  background: #fffbf2;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(0, 185, 71, 0.1);
-
-}
-
-.invitados {
-  height: 200px;
-  border-radius: 10px;
-  border-left: 6px solid #2e61bd;
-
-
-  background: #fffbf2;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(0, 185, 71, 0.1);
-}
-
-.confirmado {
-  height: 200px;
-  border-radius: 10px;
-  border-left: 6px solid #0e9751;
-
-  background: #fffbf2;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.08),
-    0 0 0 1px rgba(0, 185, 71, 0.1);
-}
-
+.pendientes,
+.invitados,
+.confirmado,
 .ausentes {
   height: 200px;
   border-radius: 10px;
-  border-left: 6px solid #df423d;
-
   background: #fffbf2;
   box-shadow:
     0 10px 25px rgba(0, 0, 0, 0.08),
     0 0 0 1px rgba(0, 185, 71, 0.1);
+}
+
+.pendientes {
+  border-left: 6px solid #ffb602;
+}
+
+.invitados {
+  border-left: 6px solid #2e61bd;
+}
+
+.confirmado {
+  border-left: 6px solid #0e9751;
+}
+
+.ausentes {
+  border-left: 6px solid #df423d;
 }
 
 .icono {
@@ -307,20 +289,15 @@ th {
   .confirmado,
   .invitados,
   .pendientes {
-    height: auto;
+    /* height: auto; */
+     height: auto;
+     padding-top: 10px;
   }
 
   .cont-details .row {
-    width: 300px;
+    width: 350px;
     height: 100%;
 
   }
-
-
-
-
-
-
-
 
 }
