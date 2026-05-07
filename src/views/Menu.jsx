@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Menu({ resumen }) {
- const [isOpen, setIsOpen] = useState(true);
+export default function Menu({ resumen , changeTitle}) {
+  const [isOpen, setIsOpen] = useState(true);
   const containerRef = useRef(null);
 
   return (
@@ -18,7 +18,7 @@ export default function Menu({ resumen }) {
     >
       <motion.div style={background} variants={sidebarVariants} />
 
-      <Navigation resumen={resumen} />
+      <Navigation resumen={resumen}  changeTitle={ changeTitle}  />
       <MenuToggle toggle={() => setIsOpen((prev) => !prev)} />
       {/*     toma el valor anterior (prev) Lo invierte (true → false, false → true) Actualiza el estado isOpen */}
     </motion.nav>
@@ -40,7 +40,7 @@ const navVariants = {
   },
 };
 
-const Navigation = ({ resumen }) => (
+const Navigation = ({ resumen,changeTitle }) => (
   <motion.ul style={list} variants={navVariants}>
     <motion.li
       variants={itemVariants}
@@ -58,7 +58,16 @@ const Navigation = ({ resumen }) => (
         <i className="bi bi-file-earmark-excel"></i>
       </Link>
       <Link className="nav-link active" title="Invitados" to="/invitados">
-        <i className="bi bi-person-vcard"></i>
+        <i className="bi bi-person-fill-gear"></i>
+      </Link>
+
+      <Link
+        className="nav-link active"
+        title="Agregar Invitados"
+        to="/editar"
+        onClick={() => changeTitle()}
+      >
+        <i className="bi bi-person-fill-add"></i>
       </Link>
       <Link
         className="nav-link active"
@@ -66,14 +75,15 @@ const Navigation = ({ resumen }) => (
         to="/detalles"
         onClick={resumen}
       >
-        <i className="bi bi-binoculars"></i>
+        <i className="bi bi-person-vcard"></i>
       </Link>
+
       <Link
         className="nav-item mt-3 nav-link   active"
         title="Ver Invitación"
         /* to="https://admin-invitation-lac.vercel.app/bya" */
       >
-        <i className="bi bi-box-arrow-right"> </i>
+        <i className="bi bi-binoculars"> </i>
       </Link>
     </motion.li>
   </motion.ul>

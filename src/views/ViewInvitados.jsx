@@ -8,7 +8,6 @@ const ViewInvitados = ({
   errores,
   message,
   processo,
-  changeTitle,
   Confirmation,
   handleInputChange,
   inputValue,
@@ -119,23 +118,15 @@ const ViewInvitados = ({
     <div className="container mt-3">
       <div className="row mb-3">
         <div className="col">
+          <p className="form-label title-resumen-invitados">Buscar invitados</p>
           <input
             id="filter"
             type="search"
             className="form-control"
-            placeholder="Buscar"
+            placeholder="Buscar por Código, Nombre o Grupo"
             onChange={handleInputChange}
             value={inputValue}
           />
-        </div>
-        <div className="col-auto">
-          <Link
-            className="btn btn-primary"
-            to="/editar"
-            onClick={() => changeTitle()}
-          >
-            <i className="bi bi-person-add text-white"> Agregar Invitado</i>
-          </Link>
         </div>
       </div>
 

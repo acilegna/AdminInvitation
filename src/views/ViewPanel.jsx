@@ -45,7 +45,7 @@ function ViewPanel() {
 
   return (
     <div className="d-flex">
-      <Menu resumen={resumen} />
+      <Menu resumen={resumen} changeTitle={changeTitle} />
       <section className="sections d-flex justify-content-center align-items-center">
         {/*   pasar datos a componentes  */}
 
@@ -58,7 +58,6 @@ function ViewPanel() {
                 processo={ProcessDeleteOrSearch}
                 errores={error}
                 message={mensaje}
-                changeTitle={changeTitle}
                 Confirmation={Confirmation}
                 handleInputChange={handleInputChange}
                 inputValue={inputValue}
@@ -110,7 +109,7 @@ function ViewPanel() {
           ></Route>
 
           <Route path="/import" element={<ViewImport />}></Route>
-           <Route path="/" element={<ViewHome />}></Route>
+          <Route path="/" element={<ViewHome />}></Route>
         </Routes>
       </section>
     </div>

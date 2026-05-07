@@ -31,7 +31,9 @@ const ViewImport = () => {
               <label htmlFor="fileUpload" className="upload-box">
                 <i className="bi bi-cloud-arrow-up upload-icon"></i>
 
-                <p className="mb-1 fw-semibold mt-3">Arrastra tu archivo aquí</p>
+                <p className="mb-1 fw-semibold mt-3">
+                  Arrastra tu archivo aquí
+                </p>
                 <small className="text-muted">
                   o haz clic para seleccionar
                 </small>
