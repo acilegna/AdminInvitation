@@ -330,6 +330,7 @@ function Content() {
             </div>
           </div>
         </div>
+        <hr />
 
         <div className="text-center">
           <h3 className="step-title"> 2. ¿Ya tienes tu ID de invitación?</h3>
@@ -339,7 +340,7 @@ function Content() {
           </p>
         </div>
 
-        <div className="row justify-content-center  ">
+        <div className="row justify-content-center mb-4">
           <div className="col-lg-8">
             <div className="search-box">
               <input
@@ -363,8 +364,15 @@ function Content() {
           </div>
         </div>
 
-        <hr />
+        {(adultos.length > 0 || ninos.length > 0) && (
+          <div className="confirmation-section">
+            <h2 className="confirmation-title">3. Confirma tu asistencia</h2>
 
+            <p className="confirmation-subtitle">
+              Selecciona Sí o No para cada invitado de tu familia.
+            </p>
+          </div>
+        )}
         <div className="confir text-center">
           <div className="row">
             {adultos.length > 0 && (

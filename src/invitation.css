@@ -1,7 +1,135 @@
+/* CONTENEDOR */
+
+.confirmation-section {
+  margin-top: 60px;
+}
+
+.confirmation-title {
+  font-weight: 600;
+  text-align: center;
+  color: #2d2d2d;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+}
+
+.confirmation-subtitle {
+  text-align: center;
+  color: #666;
+ font-size: 1.1rem;
+  margin-top: 10px;
+  margin-bottom: 35px;
+}
+
+/* TARJETAS */
+
+.guest-card {
+  background: #fff;
+  border: 1px solid #e8d8c0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.guest-header {
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #eee;
+  color: #b68a3e;
+  font-size: 32px;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+}
+
+/* FILAS */
+
+.guest-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 28px;
+
+  border-bottom: 1px solid #efefef;
+}
+
+.guest-row:last-child {
+  border-bottom: none;
+}
+
+.guest-name {
+  font-size: 20px;
+  color: #333;
+}
+
+.guest-options {
+  display: flex;
+  gap: 35px;
+}
+
+/* OPCIONES */
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.option input {
+  width: 22px;
+  height: 22px;
+}
+
+.option.yes input {
+  accent-color: #38a169;
+}
+
+.option.no input {
+  accent-color: #d9534f;
+}
+
+/* BOTON */
+
+.btn-confirm {
+  background: #b88a43;
+  color: white;
+
+  border: none;
+
+  border-radius: 14px;
+
+  padding: 16px 60px;
+
+  font-size: 28px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  transition: 0.3s;
+}
+
+.btn-confirm:hover {
+  background: #a67936;
+
+  transform: translateY(-2px);
+}
+
+.btn-confirm:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+/* invitation.cssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
 .reservation-card {
   max-width: 1000px;
-  margin: 50px auto;
-  padding: 40px;
+  margin: 35px auto;
+  padding: 30px;
   background: #fff;
   border-radius: 25px;
   border: 1px solid #e8dfd3;
@@ -106,7 +234,7 @@
 
 .step-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2.2rem;
+  font-size: 1.8rem;
 }
 
 .step-description {
@@ -531,7 +659,7 @@ margin-left: 30px;
 }
 
 .cont-confirmation {
-  background-color: #c3c3c3;
+  background-color: #f6f0f0;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -539,6 +667,7 @@ margin-left: 30px;
 }
 
 .text-confirmation {
+  margin-top: 27px;
   font-size: 4.2rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
