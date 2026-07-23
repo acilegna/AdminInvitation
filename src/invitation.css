@@ -1,12 +1,170 @@
+.reservation-card {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 25px;
+  border: 1px solid #e8dfd3;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.reservation-icon {
+  width: 95px;
+  height: 95px;
+
+  border-radius: 50%;
+
+  background: #f7f3ec;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: auto;
+}
+
+.reservation-icon i {
+  font-size: 45px;
+  color: #b9925d;
+}
+
+.reservation-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.reservation-description {
+  font-size: 1.15rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+.btn-reservar {
+  display: inline-block;
+
+  background: #b9925d;
+  color: white;
+
+  padding: 18px 35px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+
+  font-size: 1.2rem;
+
+  transition: 0.3s;
+}
+
+.btn-reservar:hover {
+  color: white;
+  background: #a6834d;
+  transform: translateY(-3px);
+}
+
+.reservation-note {
+  margin-top: 15px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.step-divider {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  margin: 50px auto;
+
+  max-width: 900px;
+}
+
+.line {
+  flex: 1;
+  border-top: 2px dotted #1f1708;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  border: 2px solid #d8c8aa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 20px;
+
+  font-size: 28px;
+  color: #b9925d;
+
+  font-family: "Cormorant Garamond", serif;
+}
+
+.step-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+}
+
+.step-description {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.search-box {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.search-box input {
+  border: none;
+  height: 65px;
+  font-size: 20px;
+}
+
+.search-box input:focus {
+  box-shadow: none;
+}
+
+.btn-search {
+  width: 220px;
+  border: none;
+
+  background: #b9925d;
+  color: white;
+
+  font-size: 22px;
+}
+
+.btn-search:hover {
+  background: #a6834d;
+}
+
+/* invitation.css */
 .section-invi {
   --bs-gutter-x: 0rem;
 }
+
+/* .cont-full {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+} */
 
 .cont-full {
   z-index: 1;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   overflow: hidden;
 }
 
@@ -373,7 +531,7 @@ margin-left: 30px;
 }
 
 .cont-confirmation {
-  background-color: #ffffff;
+  background-color: #c3c3c3;
   flex-direction: column;
   display: flex;
   justify-content: center;

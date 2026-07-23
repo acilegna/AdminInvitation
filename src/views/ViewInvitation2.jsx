@@ -150,7 +150,6 @@ function Content() {
         </div>
       </div>
       {/* FIN SECCION 4*/}
-
       <div className="cont-full seccion cont-centrado">
         <img
           src="/sources/pareja.jpg"
@@ -182,7 +181,6 @@ function Content() {
         </div>
       </div>
       {/* FIN SECCION 5*/}
-
       <div className="cont-full seccion cont-centrado" id="itinerario">
         <div className="d-flex flex-column align-items-center">
           <h2 className="text-center">
@@ -278,83 +276,32 @@ function Content() {
         </div>
       </div>
       {/* FIN SECCION 6*/}
+
       {/*INICIO SECCION 7*/}
-
       <div className="cont-full seccion  cont-confirmation">
-        <h2 className="text-confirmation text-center">
-          {" "}
-          Confirma tu asistencia{" "}
-        </h2>
-        <p className="text-msj-confirmation downup text-center">
-          {" "}
-          Por favor danos tu respuesta antes del 4-12-2025.{" "}
-        </p>
-        <div className="reservation-card">
-          <div className="row align-items-center">
-            {/* Icono */}
-            <div className="col-md-2 text-center">
-              <div className="reservation-icon">
-                <i className="bi bi-building"></i>
-              </div>
-            </div>
-
-            {/* Texto */}
-            <div className="col-md-6">
-              <h3 className="reservation-title">
-                1. Realiza la reservación de tu habitación
-              </h3>
-
-              <p className="reservation-description">
-                Al finalizar recibirás tu
-                <strong> ID de invitación</strong>, el cual necesitarás para
-                confirmar tu asistencia.
-              </p>
-            </div>
-
-            {/* Botón */}
-            <div className="col-md-4 text-center">
-              <a
-                href="https://tu-link-de-reservacion.com"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-reservar"
-              >
-                <i className="bi bi-calendar2-check me-2"></i>
-                Reservar ahora
-              </a>
-
-              <div className="reservation-note">
-                <i className="bi bi-shield-lock"></i>
-                Sitio seguro de reservación
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <h3 className="step-title"> 2. ¿Ya tienes tu ID de invitación?</h3>
-
-          <p className="step-description">
-            Ingresa tu ID para confirmar tu asistencia.
+        <div className="d-flex flex-column align-items-center text-center confir">
+          <h2 className="text-confirmation"> Confirma tu asistencia </h2>
+          <p className="text-msj-confirmation downup">
+            {" "}
+            Por favor danos tu respuesta antes del 4-12-2025.{" "}
           </p>
-        </div>
-
-        <div className="row justify-content-center  ">
-          <div className="col-lg-8">
-            <div className="search-box">
+          <div className="row g-3 mx-3 ">
+            <div className="col-8 col-sm-8 col-md-6 col-lg-6  izq">
               <input
                 id="search"
                 type="search"
-                className="form-control"
-                placeholder="Ingresa tu ID de invitación"
-                value={inputValue}
+                className="form-control me-2"
                 onChange={handleInput}
+                value={inputValue}
+                placeholder="Ingresa tu ID de invitación"
               />
+            </div>
 
-              <button className="btn-search" onClick={handleClick}>
-                <i className="bi bi-search me-2"></i>
+            <div className="col-4 col-sm-4 col-md-6 col-lg-6 d-flex align-items-center justify-content-start   der">
+              <i className="bi bi-search" onClick={handleClick}>
+                {" "}
                 Buscar
-              </button>
+              </i>
             </div>
             {mensaje && (
               <h5 className="text-success text-center ">{mensaje}</h5>
@@ -362,7 +309,6 @@ function Content() {
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
           </div>
         </div>
-
         <hr />
 
         <div className="confir text-center">
@@ -489,8 +435,9 @@ function Content() {
           </div>
         </div>
       </div>
+      ;{/* FIN SECCION 7*/}
 
-      {/* FIN SECCION 7*/}
+      
       {/* <footer>
         <p className="text-center">
           &copy; 2025 Invitacion B&A | Creado por Entheosmultimedia
@@ -498,7 +445,6 @@ function Content() {
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark ">
        
       </footer> */}
-
       <footer className="d-flex flex-wrap justify-content-between align-items-center    border-top bg-dark ">
         <div className="col-md-4 d-flex align-items-center p-3 mb-2 bg-dark text-white">
           <span className="mb-3 mb-md-0 ">
