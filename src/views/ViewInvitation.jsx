@@ -363,6 +363,7 @@ function Content() {
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
           </div>
         </div>
+        <hr />
 
         {(adultos.length > 0 || ninos.length > 0) && (
           <div className="confirmation-section">
@@ -374,110 +375,120 @@ function Content() {
           </div>
         )}
         <div className="confir text-center">
-          <div className="row">
+          <div className="row justify-content-evenly">
             {adultos.length > 0 && (
               <>
-                <div className="col-12 col-md-6">
-                  <h4 className="text-center clasificacion">Adultos</h4>
-                  {adultos.map((invitadosFamily) => (
-                    <div key={invitadosFamily.id} className="mb-2">
-                      <div className="row">
-                        <div className="col-12 col-md-6 ">
-                          <strong className="me-3 mb-2">
-                            {invitadosFamily.name} {invitadosFamily.apellido}
-                          </strong>
-                        </div>
-                        <div className="col-12 col-md-6 ">
-                          <div className="form-check form-check-inline">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name={invitadosFamily.id}
-                              id={invitadosFamily.id}
-                              value="Si"
-                              onChange={handleChangeRadio}
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor={`si-${invitadosFamily.id}`}
-                            >
-                              Sí
-                            </label>
+                <div className="col-12 col-md-5">
+                  <div className="grupo-card">
+                    <h4 className="text-center clasificacion txt-clasificacion">Adultos</h4>
+                    {adultos.map((invitadosFamily) => (
+                      <div
+                        key={invitadosFamily.id}
+                        className="mb-2 invitado-fila"
+                      >
+                        <div className="row">
+                          <div className="col-12 col-md-8 ">
+                            <strong className="me-3 mb-2 invitado-nombre">
+                              {invitadosFamily.name} {invitadosFamily.apellido}
+                            </strong>
                           </div>
+                          <div className="col-12 col-md-4 invitado-opciones ">
+                            <div className="form-check form-check-inline ">
+                              <input
+                                className="form-check-input radio-si"
+                                type="radio"
+                                name={invitadosFamily.id}
+                                id={invitadosFamily.id}
+                                value="Si"
+                                onChange={handleChangeRadio}
+                              />
+                              <label
+                                className="form-check-label label-si"
+                                htmlFor={`si-${invitadosFamily.id}`}
+                              >
+                                Sí
+                              </label>
+                            </div>
 
-                          <div className="form-check form-check-inline">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name={invitadosFamily.id}
-                              id={invitadosFamily.id}
-                              value="No"
-                              onChange={handleChangeRadio}
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor={`no-${invitadosFamily.id}`}
-                            >
-                              No
-                            </label>
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input radio-no"
+                                type="radio"
+                                name={invitadosFamily.id}
+                                id={invitadosFamily.id}
+                                value="No"
+                                onChange={handleChangeRadio}
+                              />
+                              <label
+                                className="form-check-label label-no"
+                                htmlFor={`no-${invitadosFamily.id}`}
+                              >
+                                No
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </>
             )}
             {ninos.length > 0 && (
               <>
-                <div className="col-12 col-md-6 ">
-                  <h4 className="text-center clasificacion">Niños</h4>
-                  {ninos.map((invitadosFamily) => (
-                    <div key={invitadosFamily.id} className="mb-2">
-                      <div className="row">
-                        <div className="col-12 col-md-6 ">
-                          <strong className="me-3 mb-2">
-                            {invitadosFamily.name} {invitadosFamily.apellido}
-                          </strong>
-                        </div>
-                        <div className="col-12 col-md-6 ">
-                          <div className="form-check form-check-inline">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name={invitadosFamily.id}
-                              id={invitadosFamily.id}
-                              value="Si"
-                              onChange={handleChangeRadio}
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor={`si-${invitadosFamily.id}`}
-                            >
-                              Sí
-                            </label>
+                <div className="col-12 col-md-5">
+                  <div className="grupo-card">
+                    <h4 className="text-center clasificacion txt-clasificacion">Niños</h4>
+                    {ninos.map((invitadosFamily) => (
+                      <div
+                        key={invitadosFamily.id}
+                        className="mb-2 invitado-fila"
+                      >
+                        <div className="row">
+                          <div className="col-12 col-md-8 ">
+                            <strong className="me-3 mb-2 invitado-nombre">
+                              {invitadosFamily.name} {invitadosFamily.apellido}
+                            </strong>
                           </div>
+                          <div className="col-12 col-md-4 invitado-opciones">
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input radio-si"
+                                type="radio"
+                                name={invitadosFamily.id}
+                                id={invitadosFamily.id}
+                                value="Si"
+                                onChange={handleChangeRadio}
+                              />
+                              <label
+                                className="form-check-label label-si"
+                                htmlFor={`si-${invitadosFamily.id}`}
+                              >
+                                Sí
+                              </label>
+                            </div>
 
-                          <div className="form-check form-check-inline">
-                            <input
-                              className="form-check-input"
-                              type="radio"
-                              name={invitadosFamily.id}
-                              id={invitadosFamily.id}
-                              value="No"
-                              onChange={handleChangeRadio}
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor={`no-${invitadosFamily.id}`}
-                            >
-                              No
-                            </label>
+                            <div className="form-check form-check-inline">
+                              <input
+                                className="form-check-input radio-no"
+                                type="radio"
+                                name={invitadosFamily.id}
+                                id={invitadosFamily.id}
+                                value="No"
+                                onChange={handleChangeRadio}
+                              />
+                              <label
+                                className="form-check-label label-no"
+                                htmlFor={`no-${invitadosFamily.id}`}
+                              >
+                                No
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               </>
             )}
@@ -485,11 +496,11 @@ function Content() {
             {(adultos.length > 0 || ninos.length > 0) && (
               <div className="text-center my-4">
                 <button
-                  className="btn px-4"
+                  className="btn px-4 new "
                   onClick={confirmar}
                   disabled={disable}
                 >
-                  <i className="bi bi-check2-circle me-2"></i>
+                  <i className="bi bi-check2-circle me-2 "></i>
                   Confirmar
                 </button>
               </div>

@@ -1,7 +1,102 @@
+/* estilos new */
+
+
+
+
+
+.new {
+  display: inline-block;
+  background: #b9925d;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.new:hover {
+  color: white;
+  background: #a6834d;
+  transform: translateY(-3px);
+}
+
+
+.txt-clasificacion {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  color: #202020;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.grupo-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.invitado-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eeeeee;
+  text-align: left;
+}
+
+.invitado-fila:last-child {
+  border-bottom: none;
+}
+
+.invitado-nombre {
+  color: #202020;
+  font-size: 1.25rem;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.invitado-opciones {
+  display: flex;
+  align-items: center;
+}
+/* Radios */
+.radio-si {
+  accent-color: #2e9e6b;
+  cursor: pointer;
+}
+
+.radio-no {
+  accent-color: #d9534f;
+  cursor: pointer;
+}
+
+.label-si,
+.label-no {
+  color: #000000;
+   font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.radio-si:checked + .label-si {
+  color: #2e9e6b;
+  font-weight: 600;
+}
+
+.radio-no:checked + .label-no {
+  color: #d9534f;
+  font-weight: 600;
+}
+
+/* estilos new */
 /* CONTENEDOR */
 
 .confirmation-section {
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .confirmation-title {
@@ -16,112 +111,9 @@
 .confirmation-subtitle {
   text-align: center;
   color: #666;
- font-size: 1.1rem;
+  font-size: 1.1rem;
   margin-top: 10px;
   margin-bottom: 35px;
-}
-
-/* TARJETAS */
-
-.guest-card {
-  background: #fff;
-  border: 1px solid #e8d8c0;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-}
-
-.guest-header {
-  height: 72px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid #eee;
-  color: #b68a3e;
-  font-size: 32px;
-  font-family: "Cormorant Garamond", serif;
-  font-weight: 600;
-}
-
-/* FILAS */
-
-.guest-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  padding: 18px 28px;
-
-  border-bottom: 1px solid #efefef;
-}
-
-.guest-row:last-child {
-  border-bottom: none;
-}
-
-.guest-name {
-  font-size: 20px;
-  color: #333;
-}
-
-.guest-options {
-  display: flex;
-  gap: 35px;
-}
-
-/* OPCIONES */
-
-.option {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  font-size: 19px;
-}
-
-.option input {
-  width: 22px;
-  height: 22px;
-}
-
-.option.yes input {
-  accent-color: #38a169;
-}
-
-.option.no input {
-  accent-color: #d9534f;
-}
-
-/* BOTON */
-
-.btn-confirm {
-  background: #b88a43;
-  color: white;
-
-  border: none;
-
-  border-radius: 14px;
-
-  padding: 16px 60px;
-
-  font-size: 28px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  transition: 0.3s;
-}
-
-.btn-confirm:hover {
-  background: #a67936;
-
-  transform: translateY(-2px);
-}
-
-.btn-confirm:disabled {
-  opacity: 0.6;
-
-  cursor: not-allowed;
 }
 
 /* invitation.cssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
@@ -139,20 +131,16 @@
 .reservation-icon {
   width: 95px;
   height: 95px;
-
   border-radius: 50%;
-
   background: #f7f3ec;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   margin: auto;
 }
 
 .reservation-icon i {
-  font-size: 45px;
+  font-size: 2.5rem;
   color: #b9925d;
 }
 
@@ -170,18 +158,12 @@
 
 .btn-reservar {
   display: inline-block;
-
   background: #b9925d;
   color: white;
-
-  padding: 18px 35px;
-
+  padding: 10px 20px;
   border-radius: 12px;
-
   text-decoration: none;
-
   font-size: 1.2rem;
-
   transition: 0.3s;
 }
 
@@ -195,41 +177,6 @@
   margin-top: 15px;
   color: #888;
   font-size: 0.95rem;
-}
-
-.step-divider {
-  display: inline-block;
-  align-items: center;
-  justify-content: center;
-
-  margin: 50px auto;
-
-  max-width: 900px;
-}
-
-.line {
-  flex: 1;
-  border-top: 2px dotted #1f1708;
-}
-
-.step-number {
-  width: 60px;
-  height: 60px;
-
-  border-radius: 50%;
-
-  border: 2px solid #d8c8aa;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin: 0 20px;
-
-  font-size: 28px;
-  color: #b9925d;
-
-  font-family: "Cormorant Garamond", serif;
 }
 
 .step-title {
@@ -252,8 +199,9 @@
 
 .search-box input {
   border: none;
-  height: 65px;
+  height: 55px;
   font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .search-box input:focus {
@@ -261,13 +209,12 @@
 }
 
 .btn-search {
-  width: 220px;
+  width: 150px;
   border: none;
-
   background: #b9925d;
   color: white;
-
-  font-size: 22px;
+  font-size: 1.4rem;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .btn-search:hover {
@@ -659,7 +606,7 @@ margin-left: 30px;
 }
 
 .cont-confirmation {
-  background-color: #f6f0f0;
+  background-color: #ffffff;
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -675,6 +622,7 @@ margin-left: 30px;
 
 .text-msj-confirmation {
   font-family: "Alumni Sans Pinstripe", sans-serif;
+
   color: rgb(0, 0, 0);
   font-size: 1.8rem;
 }
