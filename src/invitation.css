@@ -1,26 +1,15 @@
 /* estilos new */
 
-
-
-
-
-.new {
-  display: inline-block;
-  background: #b9925d;
-  color: white;
-  padding: 10px 20px;
+.news {
+  background: #916d3b !important;
+  color: white !important;
+  padding: 10px 10px;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 1.2rem;
-  transition: 0.3s;
+  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
 }
-
-.new:hover {
-  color: white;
-  background: #a6834d;
-  transform: translateY(-3px);
-}
-
 
 .txt-clasificacion {
   font-family: "Cormorant Garamond", serif;
@@ -54,7 +43,7 @@
 }
 
 .invitado-nombre {
-  color: #202020;
+  color: #515151;
   font-size: 1.25rem;
   font-family: "Cormorant Garamond", serif;
 }
@@ -76,8 +65,8 @@
 
 .label-si,
 .label-no {
-  color: #000000;
-   font-weight: 700;
+ color: #515151;
+  font-weight: 700;
   font-size: 0.9rem;
   cursor: pointer;
 }
@@ -105,13 +94,13 @@
   color: #2d2d2d;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .confirmation-subtitle {
   text-align: center;
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 10px;
   margin-bottom: 35px;
 }
@@ -146,12 +135,12 @@
 
 .reservation-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   margin-bottom: 15px;
 }
 
 .reservation-description {
-  font-size: 1.15rem;
+  font-size: 1rem;
   color: #666;
   line-height: 1.8;
 }
@@ -163,7 +152,7 @@
   padding: 10px 20px;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: 0.3s;
 }
 
@@ -176,17 +165,17 @@
 .reservation-note {
   margin-top: 15px;
   color: #888;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .step-title {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 .step-description {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 30px;
 }
 
@@ -209,11 +198,11 @@
 }
 
 .btn-search {
-  width: 150px;
+  width: 130px;
   border: none;
   background: #b9925d;
   color: white;
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -343,7 +332,7 @@
 .cont-msj {
   position: absolute;
   /* Para poder moverlo libremente */
-  top: 50%;
+  top: 55%;
   /* Se baja un 30% desde arriba */
   left: 50%;
   /* Punto central horizontal */
@@ -352,7 +341,7 @@
 }
 
 .text-save-date {
-  font-size: 4.2rem;
+  font-size: 3.7rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
   line-height: 20px;
@@ -360,7 +349,7 @@
 
 .text-msj {
   color: rgb(0, 0, 0);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-family: "Alumni Sans Pinstripe", sans-serif;
 }
 
@@ -528,7 +517,7 @@ margin-left: 30px;
 }
 
 .text-present {
-  font-size: 4.2rem;
+  font-size: 3.7rem;
   font-family: "Italianno", cursive;
 
   color: #f0f2f3;
@@ -587,7 +576,7 @@ margin-left: 30px;
 }
 
 .title-itinerario {
-  font-size: 4.2rem;
+  font-size: 3.7rem;
   font-family: "Italianno", cursive;
   color: rgb(24, 24, 24);
   letter-spacing: 3px;
@@ -614,17 +603,16 @@ margin-left: 30px;
 }
 
 .text-confirmation {
-  margin-top: 27px;
-  font-size: 4.2rem;
+  margin-top: 70px;
+  font-size: 3.7rem;
   font-family: "Italianno", cursive;
   color: rgb(0, 0, 0);
 }
 
 .text-msj-confirmation {
   font-family: "Alumni Sans Pinstripe", sans-serif;
-
   color: rgb(0, 0, 0);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 @media (max-width: 743px) {

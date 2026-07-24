@@ -287,7 +287,8 @@ function Content() {
         </h2>
         <p className="text-msj-confirmation downup text-center">
           {" "}
-          Por favor danos tu respuesta antes del 4-12-2025.{" "}
+          Por favor danos tu respuesta antes del  <strong>  30-04-2027.</strong> {" "}
+           
         </p>
         <div className="reservation-card">
           <div className="row align-items-center">
@@ -496,11 +497,11 @@ function Content() {
             {(adultos.length > 0 || ninos.length > 0) && (
               <div className="text-center my-4">
                 <button
-                  className="btn px-4 new "
+                  className="btn px-4  news"
                   onClick={confirmar}
                   disabled={disable}
                 >
-                  <i className="bi bi-check2-circle me-2 "></i>
+                  <i className="bi bi-check2-circle me-2"></i>
                   Confirmar
                 </button>
               </div>
