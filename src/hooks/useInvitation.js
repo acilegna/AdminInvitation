@@ -11,7 +11,7 @@ export const useInvitation = () => {
   //hook para manejo de notificacion
   const [mensaje, setMensaje] = useState("");
 
-  const targetDate = "2026-12-20T15:00:00"; // fecha y hora del evento
+  const targetDate = "2027-11-30T14:00:00"; // fecha y hora del evento
 
   const calculateTimeLeft = () => {
     const difference = new Date(targetDate) - new Date();

@@ -115,7 +115,7 @@ function Content() {
           </div>
           {/*      Contenedor para la fecha */}
           <div className="cont-date">
-            <h3 className="text-date updown">10.12.2026</h3>
+            <h3 className="text-date updown">30.11.2027</h3>
           </div>
         </div>
       </div>
@@ -161,24 +161,12 @@ function Content() {
 
         <div className="d-flex flex-column align-items-center">
           <h2>
-            <span className="text-present">Sugerencias de regalo</span>
+            <span className="text-present">Dress code </span>
           </h2>
-          <div className="row downup">
-            <div className="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
-              <i className="bi bi-gift"></i>
-              <h4>
-                <span className="text-present-place">Liverpool</span>
-              </h4>
-              <i className="bi  bi-binoculars">Ver regalos</i>
-            </div>
-            <div className="col-6 col-sm-6 col-md-6 col-lg-6  d-flex flex-column align-items-center">
-              <i className="bi bi-gift"></i>
-              <h4>
-                <span className="text-present-place">Amazon</span>
-              </h4>
-              <i className="bi  bi-binoculars">Ver regalos</i>
-            </div>
-          </div>
+          <p className="dress-code downup text-center">Formal de playa</p>
+          <p className="dress-text">
+            ¡Luce fabuloso(a) y ven con toda la actitud!
+          </p>
         </div>
       </div>
       {/* FIN SECCION 5*/}
@@ -287,25 +275,26 @@ function Content() {
         </h2>
         <p className="text-msj-confirmation downup text-center">
           {" "}
-          Por favor danos tu respuesta antes del  <strong>  30-04-2027.</strong> {" "}
-           
+          Por favor danos tu respuesta antes del{" "}
+          <strong> 30-04-2027.</strong>{" "}
         </p>
+
         <div className="reservation-card">
-          <div className="row align-items-center">
+          <div className="row align-items-center  gy-4">
             {/* Icono */}
-            <div className="col-md-2 text-center">
+            <div className="col-12 col-md-2 text-center">
               <div className="reservation-icon">
                 <i className="bi bi-building"></i>
               </div>
             </div>
 
             {/* Texto */}
-            <div className="col-md-6">
+            <div className="col-12 col-md-6 text-center text-md-start">
               <h3 className="reservation-title">
                 1. Realiza la reservación de tu habitación
               </h3>
 
-              <p className="reservation-description">
+              <p className="reservation-description mb-0">
                 Al finalizar recibirás tu
                 <strong> ID de invitación</strong>, el cual necesitarás para
                 confirmar tu asistencia.
@@ -313,7 +302,7 @@ function Content() {
             </div>
 
             {/* Botón */}
-            <div className="col-md-4 text-center">
+            <div className="col-12 col-md-4 text-center">
               <a
                 href="https://tu-link-de-reservacion.com"
                 target="_blank"
@@ -324,13 +313,14 @@ function Content() {
                 Reservar ahora
               </a>
 
-              <div className="reservation-note">
-                <i className="bi bi-shield-lock"></i>
+              <div className="reservation-note mt-3">
+                <i className="bi bi-shield-lock me-2"></i>
                 Sitio seguro de reservación
               </div>
             </div>
           </div>
         </div>
+
         <hr />
 
         <div className="text-center">
@@ -342,28 +332,35 @@ function Content() {
         </div>
 
         <div className="row justify-content-center mb-4">
-          <div className="col-lg-8">
-            <div className="search-box">
-              <input
-                id="search"
-                type="search"
-                className="form-control"
-                placeholder="Ingresa tu ID de invitación"
-                value={inputValue}
-                onChange={handleInput}
-              />
-
-              <button className="btn-search" onClick={handleClick}>
-                <i className="bi bi-search me-2"></i>
-                Buscar
-              </button>
+          <div className="col-md-10 col-lg-8 px-4">
+            <div className="row g-2">
+              <div className="col-12 col-md">
+                <input
+                  id="search"
+                  type="search"
+                  className="form-control search-input"
+                  placeholder="Ingresa tu ID de invitación"
+                  value={inputValue}
+                  onChange={handleInput}
+                />
+              </div>
+              <div className="col-12 col-md-auto ">
+                <button
+                  className="btn btn-primary w-100 btn-search "
+                  onClick={handleClick}
+                >
+                  <i className="bi bi-search me-2"></i>
+                  Buscar
+                </button>
+              </div>
             </div>
             {mensaje && (
-              <h5 className="text-success text-center ">{mensaje}</h5>
+              <h5 className="text-success text-center mt-3">{mensaje}</h5>
             )}
             {error && <h5 className="text-danger text-center mt-3">{error}</h5>}
           </div>
         </div>
+
         <hr />
 
         {(adultos.length > 0 || ninos.length > 0) && (
@@ -375,13 +372,15 @@ function Content() {
             </p>
           </div>
         )}
-        <div className="confir text-center">
-          <div className="row justify-content-evenly">
+        <div className="confir text-center ">
+          <div className="row justify-content-evenly px-3">
             {adultos.length > 0 && (
               <>
-                <div className="col-12 col-md-5">
+                <div className="col-12 col-md-5 mb-4">
                   <div className="grupo-card">
-                    <h4 className="text-center clasificacion txt-clasificacion">Adultos</h4>
+                    <h4 className="text-center clasificacion txt-clasificacion">
+                      Adultos
+                    </h4>
                     {adultos.map((invitadosFamily) => (
                       <div
                         key={invitadosFamily.id}
@@ -439,7 +438,9 @@ function Content() {
               <>
                 <div className="col-12 col-md-5">
                   <div className="grupo-card">
-                    <h4 className="text-center clasificacion txt-clasificacion">Niños</h4>
+                    <h4 className="text-center clasificacion txt-clasificacion">
+                      Niños
+                    </h4>
                     {ninos.map((invitadosFamily) => (
                       <div
                         key={invitadosFamily.id}
@@ -519,31 +520,33 @@ function Content() {
        
       </footer> */}
 
-      <footer className="d-flex flex-wrap justify-content-between align-items-center    border-top bg-dark ">
-        <div className="col-md-4 d-flex align-items-center p-3 mb-2 bg-dark text-white">
-          <span className="mb-3 mb-md-0 ">
-            © 2027 Invitacion B&A | Entheosmultimedia
-          </span>
-        </div>
-        <ul className="nav col-md-4 justify-content-end list-unstyled d-flex p-3 mb-2">
-          <li className="ms-3">
+      <footer className="d-flex flex-column justify-content-center align-items-center border-top bg-dark py-3">
+        <span className="text-white text-center mb-3">
+          © 2027 Invitación B&A | Entheosmultimedia
+        </span>
+
+        <ul className="nav justify-content-center list-unstyled d-flex mb-0">
+          <li className="mx-3">
             <a
               className="text-white"
               href="https://www.instagram.com/entheosmultimedia?igsh=MTA3Nmp4cXJza3B3eg=="
               aria-label="Instagram"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <i className="bi bi-instagram"></i>
+              <i className="bi bi-instagram fs-4"></i>
             </a>
           </li>
-          <li className="ms-3">
+
+          <li className="mx-3">
             <a
               className="text-white"
               href="https://www.facebook.com/Enthe0sMultimedia"
               aria-label="Facebook"
               target="_blank"
+              rel="noopener noreferrer"
             >
-              <i className="bi bi-facebook"></i>
+              <i className="bi bi-facebook fs-4"></i>
             </a>
           </li>
         </ul>
