@@ -72,7 +72,7 @@ function Content() {
       </div>
       {/* FIN SECCION 1 */}
       <div className="cont-full cont-sound seccion">
-        <audio id="audio" controls loop>
+        <audio id="audio" controls autoPlay loop>
           <source
             src="https://acilegna.github.io/audio.github.io/noc.mp3"
             type="audio/mp3"
@@ -271,12 +271,12 @@ function Content() {
       <div className="cont-full seccion  cont-confirmation">
         <h2 className="text-confirmation text-center">
           {" "}
-         Realiza tu reservación{" "}
+          Realiza tu reservación{" "}
         </h2>
         <p className="text-msj-confirmation downup text-center">
           {" "}
-          Fecha límite para reservar y confirmar tu asistencia{" "}
-          <strong> 30-04-2027.</strong>{" "}
+          Reserva y confirma tu asistencia antes del{" "}
+          <strong className="date-text"> 30-04-2027.</strong>{" "}
         </p>
 
         <div className="reservation-card">

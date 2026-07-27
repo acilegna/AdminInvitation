@@ -18,6 +18,8 @@ const ViewDetalles = ({
 }) => {
   return (
     <div className="cont-details p-3 text-white rounded d-flex flex-column justify-content-center align-items-center gap-2">
+
+      
       <label className="title-resumen-invitados ">Resumen de Invitados</label>
       <div className="row justify-content-center   d-flex gap-2">
         <div className="col-xxl-5 col-xl-5 col-lg-5 col-md-5  col-12  d-flex flex-column justify-content-center align-items-center invitados">
