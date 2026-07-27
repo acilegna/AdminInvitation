@@ -271,11 +271,11 @@ function Content() {
       <div className="cont-full seccion  cont-confirmation">
         <h2 className="text-confirmation text-center">
           {" "}
-          Confirma tu asistencia{" "}
+         Realiza tu reservación{" "}
         </h2>
         <p className="text-msj-confirmation downup text-center">
           {" "}
-          Por favor danos tu respuesta antes del{" "}
+          Fecha límite para reservar y confirmar tu asistencia{" "}
           <strong> 30-04-2027.</strong>{" "}
         </p>
 
@@ -283,7 +283,7 @@ function Content() {
           <div className="row align-items-center  gy-4">
             {/* Icono */}
             <div className="col-12 col-md-2 text-center">
-              <div className="reservation-icon">
+              <div className="reservation-icon ">
                 <i className="bi bi-building"></i>
               </div>
             </div>
@@ -307,9 +307,9 @@ function Content() {
                 href="https://tu-link-de-reservacion.com"
                 target="_blank"
                 rel="noreferrer"
-                className="btn-reservar"
+                className="btn-reservar bg-dark"
               >
-                <i className="bi bi-calendar2-check me-2"></i>
+                <i className="bi bi-calendar2-check me-2 "></i>
                 Reservar ahora
               </a>
 
@@ -346,7 +346,7 @@ function Content() {
               </div>
               <div className="col-12 col-md-auto ">
                 <button
-                  className="btn btn-primary w-100 btn-search "
+                  className="btn btn-primary w-100 btn-search bg-dark"
                   onClick={handleClick}
                 >
                   <i className="bi bi-search me-2"></i>
@@ -498,7 +498,7 @@ function Content() {
             {(adultos.length > 0 || ninos.length > 0) && (
               <div className="text-center my-4">
                 <button
-                  className="btn px-4  news"
+                  className="btn px-4  news bg-dark"
                   onClick={confirmar}
                   disabled={disable}
                 >

@@ -17,7 +17,7 @@
 /* estilos new */
 
 .news {
-  background: #916d3b !important;
+   
   color: white !important;
   padding: 10px 10px;
   border-radius: 12px;
@@ -104,12 +104,18 @@
   margin-top: 30px;
 }
 
+
+.reservation-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
 .confirmation-title {
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   color: #2d2d2d;
 
-  font-family: "Cormorant Garamond", serif;
+ /*  font-family: "Cormorant Garamond", serif; */
   font-size: 1.7rem;
 }
 
@@ -149,15 +155,11 @@
 
 .reservation-icon i {
   font-size: 2.6rem;
-  color: #b8860b;
+ /*  color: #b8860b; */
 }
 
 /* Título */
-.reservation-title {
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
+ 
 
 /* Descripción */
 .reservation-description {
@@ -169,7 +171,7 @@
 /* Botón */
 .btn-reservar {
   display: inline-block;
-  background: #b8860b;
+   
   color: #fff;
   padding: 15px 30px;
   border-radius: 50px;
@@ -189,10 +191,15 @@
   color: #777;
   font-size: 0.95rem;
 }
-
-.step-title {
-  font-family: "Cormorant Garamond", serif;
+.reservation-title {
   font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.step-title {
+  
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
 .step-description {
@@ -228,7 +235,7 @@
   border-radius: 12px;
   min-width: 100px;
   border: none;
-  background: #b9925d;
+ 
   color: white;
   font-size: 1rem;
   font-family: "Cormorant Garamond", serif;
@@ -783,7 +790,10 @@ margin-left: 30px;
     font-size: 1.4rem;
     line-height: 1.4;
   }
-
+.confirmation-title {
+  
+ font-size: 1.4rem;
+}
   .step-description {
     font-size: 0.95rem;
     line-height: 1.5;
@@ -826,6 +836,14 @@ margin-left: 30px;
   .step-title {
     font-size: 1.2rem;
   }
+  .confirmation-title {
+  
+ font-size: 1.2rem;
+}
+.reservation-title {
+  
+ font-size: 1.2rem;
+}
 
   .step-description {
     font-size: 0.9rem;
