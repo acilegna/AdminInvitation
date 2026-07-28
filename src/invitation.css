@@ -24,7 +24,7 @@
 .audio-time {
   font-size: 1.5rem;
   color: #555;
-  
+
   font-family: "Cormorant Garamond", serif;
 }
 /* Imagen */
@@ -76,28 +76,22 @@
 }
 
 .btn-abrir {
-  padding: 15px 45px;
-
-  border: 2px solid #fff;
+  margin-top: 35px;
+  padding: 5px 20px;
+  border: 2px solid #faf6f6;
   border-radius: 50px;
-
   background: transparent;
-
-  color: white;
-
-  font-size: 18px;
-
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
   cursor: pointer;
-
   transition: 0.4s;
 }
 
 .btn-abrir:hover {
   background: white;
-
   color: black;
-
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 /* solo pantalla  de inicio...................................................................... */
@@ -429,7 +423,7 @@
   font-size: 5.4rem;
   font-family: "Italianno", cursive;
   line-height: 60px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .title-merried-text {

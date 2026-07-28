@@ -1,5 +1,5 @@
 import { useInvitation } from "../hooks/useInvitation";
-//import { useDatosInvitados } from "../hooks/useDatosInvitados";
+
 import useScrollSections from "../hooks/useScrollSections";
 
 import { motion, useSpring, useScroll } from "framer-motion";
