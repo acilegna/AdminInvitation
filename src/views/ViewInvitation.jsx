@@ -64,7 +64,11 @@ function Content({ toggleAudio, reproduciendo }) {
       <div className="container-fluid section-invi">
         <div className="cont-full seccion">
           <div className="imagenes-container downup">
-            <img src="/sources/pareja.jpg" alt="Fondo" className="imagenes" />
+            <img
+              src="/sources/pareja.jpg"
+              alt="Fondo"
+              className="imagen-full scale"
+            />
           </div>
         </div>
         <div className="cont-full cont-sound seccion">
@@ -289,10 +293,13 @@ function Content({ toggleAudio, reproduciendo }) {
           <p className="reservation-info">
             Para que disfrutes al máximo de nuestra celebración, hemos reservado
             un bloque de habitaciones en Cancún con una tarifa preferencial
-            exclusiva para nuestros invitados del <strong className="date-reserva"> 29 de noviembre al 2 de diciembre de 2027.</strong>{" "}
+            exclusiva para nuestros invitados del{" "}
+            <strong className="date-reserva">
+              {" "}
+              29 de noviembre al 2 de diciembre de 2027.
+            </strong>{" "}
           </p>
 
-           
           <p className="text-msj-confirmation downup text-center">
             {" "}
             Reserva y confirma tu asistencia antes del{" "}
