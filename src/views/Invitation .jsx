@@ -26,7 +26,7 @@ function Content() {
       {!abierta && (
         <div className="cover">
           <img
-            src="/sources/IMG_1150.jpg"
+            src="/sources/boda.jpg"
             alt="Fondo"
             className="cover-img downup"
           />

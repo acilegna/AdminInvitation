@@ -39,35 +39,6 @@
 }
 /* fin divider  */
 
-.audio-player {
-  position: absolute;
-  /*  display:flex;
-    align-items:center; */
-  top: 35%;
-  width: auto;
-  padding: 9px 22px;
-}
-
-.audio-player button {
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 24px;
-  color: #444;
-  transition: 0.3s;
-}
-
-.audio-player button:hover {
-  color: #000;
-  transform: scale(1.15);
-}
-
-.audio-time {
-  font-size: 1.5rem;
-  color: #555;
-
-  font-family: "Cormorant Garamond", serif;
-}
 /* Imagen */
 .cover {
   position: fixed;
@@ -406,22 +377,7 @@
   z-index: 1;
 }
 
-.imagenes-container {
-  display: flex;
-  justify-content: center;
-  /* centra en horizontal */
-  align-items: center;
-  /* centra en vertical */
-  height: 100vh;
-  /* ocupa toda la altura de la pantalla */
-}
 
-.imagenes {
-  width: 85%;
-  height: 85%;
-
-  object-fit: cover;
-}
 
 .imagenes2 {
   width: 100%;
@@ -475,42 +431,89 @@
   line-height: 1.3;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
-
+.imagenes {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
+}
 /*SECCION 2 */
-.cont-sound {
-  background-color: #f1f3f4;
+ .imagenes-container {
+  position: relative;
   display: flex;
   justify-content: center;
-  /* centra horizontal */
   align-items: center;
-  /* centra vertical */
+  height: 100vh;
+}
+
+.imagenes3 {
+  width: 85%;
+  height: 85%;
+  object-fit: cover;
 }
 
 .cont-msj {
   position: absolute;
-  /* Para poder moverlo libremente */
-  top: 52%;
-  /* Se baja un 30% desde arriba */
+  top: 50%;
   left: 50%;
-  /* Punto central horizontal */
   transform: translate(-50%, -50%);
-  /* Ajuste para centrar en ambos ejes */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(3px);
+  padding: 20px 30px;
+  border-radius: 12px;
+}
+.cont-sound {
+  background-color: #f1f3f4;
+  /*  display: flex; */
+  justify-content: center;
+  align-items: center;
+  /*   min-height: 100vh; */
+}
+
+ 
+
+.audio-player {
+  align-items: center;
+  gap: 4px;
+  padding: 0px 22px;
+}
+
+.audio-player button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #444;
+  transition: 0.3s;
+}
+
+.audio-player button:hover {
+  color: #000;
+  transform: scale(1.15);
+}
+
+.audio-time {
+  font-size: 1.3rem;
+  color: #555;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .text-save-date {
   font-size: 3.7rem;
   font-family: "Italianno", cursive;
-  color: rgb(0, 0, 0);
-  line-height: 20px;
+  color: #000;
 }
 
 .text-msj {
-  color: rgb(75, 75, 75);
+  color: #4b4b4b;
   font-size: 1.6rem;
-
   font-family: "Cormorant Garamond", serif;
 }
-
 /* SECCION 3 */
 
 .cont-titleContador,

@@ -63,6 +63,19 @@ function Content({ toggleAudio, reproduciendo }) {
     <>
       <div className="container-fluid section-invi">
         {/*inicio SECCION 1 */}
+        <div className="cont-full seccion">
+          <div className="imagenes-container downup">
+            <img
+              src="/sources/pareja.jpg"
+              alt="Fondo"
+              className="imagenes scale"
+            />
+          </div>
+        </div>
+
+        {/* FIN SECCION 1 */}
+
+        {/*inicio SECCION 2*/}
         <div className="cont-full cont-sound seccion">
           <div className="imagenes-container downup">
             <img
@@ -97,7 +110,6 @@ function Content({ toggleAudio, reproduciendo }) {
             </h5>
           </div>
         </div>
-        {/* FIN SECCION 1 */}
         <div className="cont-full seccion cont-centrado">
           <div className="d-flex flex-column align-items-center">
             {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
