@@ -14,7 +14,7 @@ function App() {
         <AudioProvider>
           <Routes>
             <Route path="/panel" element={<ViewPanel />} />
-            <Route path="/bya" element={<ViewInvitation />} />
+            <Route path="/ayb" element={<ViewInvitation />} />
             <Route path="/*" element={<Invitation />} />
             {/*     <Route path="/b" element={<Invitation />} />
              */}{" "}

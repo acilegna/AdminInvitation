@@ -13,7 +13,7 @@ export default function Invitation() {
 function Content() {
   const [abierta, setAbierta] = useState(false);
   const { iniciarMusica } = useAudio();
-    const animate = useScrollSections();
+  const animate = useScrollSections();
 
   const abrirInvitacion = () => {
     setAbierta(true);
@@ -30,11 +30,18 @@ function Content() {
             alt="Fondo"
             className="cover-img downup"
           />
-          <div className="cover-content">
+          <div className="cover-content  ">
             <h2 className="title-name-text ">Ana &amp; Boris</h2>
-            <h4 className="title-merried-text der">Unimos nuestras vidas</h4>
+            <div className="divider">
+             <span>◆</span>
+            </div>
+            <h4 className="title-merried-text  ">Unimos nuestras vidas</h4>
 
-            <Link className="nav-link active" title="Abrir Invitacion" to="/bya">
+            <Link
+              className="nav-link active"
+              title="Abrir Invitacion"
+              to="/bya"
+            >
               <button className="btn-abrir" onClick={abrirInvitacion}>
                 Ver Invitación
               </button>

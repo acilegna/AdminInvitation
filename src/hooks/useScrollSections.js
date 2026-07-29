@@ -134,7 +134,7 @@ export default function useScrollSections() {
     inView(".seccion .downup", (element) => {
       animate(
         element,
-        { opacity: 1, y: [80, 0] }, //   de arriba hacia abajo
+        { opacity: 1, y: [50, 0] }, //   de arriba hacia abajo
         {
           duration: 0.9,
           easing: [0.17, 0.55, 0.55, 1],

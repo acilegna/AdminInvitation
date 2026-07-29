@@ -62,34 +62,6 @@ function Content({ toggleAudio, reproduciendo }) {
   return (
     <>
       <div className="container-fluid section-invi">
-        <div className="cont-full seccion cont-centrado">
-          <div className="d-flex flex-column align-items-center">
-            {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
-            <div className="iniciales-container">
-              <h3 className="inicial img ">B</h3>
-              <h4 className="inicial novia downup">A</h4>
-            </div>
-
-            {/* Contenedor para las imágenes */}
-            <div className="d-flex justify-content-center align-items-center flex">
-              <div className="col lados">
-                {" "}
-                <img src="/sources/1.jpg" alt="Fondo" className="image" />
-              </div>
-              <div className="col updown">
-                <img src="/sources/2.jpg" alt="Fondo" className="image " />
-              </div>
-              <div className="col lados">
-                {" "}
-                <img src="/sources/3.jpg" alt="Fondo" className="image" />
-              </div>
-            </div>
-            {/*      Contenedor para la fecha */}
-            <div className="cont-date">
-              <h3 className="text-date updown">30.11.2027</h3>
-            </div>
-          </div>
-        </div>
         <div className="cont-full seccion">
           <div className="imagenes-container downup">
             <img src="/sources/pareja.jpg" alt="Fondo" className="imagenes" />
@@ -123,7 +95,34 @@ function Content({ toggleAudio, reproduciendo }) {
           </div>
         </div>
         {/* FIN SECCION 2 */}
+        <div className="cont-full seccion cont-centrado">
+          <div className="d-flex flex-column align-items-center">
+            {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
+            <div className="iniciales-container">
+              <h3 className="inicial img ">B</h3>
+              <h4 className="inicial novia downup">A</h4>
+            </div>
 
+            {/* Contenedor para las imágenes */}
+            <div className="d-flex justify-content-center align-items-center flex">
+              <div className="col lados">
+                {" "}
+                <img src="/sources/z1.jpg" alt="Fondo" className="image" />
+              </div>
+              <div className="col updown">
+                <img src="/sources/z2.jpg" alt="Fondo" className="image" />
+              </div>
+              <div className="col lados">
+                {" "}
+                <img src="/sources/z3.jpg" alt="Fondo" className="image" />
+              </div>
+            </div>
+            {/*      Contenedor para la fecha */}
+            <div className="cont-date">
+              <h3 className="text-date updown">30.11.2027</h3>
+            </div>
+          </div>
+        </div>
         {/* FIN SECCION 3*/}
         <div className="cont-full seccion ">
           <img
