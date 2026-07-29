@@ -62,6 +62,38 @@ function Content({ toggleAudio, reproduciendo }) {
   return (
     <>
       <div className="container-fluid section-invi">
+        <div className="cont-full seccion">
+          <div className="imagenes-container downup">
+            <img src="/sources/pareja.jpg" alt="Fondo" className="imagenes" />
+          </div>
+        </div>
+        <div className="cont-full cont-sound seccion">
+          <div className="audio-player">
+            <button onClick={toggleAudio}>
+              <i
+                className={`bi ${
+                  reproduciendo ? "bi-pause-fill" : "bi-play-fill"
+                }`}
+              ></i>
+            </button>
+
+            <span className="audio-time">
+              {reproduciendo ? "Reproduciendo..." : "Pausado"}
+            </span>
+          </div>
+
+          <div className="cont-msj">
+            <h2>
+              <span className="text-save-date">Estás Invitado!</span>
+            </h2>
+            <h5 className="mt-4 updown">
+              <span className="text-msj">
+                Queremos que seas parte de este momento tan especial
+              </span>
+            </h5>
+          </div>
+        </div>
+
         <div className="cont-full seccion cont-centrado">
           <div className="d-flex flex-column align-items-center">
             {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
@@ -90,38 +122,9 @@ function Content({ toggleAudio, reproduciendo }) {
             </div>
           </div>
         </div>
-        <div className="cont-full seccion">
-          <div className="imagenes-container downup">
-            <img src="/sources/pareja.jpg" alt="Fondo" className="imagenes" />
-          </div>
-        </div>
+
         {/* FIN SECCION 1 */}
-        <div className="cont-full cont-sound seccion">
-          <div className="audio-player">
-            <button onClick={toggleAudio}>
-              <i
-                className={`bi ${
-                  reproduciendo ? "bi-pause-fill" : "bi-play-fill"
-                }`}
-              ></i>
-            </button>
 
-            <span className="audio-time">
-              {reproduciendo ? "Reproduciendo..." : "Pausado"}
-            </span>
-          </div>
-
-          <div className="cont-msj">
-            <h2>
-              <span className="text-save-date">Estás Invitado!</span>
-            </h2>
-            <h5 className="mt-4 updown">
-              <span className="text-msj">
-                Queremos que seas parte de este momento tan especial
-              </span>
-            </h5>
-          </div>
-        </div>
         {/* FIN SECCION 2 */}
 
         {/* FIN SECCION 3*/}
@@ -282,12 +285,19 @@ function Content({ toggleAudio, reproduciendo }) {
             {" "}
             Realiza tu reservación{" "}
           </h2>
+
+          <p className="reservation-info">
+            Para que disfrutes al máximo de nuestra celebración, hemos reservado
+            un bloque de habitaciones en Cancún con una tarifa preferencial
+            exclusiva para nuestros invitados del <strong className="date-reserva"> 29 de noviembre al 2 de diciembre de 2027.</strong>{" "}
+          </p>
+
+           
           <p className="text-msj-confirmation downup text-center">
             {" "}
             Reserva y confirma tu asistencia antes del{" "}
             <strong className="date-text"> 30-04-2027.</strong>{" "}
           </p>
-
           <div className="reservation-card">
             <div className="row align-items-center  gy-4">
               {/* Icono */}

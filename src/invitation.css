@@ -1,6 +1,17 @@
+.reservation-info {
+  max-width: 680px;
+  margin: 0.4rem auto 0;
+  font-size: 1.1rem;
+  line-height: 2;
+  font-weight: 300;
+  color: #5b5b5b;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
 /* divider */
 
- .divider {
+.divider {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,19 +27,17 @@
   background: linear-gradient(
     to right,
     transparent,
-    rgba(255,255,255,.8),
+    rgba(255, 255, 255, 0.8),
     transparent
   );
 }
 
 .divider span {
   margin: 0 18px;
-  color: rgba(255,255,255,.95);
+  color: rgba(255, 255, 255, 0.95);
   font-size: 22px;
 }
 /* fin divider  */
-
-
 
 .audio-player {
   position: absolute;
@@ -455,7 +464,6 @@
   font-size: 5.4rem;
   font-family: "Italianno", cursive;
   line-height: 60px;
-  
 }
 
 .title-merried-text {
@@ -762,12 +770,17 @@ margin-left: 30px;
 }
 .date-text {
   font-weight: 700;
-  font-size: 2.1rem;
+  font-size: 2rem;
+  color: rgb(152, 1, 1);
+}
+.date-reserva {
+  font-weight: 700;
+  font-size: 1.1rem;
   color: rgb(0, 0, 0);
 }
 .text-msj-confirmation {
   font-family: "Cormorant Garamond", serif;
-
+  margin-top: 20px;
   color: rgb(75, 75, 75);
   font-size: 1.6rem;
 }
