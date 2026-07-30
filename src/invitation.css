@@ -313,7 +313,7 @@
 
  .cont-msj {
     top: auto;
-    
+    bottom: 140px;       /* Distancia desde abajo */
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
