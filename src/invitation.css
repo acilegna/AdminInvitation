@@ -112,21 +112,25 @@
 
 .iniciales-container {
   position: relative;
-  display: inline-block;
-  text-align: center;
-  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px auto 30px;
 }
 
 .inicial {
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 8vw, 4.5rem);
   font-family: "Italianno", cursive;
   color: #464646;
+  line-height: 1;
 }
 
 .novia {
   position: absolute;
   top: 20px;
-  left: 10px;
+  left: 50%;
+  transform: translateX(-35%);
 }
 
 /* Contenedor de imágenes */
