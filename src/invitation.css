@@ -77,14 +77,14 @@
 }
 
 .text-save-date {
-  font-size: clamp(2.5rem, 6vw, 4.7rem);
+  font-size: clamp(2.5rem, 8.7rem, 4.7rem);
   font-family: "Italianno", cursive;
   color: #fffcfc;
 }
 
 .text-msj {
   color: #faf7f7;
-  font-size: clamp(1.2rem, 3.2vw, 2.4rem);
+  font-size: clamp(1.2rem, 4vw, 2.4rem);
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
 }
