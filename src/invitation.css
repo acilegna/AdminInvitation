@@ -186,7 +186,8 @@
   /* Muy importante para que quede detrás */
 }
 
-.cont-titleContador,.cont-date,
+.cont-titleContador,
+.cont-date,
 .time-values {
   position: absolute;
   top: 45%;
@@ -207,11 +208,10 @@
   text-align: center;
 }
 
- 
 .time-values {
   padding-top: 160px;
 }
- .cont-date {
+.cont-date {
   margin-top: 230px;
 }
 .time-box {
@@ -235,12 +235,12 @@
   font-weight: bold;
   display: block;
 }
- 
+
 .text-date {
   margin-top: 25px;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
-   font-size: 3.5rem;
+  font-size: 3.5rem;
   color: #fffefe;
   letter-spacing: 4px;
 }
@@ -309,14 +309,11 @@
   }
 }
 
- 
 @media (max-width: 768px) {
-.text-time {
-  font-size: 2.2rem;
-
-   
-}
-   .cont-titleContador {
+  .text-time {
+    font-size: 2.2rem;
+  }
+  .cont-titleContador {
     top: 20%;
   }
 
@@ -370,7 +367,11 @@
 
   .text-date {
     margin-top: 20px;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
+  }
+
+  .cont-msj {
+    top: 70%;
   }
 }
 
