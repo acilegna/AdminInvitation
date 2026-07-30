@@ -92,13 +92,11 @@ function Content({ toggleAudio, reproduciendo }) {
 
             <h5 className="updown">
               <span className="text-msj">
-                Queremos que seas parte de este momento tan especial
+                Te esperamos para celebrar juntos.
               </span>
             </h5>
           </div>
         </div>
-
-       
       </div>
     </>
   );
