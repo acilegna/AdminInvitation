@@ -119,11 +119,14 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 2 */}
         {/*  SECCION 3 */}
           <div className="cont-full seccion ">
-          <img
-            src="/sources/IMG_1505.jpg"
-            alt="Fondo"
-            className="imagen-full scale"
-          />
+          
+           <div className="imagenes-container downup">
+            <img
+              src="/sources/IMG_1505.jpg"
+              alt="Fondo"
+              className="img-seccion-one scale"
+            />
+          </div>
 
           <div className="cont-titleContador">
             <h2>
