@@ -152,7 +152,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
           <div className="cont-date">
             <h3 className="updown">
-              <span className="text-date  "> 30.11.2027</span>
+              <span className="text-date "> 30.11.2027</span>
             </h3>
           </div>
         </div>

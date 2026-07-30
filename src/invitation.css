@@ -311,7 +311,11 @@
 
  
 @media (max-width: 768px) {
+.text-time {
+  font-size: 2.2rem;
 
+   
+}
    .cont-titleContador {
     top: 20%;
   }
@@ -366,7 +370,7 @@
 
   .text-date {
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 
