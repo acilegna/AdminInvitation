@@ -313,15 +313,15 @@
 @media (max-width: 768px) {
 
    .cont-titleContador {
-    top: 25%;
+    top: 20%;
   }
 
   .time-values {
-    top: 25%;
+    top: 18%;
   }
 
   .cont-date {
-    top: 28%;
+    top: 10%;
   }
   .iniciales-container {
     margin: 20px auto;
