@@ -9,35 +9,7 @@
   letter-spacing: 0.3px;
 }
 
-/* divider */
 
-.divider {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px 0;
-}
-
-.divider::before,
-.divider::after {
-  content: "";
-  flex: 1;
-  max-width: 120px;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.8),
-    transparent
-  );
-}
-
-.divider span {
-  margin: 0 18px;
-  color: rgba(255, 255, 255, 0.95);
-  font-size: 22px;
-}
-/* fin divider  */
 
 /* Imagen */
 .cover {
@@ -372,27 +344,7 @@
 /* SECCION UNO */
 
 
-.couple-name {
-  top: 75%;
-  text-shadow: 2px 2px 4px #000;
-}
 
-.title-name-text {
-  color: white;
-  font-size: 5.4rem;
-  font-family: "Italianno", cursive;
-  line-height: 60px;
-}
-
-.title-merried-text {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem; /* Ajusta según el tamaño de los nombres */
-  font-weight: 400; /* Puedes probar también 500 */
-  color: #fff;
-  letter-spacing: 1px;
-  line-height: 1.3;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
-}
 .imagenes {
   width: 85%;
   height: 85%;
@@ -434,10 +386,7 @@ margin-left: 30px;
 
 
 
-.flex {
-  gap: 0px;
-  /* d-flex justify-content-space-between flex-column align-items-center */
-}
+
 
 /* .image {
   width: 100%;

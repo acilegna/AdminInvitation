@@ -100,14 +100,20 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
         <div className="cont-full seccion cont-rompecabeza">
+          <img
+            src="/sources/chat.png"
+            alt="Fondo"
+            className="imagen-chat scale"
+          />
           <div className=" ">
             <div className="iniciales-container">
               <h3 className="inicial img ">B</h3>
               <h4 className="inicial novia downup">A</h4>
             </div>
-
+         
+            
             {/* Contenedor para las imágenes */}
-            <div className="contenedor-imagenes">
+            {/* <div className="contenedor-imagenes">
               <div className="img-izquierda updown">
                 <img
                   src="/sources/1.jpg"
@@ -131,11 +137,11 @@ function Content({ toggleAudio, reproduciendo }) {
                   className="image-piezas"
                 />
               </div>
-            </div>
+            </div> */}
             {/*      Contenedor para la fecha */}
-            <div className="cont-date">
+            {/* <div className="cont-date">
               <h3 className="text-date updown">30.11.2027</h3>
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -147,7 +153,6 @@ function Content({ toggleAudio, reproduciendo }) {
             alt="Fondo"
             className="imagen-full scale"
           />
-          <div className="fondo-imagen imagen-full"></div>
 
           <div className="cont-titleContador">
             <h2>
