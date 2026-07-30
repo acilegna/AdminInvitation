@@ -104,7 +104,7 @@
 
 /* FIN SECCION 1 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*SECCION rompecabeza SECCION 2*/
- .cont-rompecabeza {
+.cont-rompecabeza {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,7 +204,20 @@
   }
 }
 @media (max-width: 768px) {
+    .iniciales-container {
+    margin: 20px auto;
+    justify-content: center;
+  }
 
+  .inicial {
+    font-size: clamp(3rem, 18vw, 4.5rem);
+  }
+
+  .novia {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-35%);
+  }
   .cont-rompecabeza {
     padding: 20px 10px;
   }
@@ -215,6 +228,7 @@
     align-items: center;
     gap: 10px;
     flex-wrap: nowrap; /* Mantiene las 3 en una fila */
+     margin-top:-40px;
   }
 
   .img-izquierda,
@@ -238,14 +252,13 @@
 }
 
 @media (max-width: 576px) {
-
   .contenedor-imagenes {
     display: flex;
-    flex-direction: row;      /* Mantenerlas en horizontal */
+    flex-direction: row; /* Mantenerlas en horizontal */
     justify-content: center;
     align-items: center;
-    gap: 8px;                 /* Menor separación */
-    flex-wrap: nowrap;        /* Evita que bajen a otra línea */
+    gap: 8px; /* Menor separación */
+    flex-wrap: nowrap; /* Evita que bajen a otra línea */
   }
 
   .img-izquierda {
@@ -261,7 +274,7 @@
   }
 
   .image-piezas {
-    width: 30vw;              /* Cada imagen ocupa aproximadamente un tercio */
+    width: 30vw; /* Cada imagen ocupa aproximadamente un tercio */
     max-width: 120px;
     min-width: 85px;
     height: auto;
