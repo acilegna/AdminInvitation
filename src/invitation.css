@@ -77,14 +77,14 @@
 }
 
 .text-save-date {
-  font-size:  4.7rem;
+  font-size: 4.7rem;
   font-family: "Italianno", cursive;
   color: #fffcfc;
 }
 
 .text-msj {
   color: #faf7f7;
-  font-size:   2rem;
+  font-size: 2rem;
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
 }
@@ -364,7 +364,6 @@
     color: #fdf9f9;
   }
 
- 
   .audio-player button:hover {
     color: #f7f7f7;
   }
@@ -375,18 +374,19 @@
   }
 
   .text-save-date {
-  font-size:  3.5rem;
-}
+    font-size: 3.5rem;
+  }
 
-.text-msj {
-   font-size:   1.5rem;
-}
+  .text-msj {
+    font-size: 1.5rem;
+  }
 
-.text-time {
-  font-size: 2rem;
-
-   
-}
+  .text-time {
+    font-size: 2rem;
+  }
+  .text-date {
+    font-size: 3rem;
+  }
 }
 
 @media (max-width: 576px) {
