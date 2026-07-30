@@ -84,7 +84,7 @@
 
 .text-msj {
   color: #faf7f7;
-  font-size: clamp(1.2rem, 2rem, 2.4rem);
+  font-size: clamp(1.2rem, 1.5rem, 2rem);
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
 }
