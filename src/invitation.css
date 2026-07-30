@@ -364,15 +364,13 @@
     color: #fdf9f9;
   }
 
-  .audio-player button:hover {
-    color: #dadada;
-  }
+ 
   .audio-player button:hover {
     color: #f7f7f7;
   }
 
   .audio-time {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #f8f6f6;
   }
 }
