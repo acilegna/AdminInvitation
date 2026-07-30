@@ -488,26 +488,9 @@ margin-left: 30px;
 }
   */
 
-.iniciales-container {
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
 
-.inicial {
-  /*  font-family: "Miss Fajardose", cursive; */
-  font-size: 4em;
-  font-family: "Italianno", cursive;
-  color: #464646;
-}
 
-.novia {
-  position: absolute;
-  top: 20px;
-  /* mueve hacia abajo */
-  left: 5px;
-  /* mueve hacia la derecha */
-}
+
 
 .flex {
   gap: 0px;
@@ -543,10 +526,7 @@ margin-left: 30px;
   height: 45px;
 }
 
-.image {
-  width: 250px;
-  height: auto;
-}
+
 
 .text-where {
   font-size: 4.2rem;
@@ -554,41 +534,15 @@ margin-left: 30px;
   color: rgb(0, 0, 0);
 }
 
-.text-date {
-  justify-content: center;
-  /* centra horizontal */
-  margin: 0 8px;
-  font-size: 2.5rem;
-  letter-spacing: 2px;
-  color: rgb(31, 31, 31);
 
-  font-family: "Sirivennela", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
 
-.cont-date {
-  /* padding-top: 20px; */
-}
-
-.cont-date h3 {
-  text-align: center;
-  /* centra horizontal el texto */
-}
 
 /************************************SECTION 5 *************************************************************************/
-.cont-centrado {
-  display: flex;
-  justify-content: center;
-  /* centra horizontal */
-  align-items: center;
-  /* centra vertical */
-}
+
 
 .text-present {
   font-size: 3.7rem;
   font-family: "Italianno", cursive;
-
   color: #f0f2f3;
   letter-spacing: 3px;
 }
@@ -597,7 +551,6 @@ margin-left: 30px;
   color: rgb(236, 236, 236);
   font-size: 1.5rem;
   text-align: center;
-
   font-family: "Cormorant Garamond", serif;
 }
 

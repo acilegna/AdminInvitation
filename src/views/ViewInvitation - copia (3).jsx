@@ -98,6 +98,7 @@ function Content({ toggleAudio, reproduciendo }) {
           </div>
         </div>
         {/* FIN SECCION 1 */}
+         {/*  SECCION 2 */}
         <div className="cont-full seccion cont-centrado">
           <div className="d-flex flex-column align-items-center">
             {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}

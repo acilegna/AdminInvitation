@@ -97,6 +97,50 @@ function Content({ toggleAudio, reproduciendo }) {
             </h5>
           </div>
         </div>
+        {/* FIN SECCION 1 */}
+        {/*  SECCION 2 */}
+        <div className="cont-full seccion cont-rompecabeza">
+          <div className="d-flex flex-column align-items-center">
+            <div className="iniciales-container">
+              <h3 className="inicial img ">B</h3>
+              <h4 className="inicial novia downup">A</h4>
+            </div>
+
+            {/* Contenedor para las imágenes */}
+           <div className="contenedor-imagenes">
+  <div className="img-izquierda updown">
+    <img
+      src="/sources/1.jpg"
+      alt="Fondo"
+      className="image-piezas"
+    />
+  </div>
+
+  <div className="img-centro updown">
+    <img
+      src="/sources/2.jpg"
+      alt="Fondo"
+      className="image-piezas"
+    />
+  </div>
+
+  <div className="img-derecha updown">
+    <img
+      src="/sources/3.jpg"
+      alt="Fondo"
+      className="image-piezas"
+    />
+  </div>
+</div>
+            {/*      Contenedor para la fecha */}
+            <div className="cont-date">
+              <h3 className="text-date updown">30.11.2027</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* FIN SECCION 2 */}
+      
       </div>
     </>
   );

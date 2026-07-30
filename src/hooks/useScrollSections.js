@@ -85,7 +85,8 @@ export default function useScrollSections() {
     inView(".seccion .lados", (element) => {
       animate(
         element,
-        { opacity: 1, y: [-100, 0] }, //   de arriba hacia abajo
+        { opacity: 1, y: [-100, 0]   ,
+        transform: ["translateY('20px')", "translateY(40px)"]}, // de abajo hacia arriba
         {
           duration: 3,
           // easing: [0.75],
@@ -108,7 +109,8 @@ export default function useScrollSections() {
   animate(
     element,
     {
-      transform: ["translateY(100%)", "translateY(0)"], // de abajo hacia arriba
+      transform: ["translateY('30px')", "translateY(40px)"], // de abajo hacia arriba
+      
       opacity: [0, 1],
     },
     {
