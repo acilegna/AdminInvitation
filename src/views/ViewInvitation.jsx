@@ -100,12 +100,6 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
         <div className="cont-rompe seccion">
-          <img
-            src="/sources/chat.png"
-            alt="Fondo"
-            className="imagen-chat scale"
-          />
-
           <div className="iniciales-container">
             <h3 className="inicial img ">B</h3>
             <h4 className="inicial novia downup">A</h4>
@@ -161,6 +155,28 @@ function Content({ toggleAudio, reproduciendo }) {
           </div>
         </div>
         {/* FIN SECCION 3 */}
+
+        {/*  SECCION 4 */}
+        <div className="cont-full cont-sound seccion">
+          <div className="imagenes-container downup">
+            <img
+              src="/sources/pareja.jpg"
+              alt="Fondo"
+              className="img-seccion-one scale"
+            />
+          </div>
+
+          <div className="texto-imagen">
+            <h2>
+              <span className="text-present">Dress Code</span>
+            </h2>
+            <p className="dress-code">Formal de playa</p>
+            <p className="dress-text">
+              ¡Luce fabuloso(a) y ven con toda la actitud!
+            </p>
+          </div>
+        </div>
+         {/* FIN SECCION 4 */}
       </div>
     </>
   );
