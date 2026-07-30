@@ -203,32 +203,36 @@
 @media (max-width: 576px) {
 
   .contenedor-imagenes {
-    flex-direction: column;
-    gap: 20px;
+    display: flex;
+    flex-direction: row;      /* Mantenerlas en horizontal */
+    justify-content: center;
+    align-items: center;
+    gap: 8px;                 /* Menor separación */
+    flex-wrap: nowrap;        /* Evita que bajen a otra línea */
+  }
+
+  .img-izquierda {
+    margin-top: 20px;
+  }
+
+  .img-centro {
+    margin-top: -20px;
+  }
+
+  .img-derecha {
+    margin-top: 20px;
   }
 
   .image-piezas {
-    max-width: 85vw;
-  }
-
-  .img-izquierda,
-  .img-centro,
-  .img-derecha {
-    margin-top: 0;
-  }
-
-  .inicial {
-    font-size: 3.5rem;
-  }
-
-  .novia {
-    top: 16px;
-    left: 8px;
+    width: 30vw;              /* Cada imagen ocupa aproximadamente un tercio */
+    max-width: 120px;
+    min-width: 85px;
+    height: auto;
   }
 
   .text-date {
-    font-size: 2.2rem;
-    margin-top: 20px;
+    font-size: 2rem;
+    margin-top: 15px;
   }
 }
 /* RESPONSIVE FIN ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
