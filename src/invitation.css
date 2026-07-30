@@ -173,16 +173,6 @@
   margin-top: -100px;
 }
 
-.text-date {
-  margin-top: -40px;
-  text-align: center;
-  font-size: 3.5rem;
-  letter-spacing: 2px;
-  color: rgb(31, 31, 31);
-  font-family: "Sirivennela", sans-serif;
-  font-weight: 500;
-}
-
 /* FIN SECCION 2 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*inicio SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .imagen-full {
@@ -196,7 +186,7 @@
   /* Muy importante para que quede detrás */
 }
 
-.cont-titleContador,
+.cont-titleContador,.cont-date,
 .time-values {
   position: absolute;
   top: 45%;
@@ -218,9 +208,11 @@
 }
 
 .time-values {
-  padding-top: 165px;
+  padding-top: 160px;
 }
-
+ .cont-date {
+  margin-top: 230px;
+}
 .time-box {
   background-color: rgba(0, 0, 0, 0.404);
   color: white;
@@ -241,6 +233,15 @@
   font-size: 28px;
   font-weight: bold;
   display: block;
+}
+ 
+.text-date {
+  margin-top: 25px;
+  text-align: center;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #cfcbcb;
+  letter-spacing: 4px;
 }
 /* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */

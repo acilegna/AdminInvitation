@@ -153,6 +153,12 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="time-label">Segundos</div>
             </div>
           </div>
+
+          <div className="cont-date">
+            <h3>
+              <span className="text-date updown"> 30.11.2027</span>
+            </h3>
+          </div>
         </div>
         {/* FIN SECCION 3 */}
 
@@ -176,7 +182,7 @@ function Content({ toggleAudio, reproduciendo }) {
             </p>
           </div>
         </div>
-         {/* FIN SECCION 4 */}
+        {/* FIN SECCION 4 */}
       </div>
     </>
   );
