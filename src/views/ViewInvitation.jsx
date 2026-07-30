@@ -114,11 +114,11 @@ function Content({ toggleAudio, reproduciendo }) {
               <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
             </div>
           </div>
-        </div> */}
+        </div>  
 
         {/* FIN SECCION 2 */}
         {/*  SECCION 3 */}
-        {/* <div className="cont-full seccion ">
+          <div className="cont-full seccion ">
           <img
             src="/sources/IMG_1505.jpg"
             alt="Fondo"
@@ -155,7 +155,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <span className="text-date "> 30.11.2027</span>
             </h3>
           </div>
-        </div> */}
+        </div> 
         {/* FIN SECCION 3 */}
 
         {/*  SECCION 4 */}
