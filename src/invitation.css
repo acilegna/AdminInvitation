@@ -107,33 +107,40 @@
 
 /* FIN SECCION 1 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*SECCION rompecabeza SECCION 2*/
-.imagen-chat {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cont-rompe {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit:fill;
-  z-index: -1;
-  /* Muy importante para que quede detrás */
-}
-.cont-rompecabeza {
+  min-height: 100vh;
+  overflow: hidden;
+
   display: flex;
+  flex-direction: column;   /* <-- Agrega esto */
   justify-content: center;
   align-items: center;
 }
+
+.imagen-chat {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* o contain si quieres verla completa */
+  object-position: center;
+  z-index: -1;
+}
+
+
 
 .iniciales-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: 0px auto 0px;
+  margin-bottom: 70px; /* separación con las imágenes */
 }
 
 .inicial {
-  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-size: clamp(4rem, 12vw, 8rem);
   font-family: "Italianno", cursive;
   color: #464646;
   line-height: 1;
@@ -143,9 +150,8 @@
   position: absolute;
   top: 20px;
   left: 50%;
-  transform: translateX(-35%);
+  transform: translateX(-30%);
 }
-
 /* Contenedor de imágenes */
 .contenedor-imagenes {
   display: flex;
@@ -192,7 +198,7 @@
   font-family: "Sirivennela", sans-serif;
   font-weight: 500;
 }
- 
+
 /* FIN SECCION 2 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*inicio SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .imagen-full {

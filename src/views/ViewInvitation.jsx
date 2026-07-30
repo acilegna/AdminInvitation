@@ -99,49 +99,30 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-        <div className="cont-full seccion cont-rompecabeza">
+        <div className="cont-rompe seccion">
           <img
             src="/sources/chat.png"
             alt="Fondo"
             className="imagen-chat scale"
           />
-          <div className=" ">
-            <div className="iniciales-container">
-              <h3 className="inicial img ">B</h3>
-              <h4 className="inicial novia downup">A</h4>
+
+          <div className="iniciales-container">
+            <h3 className="inicial img ">B</h3>
+            <h4 className="inicial novia downup">A</h4>
+          </div>
+          {/* Contenedor para las imágenes */}
+          <div className="contenedor-imagenes">
+            <div className="img-izquierda updown">
+              <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
             </div>
-         
-            
-            {/* Contenedor para las imágenes */}
-            {/* <div className="contenedor-imagenes">
-              <div className="img-izquierda updown">
-                <img
-                  src="/sources/1.jpg"
-                  alt="Fondo"
-                  className="image-piezas"
-                />
-              </div>
 
-              <div className="img-centro updown">
-                <img
-                  src="/sources/2.jpg"
-                  alt="Fondo"
-                  className="image-piezas"
-                />
-              </div>
+            <div className="img-centro updown">
+              <img src="/sources/2.jpg" alt="Fondo" className="image-piezas" />
+            </div>
 
-              <div className="img-derecha updown">
-                <img
-                  src="/sources/3.jpg"
-                  alt="Fondo"
-                  className="image-piezas"
-                />
-              </div>
-            </div> */}
-            {/*      Contenedor para la fecha */}
-            {/* <div className="cont-date">
-              <h3 className="text-date updown">30.11.2027</h3>
-            </div> */}
+            <div className="img-derecha updown">
+              <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
+            </div>
           </div>
         </div>
 
