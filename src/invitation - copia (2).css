@@ -308,21 +308,7 @@
     margin-top: 20px;
   }
 }
-
- 
 @media (max-width: 768px) {
-
-   .cont-titleContador {
-    top: 18%;
-  }
-
-  .time-values {
-    top: 33%;
-  }
-
-  .cont-date {
-    top: 48%;
-  }
   .iniciales-container {
     margin: 20px auto;
     justify-content: center;
