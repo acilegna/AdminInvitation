@@ -311,9 +311,12 @@
 
 @media (max-width: 768px) {
 
-   .cont-msj {
-    justify-content: flex-end; /* Lo envía abajo */
-    padding-bottom: 40px;
+ .cont-msj {
+    top: auto;
+    bottom: 40px;       /* Distancia desde abajo */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
   }
   .text-time {
     font-size: 2.2rem;
