@@ -63,7 +63,7 @@ function Content({ toggleAudio, reproduciendo }) {
     <>
       <div className="container-fluid section-invi">
         {/*inicio SECCION 1 */}
-        <div className="cont-full cont-sound seccion">
+        <div className="cont-full  seccion">
           <div className="imagenes-container downup">
             <img
               src="/sources/pareja.jpg"
@@ -99,8 +99,8 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-        <div className="cont-rompe seccion">
-          {/* Contenedor para las imágenes */}
+        {/*         <div className="cont-rompe seccion">
+           
           <div className="contenedor-imagenes">
             <div className="img-izquierda updown">
               <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
@@ -114,11 +114,11 @@ function Content({ toggleAudio, reproduciendo }) {
               <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* FIN SECCION 2 */}
         {/*  SECCION 3 */}
-        <div className="cont-full seccion ">
+        {/* <div className="cont-full seccion ">
           <img
             src="/sources/IMG_1505.jpg"
             alt="Fondo"
@@ -155,11 +155,11 @@ function Content({ toggleAudio, reproduciendo }) {
               <span className="text-date "> 30.11.2027</span>
             </h3>
           </div>
-        </div>
+        </div> */}
         {/* FIN SECCION 3 */}
 
         {/*  SECCION 4 */}
-        <div className="cont-full cont-sound seccion">
+        {/*   <div className="cont-full cont-sound seccion">
           <div className="imagenes-container downup">
             <img
               src="/sources/pareja.jpg"
@@ -177,7 +177,7 @@ function Content({ toggleAudio, reproduciendo }) {
               ¡Luce fabuloso(a) y ven con toda la actitud!
             </p>
           </div>
-        </div>
+        </div> */}
         {/* FIN SECCION 4 */}
       </div>
     </>
