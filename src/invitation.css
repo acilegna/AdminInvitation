@@ -310,6 +310,11 @@
 }
 
 @media (max-width: 768px) {
+
+   .cont-msj {
+    justify-content: flex-end; /* Lo envía abajo */
+    padding-bottom: 40px;
+  }
   .text-time {
     font-size: 2.2rem;
   }
@@ -370,9 +375,7 @@
     font-size: 2.8rem;
   }
 
-  .cont-msj {
-    top: 70%;
-  }
+   
 }
 
 @media (max-width: 576px) {
