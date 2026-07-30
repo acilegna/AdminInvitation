@@ -119,12 +119,12 @@
   background-color: #000;
 }
 
-.iniciales-container {
+/* .iniciales-container {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px; /* separación con las imágenes */
+  margin-bottom: 60px;  
 }
 
 .inicial {
@@ -139,7 +139,7 @@
   top: 20px;
   left: 70%;
   transform: translateX(-30%);
-}
+} */
 /* Contenedor de imágenes */
 .contenedor-imagenes {
   display: flex;
@@ -239,8 +239,8 @@
   margin-top: 25px;
   text-align: center;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 5vw, 3.5rem);
-  color: #cfcbcb;
+   font-size: 3.5rem;
+  color: #fffefe;
   letter-spacing: 4px;
 }
 /* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */

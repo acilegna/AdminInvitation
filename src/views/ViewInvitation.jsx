@@ -100,10 +100,6 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
         <div className="cont-rompe seccion">
-          <div className="iniciales-container">
-            <h3 className="inicial img ">B</h3>
-            <h4 className="inicial novia downup">A</h4>
-          </div>
           {/* Contenedor para las imágenes */}
           <div className="contenedor-imagenes">
             <div className="img-izquierda updown">
@@ -155,8 +151,8 @@ function Content({ toggleAudio, reproduciendo }) {
           </div>
 
           <div className="cont-date">
-            <h3>
-              <span className="text-date updown"> 30.11.2027</span>
+            <h3 className="updown">
+              <span className="text-date  "> 30.11.2027</span>
             </h3>
           </div>
         </div>
