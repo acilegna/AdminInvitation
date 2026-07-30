@@ -87,7 +87,7 @@ function Content({ toggleAudio, reproduciendo }) {
             </div>
 
             <h2 className="updown">
-              <span className="text-save-date">¡Estás Invitad7o!</span>
+              <span className="text-save-date">¡Estás Invitado!</span>
             </h2>
 
             <h5 className="updown">
