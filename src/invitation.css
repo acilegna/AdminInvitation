@@ -203,6 +203,70 @@
     margin-top: 20px;
   }
 }
+/* ==========================
+   RESPONSIVE CELULAR
+========================== */
+@media (max-width: 768px) {
+
+  .cont-rompecabeza {
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  .iniciales-container {
+    margin: 20px auto;
+    justify-content: center;
+  }
+
+  .inicial {
+    font-size: clamp(3rem, 18vw, 4.5rem);
+  }
+
+  .novia {
+    top: 15px;
+    left: 50%;
+    transform: translateX(-35%);
+  }
+
+  .contenedor-imagenes {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .img-izquierda,
+  .img-centro,
+  .img-derecha {
+    flex: none;
+    width: 100%;
+    max-width: 320px;
+    margin-top: 0; /* Elimina los desplazamientos */
+    display: flex;
+    justify-content: center;
+  }
+
+  .image-piezas {
+    width: 90%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .cont-date {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .text-date {
+    margin-top: 0;
+    text-align: center;
+    font-size: 2.5rem;
+  }
+}
 
 @media (max-width: 576px) {
 
