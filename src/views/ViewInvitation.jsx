@@ -100,7 +100,7 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
         <div className="cont-full seccion cont-rompecabeza">
-          <div className="d-flex flex-column align-items-center">
+          <div className=" ">
             <div className="iniciales-container">
               <h3 className="inicial img ">B</h3>
               <h4 className="inicial novia downup">A</h4>
@@ -140,6 +140,41 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
 
         {/* FIN SECCION 2 */}
+        {/*  SECCION 3 */}
+        <div className="cont-full seccion ">
+          <img
+            src="/sources/IMG_1505.jpg"
+            alt="Fondo"
+            className="imagen-full scale"
+          />
+          <div className="fondo-imagen imagen-full"></div>
+
+          <div className="cont-titleContador">
+            <h2>
+              <span className="text-time"> SAVE THE DATE</span>
+            </h2>
+          </div>
+
+          <div className="time-values d-flex justify-content-center  ">
+            <div className="time-box updown">
+              <span className="time-number">{tiempoRestante.dias}</span>
+              <div className="time-label">Días</div>
+            </div>
+            <div className="time-box  updown">
+              <span className="time-number">{tiempoRestante.horas}</span>
+              <div className="time-label">Horas</div>
+            </div>
+            <div className="time-box  updown">
+              <span className="time-number">{tiempoRestante.minutos}</span>
+              <div className="time-label">Minutos</div>
+            </div>
+            <div className="time-box  updown">
+              <span className="time-number">{tiempoRestante.segundos}</span>
+              <div className="time-label">Segundos</div>
+            </div>
+          </div>
+        </div>
+        {/* FIN SECCION 3 */}
       </div>
     </>
   );

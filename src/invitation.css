@@ -116,7 +116,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 50px auto 30px;
+  margin: 0px auto 0px;
 }
 
 .inicial {
@@ -181,6 +181,70 @@
 }
 
 /* FIN SECCION 2 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+/*inicio SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+.imagen-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  /* Muy importante para que quede detrás */
+}
+
+.fondo-imagen {
+  background-color: rgba(0, 0, 0, 0.589);
+  position: relative;
+  z-index: 1;
+}
+.cont-titleContador,
+.time-values {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* centra en ambos ejes */
+  text-align: center;
+  width: 100%;
+}
+
+.text-time {
+  font-size: 2.5rem;
+
+  font-family: "Suranna", serif;
+  letter-spacing: 7px;
+  line-height: 60px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.time-values {
+  padding-top: 165px;
+}
+
+.time-box {
+  background-color: rgba(0, 0, 0, 0.404);
+  color: white;
+  padding: 7px;
+  margin: 7px;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Suranna", serif;
+}
+
+.time-label {
+  font-size: 12px;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+
+.time-box span {
+  font-size: 28px;
+  font-weight: bold;
+  display: block;
+}
+/* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /* RESPONSIVE ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 @media (max-width: 992px) {
 
