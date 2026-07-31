@@ -726,7 +726,7 @@
   .audio-player button {
     font-size: 2rem;
     color: #edebeb;
-    top:290px;
+    margin-top:290px;
   }
 
   .audio-player button:hover {
@@ -735,7 +735,7 @@
 
   .audio-time {
     font-size: 1.5rem;
-    color: #1bf86c;
+    color: #361cc4;
   }
 
   .text-save-date {
