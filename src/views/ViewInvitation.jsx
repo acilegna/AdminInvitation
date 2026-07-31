@@ -425,7 +425,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
           {(adultos.length > 0 || ninos.length > 0) && (
             <div className="confirmation-section">
-              <h2 className="confirmation-title">3. Confirma tu asistencia</h2>
+              <h2 className="confirmation-title">3. Indica quien asistirà</h2>
 
               <p className="confirmation-subtitle">
                 Selecciona Sí o No para cada invitado de tu familia.
