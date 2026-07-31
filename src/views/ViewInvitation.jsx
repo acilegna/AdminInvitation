@@ -99,8 +99,7 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-        {/*         <div className="cont-rompe seccion">
-           
+        {/*    <div className="cont-rompe seccion">
           <div className="contenedor-imagenes">
             <div className="img-izquierda updown">
               <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
@@ -114,13 +113,12 @@ function Content({ toggleAudio, reproduciendo }) {
               <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
             </div>
           </div>
-        </div>  
+        </div> */}
 
         {/* FIN SECCION 2 */}
         {/*  SECCION 3 */}
-          <div className="cont-full seccion ">
-          
-           <div className="imagenes-container downup">
+        <div className="cont-full seccion ">
+          <div className="imagenes-container downup">
             <img
               src="/sources/IMG_1505.jpg"
               alt="Fondo"
@@ -158,11 +156,11 @@ function Content({ toggleAudio, reproduciendo }) {
               <span className="text-date "> 30.11.2027</span>
             </h3>
           </div>
-        </div> 
+        </div>
         {/* FIN SECCION 3 */}
 
         {/*  SECCION 4 */}
-        {/*   <div className="cont-full cont-sound seccion">
+        {/*  <div className="cont-full cont-sound seccion">
           <div className="imagenes-container downup">
             <img
               src="/sources/pareja.jpg"
@@ -170,7 +168,10 @@ function Content({ toggleAudio, reproduciendo }) {
               className="img-seccion-one scale"
             />
           </div>
-
+          <div className="iniciales-container">
+            <h3 className="inicial img ">B</h3>
+            <h4 className="inicial novia downup">A</h4>
+          </div>
           <div className="texto-imagen">
             <h2>
               <span className="text-present">Dress Code</span>
@@ -182,6 +183,103 @@ function Content({ toggleAudio, reproduciendo }) {
           </div>
         </div> */}
         {/* FIN SECCION 4 */}
+
+        {/*INICIO SECCION 5*/}
+        <div className="cont-full seccion cont-centrado" id="itinerario">
+          <div className="d-flex flex-column align-items-center">
+            <h2 className="text-center">
+              <span className="title-itinerario">Itinerario</span>
+            </h2>
+
+            <div className="">
+              <div className="row ">
+                <div className="col-4 icons-itinerario izqicon">
+                  <img
+                    src="/sources/iglesia.png"
+                    alt="Fondo"
+                    className="img-itinerario"
+                  />
+                </div>
+                <div className="col-8 text-itinerario der">
+                  <span className="span-text">Celebracion Religiosa</span>{" "}
+                  <span className="span-hora"> 9:20 PM</span>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="col-4 icons-itinerario izqicon">
+                  {" "}
+                  <img
+                    src="/sources/brindis.png"
+                    alt="Fondo"
+                    className="img-itinerario3"
+                  />
+                </div>
+                <div className="col-8 text-itinerario der">
+                  <span className="span-text">Recepcion</span>{" "}
+                  <span className="span-hora"> 9:20 PM</span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4 icons-itinerario izqicon">
+                  {" "}
+                  <img
+                    src="/sources/brides.png"
+                    alt="Fondo"
+                    className="img-itinerario"
+                  />
+                </div>
+                <div className="col-8 text-itinerario der">
+                  <span className="span-text ">Entrada Esposos</span>
+                  <span className="span-hora"> 9:20 PM</span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4 icons-itinerario izqicon">
+                  {" "}
+                  <img
+                    src="/sources/cena.png"
+                    alt="Fondo"
+                    className="img-itinerario2"
+                  />
+                </div>
+                <div className="col-8 text-itinerario der">
+                  <span className="span-text">Cena</span>{" "}
+                  <span className="span-hora"> 9:20 PM</span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4 icons-itinerario izqicon">
+                  {" "}
+                  <img
+                    src="/sources/bals.png"
+                    alt="Fondo"
+                    className="img-itinerario3"
+                  />
+                </div>
+                <div className="col-8 text-itinerario der">
+                  <span className="span-text">Vals Esposos</span>{" "}
+                  <span className="span-hora"> 9:20 PM</span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4 icons-itinerario izqicon">
+                  {" "}
+                  <img
+                    src="/sources/damcin.png"
+                    alt="Fondo"
+                    className="img-itinerario"
+                  />
+                </div>
+                <div className="col-8 text-itinerario der">
+                  <span className="span-text"> A bailar</span>{" "}
+                  <span className="span-hora"> 9:20 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* FIN SECCION 5*/}
       </div>
     </>
   );

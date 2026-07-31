@@ -103,27 +103,6 @@
   background-color: #000;
 }
 
-/* .iniciales-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;  
-}
-
-.inicial {
-  font-size: clamp(4rem, 12vw, 8rem);
-  font-family: "Italianno", cursive;
-  color: #bdbcbc;
-  line-height: 1;
-}
-
-.novia {
-  position: absolute;
-  top: 20px;
-  left: 70%;
-  transform: translateX(-30%);
-} */
 /* Contenedor de imágenes */
 .contenedor-imagenes {
   display: flex;
@@ -270,7 +249,85 @@
   line-height: 1.6;
 }
 
+.iniciales-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.inicial {
+  font-size: clamp(4rem, 12vw, 8rem);
+  font-family: "Italianno", cursive;
+  color: #bdbcbc;
+  line-height: 1;
+}
+
+.novia {
+  position: absolute;
+  top: 20px;
+  left: 70%;
+  transform: translateX(-30%);
+}
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+/*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+.icons-itinerario {
+  text-align: right;
+}
+
+#itinerario {
+  background-color: rgba(251, 251, 251, 0.658);
+}
+
+.span-hora {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+   font-size:1.2rem;
+}
+.span-text {
+   
+   font-size:1.3rem;
+}
+.text-itinerario span {
+  white-space: nowrap;
+  display: block;
+}
+
+/*span */
+.text-itinerario {
+  margin: auto;
+}
+
+.title-itinerario {
+  font-size:4.7rem;
+  font-family: "Italianno", cursive;
+  color: rgb(24, 24, 24);
+  letter-spacing: 8px;
+}
+.img-itinerario {
+  width: 45px;
+  height: 40px;
+}
+
+.img-itinerario2 {
+  width: 45px;
+  height: 33px;
+}
+
+.img-itinerario3 {
+  width: 35px;
+  height: 45px;
+}
+.cont-centrado {
+  display: flex;
+  justify-content: center;
+  /* centra horizontal */
+  align-items: center;
+  /* centra vertical */
+}
+/*   fin SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+
 /* RESPONSIVE ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 @media (max-width: 992px) {
   .contenedor-imagenes {
