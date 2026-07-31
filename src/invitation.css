@@ -54,7 +54,7 @@
 
 .audio-player {
   align-items: center;
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
@@ -728,7 +728,6 @@
   .audio-player button {
     font-size: 2rem;
     color: #edebeb;
- 
   }
 
   .audio-player button:hover {
@@ -814,6 +813,15 @@
 
   .info-texto strong {
     font-size: 1.05rem;
+  }
+
+  .span-hora {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  .span-text {
+    font-size: 1.1rem;
   }
 }
 
