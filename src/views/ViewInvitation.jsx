@@ -345,7 +345,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
                 <p className="reservation-description mb-0">
                   Al finalizar recibirás tu
-                  <strong> ID de invitación</strong>, el cual necesitarás para
+                  <strong className="date-reserva">  ID de invitación</strong>, el cual necesitarás para
                   confirmar tu asistencia.
                 </p>
               </div>
