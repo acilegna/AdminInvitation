@@ -335,7 +335,7 @@ function Content({ toggleAudio, reproduciendo }) {
               {/* Icono */}
               <div className="col-12 col-md-2 text-center">
                 <div className="reservation-icon ">
-                  <i className="bi bi-building"></i>
+                  <i className="bi bi-buildings"></i>
                 </div>
               </div>
 
@@ -375,16 +375,16 @@ function Content({ toggleAudio, reproduciendo }) {
               {/* Icono */}
               <div className="col-12 col-md-2 text-center">
                 <div className="reservation-icon ">
-                  <i className="bi bi-building"></i>
+                  <i className="bi bi-person-check "></i>
                 </div>
               </div>
-
+ 
               {/* Texto */}
               <div className="col-12 col-md-6 text-center text-md-start">
                 <h3 className="reservation-title">2. Confirma tu asistencia</h3>
 
                 <p className="reservation-description mb-0">
-                  Ingresa tu ID para confirmar tu asistencia.
+                  Ingresa aqui tu ID.
                 </p>
                <div className="row g-2">
                 <div className="col-12 col-md">
@@ -392,7 +392,7 @@ function Content({ toggleAudio, reproduciendo }) {
                     id="search"
                     type="search"
                     className="form-control search-input"
-                    placeholder="Ingresa tu ID de invitación"
+                    placeholder="ID de invitación"
                     value={inputValue}
                     onChange={handleInput}
                   />
