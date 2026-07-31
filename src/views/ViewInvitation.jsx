@@ -330,7 +330,7 @@ function Content({ toggleAudio, reproduciendo }) {
             <strong className="date-text"> 30-04-2027.</strong>{" "}
           </p> */}
 
-          <div className="reservation-card">
+          <div className="reservation-card izqicon">
             <div className="row align-items-center  gy-4">
               {/* Icono */}
               <div className="col-12 col-md-2 text-center">
@@ -370,7 +370,7 @@ function Content({ toggleAudio, reproduciendo }) {
             </div>
           </div>
 
-          <div className="reservation-card">
+          <div className="reservation-card izqicon">
             <div className="row align-items-center  gy-4">
               {/* Icono */}
               <div className="col-12 col-md-2 text-center">
