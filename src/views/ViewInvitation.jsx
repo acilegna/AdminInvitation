@@ -290,7 +290,7 @@ function Content({ toggleAudio, reproduciendo }) {
           <div className="lineadiv">
             <span>♡</span>
           </div>
-          <p className="reservation-info updown">
+          <p className="reservation-info izqicon">
             Para disfrutar al máximo de nuestra celebración, hemos reservado un
             bloque de habitaciones en{" "}
             <strong className="date-reserva"> Cancún</strong> con una tarifa
