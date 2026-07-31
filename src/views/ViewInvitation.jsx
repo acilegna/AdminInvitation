@@ -290,19 +290,19 @@ function Content({ toggleAudio, reproduciendo }) {
           <div className="lineadiv">
             <span>♡</span>
           </div>
-          <p className="reservation-info">
+          <p className="reservation-info updown">
             Para disfrutar al máximo de nuestra celebración, hemos reservado un
             bloque de habitaciones en{" "}
             <strong className="date-reserva"> Cancún</strong> con una tarifa
             preferencial exclusiva para nuestros invitados.
           </p>
-          <div className="info-fechas">
+          <div className="info-fechas izqicon">
             <div className="info-item">
               <div className="info-icon">
                 <i className="bi bi-calendar3"></i>
               </div>
 
-              <div className="info-texto">
+              <div className="info-texto izqicon">
                 <span className="info-titulo">Hospedaje</span>
                 <strong>29 de noviembre al</strong>
                 <strong>2 de diciembre de 2027</strong>
