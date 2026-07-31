@@ -54,6 +54,8 @@
 
 .audio-player {
   align-items: center;
+  display:flex;
+  justify-content: center;
 }
 
 .audio-player button {
@@ -726,7 +728,7 @@
   .audio-player button {
     font-size: 2rem;
     color: #edebeb;
-   padding-top:290px;
+ 
   }
 
   .audio-player button:hover {
@@ -735,7 +737,7 @@
 
   .audio-time {
     font-size: 1.5rem;
-    color: #cf9312;
+    color: #f7f7f7;
   }
 
   .text-save-date {
