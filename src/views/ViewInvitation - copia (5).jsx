@@ -370,23 +370,19 @@ function Content({ toggleAudio, reproduciendo }) {
             </div>
           </div>
 
-          <div className="reservation-card">
-            <div className="row align-items-center  gy-4">
-              {/* Icono */}
-              <div className="col-12 col-md-2 text-center">
-                <div className="reservation-icon ">
-                  <i className="bi bi-building"></i>
-                </div>
-              </div>
+          <hr />
 
-              {/* Texto */}
-              <div className="col-12 col-md-6 text-center text-md-start">
-                <h3 className="reservation-title">2. Confirma tu asistencia</h3>
+          <div className="text-center">
+            <h3 className="step-title"> 2. Confirma tu asistencia</h3>
 
-                <p className="reservation-description mb-0">
-                  Ingresa tu ID para confirmar tu asistencia.
-                </p>
-               <div className="row g-2">
+            <p className="step-description">
+              Ingresa tu ID para confirmar tu asistencia.
+            </p>
+          </div>
+
+          <div className="row justify-content-center mb-4">
+            <div className="col-md-10 col-lg-8 px-4">
+              <div className="row g-2">
                 <div className="col-12 col-md">
                   <input
                     id="search"
@@ -407,19 +403,14 @@ function Content({ toggleAudio, reproduciendo }) {
                   </button>
                 </div>
               </div>
-               {mensaje && (
+              {mensaje && (
                 <h5 className="text-success text-center mt-3">{mensaje}</h5>
               )}
               {error && (
                 <h5 className="text-danger text-center mt-3">{error}</h5>
               )}
-              </div>
             </div>
           </div>
-
-         
-
-           
 
           <hr />
 
