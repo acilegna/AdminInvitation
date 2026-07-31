@@ -723,7 +723,12 @@
     margin-top: 20px;
     font-size: 2.8rem;
   }
+  .audio-player button {
+    font-size: 2rem;
+    color: #edebeb;
+  } 
 
+  
   .audio-player button:hover {
     color: #f7f7f7;
   }
@@ -731,12 +736,10 @@
   .audio-time {
     font-size: 1.5rem;
     color: #f8f6f6;
+    padding-bottom: 30px;
   }
-  .audio-player button {
-    font-size: 1.5rem;
-  }
-
  
+
   .text-save-date {
     font-size: 3rem;
   }
