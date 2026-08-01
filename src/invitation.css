@@ -222,7 +222,11 @@
   transform: translateY(-80px); /* Sube todo el bloque */
   top: -7%;
 }
-
+.texto-imagen h2 {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
 .dress-code {
   font-size: 3.7rem;
   font-family: "Italianno", cursive;
@@ -239,16 +243,26 @@
   font-size: clamp(1.8rem, 4vw, 1.8rem);
   margin-bottom: 10px;
   font-style: italic;
+  margin-top: -10px;
 }
 
-.iniciales-container {
+/* .iniciales-container {
   position: absolute;
-  top: 12%; /* Ajusta según necesites */
+  top: 12%;  
   left: 50%;
   transform: translateX(-50%);
   width: 220px;
   height: 160px;
   z-index: 10;
+} */
+
+
+.iniciales-container{
+    position:absolute;
+    top:12%;
+    left:50%;
+    transform:translateX(-50%) scale(1);
+    transform-origin:center;
 }
 
 .inicial {
@@ -674,6 +688,17 @@
     font-size: 2.8rem;
     margin-top: 20px;
   }
+}
+@media (max-width:768px){
+    .iniciales-container{
+        transform:translateX(-50%) scale(.75);
+    }
+}
+
+@media (max-width:480px){
+    .iniciales-container{
+        transform:translateX(-50%) scale(.6);
+    }
 }
 
 @media (max-width: 768px) {
