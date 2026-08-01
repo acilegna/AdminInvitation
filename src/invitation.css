@@ -246,7 +246,7 @@
   margin-top: -10px;
 }
 
-/* .iniciales-container {
+  .iniciales-container {
   position: absolute;
   top: 12%;  
   left: 50%;
@@ -254,21 +254,12 @@
   width: 220px;
   height: 160px;
   z-index: 10;
-} */
-
-
-.iniciales-container{
-    position:absolute;
-    top:12%;
-    left:50%;
-    transform:translateX(-50%) scale(1);
-    transform-origin:center;
-}
+}  
 
 .inicial {
   position: absolute;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(5rem, 9vw, 6.5rem);
+  font-size:   6.5rem;
   font-weight: 400;
   color: #b89b68; /* Dorado */
   line-height: 1;
@@ -689,17 +680,7 @@
     margin-top: 20px;
   }
 }
-@media (max-width:768px){
-    .iniciales-container{
-        transform:translateX(-50%) scale(.75);
-    }
-}
 
-@media (max-width:480px){
-    .iniciales-container{
-        transform:translateX(-50%) scale(.6);
-    }
-}
 
 @media (max-width: 768px) {
   .cont-msj {
