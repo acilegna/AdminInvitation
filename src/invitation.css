@@ -233,8 +233,6 @@
   color: #1c1c1d;
   letter-spacing: 3px;
   margin: 0;
- 
- 
 }
 
 .text-present {
@@ -246,20 +244,20 @@
   margin-top: -10px;
 }
 
-  .iniciales-container {
+.iniciales-container {
   position: absolute;
-  top: 12%;  
+  top: 12%;
   left: 50%;
   transform: translateX(-50%);
   width: 220px;
   height: 160px;
   z-index: 10;
-}  
+}
 
 .inicial {
   position: absolute;
   font-family: "Cormorant Garamond", serif;
-  font-size:   6.5rem;
+  font-size: 6.5rem;
   font-weight: 400;
   color: #b89b68; /* Dorado */
   line-height: 1;
@@ -294,6 +292,60 @@
   object-fit: contain;
 }
 
+.dress-columns {
+   position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(850px, 90%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 3;
+}
+
+.dress-card {
+  
+   font-size: 2rem;
+    color:#b89b68;
+    margin-bottom:8px;
+}
+.dress-card h3{
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.dress-card li{
+    font-size:1.1rem;
+    line-height:1.5;
+}
+
+.dress-icon {
+  font-size: 3.5rem;
+  color: #b89b68;
+  margin-bottom: 10px;
+}
+
+.dress-card h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.dress-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dress-card li {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #555;
+}
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .icons-itinerario {
@@ -659,6 +711,25 @@
   .reservation-description {
     text-align: center;
   }
+
+  /* Ajustes para seccion dress code*/
+   .dress-columns{
+        top:50%;
+        width:95%;
+    }
+
+    .dress-card{
+        width:180px;
+    }
+
+    .dress-card h3{
+        font-size:1.7rem;
+    }
+
+    .dress-card li{
+        font-size:1rem;
+    }
+    /* fin Ajustes para seccion dress code*/
 }
 @media (max-width: 992px) {
   .contenedor-imagenes {
@@ -680,7 +751,6 @@
     margin-top: 20px;
   }
 }
-
 
 @media (max-width: 768px) {
   .cont-msj {
@@ -846,6 +916,52 @@
   .span-text {
     font-size: 1.1rem;
   }
+
+  /* Ajustes para seccion dress code*/
+    .texto-imagen{
+        top:-2%;
+        transform:translateY(0);
+    }
+
+    .dress-columns{
+        position:relative;
+        top:auto;
+        left:auto;
+        transform:none;
+        width:100%;
+        margin-top:-120px; /* ajusta según la altura de la imagen */
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:25px;
+    }
+
+    .dress-card{
+        width:90%;
+        max-width:300px;
+    }
+
+    .dress-card h3{
+        font-size:1.6rem;
+    }
+
+    .dress-card li{
+        font-size:1rem;
+    }
+
+    .dress-code{
+        font-size:2.8rem;
+    }
+
+    .text-present{
+        font-size:1.3rem;
+    }
+
+    .iniciales-container{
+        transform:translateX(-50%) scale(.75);
+        top:8%;
+    }
+  /* fin Ajustes para seccion dress code*/
 }
 
 @media (max-width: 576px) {

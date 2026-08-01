@@ -181,7 +181,33 @@ function Content({ toggleAudio, reproduciendo }) {
             </h2>
 
             <p className="text-present ">Formal de playa</p>
-             
+          </div>
+          <div className="dress-columns ">
+            <div className="dress-card">
+              <i className="bi bi-person-standing"></i>
+
+              <h3>Hombres</h3>
+
+              <ul>
+                <li>Camisa de lino o algodón</li>
+                <li>Pantalón de vestir</li>
+                <li>Mocasines o zapatos</li>
+                <li>Sin corbata (opcional)</li>
+              </ul>
+            </div>
+
+            <div className="dress-card">
+              <i className="bi bi-person-standing-dress"></i>
+
+              <h3>Mujeres</h3>
+
+              <ul>
+                <li>Vestido largo o midi</li>
+                <li>Sandalias elegantes</li>
+                <li>Accesorios discretos</li>
+                <li>Evitar el color blanco</li>
+              </ul>
+            </div>
           </div>
         </div>
         {/* FIN SECCION 4 */}
