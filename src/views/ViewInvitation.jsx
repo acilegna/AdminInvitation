@@ -160,28 +160,30 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 3 */}
 
         {/*  SECCION 4 */}
-        {/*  <div className="cont-full cont-sound seccion">
+
+        <div className="cont-full seccion">
           <div className="imagenes-container downup">
             <img
-              src="/sources/pareja.jpg"
+              src="/sources/vestido.png"
               alt="Fondo"
-              className="img-seccion-one scale"
+              className="img-seccion-dress scale"
             />
+            <div className="iniciales-container">
+              <span className="inicial inicial-1">B</span>
+              <span className="ampersand">&</span>
+              <span className="inicial inicial-2">A</span>
+            </div>
           </div>
-          <div className="iniciales-container">
-            <h3 className="inicial img ">B</h3>
-            <h4 className="inicial novia downup">A</h4>
-          </div>
+
           <div className="texto-imagen">
             <h2>
-              <span className="text-present">Dress Code</span>
+              <span className="dress-code">Dress Code</span>
             </h2>
-            <p className="dress-code">Formal de playa</p>
-            <p className="dress-text">
-              ¡Luce fabuloso(a) y ven con toda la actitud!
-            </p>
+
+            <p className="text-present ">Formal de playa</p>
+             
           </div>
-        </div> */}
+        </div>
         {/* FIN SECCION 4 */}
 
         {/*INICIO SECCION 5*/}
@@ -345,8 +347,8 @@ function Content({ toggleAudio, reproduciendo }) {
 
                 <p className="reservation-description mb-0">
                   Al finalizar recibirás tu
-                  <strong className="date-reserva">  ID de invitación</strong>, el cual necesitarás para
-                  confirmar tu asistencia.
+                  <strong className="date-reserva"> ID de invitación</strong>,
+                  el cual necesitarás para confirmar tu asistencia.
                 </p>
               </div>
 
@@ -378,7 +380,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   <i className="bi bi-person-check "></i>
                 </div>
               </div>
- 
+
               {/* Texto */}
               <div className="col-12 col-md-6 text-center text-md-start">
                 <h3 className="reservation-title">2. Confirma tu asistencia</h3>
@@ -386,40 +388,36 @@ function Content({ toggleAudio, reproduciendo }) {
                 <p className="reservation-description mb-0">
                   Ingresa aqui tu ID.
                 </p>
-               <div className="row g-2">
-                <div className="col-12 col-md">
-                  <input
-                    id="search"
-                    type="search"
-                    className="form-control search-input"
-                    placeholder="ID de invitación"
-                    value={inputValue}
-                    onChange={handleInput}
-                  />
+                <div className="row g-2">
+                  <div className="col-12 col-md">
+                    <input
+                      id="search"
+                      type="search"
+                      className="form-control search-input"
+                      placeholder="ID de invitación"
+                      value={inputValue}
+                      onChange={handleInput}
+                    />
+                  </div>
+                  <div className="col-12 col-md-auto ">
+                    <button
+                      className="btn btn-primary w-100 btn-search bg-dark"
+                      onClick={handleClick}
+                    >
+                      <i className="bi bi-search me-2"></i>
+                      Buscar
+                    </button>
+                  </div>
                 </div>
-                <div className="col-12 col-md-auto ">
-                  <button
-                    className="btn btn-primary w-100 btn-search bg-dark"
-                    onClick={handleClick}
-                  >
-                    <i className="bi bi-search me-2"></i>
-                    Buscar
-                  </button>
-                </div>
-              </div>
-               {mensaje && (
-                <h5 className="text-success text-center mt-3">{mensaje}</h5>
-              )}
-              {error && (
-                <h5 className="text-danger text-center mt-3">{error}</h5>
-              )}
+                {mensaje && (
+                  <h5 className="text-success text-center mt-3">{mensaje}</h5>
+                )}
+                {error && (
+                  <h5 className="text-danger text-center mt-3">{error}</h5>
+                )}
               </div>
             </div>
           </div>
-
-         
-
-           
 
           <hr />
 
@@ -576,7 +574,7 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FOOTER*/}
         <footer className="d-flex flex-column justify-content-center align-items-center border-top bg-dark py-3">
           <span className="text-white text-center mb-3">
-            © 2027 Invitación B&A | Entheosmultimedia
+            © 2026 Invitación B&A | Entheosmultimedia
           </span>
 
           <ul className="nav justify-content-center list-unstyled d-flex mb-0">

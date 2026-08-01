@@ -211,67 +211,84 @@
 }
 /* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+
 .texto-imagen {
   position: absolute;
   inset: 0;
-
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  text-align: center;
-  color: white;
-  padding: 20px;
-}
-
-.texto-imagen h2 {
-  margin-bottom: 10px;
+  justify-content: center;
+  transform: translateY(-80px); /* Sube todo el bloque */
+  top: -7%;
 }
 
 .dress-code {
-  font-family: "Cormorant Garamond", serif;
-  color: rgb(217, 207, 207);
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  margin-bottom: 10px;
-}
-.text-present {
   font-size: 3.7rem;
   font-family: "Italianno", cursive;
-  color: #f0f2f3;
+  color: #1c1c1d;
   letter-spacing: 3px;
+  margin: 0;
+ 
+ 
 }
 
-.dress-text {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+.text-present {
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(39, 39, 39);
+  font-size: clamp(1.8rem, 4vw, 1.8rem);
+  margin-bottom: 10px;
   font-style: italic;
-  color: #d8b36a;
-  max-width: 450px;
-  margin: 0 auto;
-  line-height: 1.6;
 }
 
 .iniciales-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 60px;
+  position: absolute;
+  top: 12%; /* Ajusta según necesites */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  height: 160px;
+  z-index: 10;
 }
 
 .inicial {
-  font-size: clamp(4rem, 12vw, 8rem);
-  font-family: "Italianno", cursive;
-  color: #bdbcbc;
+  position: absolute;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(5rem, 9vw, 6.5rem);
+  font-weight: 400;
+  color: #b89b68; /* Dorado */
   line-height: 1;
 }
 
-.novia {
-  position: absolute;
-  top: 20px;
-  left: 70%;
-  transform: translateX(-30%);
+.inicial-1 {
+  top: 0;
+  left: 35px;
+  z-index: 1;
 }
+
+.inicial-2 {
+  top: 30px;
+  left: 105px;
+  z-index: 1;
+}
+
+.ampersand {
+  position: absolute;
+  top: 90px; /* antes: 68px */
+  left: 99px; /* ajústalo según necesites */
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 3.8vw, 3rem); /* ligeramente más pequeño */
+  color: #b89b68;
+  z-index: 2;
+}
+
+.img-seccion-dress {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+}
+
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .icons-itinerario {
@@ -279,7 +296,7 @@
 }
 
 #itinerario {
-   background-color: #f4f4f4;
+  background-color: #f4f4f4;
 }
 
 .span-hora {
