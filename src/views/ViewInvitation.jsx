@@ -170,15 +170,6 @@ function Content({ toggleAudio, reproduciendo }) {
             />
 
             <div className="dress-content ">
-              <div className="row">
-                <div className="col-12 d-flex justify-content-center">
-                  <div className="iniciales-container">
-                    <span className="inicial inicial-1">B</span>
-                    <span className="ampersand">&</span>
-                    <span className="inicial inicial-2">A</span>
-                  </div>
-                </div>
-              </div>
               <div className="row justify-content-center">
                 <div className="col-12 text-center">
                   <h2 className="mb-0">
@@ -186,10 +177,18 @@ function Content({ toggleAudio, reproduciendo }) {
                   </h2>
                 </div>
               </div>
+              <div className="row justify-content-center">
+                <div className="col-12 text-center">
+                  <p className="text-present ">Formal de playa</p>
+                </div>
+              </div>
               <div className="row mt-4">
                 <div className="col-6 text-center">
                   <i className="bi bi-person-standing"></i>
                   <h3>Hombres</h3>
+                  <div className="lineadiv">
+                    <span>♡</span>
+                  </div>
                   <ul className="list-unstyled">
                     <li>Camisa de lino o algodón</li>
                     <li>Pantalón de vestir</li>
@@ -201,12 +200,22 @@ function Content({ toggleAudio, reproduciendo }) {
                 <div className="col-6 text-center">
                   <i className="bi bi-person-standing-dress"></i>
                   <h3>Mujeres</h3>
+                  <div className="lineadiv">
+                    <span>♡</span>
+                  </div>
                   <ul className="list-unstyled">
                     <li>Vestido largo o midi</li>
                     <li>Sandalias elegantes</li>
                     <li>Accesorios discretos</li>
                     <li>Evitar el color blanco</li>
                   </ul>
+                </div>
+              </div>
+              <div className="row justify-content-center">
+                <div className="col-12 text-center">
+                  <p className="text-present ">
+                    Sugerencia de paleta de colores
+                  </p>
                 </div>
               </div>
             </div>

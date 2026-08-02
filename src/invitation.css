@@ -223,7 +223,8 @@
   width: 95%;
   height: 95%;
   object-fit: contain;
-  background-color: #acf8b9;
+ 
+  background-color: #f4f4f4;
 }
 .dress-code {
   font-size: 3.7rem;
@@ -256,38 +257,20 @@
 .dress-content ul {
   padding: 0;
 }
- .iniciales-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: fit-content;
-  margin: 0 auto;
-}
-
-.inicial {
+ .text-present {
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(4rem, 8vw, 6.5rem);
-  font-weight: 400;
-  color: #b89b68;
-  line-height: 1;
+  color: rgb(39, 39, 39);
+  font-size: clamp(1.8rem, 4vw, 1.8rem);
+  margin-bottom: 10px;
+  font-style: italic;
+  margin-top: 60px;
 }
 
-.inicial-1 {
-  transform: translateX(12px);
-}
+ 
+ 
 
-.inicial-2 {
-  transform: translateX(-12px) translateY(22px);
-}
 
-.ampersand {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: #b89b68;
-  margin: 0 -18px;
-  z-index: 2;
-}
+ 
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .icons-itinerario {
