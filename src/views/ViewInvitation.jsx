@@ -162,51 +162,53 @@ function Content({ toggleAudio, reproduciendo }) {
         {/*  SECCION 4 */}
 
         <div className="cont-full seccion">
-          <div className="imagenes-container downup">
+          <div className="img-dress downup">
             <img
               src="/sources/vestido.png"
               alt="Fondo"
               className="img-seccion-dress scale"
             />
-            <div className="iniciales-container">
-              <span className="inicial inicial-1">B</span>
-              <span className="ampersand">&</span>
-              <span className="inicial inicial-2">A</span>
-            </div>
-          </div>
 
-          <div className="texto-imagen">
-            <h2>
-              <span className="dress-code">Dress Code</span>
-            </h2>
+            <div className="dress-content ">
+              <div className="row">
+                <div className="col-12 d-flex justify-content-center">
+                  <div className="iniciales-container">
+                    <span className="inicial inicial-1">B</span>
+                    <span className="ampersand">&</span>
+                    <span className="inicial inicial-2">A</span>
+                  </div>
+                </div>
+              </div>
+              <div className="row justify-content-center">
+                <div className="col-12 text-center">
+                  <h2 className="mb-0">
+                    <span className="dress-code">Dress Code</span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row mt-4">
+                <div className="col-6 text-center">
+                  <i className="bi bi-person-standing"></i>
+                  <h3>Hombres</h3>
+                  <ul className="list-unstyled">
+                    <li>Camisa de lino o algodón</li>
+                    <li>Pantalón de vestir</li>
+                    <li>Mocasines o zapatos</li>
+                    <li>Sin corbata (opcional)</li>
+                  </ul>
+                </div>
 
-            <p className="text-present ">Formal de playa</p>
-          </div>
-          <div className="dress-columns ">
-            <div className="dress-card">
-              <i className="bi bi-person-standing"></i>
-
-              <h3>Hombres</h3>
-
-              <ul>
-                <li>Camisa de lino o algodón</li>
-                <li>Pantalón de vestir</li>
-                <li>Mocasines o zapatos</li>
-                <li>Sin corbata (opcional)</li>
-              </ul>
-            </div>
-
-            <div className="dress-card">
-              <i className="bi bi-person-standing-dress"></i>
-
-              <h3>Mujeres</h3>
-
-              <ul>
-                <li>Vestido largo o midi</li>
-                <li>Sandalias elegantes</li>
-                <li>Accesorios discretos</li>
-                <li>Evitar el color blanco</li>
-              </ul>
+                <div className="col-6 text-center">
+                  <i className="bi bi-person-standing-dress"></i>
+                  <h3>Mujeres</h3>
+                  <ul className="list-unstyled">
+                    <li>Vestido largo o midi</li>
+                    <li>Sandalias elegantes</li>
+                    <li>Accesorios discretos</li>
+                    <li>Evitar el color blanco</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

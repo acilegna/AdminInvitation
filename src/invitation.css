@@ -212,20 +212,18 @@
 /* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 
-.texto-imagen {
-  position: absolute;
-  inset: 0;
+.img-dress {
+  position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  transform: translateY(-80px); /* Sube todo el bloque */
-  top: -7%;
+  align-items: center;
+  height: 100vh;
 }
-.texto-imagen h2 {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
+.img-seccion-dress {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+  background-color: #acf8b9;
 }
 .dress-code {
   font-size: 3.7rem;
@@ -234,117 +232,61 @@
   letter-spacing: 3px;
   margin: 0;
 }
-
-.text-present {
-  font-family: "Cormorant Garamond", serif;
-  color: rgb(39, 39, 39);
-  font-size: clamp(1.8rem, 4vw, 1.8rem);
-  margin-bottom: 10px;
-  font-style: italic;
-  margin-top: -10px;
+.dress-content{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;   /* importante */
+    justify-content:center;
+    width:100%;
+    padding:0 5%;
+}
+.dress-content .row {
+  width: 100%;
 }
 
-.iniciales-container {
-  position: absolute;
-  top: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 220px;
-  height: 160px;
-  z-index: 10;
+.dress-content i {
+  font-size: 2.5rem;
+}
+
+.dress-content h3 {
+  margin: 10px 0;
+}
+
+.dress-content ul {
+  padding: 0;
+}
+ .iniciales-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .inicial {
-  position: absolute;
   font-family: "Cormorant Garamond", serif;
-  font-size: 6.5rem;
+  font-size: clamp(4rem, 8vw, 6.5rem);
   font-weight: 400;
-  color: #b89b68; /* Dorado */
+  color: #b89b68;
   line-height: 1;
 }
 
 .inicial-1 {
-  top: 0;
-  left: 35px;
-  z-index: 1;
+  transform: translateX(12px);
 }
 
 .inicial-2 {
-  top: 30px;
-  left: 105px;
-  z-index: 1;
+  transform: translateX(-12px) translateY(22px);
 }
 
 .ampersand {
-  position: absolute;
-  top: 90px; /* antes: 68px */
-  left: 99px; /* ajústalo según necesites */
-  transform: translate(-50%, -50%);
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2.2rem, 3.8vw, 3rem); /* ligeramente más pequeño */
+  font-size: clamp(2rem, 4vw, 3rem);
   color: #b89b68;
+  margin: 0 -18px;
   z-index: 2;
-}
-
-.img-seccion-dress {
-  width: 95%;
-  height: 95%;
-  object-fit: contain;
-}
-
-.dress-columns {
-   position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(850px, 90%);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    z-index: 3;
-}
-
-.dress-card {
-  
-   font-size: 2rem;
-    color:#b89b68;
-    margin-bottom:8px;
-}
-.dress-card h3{
-    font-family:"Cormorant Garamond",serif;
-    font-size:2rem;
-    margin-bottom:10px;
-}
-
-.dress-card li{
-    font-size:1.1rem;
-    line-height:1.5;
-}
-
-.dress-icon {
-  font-size: 3.5rem;
-  color: #b89b68;
-  margin-bottom: 10px;
-}
-
-.dress-card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.dress-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.dress-card li {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #555;
 }
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
@@ -713,23 +655,23 @@
   }
 
   /* Ajustes para seccion dress code*/
-   .dress-columns{
-        top:50%;
-        width:95%;
-    }
+  .dress-columns {
+    top: 50%;
+    width: 95%;
+  }
 
-    .dress-card{
-        width:180px;
-    }
+  .dress-card {
+    width: 180px;
+  }
 
-    .dress-card h3{
-        font-size:1.7rem;
-    }
+  .dress-card h3 {
+    font-size: 1.7rem;
+  }
 
-    .dress-card li{
-        font-size:1rem;
-    }
-    /* fin Ajustes para seccion dress code*/
+  .dress-card li {
+    font-size: 1rem;
+  }
+  /* fin Ajustes para seccion dress code*/
 }
 @media (max-width: 992px) {
   .contenedor-imagenes {
@@ -918,49 +860,56 @@
   }
 
   /* Ajustes para seccion dress code*/
-    .texto-imagen{
-        top:-2%;
-        transform:translateY(0);
-    }
+  .texto-imagen {
+    top: -2%;
+    transform: translateY(0);
+  }
 
-    .dress-columns{
-        position:relative;
-        top:auto;
-        left:auto;
-        transform:none;
-        width:100%;
-        margin-top:-120px; /* ajusta según la altura de la imagen */
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:25px;
-    }
+  .dress-columns {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: 100%;
+    margin-top: -120px; /* ajusta según la altura de la imagen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
 
-    .dress-card{
-        width:90%;
-        max-width:300px;
-    }
+  .dress-card {
+    width: 90%;
+    max-width: 300px;
+  }
 
-    .dress-card h3{
-        font-size:1.6rem;
-    }
+  .dress-card h3 {
+    font-size: 1.6rem;
+  }
 
-    .dress-card li{
-        font-size:1rem;
-    }
+  .dress-card li {
+    font-size: 1rem;
+  }
 
-    .dress-code{
-        font-size:2.8rem;
-    }
+  .dress-code {
+    font-size: 2.8rem;
+  }
 
-    .text-present{
-        font-size:1.3rem;
-    }
+  .text-present {
+    font-size: 1.3rem;
+  }
 
-    .iniciales-container{
-        transform:translateX(-50%) scale(.75);
-        top:8%;
-    }
+   .inicial-1 {
+    transform: translateX(8px);
+  }
+
+  .inicial-2 {
+    transform: translateX(-8px) translateY(14px);
+  }
+
+  .ampersand {
+    margin: 0 -10px;
+  }
   /* fin Ajustes para seccion dress code*/
 }
 
