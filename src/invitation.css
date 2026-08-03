@@ -223,7 +223,7 @@
   width: 95%;
   height: 95%;
   object-fit: contain;
- 
+
   background-color: #f4f4f4;
 }
 .dress-code {
@@ -233,14 +233,30 @@
   letter-spacing: 3px;
   margin: 0;
 }
-.dress-content{
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;   /* importante */
-    justify-content:center;
-    width:100%;
-    padding:0 5%;
+
+.text-present {
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(39, 39, 39);
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
+  margin-bottom: 10px;
+  font-style: italic;
+  text-decoration: none;
+}
+.text-sugerencia {
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(39, 39, 39);
+  font-size: clamp(1.6rem, 4vw, 1.8rem);
+
+  font-style: italic;
+}
+.dress-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column; /* importante */
+  justify-content: center;
+  width: 100%;
+  padding: 0 5%;
 }
 .dress-content .row {
   width: 100%;
@@ -257,20 +273,64 @@
 .dress-content ul {
   padding: 0;
 }
- .text-present {
-  font-family: "Cormorant Garamond", serif;
-  color: rgb(39, 39, 39);
-  font-size: clamp(1.8rem, 4vw, 1.8rem);
-  margin-bottom: 10px;
-  font-style: italic;
-  margin-top: 60px;
+
+/* codigo vestimenta */
+.color-palette {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
- 
- 
+.color {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: block;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 
+/* Colores */
+.beige {
+  background: #e8dccb;
+}
 
- 
+.arena {
+  background: #d4b483;
+}
+
+.verde {
+  background: #7c8c6a;
+}
+
+.azul {
+  background: #7a9dbb;
+}
+
+.cafe {
+  background: #8b6b4a;
+}
+
+.gris {
+  background: #b7b7b7;
+}
+
+.amarillo {
+  background: #f9e28b;
+}
+.rosa {
+  background: #dab0a8;
+}
+.lavanda {
+  background: #a15039;
+}
+.taupe {
+  background: #9b9088;
+}
+
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .icons-itinerario {
@@ -882,7 +942,7 @@
     font-size: 1.3rem;
   }
 
-   .inicial-1 {
+  .inicial-1 {
     transform: translateX(8px);
   }
 
@@ -892,6 +952,15 @@
 
   .ampersand {
     margin: 0 -10px;
+  }
+
+  .dress-color {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dress-colors {
+    gap: 10px;
   }
   /* fin Ajustes para seccion dress code*/
 }

@@ -172,20 +172,26 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="dress-content ">
               <div className="row justify-content-center">
                 <div className="col-12 text-center">
-                  <h2 className="mb-0">
-                    <span className="dress-code">Dress Code</span>
+                  <h2 className="mb-1">
+                    <span className="dress-code">Codigo de Vestimenta</span>
                   </h2>
                 </div>
               </div>
               <div className="row justify-content-center">
                 <div className="col-12 text-center">
-                  <p className="text-present ">Formal de playa</p>
+                  <a
+                    href="https://www.pinterest.com/tu-enlace"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-estilo text-present"
+                  >
+                    Ver estilo sugerido
+                  </a>
                 </div>
               </div>
               <div className="row mt-4">
                 <div className="col-6 text-center">
-                  <i className="bi bi-person-standing"></i>
-                  <h3>Hombres</h3>
+                  <h3>Caballero</h3>
                   <div className="lineadiv">
                     <span>♡</span>
                   </div>
@@ -193,29 +199,65 @@ function Content({ toggleAudio, reproduciendo }) {
                     <li>Camisa de lino o algodón</li>
                     <li>Pantalón de vestir</li>
                     <li>Mocasines o zapatos</li>
-                    <li>Sin corbata (opcional)</li>
+                    <li>Sin corbata </li>
                   </ul>
                 </div>
 
                 <div className="col-6 text-center">
-                  <i className="bi bi-person-standing-dress"></i>
-                  <h3>Mujeres</h3>
+                  <h3>Dama</h3>
                   <div className="lineadiv">
                     <span>♡</span>
                   </div>
                   <ul className="list-unstyled">
                     <li>Vestido largo o midi</li>
-                    <li>Sandalias elegantes</li>
+                    <li>Sandalias o zapato comodo</li>
                     <li>Accesorios discretos</li>
                     <li>Evitar el color blanco</li>
                   </ul>
                 </div>
               </div>
-              <div className="row justify-content-center">
+              <div className="row justify-content-center mt-4">
                 <div className="col-12 text-center">
-                  <p className="text-present ">
+                  <p className=" text-sugerencia ">
                     Sugerencia de paleta de colores
                   </p>
+                </div>
+              </div>
+              <div className="color-palette">
+                <div className="color-item">
+                  <span className="color beige"></span>
+                </div>
+
+                <div className="color-item">
+                  <span className="color arena"></span>
+                </div>
+
+                <div className="color-item">
+                  <span className="color verde"></span>
+                </div>
+
+                <div className="color-item">
+                  <span className="color azul"></span>
+                </div>
+
+                <div className="color-item">
+                  <span className="color cafe"></span>
+                </div>
+
+                <div className="color-item">
+                  <span className="color gris"></span>
+                </div>
+                <div className="color-item">
+                  <span className="color amarillo"></span>
+                </div>
+                <div className="color-item">
+                  <span className="color rosa"></span>
+                </div>
+                <div className="color-item">
+                  <span className="color lavanda"></span>
+                </div>
+                <div className="color-item">
+                  <span className="color taupe"></span>
                 </div>
               </div>
             </div>
@@ -330,10 +372,12 @@ function Content({ toggleAudio, reproduciendo }) {
             <span>♡</span>
           </div>
           <p className="reservation-info izqicon">
-            Para disfrutar al máximo de nuestra celebración, hemos reservado un
-            bloque de habitaciones en{" "}
-            <strong className="date-reserva"> Cancún</strong> con una tarifa
-            preferencial exclusiva para nuestros invitados.
+            Hemos reservado un bloque de habitaciones en{" "}
+            <strong className="date-reserva">
+              {" "}
+              Grand Palladium Costa Mujeres
+            </strong>{" "}
+            con tarifa preferencial para nuestros invitados
           </p>
           <div className="info-fechas izqicon">
             <div className="info-item">

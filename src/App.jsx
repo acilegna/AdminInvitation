@@ -13,12 +13,10 @@ function App() {
       <BrowserRouter>
         <AudioProvider>
           <Routes>
-            <Route path="/panel" element={<ViewPanel />} />
-            <Route path="/ayb" element={<ViewInvitation />} />
-            <Route path="/*" element={<Invitation />} />
-            {/*     <Route path="/b" element={<Invitation />} />
-             */}{" "}
-            {/*   <Route path="/*" element={<Back />} />     */}
+             
+            <Route path="/panel/*" element={<ViewPanel />} />
+            <Route path="/AYB" element={<ViewInvitation />} />
+            <Route path="/" element={<Invitation />} />
           </Routes>
         </AudioProvider>
       </BrowserRouter>

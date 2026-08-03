@@ -109,7 +109,7 @@ function ViewPanel() {
           ></Route>
 
           <Route path="/import" element={<ViewImport />}></Route>
-          <Route path="/" element={<ViewHome />}></Route>
+         {/*  <Route path="/home" element={<ViewHome />}></Route> */}
         </Routes>
       </section>
     </div>

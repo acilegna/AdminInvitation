@@ -72,7 +72,7 @@ export const useDatosInvitados = () => {
       setMensaje(result.message);
       setEstado(1);
       clearMensaje(setMensaje);
-      navigate("/invitados");
+      navigate("/panel/invitados");
     }
   };
 
@@ -90,7 +90,7 @@ export const useDatosInvitados = () => {
         prev.map((i) => (i.id === id ? result.info : i)),
       );
 
-      navigate("/invitados");
+      navigate("/panel/invitados");
 
       setMensaje(result.mensaje);
       setEstado(2);
@@ -234,10 +234,10 @@ export const useDatosInvitados = () => {
 
   const location = useLocation();
   useEffect(() => {
-    if (location.pathname === "/detalles") {
+    if (location.pathname === "/panel/detalles") {
       resumen();
     }
-    if (location.pathname === "/invitados") {
+    if (location.pathname === "/panel/invitados") {
       allInvitados();
     }
       

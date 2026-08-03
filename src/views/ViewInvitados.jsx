@@ -63,14 +63,14 @@ const ViewInvitados = ({
       cell: (row) => (
         <div>
           <Link
-            to="/invitados"
+            to="/panel/invitados"
             onClick={() => Confirmation(row.id, { status: "Si" })}
           >
             <i className="bi bi-check-circle" title="Sí asistirá"></i>
           </Link>
 
           <Link
-            to="/invitados"
+            to="/panel/invitados"
             onClick={() => Confirmation(row.id, { status: "No" })}
           >
             <i className="bi bi-x-circle" title="No asistira"></i>
@@ -85,7 +85,7 @@ const ViewInvitados = ({
       cell: (row) => (
         <div>
           <Link
-            to="/invitados"
+            to="/panel/invitados"
             onClick={() => Confirmation(row.id, { status: "Pendiente" })}
           >
             <i
@@ -102,11 +102,11 @@ const ViewInvitados = ({
       selector: (row) => row.id,
       cell: (row) => (
         <div className="d-flex justify-content-center gap-3">
-          <Link to="/invitados" onClick={() => processo(row.id, process)}>
+          <Link to="/panel/invitados" onClick={() => processo(row.id, process)}>
             <i className="bi bi-trash text-danger" title="Eliminar"></i>
           </Link>
 
-          <Link to="/editar" onClick={() => processo(row.id)}>
+          <Link to="/panel/editar" onClick={() => processo(row.id)}>
             <i className="bi bi-pencil-fill text-primary" title="Modificar"></i>
           </Link>
         </div>

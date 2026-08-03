@@ -40,7 +40,7 @@ function Content() {
             <Link
               className="nav-link active"
               title="Abrir Invitacion"
-              to="/ayb"
+              to="/AYB"
             >
               <button className="btn-abrir" onClick={abrirInvitacion}>
                 Ver Invitación

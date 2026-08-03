@@ -54,17 +54,17 @@ const Navigation = ({ resumen,changeTitle }) => (
         <i className="bi bi-house-door"></i>
       </Link>
 
-      <Link className="nav-link active" title="Importar" to="/import">
+      <Link className="nav-link active" title="Importar" to="/panel/import">
         <i className="bi bi-file-earmark-excel"></i>
       </Link>
-      <Link className="nav-link active" title="Invitados" to="/invitados">
+      <Link className="nav-link active" title="Invitados" to="/panel/invitados">
         <i className="bi bi-person-fill-gear"></i>
       </Link>
 
       <Link
         className="nav-link active"
         title="Agregar Invitados"
-        to="/editar"
+        to="/panel/editar"
         onClick={() => changeTitle()}
       >
         <i className="bi bi-person-fill-add"></i>
@@ -72,7 +72,7 @@ const Navigation = ({ resumen,changeTitle }) => (
       <Link
         className="nav-link active"
         title="Detalles"
-        to="/detalles"
+        to="/panel/detalles"
         onClick={resumen}
       >
         <i className="bi bi-person-vcard"></i>
