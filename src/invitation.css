@@ -219,7 +219,11 @@
   width: 100%;
   padding: 40px 5%;
 }
-
+ 
+.ola{
+  
+  background-color: #7d1111;
+}
 
 .cont-dresscode {
   z-index: 1;
@@ -231,21 +235,20 @@
   background-color: #bbbaba;
 }
 
-.img-dress {
+/* .img-dress {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   
-}
+} */
 .img-seccion-dress{
-    width:100%;
-    max-width:420px;
-    height:auto;
-    object-fit:contain;
-    display:block;
-    margin:auto;
+width: 100%;
+    max-width: 320px; /* Tamaño máximo en pantallas grandes */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 .dress-code {
   font-size: 3.7rem;
@@ -1003,6 +1006,11 @@
     gap: 10px;
   }
   /* fin Ajustes para seccion dress code*/
+
+     .img-seccion-dress{
+        width: 70%;
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 576px) {

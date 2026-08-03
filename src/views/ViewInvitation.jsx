@@ -183,7 +183,7 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
             </div>
             <div className="row mt-4 align-items-center">
-              <div className="col-4 text-center">
+               <div className="col-12 col-md-4 text-center order-2 order-md-1">
                 <img
                   src="/sources/009-man.png"
                   alt="Caballero"
@@ -201,7 +201,7 @@ function Content({ toggleAudio, reproduciendo }) {
                 </ul>
               </div>
 
-              <div className="col-4">
+              <div className="col-12 col-md-4 order-1 order-md-2 ola">
                 <img
                   src="/sources/vestido.png"
                   alt="Fondo"
@@ -209,7 +209,7 @@ function Content({ toggleAudio, reproduciendo }) {
                 />
               </div>
 
-              <div className="col-4 text-center">
+              <div className="col-12 col-md-4 text-center order-3 order-md-3 ola">
                 <img
                   src="/sources/001-woman.png"
                   alt="Caballero"
