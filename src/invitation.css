@@ -455,7 +455,7 @@
 .reservation-info {
   max-width: 680px;
   margin: 0.4rem auto 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 2;
   font-weight: 300;
   color: #5b5b5b;
@@ -713,7 +713,7 @@
 }
 
 .info-titulo {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #555;
 }
 
