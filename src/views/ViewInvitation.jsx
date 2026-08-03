@@ -180,7 +180,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="row justify-content-center">
                 <div className="col-12 text-center">
                   <a
-                    href="https://www.pinterest.com/tu-enlace"
+                    href="https://mx.pinterest.com/bcalvoalberti/mariage-invitation/?invite_code=4814280214e9424e935baad3c9de121c&board_collab_inviter=True&inviter_user_id=543035804977483751"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-estilo text-present"
@@ -191,7 +191,12 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
               <div className="row mt-4">
                 <div className="col-6 text-center">
-                  <h3>Caballero</h3>
+                  <img
+                    src="/sources/009-man.png"
+                    alt="Caballero"
+                    className="dress-icon"
+                  />
+                  <h3 className="text-tipo">Caballero</h3>
                   <div className="lineadiv">
                     <span>♡</span>
                   </div>
@@ -204,7 +209,12 @@ function Content({ toggleAudio, reproduciendo }) {
                 </div>
 
                 <div className="col-6 text-center">
-                  <h3>Dama</h3>
+                  <img
+                    src="/sources/001-woman.png"
+                    alt="Caballero"
+                    className="dress-icon"
+                  />
+                   <h3 className="text-tipo">Dama</h3>
                   <div className="lineadiv">
                     <span>♡</span>
                   </div>
@@ -216,48 +226,50 @@ function Content({ toggleAudio, reproduciendo }) {
                   </ul>
                 </div>
               </div>
-              <div className="row justify-content-center mt-4">
-                <div className="col-12 text-center">
-                  <p className=" text-sugerencia ">
-                    Sugerencia de paleta de colores
-                  </p>
-                </div>
-              </div>
-              <div className="color-palette">
-                <div className="color-item">
-                  <span className="color beige"></span>
-                </div>
+              <div className="section-footer">
+                <div className="row justify-content-center  ">
+                  <div className="col-12 text-center">
+                    <p className=" text-sugerencia ">
+                      Sugerencia de paleta de colores
+                    </p>
+                  </div>
+                  <div className="color-palette">
+                    <div className="color-item">
+                      <span className="color beige"></span>
+                    </div>
 
-                <div className="color-item">
-                  <span className="color arena"></span>
-                </div>
+                    <div className="color-item">
+                      <span className="color arena"></span>
+                    </div>
 
-                <div className="color-item">
-                  <span className="color verde"></span>
-                </div>
+                    <div className="color-item">
+                      <span className="color verde"></span>
+                    </div>
 
-                <div className="color-item">
-                  <span className="color azul"></span>
-                </div>
+                    <div className="color-item">
+                      <span className="color azul"></span>
+                    </div>
 
-                <div className="color-item">
-                  <span className="color cafe"></span>
-                </div>
+                    <div className="color-item">
+                      <span className="color cafe"></span>
+                    </div>
 
-                <div className="color-item">
-                  <span className="color gris"></span>
-                </div>
-                <div className="color-item">
-                  <span className="color amarillo"></span>
-                </div>
-                <div className="color-item">
-                  <span className="color rosa"></span>
-                </div>
-                <div className="color-item">
-                  <span className="color lavanda"></span>
-                </div>
-                <div className="color-item">
-                  <span className="color taupe"></span>
+                    <div className="color-item">
+                      <span className="color gris"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color amarillo"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color rosa"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color lavanda"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color taupe"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

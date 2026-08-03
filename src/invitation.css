@@ -218,13 +218,14 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 }
 .img-seccion-dress {
   width: 95%;
   height: 95%;
   object-fit: contain;
-
-  background-color: #f4f4f4;
+ 
+    background-color: #f4f4f4;  
 }
 .dress-code {
   font-size: 3.7rem;
@@ -234,6 +235,15 @@
   margin: 0;
 }
 
+.text-tipo {
+  font-family: "Cormorant Garamond", serif;
+  color: rgb(39, 39, 39);
+  font-size: clamp(1.7rem, 4vw, 1.8rem);
+   
+  font-style: italic;
+  font-weight: 700;
+ 
+}
 .text-present {
   font-family: "Cormorant Garamond", serif;
   color: rgb(39, 39, 39);
@@ -273,20 +283,19 @@
 .dress-content ul {
   padding: 0;
 }
-
+ 
 /* codigo vestimenta */
 .color-palette {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
   flex-wrap: wrap;
-  margin-top: 20px;
 }
 
 .color {
-  width: 42px;
-  height: 42px;
+  width:32px;
+  height: 32px;
   border-radius: 50%;
   display: block;
   border: 2px solid #fff;
@@ -331,6 +340,10 @@
   background: #9b9088;
 }
 
+.dress-icon {
+  width: 55px;
+  height: 55px;
+}
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .icons-itinerario {
@@ -389,7 +402,7 @@
 /*   fin SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   INICIO SECCION RESERVA ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .cont-confirmation {
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   flex-direction: column;
   display: flex;
   justify-content: center;
