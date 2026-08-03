@@ -211,7 +211,7 @@
 }
 /* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
- 
+
 .dress-content {
   display: flex;
   flex-direction: column;
@@ -219,12 +219,13 @@
   width: 100%;
   padding: 40px 5%;
 }
- 
-.ola{
-  
-  background-color: #7d1111;
+.caballero {
+    transform: translateX(50px);
 }
 
+.dama {
+    transform: translateX(-50px);
+}
 .cont-dresscode {
   z-index: 1;
   position: relative;
@@ -232,7 +233,7 @@
   min-height: 100vh;
   height: auto;
   overflow: hidden;
-  background-color: #bbbaba;
+  background-color: #f7f3f3;
 }
 
 /* .img-dress {
@@ -243,29 +244,30 @@
   height: 100vh;
   
 } */
-.img-seccion-dress{
-width: 100%;
-    max-width: 320px; /* Tamaño máximo en pantallas grandes */
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.img-seccion-dress {
+  width: 100%;
+  max-width: 320px; /* Tamaño máximo en pantallas grandes */
+  height: auto;
+  display: block;
+   
+  margin: 0 auto;
 }
 .dress-code {
   font-size: 3.7rem;
   font-family: "Italianno", cursive;
   color: #1c1c1d;
   letter-spacing: 3px;
-   margin-bottom:0;
+  margin: 30px 0 0;
+  display: inline-block; /* o display: block */
 }
 
 .text-tipo {
   font-family: "Cormorant Garamond", serif;
   color: rgb(39, 39, 39);
-  font-size: clamp(1.7rem, 4vw, 1.8rem);
-   
+  font-size: clamp(2rem, 4vw, 1.8rem);
+
   font-style: italic;
   font-weight: 700;
- 
 }
 .text-present {
   font-family: "Cormorant Garamond", serif;
@@ -274,8 +276,8 @@ width: 100%;
 
   font-style: italic;
   text-decoration: none;
-  margin-top:0px;
-    margin-bottom:8px;
+  margin-top: 0px;
+  margin-bottom: 8px;
 }
 .text-sugerencia {
   font-family: "Cormorant Garamond", serif;
@@ -289,33 +291,37 @@ width: 100%;
   width: 100%;
 }
 
- 
-
 .dress-content h3 {
   margin: 10px 0;
 }
-.dress-content ul{
-    list-style:none;
-    padding:0;
-    margin-top:15px;
+.dress-content ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
 }
 
-.dress-content li{
-    font-family:"Cormorant Garamond", serif;
-    font-size:1.1rem;
-    line-height:1.9;
-    color:#444;
+.dress-content li {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #444;
 }
- .section-footer{
-    margin-top:45px;
+.section-footer {
+  margin-top: 10px;
+}
+.link-estilo{
+    font-size:1.4rem;
+    text-decoration:underline;
+    opacity:.85;
 }
 
- 
- 
- 
+.link-estilo:hover{
+    opacity:1;
+}
+
 /* codigo vestimenta */
 .color-palette {
-  margin-top:10px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -324,7 +330,7 @@ width: 100%;
 }
 
 .color {
-  width:32px;
+  width: 32px;
   height: 32px;
   border-radius: 50%;
   display: block;
@@ -367,7 +373,7 @@ width: 100%;
   background: #a15039;
 }
 .taupe {
-  background: #9b9088;
+  background: #a3d0de;
 }
 
 .dress-icon {
@@ -1007,10 +1013,11 @@ width: 100%;
   }
   /* fin Ajustes para seccion dress code*/
 
-     .img-seccion-dress{
-        width: 70%;
-        max-width: 250px;
-    }
+  .img-seccion-dress {
+    width: 70%;
+    max-width: 250px;
+    
+  }
 }
 
 @media (max-width: 576px) {
