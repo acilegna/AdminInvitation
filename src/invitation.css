@@ -220,11 +220,11 @@
   padding: 40px 5%;
 }
 .caballero {
-    transform: translateX(50px);
+    transform: translateX(-50px);
 }
 
 .dama {
-    transform: translateX(-50px);
+    transform: translateX(50px);
 }
 .cont-dresscode {
   z-index: 1;
@@ -1018,6 +1018,13 @@
     max-width: 250px;
     
   }
+  .caballero {
+    transform: translateX(0px);
+}
+
+.dama {
+    transform: translateX(0px);
+}
 }
 
 @media (max-width: 576px) {

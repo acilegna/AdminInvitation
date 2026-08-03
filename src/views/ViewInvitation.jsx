@@ -183,7 +183,7 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
             </div>
             <div className="row mt-2 align-items-center">
-               <div className="col-12 col-md-4 text-center order-2 order-md-1 caballero">
+               <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero">
                 <img
                   src="/sources/009-man.png"
                   alt="Caballero"
@@ -209,7 +209,7 @@ function Content({ toggleAudio, reproduciendo }) {
                 />
               </div>
 
-              <div className="col-12 col-md-4 text-center order-3 order-md-3 dama">
+              <div className="col-12 col-md-4 text-center order-2 order-md-1 dama">
                 <img
                   src="/sources/001-woman.png"
                   alt="Caballero"
