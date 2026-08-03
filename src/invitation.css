@@ -220,11 +220,11 @@
   padding: 40px 5%;
 }
 .caballero {
-    transform: translateX(-50px);
+  transform: translateX(-50px);
 }
 
 .dama {
-    transform: translateX(50px);
+  transform: translateX(50px);
 }
 .cont-dresscode {
   z-index: 1;
@@ -249,7 +249,7 @@
   max-width: 320px; /* Tamaño máximo en pantallas grandes */
   height: auto;
   display: block;
-   
+
   margin: 0 auto;
 }
 .dress-code {
@@ -309,14 +309,14 @@
 .section-footer {
   margin-top: 10px;
 }
-.link-estilo{
-    font-size:1.4rem;
-    text-decoration:underline;
-    opacity:.85;
+.link-estilo {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  opacity: 0.85;
 }
 
-.link-estilo:hover{
-    opacity:1;
+.link-estilo:hover {
+  opacity: 1;
 }
 
 /* codigo vestimenta */
@@ -330,8 +330,8 @@
 }
 
 .color {
-  width: 32px;
-  height: 32px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   display: block;
   border: 2px solid #fff;
@@ -352,7 +352,7 @@
 }
 
 .azul {
-  background: #7a9dbb;
+  background: #8eb7db;
 }
 
 .cafe {
@@ -372,14 +372,17 @@
 .lavanda {
   background: #a15039;
 }
-.taupe {
-  background: #a3d0de;
-}
 
 .dress-icon {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
 }
+.text-resaltado{
+    color: #090909;   /* tono café elegante */
+    font-weight: 700;
+    
+}
+ 
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .icons-itinerario {
@@ -1016,15 +1019,14 @@
   .img-seccion-dress {
     width: 70%;
     max-width: 250px;
-    
   }
   .caballero {
     transform: translateX(0px);
-}
+  }
 
-.dama {
+  .dama {
     transform: translateX(0px);
-}
+  }
 }
 
 @media (max-width: 576px) {

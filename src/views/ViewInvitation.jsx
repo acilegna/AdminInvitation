@@ -128,7 +128,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
           <div className="cont-titleContador">
             <h2>
-              <span className="text-time"> SAVE THE DATE</span>
+              <span className="text-time"> APARTA LA FECHA</span>
             </h2>
           </div>
 
@@ -173,7 +173,7 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="row justify-content-center">
               <div className="col-12 text-center">
                 <a
-                  href="https://mx.pinterest.com/bcalvoalberti/mariage-invitation/?invite_code=4814280214e9424e935baad3c9de121c&board_collab_inviter=True&inviter_user_id=543035804977483751"
+                  href="https://pin.it/7apilk5ng"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-estilo text-present"
@@ -183,7 +183,7 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
             </div>
             <div className="row mt-2 align-items-center">
-               <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero">
+              <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero">
                 <img
                   src="/sources/009-man.png"
                   alt="Caballero"
@@ -223,7 +223,9 @@ function Content({ toggleAudio, reproduciendo }) {
                   <li>Vestido largo o midi</li>
                   <li>Sandalias o zapato comodo</li>
                   <li>Accesorios discretos</li>
-                  <li>Evitar el color blanco</li>
+                 <li>
+  Evitar el <span className="text-resaltado">Color Blanco</span>
+</li>
                 </ul>
               </div>
             </div>
@@ -266,9 +268,6 @@ function Content({ toggleAudio, reproduciendo }) {
                   </div>
                   <div className="color-item">
                     <span className="color lavanda"></span>
-                  </div>
-                  <div className="color-item">
-                    <span className="color taupe"></span>
                   </div>
                 </div>
               </div>
