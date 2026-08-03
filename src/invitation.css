@@ -211,6 +211,25 @@
 }
 /* FIN SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
+ 
+.dress-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 40px 5%;
+}
+
+
+.cont-dresscode {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  overflow: hidden;
+  background-color: #bbbaba;
+}
 
 .img-dress {
   position: relative;
@@ -220,19 +239,20 @@
   height: 100vh;
   
 }
-.img-seccion-dress {
-  width: 95%;
-  height: 95%;
-  object-fit: contain;
- 
-    background-color: #f4f4f4;  
+.img-seccion-dress{
+    width:100%;
+    max-width:420px;
+    height:auto;
+    object-fit:contain;
+    display:block;
+    margin:auto;
 }
 .dress-code {
   font-size: 3.7rem;
   font-family: "Italianno", cursive;
   color: #1c1c1d;
   letter-spacing: 3px;
-  margin: 0;
+   margin-bottom:0;
 }
 
 .text-tipo {
@@ -248,9 +268,11 @@
   font-family: "Cormorant Garamond", serif;
   color: rgb(39, 39, 39);
   font-size: clamp(1.6rem, 4vw, 1.8rem);
-  margin-bottom: 10px;
+
   font-style: italic;
   text-decoration: none;
+  margin-top:0px;
+    margin-bottom:8px;
 }
 .text-sugerencia {
   font-family: "Cormorant Garamond", serif;
@@ -259,33 +281,38 @@
 
   font-style: italic;
 }
-.dress-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column; /* importante */
-  justify-content: center;
-  width: 100%;
-  padding: 0 5%;
-}
+
 .dress-content .row {
   width: 100%;
 }
 
-.dress-content i {
-  font-size: 2.5rem;
-}
+ 
 
 .dress-content h3 {
   margin: 10px 0;
 }
-
-.dress-content ul {
-  padding: 0;
+.dress-content ul{
+    list-style:none;
+    padding:0;
+    margin-top:15px;
 }
+
+.dress-content li{
+    font-family:"Cormorant Garamond", serif;
+    font-size:1.1rem;
+    line-height:1.9;
+    color:#444;
+}
+ .section-footer{
+    margin-top:45px;
+}
+
+ 
+ 
  
 /* codigo vestimenta */
 .color-palette {
+  margin-top:10px;
   display: flex;
   justify-content: center;
   align-items: center;

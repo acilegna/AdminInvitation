@@ -161,114 +161,114 @@ function Content({ toggleAudio, reproduciendo }) {
 
         {/*  SECCION 4 */}
 
-        <div className="cont-full seccion">
-          <div className="img-dress downup">
-            <img
-              src="/sources/vestido.png"
-              alt="Fondo"
-              className="img-seccion-dress scale"
-            />
+        <div className="cont-dresscode seccion">
+          <div className="dress-content ">
+            <div className="row mt-1 align-items-center">
+              <div className="col-12 text-center">
+                <h2 className="mb-0">
+                  <span className="dress-code">Codigo de Vestimenta</span>
+                </h2>
+              </div>
+            </div>
+            <div className="row justify-content-center">
+              <div className="col-12 text-center">
+                <a
+                  href="https://mx.pinterest.com/bcalvoalberti/mariage-invitation/?invite_code=4814280214e9424e935baad3c9de121c&board_collab_inviter=True&inviter_user_id=543035804977483751"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-estilo text-present"
+                >
+                  Ver estilo sugerido
+                </a>
+              </div>
+            </div>
+            <div className="row mt-4 align-items-center">
+              <div className="col-4 text-center">
+                <img
+                  src="/sources/009-man.png"
+                  alt="Caballero"
+                  className="dress-icon"
+                />
+                <h3 className="text-tipo">Caballero</h3>
+                <div className="lineadiv">
+                  <span>♡</span>
+                </div>
+                <ul className="list-unstyled">
+                  <li>Camisa de lino o algodón</li>
+                  <li>Pantalón de vestir</li>
+                  <li>Mocasines o zapatos</li>
+                  <li>Sin corbata </li>
+                </ul>
+              </div>
 
-            <div className="dress-content ">
-              <div className="row justify-content-center">
+              <div className="col-4">
+                <img
+                  src="/sources/vestido.png"
+                  alt="Fondo"
+                  className="img-seccion-dress scale"
+                />
+              </div>
+
+              <div className="col-4 text-center">
+                <img
+                  src="/sources/001-woman.png"
+                  alt="Caballero"
+                  className="dress-icon"
+                />
+                <h3 className="text-tipo">Dama</h3>
+                <div className="lineadiv">
+                  <span>♡</span>
+                </div>
+                <ul className="list-unstyled">
+                  <li>Vestido largo o midi</li>
+                  <li>Sandalias o zapato comodo</li>
+                  <li>Accesorios discretos</li>
+                  <li>Evitar el color blanco</li>
+                </ul>
+              </div>
+            </div>
+            <div className="section-footer">
+              <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <h2 className="mb-1">
-                    <span className="dress-code">Codigo de Vestimenta</span>
-                  </h2>
+                  <p className=" text-sugerencia ">
+                    Sugerencia de paleta de colores
+                  </p>
                 </div>
-              </div>
-              <div className="row justify-content-center">
-                <div className="col-12 text-center">
-                  <a
-                    href="https://mx.pinterest.com/bcalvoalberti/mariage-invitation/?invite_code=4814280214e9424e935baad3c9de121c&board_collab_inviter=True&inviter_user_id=543035804977483751"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-estilo text-present"
-                  >
-                    Ver estilo sugerido
-                  </a>
-                </div>
-              </div>
-              <div className="row mt-4">
-                <div className="col-6 text-center">
-                  <img
-                    src="/sources/009-man.png"
-                    alt="Caballero"
-                    className="dress-icon"
-                  />
-                  <h3 className="text-tipo">Caballero</h3>
-                  <div className="lineadiv">
-                    <span>♡</span>
+                <div className="color-palette">
+                  <div className="color-item">
+                    <span className="color beige"></span>
                   </div>
-                  <ul className="list-unstyled">
-                    <li>Camisa de lino o algodón</li>
-                    <li>Pantalón de vestir</li>
-                    <li>Mocasines o zapatos</li>
-                    <li>Sin corbata </li>
-                  </ul>
-                </div>
 
-                <div className="col-6 text-center">
-                  <img
-                    src="/sources/001-woman.png"
-                    alt="Caballero"
-                    className="dress-icon"
-                  />
-                   <h3 className="text-tipo">Dama</h3>
-                  <div className="lineadiv">
-                    <span>♡</span>
+                  <div className="color-item">
+                    <span className="color arena"></span>
                   </div>
-                  <ul className="list-unstyled">
-                    <li>Vestido largo o midi</li>
-                    <li>Sandalias o zapato comodo</li>
-                    <li>Accesorios discretos</li>
-                    <li>Evitar el color blanco</li>
-                  </ul>
-                </div>
-              </div>
-              <div className="section-footer">
-                <div className="row justify-content-center  ">
-                  <div className="col-12 text-center">
-                    <p className=" text-sugerencia ">
-                      Sugerencia de paleta de colores
-                    </p>
+
+                  <div className="color-item">
+                    <span className="color verde"></span>
                   </div>
-                  <div className="color-palette">
-                    <div className="color-item">
-                      <span className="color beige"></span>
-                    </div>
 
-                    <div className="color-item">
-                      <span className="color arena"></span>
-                    </div>
+                  <div className="color-item">
+                    <span className="color azul"></span>
+                  </div>
 
-                    <div className="color-item">
-                      <span className="color verde"></span>
-                    </div>
+                  <div className="color-item">
+                    <span className="color cafe"></span>
+                  </div>
 
-                    <div className="color-item">
-                      <span className="color azul"></span>
-                    </div>
-
-                    <div className="color-item">
-                      <span className="color cafe"></span>
-                    </div>
-
-                    <div className="color-item">
-                      <span className="color gris"></span>
-                    </div>
-                    <div className="color-item">
-                      <span className="color amarillo"></span>
-                    </div>
-                    <div className="color-item">
-                      <span className="color rosa"></span>
-                    </div>
-                    <div className="color-item">
-                      <span className="color lavanda"></span>
-                    </div>
-                    <div className="color-item">
-                      <span className="color taupe"></span>
-                    </div>
+                  <div className="color-item">
+                    <span className="color gris"></span>
+                  </div>
+                  <div className="color-item">
+                    <span className="color amarillo"></span>
+                  </div>
+                  <div className="color-item">
+                    <span className="color rosa"></span>
+                  </div>
+                  <div className="color-item">
+                    <span className="color lavanda"></span>
+                  </div>
+                  <div className="color-item">
+                    <span className="color taupe"></span>
                   </div>
                 </div>
               </div>

@@ -62,75 +62,69 @@ function Content({ toggleAudio, reproduciendo }) {
   return (
     <>
       <div className="container-fluid section-invi">
-        <div className="cont-full seccion">
+        {/*inicio SECCION 1 */}
+        <div className="cont-full  seccion">
           <div className="imagenes-container downup">
-            <img src="/sources/pareja.jpg" alt="Fondo" className="imagenes" />
+            <img
+              src="/sources/pareja.jpg"
+              alt="Fondo"
+              className="img-seccion-one scale"
+            />
           </div>
-        </div>
-        {/* FIN SECCION 1 */}
-        <div className="cont-full cont-sound seccion">
-          <div className="audio-player">
-            <button onClick={toggleAudio}>
-              <i
-                className={`bi ${
-                  reproduciendo ? "bi-pause-fill" : "bi-play-fill"
-                }`}
-              ></i>
-            </button>
-
-            <span className="audio-time">
-              {reproduciendo ? "Reproduciendo..." : "Pausado"}
-            </span>
-          </div>
-
           <div className="cont-msj">
-            <h2>
-              <span className="text-save-date">Estás Invitado!</span>
+            <div className="audio-player">
+              <button onClick={toggleAudio}>
+                <i
+                  className={`bi ${
+                    reproduciendo ? "bi-pause-fill" : "bi-play-fill"
+                  }`}
+                ></i>
+              </button>
+
+              <span className="audio-time">
+                {reproduciendo ? "Reproduciendo..." : "Pausado"}
+              </span>
+            </div>
+
+            <h2 className="updown">
+              <span className="text-save-date">¡Estás Invitado!</span>
             </h2>
-            <h5 className="mt-4 updown">
+
+            <h5 className="updown">
               <span className="text-msj">
-                Queremos que seas parte de este momento tan especial
+                Te esperamos para celebrar juntos.
               </span>
             </h5>
           </div>
         </div>
-        {/* FIN SECCION 2 */}
-        <div className="cont-full seccion cont-centrado">
-          <div className="d-flex flex-column align-items-center">
-            {/*   <h2 className="text-center text-where"> ¿Cuándo y Dónde? </h2> */}
-            <div className="iniciales-container">
-              <h3 className="inicial img ">B</h3>
-              <h4 className="inicial novia downup">A</h4>
+        {/* FIN SECCION 1 */}
+        {/*  SECCION 2 */}
+        {/*    <div className="cont-rompe seccion">
+          <div className="contenedor-imagenes">
+            <div className="img-izquierda updown">
+              <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
             </div>
 
-            {/* Contenedor para las imágenes */}
-            <div className="d-flex justify-content-center align-items-center flex">
-              <div className="col lados">
-                {" "}
-                <img src="/sources/z1.jpg" alt="Fondo" className="image" />
-              </div>
-              <div className="col updown">
-                <img src="/sources/z2.jpg" alt="Fondo" className="image" />
-              </div>
-              <div className="col lados">
-                {" "}
-                <img src="/sources/z3.jpg" alt="Fondo" className="image" />
-              </div>
+            <div className="img-centro updown">
+              <img src="/sources/2.jpg" alt="Fondo" className="image-piezas" />
             </div>
-            {/*      Contenedor para la fecha */}
-            <div className="cont-date">
-              <h3 className="text-date updown">30.11.2027</h3>
+
+            <div className="img-derecha updown">
+              <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
             </div>
           </div>
-        </div>
-        {/* FIN SECCION 3*/}
+        </div> */}
+
+        {/* FIN SECCION 2 */}
+        {/*  SECCION 3 */}
         <div className="cont-full seccion ">
-          <img
-            src="/sources/11.jpg"
-            alt="Fondo"
-            className="imagen-full scale"
-          />
-          <div className="fondo-imagen imagen-full"></div>
+          <div className="imagenes-container downup">
+            <img
+              src="/sources/IMG_1505.jpg"
+              alt="Fondo"
+              className="img-seccion-one scale"
+            />
+          </div>
 
           <div className="cont-titleContador">
             <h2>
@@ -156,29 +150,134 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="time-label">Segundos</div>
             </div>
           </div>
-        </div>
-        {/* FIN SECCION 4*/}
 
-        <div className="cont-full seccion cont-centrado">
-          <img
-            src="/sources/pareja.jpg"
-            alt="Fondo"
-            className="imagen-full scale"
-          />
-          <div className="fondo-imagen imagen-full"></div>
-
-          <div className="d-flex flex-column align-items-center">
-            <h2>
-              <span className="text-present">Dress code </span>
-            </h2>
-            <p className="dress-code downup text-center">Formal de playa</p>
-            <p className="dress-text">
-              ¡Luce fabuloso(a) y ven con toda la actitud!
-            </p>
+          <div className="cont-date">
+            <h3 className="updown">
+              <span className="text-date "> 30.11.2027</span>
+            </h3>
           </div>
         </div>
-        {/* FIN SECCION 5*/}
+        {/* FIN SECCION 3 */}
 
+        {/*  SECCION 4 */}
+
+        <div className="cont-full seccion">
+          <div className="img-dress downup">
+            <img
+              src="/sources/vestido.png"
+              alt="Fondo"
+              className="img-seccion-dress scale"
+            />
+
+            <div className="dress-content ">
+              <div className="row justify-content-center">
+                <div className="col-12 text-center">
+                  <h2 className="mb-1">
+                    <span className="dress-code">Codigo de Vestimenta</span>
+                  </h2>
+                </div>
+              </div>
+              <div className="row justify-content-center">
+                <div className="col-12 text-center">
+                  <a
+                    href="https://mx.pinterest.com/bcalvoalberti/mariage-invitation/?invite_code=4814280214e9424e935baad3c9de121c&board_collab_inviter=True&inviter_user_id=543035804977483751"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-estilo text-present"
+                  >
+                    Ver estilo sugerido
+                  </a>
+                </div>
+              </div>
+              <div className="row mt-4">
+                <div className="col-6 text-center">
+                  <img
+                    src="/sources/009-man.png"
+                    alt="Caballero"
+                    className="dress-icon"
+                  />
+                  <h3 className="text-tipo">Caballero</h3>
+                  <div className="lineadiv">
+                    <span>♡</span>
+                  </div>
+                  <ul className="list-unstyled">
+                    <li>Camisa de lino o algodón</li>
+                    <li>Pantalón de vestir</li>
+                    <li>Mocasines o zapatos</li>
+                    <li>Sin corbata </li>
+                  </ul>
+                </div>
+
+                <div className="col-6 text-center">
+                  <img
+                    src="/sources/001-woman.png"
+                    alt="Caballero"
+                    className="dress-icon"
+                  />
+                   <h3 className="text-tipo">Dama</h3>
+                  <div className="lineadiv">
+                    <span>♡</span>
+                  </div>
+                  <ul className="list-unstyled">
+                    <li>Vestido largo o midi</li>
+                    <li>Sandalias o zapato comodo</li>
+                    <li>Accesorios discretos</li>
+                    <li>Evitar el color blanco</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="section-footer">
+                <div className="row justify-content-center  ">
+                  <div className="col-12 text-center">
+                    <p className=" text-sugerencia ">
+                      Sugerencia de paleta de colores
+                    </p>
+                  </div>
+                  <div className="color-palette">
+                    <div className="color-item">
+                      <span className="color beige"></span>
+                    </div>
+
+                    <div className="color-item">
+                      <span className="color arena"></span>
+                    </div>
+
+                    <div className="color-item">
+                      <span className="color verde"></span>
+                    </div>
+
+                    <div className="color-item">
+                      <span className="color azul"></span>
+                    </div>
+
+                    <div className="color-item">
+                      <span className="color cafe"></span>
+                    </div>
+
+                    <div className="color-item">
+                      <span className="color gris"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color amarillo"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color rosa"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color lavanda"></span>
+                    </div>
+                    <div className="color-item">
+                      <span className="color taupe"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* FIN SECCION 4 */}
+
+        {/*INICIO SECCION 5*/}
         <div className="cont-full seccion cont-centrado" id="itinerario">
           <div className="d-flex flex-column align-items-center">
             <h2 className="text-center">
@@ -195,7 +294,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
-                  <span>Celebracion Religiosa</span>{" "}
+                  <span className="span-text">Celebracion Religiosa</span>{" "}
                   <span className="span-hora"> 9:20 PM</span>
                 </div>
               </div>
@@ -210,7 +309,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
-                  <span className=" ">Recepcion</span>{" "}
+                  <span className="span-text">Recepcion</span>{" "}
                   <span className="span-hora"> 9:20 PM</span>
                 </div>
               </div>
@@ -224,7 +323,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
-                  <span className=" ">Entrada Esposos</span>
+                  <span className="span-text ">Entrada Esposos</span>
                   <span className="span-hora"> 9:20 PM</span>
                 </div>
               </div>
@@ -238,7 +337,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
-                  <span className=" ">Cena</span>{" "}
+                  <span className="span-text">Cena</span>{" "}
                   <span className="span-hora"> 9:20 PM</span>
                 </div>
               </div>
@@ -252,7 +351,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
-                  <span className=" ">Vals Esposos</span>{" "}
+                  <span className="span-text">Vals Esposos</span>{" "}
                   <span className="span-hora"> 9:20 PM</span>
                 </div>
               </div>
@@ -266,46 +365,83 @@ function Content({ toggleAudio, reproduciendo }) {
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
-                  <span className=" "> A bailar</span>{" "}
+                  <span className="span-text"> A bailar</span>{" "}
                   <span className="span-hora"> 9:20 PM</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* FIN SECCION 6*/}
-        {/*INICIO SECCION 7*/}
+        {/* FIN SECCION 5*/}
+        {/* INICIO SECCION 6*/}
 
         <div className="cont-full seccion  cont-confirmation">
           <h2 className="text-confirmation text-center">
             {" "}
             Realiza tu reservación{" "}
           </h2>
-          <p className="text-msj-confirmation downup text-center">
+          <div className="lineadiv">
+            <span>♡</span>
+          </div>
+          <p className="reservation-info izqicon">
+            Hemos reservado un bloque de habitaciones en{" "}
+            <strong className="date-reserva">
+              {" "}
+              Grand Palladium Costa Mujeres
+            </strong>{" "}
+            con tarifa preferencial para nuestros invitados
+          </p>
+          <div className="info-fechas izqicon">
+            <div className="info-item">
+              <div className="info-icon">
+                <i className="bi bi-calendar3"></i>
+              </div>
+
+              <div className="info-texto izqicon">
+                <span className="info-titulo">Hospedaje</span>
+                <strong>29 de noviembre al</strong>
+                <strong>2 de diciembre de 2027</strong>
+              </div>
+            </div>
+
+            <div className="info-divider"></div>
+
+            <div className="info-item">
+              <div className="info-icon">
+                <i className="bi bi-clock"></i>
+              </div>
+
+              <div className="info-texto">
+                <span className="info-titulo">Fecha límite para reservar</span>
+                <span className="info-titulo">y confirmar tu asistencia</span>
+                <strong>30 de abril de 2027</strong>
+              </div>
+            </div>
+          </div>
+
+          {/*  <p className="text-msj-confirmation downup text-center">
             {" "}
             Reserva y confirma tu asistencia antes del{" "}
             <strong className="date-text"> 30-04-2027.</strong>{" "}
-          </p>
+          </p> */}
 
-          <div className="reservation-card">
+          <div className="reservation-card izqicon">
             <div className="row align-items-center  gy-4">
               {/* Icono */}
               <div className="col-12 col-md-2 text-center">
                 <div className="reservation-icon ">
-                  <i className="bi bi-building"></i>
+                  <i className="bi bi-buildings"></i>
                 </div>
               </div>
 
               {/* Texto */}
               <div className="col-12 col-md-6 text-center text-md-start">
-                <h3 className="reservation-title">
-                  1. Realiza la reservación de tu habitación
-                </h3>
+                <h3 className="reservation-title">1. Reserva tu habitación</h3>
 
                 <p className="reservation-description mb-0">
                   Al finalizar recibirás tu
-                  <strong> ID de invitación</strong>, el cual necesitarás para
-                  confirmar tu asistencia.
+                  <strong className="date-reserva"> ID de invitación</strong>,
+                  el cual necesitarás para confirmar tu asistencia.
                 </p>
               </div>
 
@@ -329,45 +465,50 @@ function Content({ toggleAudio, reproduciendo }) {
             </div>
           </div>
 
-          <hr />
-
-          <div className="text-center">
-            <h3 className="step-title"> 2. ¿Ya tienes tu ID de invitación?</h3>
-
-            <p className="step-description">
-              Ingresa tu ID para confirmar tu asistencia.
-            </p>
-          </div>
-
-          <div className="row justify-content-center mb-4">
-            <div className="col-md-10 col-lg-8 px-4">
-              <div className="row g-2">
-                <div className="col-12 col-md">
-                  <input
-                    id="search"
-                    type="search"
-                    className="form-control search-input"
-                    placeholder="Ingresa tu ID de invitación"
-                    value={inputValue}
-                    onChange={handleInput}
-                  />
-                </div>
-                <div className="col-12 col-md-auto ">
-                  <button
-                    className="btn btn-primary w-100 btn-search bg-dark"
-                    onClick={handleClick}
-                  >
-                    <i className="bi bi-search me-2"></i>
-                    Buscar
-                  </button>
+          <div className="reservation-card izqicon">
+            <div className="row align-items-center  gy-4">
+              {/* Icono */}
+              <div className="col-12 col-md-2 text-center">
+                <div className="reservation-icon ">
+                  <i className="bi bi-person-check "></i>
                 </div>
               </div>
-              {mensaje && (
-                <h5 className="text-success text-center mt-3">{mensaje}</h5>
-              )}
-              {error && (
-                <h5 className="text-danger text-center mt-3">{error}</h5>
-              )}
+
+              {/* Texto */}
+              <div className="col-12 col-md-6 text-center text-md-start">
+                <h3 className="reservation-title">2. Confirma tu asistencia</h3>
+
+                <p className="reservation-description mb-0">
+                  Ingresa aqui tu ID.
+                </p>
+                <div className="row g-2">
+                  <div className="col-12 col-md">
+                    <input
+                      id="search"
+                      type="search"
+                      className="form-control search-input"
+                      placeholder="ID de invitación"
+                      value={inputValue}
+                      onChange={handleInput}
+                    />
+                  </div>
+                  <div className="col-12 col-md-auto ">
+                    <button
+                      className="btn btn-primary w-100 btn-search bg-dark"
+                      onClick={handleClick}
+                    >
+                      <i className="bi bi-search me-2"></i>
+                      Buscar
+                    </button>
+                  </div>
+                </div>
+                {mensaje && (
+                  <h5 className="text-success text-center mt-3">{mensaje}</h5>
+                )}
+                {error && (
+                  <h5 className="text-danger text-center mt-3">{error}</h5>
+                )}
+              </div>
             </div>
           </div>
 
@@ -375,7 +516,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
           {(adultos.length > 0 || ninos.length > 0) && (
             <div className="confirmation-section">
-              <h2 className="confirmation-title">3. Confirma tu asistencia</h2>
+              <h2 className="confirmation-title">3. Indica quien asistirà</h2>
 
               <p className="confirmation-subtitle">
                 Selecciona Sí o No para cada invitado de tu familia.
@@ -522,19 +663,11 @@ function Content({ toggleAudio, reproduciendo }) {
             </div>
           </div>
         </div>
-
-        {/* FIN SECCION 7*/}
-        {/* <footer>
-        <p className="text-center">
-          &copy; 2025 Invitacion B&A | Creado por Entheosmultimedia
-        </p>
-          <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top bg-dark ">
-       
-      </footer> */}
-
+        {/* FIN SECCION 6*/}
+        {/* FOOTER*/}
         <footer className="d-flex flex-column justify-content-center align-items-center border-top bg-dark py-3">
           <span className="text-white text-center mb-3">
-            © 2027 Invitación B&A | Entheosmultimedia
+            © 2026 Invitación B&A | Entheosmultimedia
           </span>
 
           <ul className="nav justify-content-center list-unstyled d-flex mb-0">
