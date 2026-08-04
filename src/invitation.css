@@ -269,28 +269,54 @@
   font-style: italic;
   font-weight: 700;
 }
-.text-present {
-  font-family: "Cormorant Garamond", serif;
-  color: rgb(39, 39, 39);
-  font-size: clamp(1.6rem, 4vw, 1.8rem);
-
-  font-style: italic;
-  text-decoration: none;
-  margin-top: 0px;
-  margin-bottom: 8px;
-}
-
 .link-estilo {
-  font-size: 1.4rem;
-  text-decoration: underline;
-  opacity: 0.85;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 5px 15px;
+  border: 1.5px solid #1d1c1c;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
 .link-estilo:hover {
-  opacity: 1;
-    color: rgb(0, 0, 0);
-    font-weight: 700;
+  background: #ebebeb;
+  border-color: #201f1f;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 11px rgba(184, 157, 125, 0.25);
 }
+
+.link-estilo img {
+  transition: transform 0.3s ease;
+}
+
+.link-estilo:hover img {
+  transform: scale(1.1);
+}
+.icon-estilo {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.pinterest-link {
+  margin-top: 30px;
+}
+.text-present {
+  font-family: "Cormorant Garamond", serif;
+  color: #3d3d3d;
+  font-size: clamp(1.2rem, 4vw, 1.6rem);
+  font-style: italic;
+  margin: 0;
+  line-height: 1;
+}
+
 .text-sugerencia {
   font-family: "Cormorant Garamond", serif;
   color: rgb(39, 39, 39);
@@ -321,7 +347,6 @@
 .section-footer {
   margin-top: 10px;
 }
-
 
 /* codigo vestimenta */
 .color-palette {
@@ -392,9 +417,9 @@
   text-align: right;
 }
 
-#itinerario{
-    background:#e6e6e6;
-    padding:90px 20px;
+#itinerario {
+  background: #e6e6e6;
+  padding: 90px 20px;
 }
 
 .span-hora {

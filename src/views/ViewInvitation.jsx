@@ -170,18 +170,7 @@ function Content({ toggleAudio, reproduciendo }) {
                 </h2>
               </div>
             </div>
-            <div className="row justify-content-center ">
-              <div className="col-12 text-center izq">
-                <a
-                  href="https://pin.it/7apilk5ng"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="link-estilo text-present"
-                >
-                  Ver estilo sugerido
-                </a>
-              </div>
-            </div>
+
             <div className="row mt-2 align-items-center">
               <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero izqicon">
                 <img
@@ -209,8 +198,7 @@ function Content({ toggleAudio, reproduciendo }) {
                 />
               </div>
 
-              <div
-                className="col-12 col-md-4 text-center order-2 order-md-1 dama izqicon" >
+              <div className="col-12 col-md-4 text-center order-2 order-md-1 dama izqicon">
                 <img
                   src="/sources/001-woman.png"
                   alt="Caballero"
@@ -234,7 +222,9 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="section-footer izqicon">
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <p className=" text-sugerencia  ">Inspírate en estos tonos</p>
+                  <p className=" text-sugerencia  ">
+                    Paleta de colores sugerida
+                  </p>
                 </div>
                 <div className="color-palette">
                   <div className="color-item">
@@ -271,111 +261,128 @@ function Content({ toggleAudio, reproduciendo }) {
                   </div>
                 </div>
               </div>
+              <div className="row justify-content-center pinterest-link">
+                <div className="col-12 text-center izq">
+                  <a
+                    href="https://pin.it/7apilk5ng"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-estilo"
+                  >
+                    <img
+                      src="/sources/002-pinterest-1.png"
+                      alt="Paleta de colores"
+                      className="icon-estilo"
+                    />
+                    <span className="text-present">
+                      Ver Inspiración
+                    </span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         {/* FIN SECCION 4 */}
 
         {/*INICIO SECCION 5*/}
-       <div className="cont-full seccion cont-centrado" id="itinerario">
-  <div className="itinerario-container">
+        <div className="cont-full seccion cont-centrado" id="itinerario">
+          <div className="itinerario-container">
+            <h2 className="text-center mb-5">
+              <span className="title-itinerario">Itinerario</span>
+            </h2>
 
-    <h2 className="text-center mb-5">
-      <span className="title-itinerario">Itinerario</span>
-    </h2>
+            <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario">
+                <img
+                  src="/sources/004-church-2.png"
+                  alt="Celebración Religiosa"
+                  className="img-itinerario"
+                />
+              </div>
 
-    <div className="row align-items-center mb-4">
-      <div className="col-4 icons-itinerario">
-        <img
-          src="/sources/004-church-2.png"
-          alt="Celebración Religiosa"
-          className="img-itinerario"
-        />
-      </div>
+              <div className="col-8 text-itinerario">
+                <span className="span-text">Celebración Religiosa</span>
+                <span className="span-hora">2:00 PM</span>
+              </div>
+            </div>
 
-      <div className="col-8 text-itinerario">
-        <span className="span-text">Celebración Religiosa</span>
-        <span className="span-hora">2:00 PM</span>
-      </div>
-    </div>
+            <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario">
+                <img
+                  src="/sources/007-champagne-glass.png"
+                  alt="Recepción"
+                  className="img-itinerario3"
+                />
+              </div>
 
-    <div className="row align-items-center mb-4">
-      <div className="col-4 icons-itinerario">
-        <img
-          src="/sources/007-champagne-glass.png"
-          alt="Recepción"
-          className="img-itinerario3"
-        />
-      </div>
+              <div className="col-8 text-itinerario">
+                <span className="span-text">Recepción</span>
+                <span className="span-hora">7:00 PM</span>
+              </div>
+            </div>
 
-      <div className="col-8 text-itinerario">
-        <span className="span-text">Recepción</span>
-        <span className="span-hora">7:00 PM</span>
-      </div>
-    </div>
+            <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario">
+                <img
+                  src="/sources/022-newlyweds-5.png"
+                  alt="Entrada de los Esposos"
+                  className="img-itinerario"
+                />
+              </div>
 
-    <div className="row align-items-center mb-4">
-      <div className="col-4 icons-itinerario">
-        <img
-          src="/sources/022-newlyweds-5.png"
-          alt="Entrada de los Esposos"
-          className="img-itinerario"
-        />
-      </div>
+              <div className="col-8 text-itinerario">
+                <span className="span-text">Entrada de los Esposos</span>
+                <span className="span-hora">7:15 PM</span>
+              </div>
+            </div>
 
-      <div className="col-8 text-itinerario">
-        <span className="span-text">Entrada de los Esposos</span>
-        <span className="span-hora">7:15 PM</span>
-      </div>
-    </div>
+            <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario">
+                <img
+                  src="/sources/005-dinner-table.png"
+                  alt="Cena"
+                  className="img-itinerario2"
+                />
+              </div>
 
-    <div className="row align-items-center mb-4">
-      <div className="col-4 icons-itinerario">
-        <img
-          src="/sources/005-dinner-table.png"
-          alt="Cena"
-          className="img-itinerario2"
-        />
-      </div>
+              <div className="col-8 text-itinerario">
+                <span className="span-text">Cena</span>
+                <span className="span-hora">8:30 PM</span>
+              </div>
+            </div>
 
-      <div className="col-8 text-itinerario">
-        <span className="span-text">Cena</span>
-        <span className="span-hora">8:30 PM</span>
-      </div>
-    </div>
+            <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario">
+                <img
+                  src="/sources/011-dance-1.png"
+                  alt="Vals de los Esposos"
+                  className="img-itinerario3"
+                />
+              </div>
 
-    <div className="row align-items-center mb-4">
-      <div className="col-4 icons-itinerario">
-        <img
-          src="/sources/011-dance-1.png"
-          alt="Vals de los Esposos"
-          className="img-itinerario3"
-        />
-      </div>
+              <div className="col-8 text-itinerario">
+                <span className="span-text">Vals de los Esposos</span>
+                <span className="span-hora">9:30 PM</span>
+              </div>
+            </div>
 
-      <div className="col-8 text-itinerario">
-        <span className="span-text">Vals de los Esposos</span>
-        <span className="span-hora">9:30 PM</span>
-      </div>
-    </div>
+            <div className="row align-items-center">
+              <div className="col-4 icons-itinerario">
+                <img
+                  src="/sources/009-dance.png"
+                  alt="A Bailar"
+                  className="img-itinerario"
+                />
+              </div>
 
-    <div className="row align-items-center">
-      <div className="col-4 icons-itinerario">
-        <img
-          src="/sources/009-dance.png"
-          alt="A Bailar"
-          className="img-itinerario"
-        />
-      </div>
-
-      <div className="col-8 text-itinerario">
-        <span className="span-text">¡A Bailar!</span>
-        <span className="span-hora">10:00 PM</span>
-      </div>
-    </div>
-
-  </div>
-</div>
+              <div className="col-8 text-itinerario">
+                <span className="span-text">¡A Bailar!</span>
+                <span className="span-hora">10:00 PM</span>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* FIN SECCION 5*/}
         {/* INICIO SECCION 6*/}
 
@@ -422,8 +429,6 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
             </div>
           </div>
-
-        
 
           <div className="reservation-card izqicon">
             <div className="row align-items-center  gy-4">
@@ -503,10 +508,14 @@ function Content({ toggleAudio, reproduciendo }) {
                   </div>
                 </div>
                 {mensaje && (
-                  <h5 className="text-success text-center mt-3 info-mensaje">{mensaje}</h5>
+                  <h5 className="text-success text-center mt-3 info-mensaje">
+                    {mensaje}
+                  </h5>
                 )}
                 {error && (
-                  <h5 className="text-danger text-center mt-3 info-mensaje">{error}</h5>
+                  <h5 className="text-danger text-center mt-3 info-mensaje">
+                    {error}
+                  </h5>
                 )}
               </div>
             </div>
@@ -519,7 +528,8 @@ function Content({ toggleAudio, reproduciendo }) {
               <h2 className="confirmation-title">3. Indica quien asistirà</h2>
 
               <p className="confirmation-subtitle">
-                Selecciona <strong>Sí</strong> o <strong>No</strong> para cada invitado de tu familia.
+                Selecciona <strong>Sí</strong> o <strong>No</strong> para cada
+                invitado de tu familia.
               </p>
             </div>
           )}
