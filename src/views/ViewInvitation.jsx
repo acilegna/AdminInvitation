@@ -183,8 +183,7 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
             </div>
             <div className="row mt-2 align-items-center">
-              <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero 
-izqicon">
+              <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero izqicon">
                 <img
                   src="/sources/009-man.png"
                   alt="Caballero"
@@ -210,8 +209,8 @@ izqicon">
                 />
               </div>
 
-              <div className="col-12 col-md-4 text-center order-2 order-md-1 dama 
-izqicon">
+              <div
+                className="col-12 col-md-4 text-center order-2 order-md-1 dama izqicon" >
                 <img
                   src="/sources/001-woman.png"
                   alt="Caballero"
@@ -235,9 +234,7 @@ izqicon">
             <div className="section-footer izqicon">
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <p className=" text-sugerencia  ">
-                    Inspírate en estos tonos
-                  </p>
+                  <p className=" text-sugerencia  ">Inspírate en estos tonos</p>
                 </div>
                 <div className="color-palette">
                   <div className="color-item">
@@ -421,11 +418,7 @@ izqicon">
             </div>
           </div>
 
-          {/*  <p className="text-msj-confirmation downup text-center">
-            {" "}
-            Reserva y confirma tu asistencia antes del{" "}
-            <strong className="date-text"> 30-04-2027.</strong>{" "}
-          </p> */}
+        
 
           <div className="reservation-card izqicon">
             <div className="row align-items-center  gy-4">

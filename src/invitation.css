@@ -482,9 +482,8 @@
 .reservation-card {
   background: #fff;
   width: 85%;
-  margin: 35px auto;
-
-  padding: 30px;
+  margin: 10px auto;
+  padding: 15px;
   border-radius: 25px;
   border: 1px solid #e8dfd3;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
@@ -683,8 +682,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 45px;
-  margin: 45px auto;
+  gap: 35px;
+  margin: 35px auto;
   flex-wrap: wrap;
 }
 
