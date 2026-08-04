@@ -176,7 +176,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   href="https://pin.it/7apilk5ng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-estilo text-present"
+                  className="link-estilo text-present der"
                 >
                   Ver estilo sugerido
                 </a>
@@ -223,18 +223,17 @@ function Content({ toggleAudio, reproduciendo }) {
                   <li>Vestido largo o midi</li>
                   <li>Sandalias o zapato comodo</li>
                   <li>Accesorios discretos</li>
-                 <li>
-  Evitar el <span className="text-resaltado">Color Blanco</span>
-</li>
+                  <li>
+                    Evitar el{" "}
+                    <span className="text-resaltado">Color Blanco</span>
+                  </li>
                 </ul>
               </div>
             </div>
             <div className="section-footer">
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <p className=" text-sugerencia ">
-                  Inspírate en estos tonos
-                  </p>
+                  <p className=" text-sugerencia izqicon">Inspírate en estos tonos</p>
                 </div>
                 <div className="color-palette">
                   <div className="color-item">
