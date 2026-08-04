@@ -233,7 +233,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
                   <p className=" text-sugerencia ">
-                    Sugerencia de paleta de colores
+                  Inspírate en estos tonos
                   </p>
                 </div>
                 <div className="color-palette">
