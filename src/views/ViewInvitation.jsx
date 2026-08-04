@@ -285,7 +285,7 @@ function Content({ toggleAudio, reproduciendo }) {
     </h2>
 
     <div className="row align-items-center mb-4">
-      <div className="col-3 icons-itinerario">
+      <div className="col-4 icons-itinerario">
         <img
           src="/sources/004-church-2.png"
           alt="Celebración Religiosa"
@@ -293,14 +293,14 @@ function Content({ toggleAudio, reproduciendo }) {
         />
       </div>
 
-      <div className="col-9 text-itinerario">
+      <div className="col-8 text-itinerario">
         <span className="span-text">Celebración Religiosa</span>
         <span className="span-hora">2:00 PM</span>
       </div>
     </div>
 
     <div className="row align-items-center mb-4">
-      <div className="col-3 icons-itinerario">
+      <div className="col-4 icons-itinerario">
         <img
           src="/sources/007-champagne-glass.png"
           alt="Recepción"
@@ -308,14 +308,14 @@ function Content({ toggleAudio, reproduciendo }) {
         />
       </div>
 
-      <div className="col-9 text-itinerario">
+      <div className="col-8 text-itinerario">
         <span className="span-text">Recepción</span>
         <span className="span-hora">7:00 PM</span>
       </div>
     </div>
 
     <div className="row align-items-center mb-4">
-      <div className="col-3 icons-itinerario">
+      <div className="col-4 icons-itinerario">
         <img
           src="/sources/022-newlyweds-5.png"
           alt="Entrada de los Esposos"
@@ -323,14 +323,14 @@ function Content({ toggleAudio, reproduciendo }) {
         />
       </div>
 
-      <div className="col-9 text-itinerario">
+      <div className="col-8 text-itinerario">
         <span className="span-text">Entrada de los Esposos</span>
         <span className="span-hora">7:15 PM</span>
       </div>
     </div>
 
     <div className="row align-items-center mb-4">
-      <div className="col-3 icons-itinerario">
+      <div className="col-4 icons-itinerario">
         <img
           src="/sources/005-dinner-table.png"
           alt="Cena"
@@ -338,14 +338,14 @@ function Content({ toggleAudio, reproduciendo }) {
         />
       </div>
 
-      <div className="col-9 text-itinerario">
+      <div className="col-8 text-itinerario">
         <span className="span-text">Cena</span>
         <span className="span-hora">8:30 PM</span>
       </div>
     </div>
 
     <div className="row align-items-center mb-4">
-      <div className="col-3 icons-itinerario">
+      <div className="col-4 icons-itinerario">
         <img
           src="/sources/011-dance-1.png"
           alt="Vals de los Esposos"
@@ -353,14 +353,14 @@ function Content({ toggleAudio, reproduciendo }) {
         />
       </div>
 
-      <div className="col-9 text-itinerario">
+      <div className="col-8 text-itinerario">
         <span className="span-text">Vals de los Esposos</span>
         <span className="span-hora">9:30 PM</span>
       </div>
     </div>
 
     <div className="row align-items-center">
-      <div className="col-3 icons-itinerario">
+      <div className="col-4 icons-itinerario">
         <img
           src="/sources/009-dance.png"
           alt="A Bailar"
@@ -368,7 +368,7 @@ function Content({ toggleAudio, reproduciendo }) {
         />
       </div>
 
-      <div className="col-9 text-itinerario">
+      <div className="col-8 text-itinerario">
         <span className="span-text">¡A Bailar!</span>
         <span className="span-hora">10:00 PM</span>
       </div>
