@@ -448,7 +448,7 @@ function Content({ toggleAudio, reproduciendo }) {
               {/* Botón */}
               <div className="col-12 col-md-4 text-center">
                 <a
-                  href="https://tu-link-de-reservacion.com"
+                  href="https://wa.link/42idk4"
                   target="_blank"
                   rel="noreferrer"
                   className="btn-reservar bg-dark"
