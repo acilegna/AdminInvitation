@@ -176,7 +176,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   href="https://pin.it/7apilk5ng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-estilo text-present "
+                  className="link-estilo text-present"
                 >
                   Ver estilo sugerido
                 </a>
@@ -287,14 +287,14 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="row ">
                 <div className="col-4 icons-itinerario izqicon">
                   <img
-                    src="/sources/iglesia.png"
+                    src="/sources/004-church-2.png"
                     alt="Fondo"
                     className="img-itinerario"
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
                   <span className="span-text">Celebracion Religiosa</span>{" "}
-                  <span className="span-hora"> 9:20 PM</span>
+                  <span className="span-hora"> 2:00 PM</span>
                 </div>
               </div>
 
@@ -302,70 +302,70 @@ function Content({ toggleAudio, reproduciendo }) {
                 <div className="col-4 icons-itinerario izqicon">
                   {" "}
                   <img
-                    src="/sources/brindis.png"
+                    src="/sources/007-champagne-glass.png"
                     alt="Fondo"
                     className="img-itinerario3"
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
                   <span className="span-text">Recepcion</span>{" "}
-                  <span className="span-hora"> 9:20 PM</span>
+                  <span className="span-hora"> 7:00 PM</span>
                 </div>
               </div>
               <div className="row">
                 <div className="col-4 icons-itinerario izqicon">
                   {" "}
                   <img
-                    src="/sources/brides.png"
+                    src="/sources/022-newlyweds-5.png"
                     alt="Fondo"
                     className="img-itinerario"
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
                   <span className="span-text ">Entrada Esposos</span>
-                  <span className="span-hora"> 9:20 PM</span>
+                  <span className="span-hora"> 7:15 PM</span>
                 </div>
               </div>
               <div className="row">
                 <div className="col-4 icons-itinerario izqicon">
                   {" "}
                   <img
-                    src="/sources/cena.png"
+                    src="/sources/005-dinner-table.png"
                     alt="Fondo"
                     className="img-itinerario2"
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
                   <span className="span-text">Cena</span>{" "}
-                  <span className="span-hora"> 9:20 PM</span>
+                  <span className="span-hora"> 8:30 PM</span>
                 </div>
               </div>
               <div className="row">
                 <div className="col-4 icons-itinerario izqicon">
                   {" "}
                   <img
-                    src="/sources/bals.png"
+                    src="/sources/011-dance-1.png"
                     alt="Fondo"
                     className="img-itinerario3"
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
                   <span className="span-text">Vals Esposos</span>{" "}
-                  <span className="span-hora"> 9:20 PM</span>
+                  <span className="span-hora"> 9:30 PM</span>
                 </div>
               </div>
               <div className="row">
                 <div className="col-4 icons-itinerario izqicon">
                   {" "}
                   <img
-                    src="/sources/damcin.png"
+                    src="/sources/009-dance.png"
                     alt="Fondo"
                     className="img-itinerario"
                   />
                 </div>
                 <div className="col-8 text-itinerario der">
                   <span className="span-text"> A bailar</span>{" "}
-                  <span className="span-hora"> 9:20 PM</span>
+                  <span className="span-hora"> 10:00 PM</span>
                 </div>
               </div>
             </div>
@@ -498,10 +498,10 @@ function Content({ toggleAudio, reproduciendo }) {
                   </div>
                 </div>
                 {mensaje && (
-                  <h5 className="text-success text-center mt-3">{mensaje}</h5>
+                  <h5 className="text-success text-center mt-3 info-mensaje">{mensaje}</h5>
                 )}
                 {error && (
-                  <h5 className="text-danger text-center mt-3">{error}</h5>
+                  <h5 className="text-danger text-center mt-3 info-mensaje">{error}</h5>
                 )}
               </div>
             </div>
@@ -514,7 +514,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <h2 className="confirmation-title">3. Indica quien asistirà</h2>
 
               <p className="confirmation-subtitle">
-                Selecciona Sí o No para cada invitado de tu familia.
+                Selecciona <strong>Sí</strong> o <strong>No</strong> para cada invitado de tu familia.
               </p>
             </div>
           )}

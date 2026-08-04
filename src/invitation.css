@@ -279,6 +279,18 @@
   margin-top: 0px;
   margin-bottom: 8px;
 }
+
+.link-estilo {
+  font-size: 1.4rem;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.link-estilo:hover {
+  opacity: 1;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+}
 .text-sugerencia {
   font-family: "Cormorant Garamond", serif;
   color: rgb(39, 39, 39);
@@ -309,15 +321,7 @@
 .section-footer {
   margin-top: 10px;
 }
-.link-estilo {
-  font-size: 1.4rem;
-  text-decoration: underline;
-  opacity: 0.85;
-}
 
-.link-estilo:hover {
-  opacity: 1;
-}
 
 /* codigo vestimenta */
 .color-palette {
@@ -418,7 +422,7 @@
 }
 .img-itinerario {
   width: 45px;
-  height: 40px;
+  height: 45px;
 }
 
 .img-itinerario2 {
@@ -713,9 +717,12 @@
 
 .info-titulo {
   font-size: 1rem;
+  color: #510000;
+}
+.info-mensaje {
+  font-size: 1rem;
   color: #555;
 }
-
 .info-texto strong {
   font-size: 1.25rem;
   font-weight: 700;
