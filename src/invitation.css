@@ -1160,8 +1160,8 @@
 
 .btn-abrir {
   margin-top: 35px;
-  padding: 5px 20px;
-  border: 2px solid #faf6f6;
+  padding: 5px 15px;
+  border: 1px solid #faf6f6;
   border-radius: 50px;
   background: transparent;
   font-weight: 400;
@@ -1173,7 +1173,7 @@
 
 .btn-abrir:hover {
   background: rgb(255, 255, 255);
-  color: rgb(73, 11, 11);
+  color: rgb(0, 0, 0);
   transform: scale(1.1);
 }
 /* divider */

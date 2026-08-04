@@ -4,7 +4,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./invitation.css";
 import ViewPanel from "./views/ViewPanel";
 import ViewInvitation from "./views/ViewInvitation";
-import Invitation from "./views/Invitation ";
+import Invitation from "./views/Invitation";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AudioProvider } from "./views/AudioContext";
 function App() {
