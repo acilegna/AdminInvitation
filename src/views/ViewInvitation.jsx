@@ -232,10 +232,10 @@ izqicon">
                 </ul>
               </div>
             </div>
-            <div className="section-footer">
+            <div className="section-footer izqicon">
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <p className=" text-sugerencia izqicon">
+                  <p className=" text-sugerencia  ">
                     Inspírate en estos tonos
                   </p>
                 </div>
