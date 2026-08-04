@@ -388,74 +388,52 @@
 
 /* FIN SECCION 4 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*   SECCION itinerario ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
-.icons-itinerario{
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-    padding-right:20px;
+.icons-itinerario {
+  text-align: right;
 }
+
 #itinerario{
     background:#e6e6e6;
     padding:90px 20px;
 }
-.itinerario-container{
-    width:100%;
-    max-width:520px;
-}
 
-
-.span-hora{
-    font-size:1.1rem;
-    color:#7b7b7b;
-    letter-spacing:2px;
+.span-hora {
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  font-size: 1.2rem;
 }
-.span-text{
-    font-size:1.35rem;
-    font-weight:500;
-    color:#222;
+.span-text {
+  font-size: 1.3rem;
 }
-
 .text-itinerario span {
   white-space: nowrap;
   display: block;
 }
 
-
-.text-itinerario{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
+/*span */
+.text-itinerario {
+  margin: auto;
 }
 
-.title-itinerario{
-    font-family:"Italianno",cursive;
-    font-size:4.5rem;
-    letter-spacing:6px;
-    color:#1d1d1d;
+.title-itinerario {
+  font-size: 4.7rem;
+  font-family: "Italianno", cursive;
+  color: rgb(24, 24, 24);
+  letter-spacing: 8px;
 }
-.img-itinerario{
-    width:45px;
-}
-
-.img-itinerario2{
-    width:45px;
+.img-itinerario {
+  width: 45px;
+  height: 45px;
 }
 
-.img-itinerario3{
-    width:35px;
-}
-.row{
-    position:relative;
+.img-itinerario2 {
+  width: 45px;
+  height: 33px;
 }
 
-.row:not(:last-child)::after{
-    content:"";
-    position:absolute;
-    left:50px;
-    bottom:-12px;
-    width:1px;
-    height:24px;
-    background:#c9c9c9;
+.img-itinerario3 {
+  width: 35px;
+  height: 45px;
 }
 .cont-centrado {
   display: flex;
