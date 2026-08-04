@@ -222,8 +222,8 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="section-footer izqicon">
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <p className=" text-sugerencia  ">
-                    Paleta de colores sugerida
+                  <p className="text-sugerencia">
+                    <strong> Sugerencia de colores</strong>.
                   </p>
                 </div>
                 <div className="color-palette">
@@ -274,9 +274,7 @@ function Content({ toggleAudio, reproduciendo }) {
                       alt="Paleta de colores"
                       className="icon-estilo"
                     />
-                    <span className="text-present">
-                      Ver Inspiración
-                    </span>
+                    <span className="text-present">Ver Inspiración</span>
                   </a>
                 </div>
               </div>
