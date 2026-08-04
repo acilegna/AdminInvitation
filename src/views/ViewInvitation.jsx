@@ -177,7 +177,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="link-estilo text-present 
-izqicon"
+der"
                 >
                   Ver estilo sugerido
                 </a>
