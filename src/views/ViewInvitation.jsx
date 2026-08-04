@@ -176,14 +176,16 @@ function Content({ toggleAudio, reproduciendo }) {
                   href="https://pin.it/7apilk5ng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-estilo text-present der"
+                  className="link-estilo text-present 
+izqicon"
                 >
                   Ver estilo sugerido
                 </a>
               </div>
             </div>
             <div className="row mt-2 align-items-center">
-              <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero">
+              <div className="col-12 col-md-4 text-center order-3 order-md-3 caballero 
+izqicon">
                 <img
                   src="/sources/009-man.png"
                   alt="Caballero"
@@ -209,7 +211,8 @@ function Content({ toggleAudio, reproduciendo }) {
                 />
               </div>
 
-              <div className="col-12 col-md-4 text-center order-2 order-md-1 dama">
+              <div className="col-12 col-md-4 text-center order-2 order-md-1 dama 
+izqicon">
                 <img
                   src="/sources/001-woman.png"
                   alt="Caballero"
@@ -233,7 +236,9 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="section-footer">
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
-                  <p className=" text-sugerencia izqicon">Inspírate en estos tonos</p>
+                  <p className=" text-sugerencia izqicon">
+                    Inspírate en estos tonos
+                  </p>
                 </div>
                 <div className="color-palette">
                   <div className="color-item">
