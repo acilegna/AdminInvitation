@@ -170,13 +170,13 @@ function Content({ toggleAudio, reproduciendo }) {
                 </h2>
               </div>
             </div>
-            <div className="row justify-content-center">
-              <div className="col-12 text-center">
+            <div className="row justify-content-center ">
+              <div className="col-12 text-center izq">
                 <a
                   href="https://pin.it/7apilk5ng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-estilo text-present izq"
+                  className="link-estilo text-present "
                 >
                   Ver estilo sugerido
                 </a>
