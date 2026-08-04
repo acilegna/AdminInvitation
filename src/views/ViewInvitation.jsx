@@ -176,8 +176,7 @@ function Content({ toggleAudio, reproduciendo }) {
                   href="https://pin.it/7apilk5ng"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="link-estilo text-present 
-der"
+                  className="link-estilo text-present izq"
                 >
                   Ver estilo sugerido
                 </a>
