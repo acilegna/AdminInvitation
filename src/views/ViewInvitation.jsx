@@ -99,26 +99,36 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-        <div className="cont-full seccion ">
+        <div className="cont-full seccion">
           <div className="imagenes-container downup">
             <img
               src="/sources/IMG_1696.jpg"
               alt="Fondo"
               className="img-seccion-one scale"
             />
-          </div>
-          <div className="cont-titleContador">
-            <h2>
-              <span className="text-time"> NOSOTROS</span>
-            </h2>
-            <h3 className="title-nameBA">Ana&amp; Boris</h3>
-          </div>
-          <div className="cont-text-padres">
-            <h3 className="updown">
-              <span className="text-padres">
-                Con la bendicion de nuestros padres
-              </span>
-            </h3>
+
+            {/* Todo el contenido sobre la imagen */}
+            <div className="overlay-padres">
+              <span className="text-nosotros">NOSOTROS</span>
+
+              <h2 className="title-nameBA">Ana &amp; Boris</h2>
+
+              <p className="text-padres">Con la bendición de nuestros padres</p>
+
+              <div className="row justify-content-center mt-5 w-100">
+                <div className="col-12 col-md-4 text-center mb-4">
+                  <h5>Padres de la Novia</h5>
+                  <p>José Juan Morales</p>
+                  <p>Blanca Elvia Ruiz</p>
+                </div>
+
+                <div className="col-12 col-md-4 text-center ">
+                  <h5>Padres del Novio</h5>
+                  <p>Aldo Calvo</p>
+                  <p>Christel Alberti</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
