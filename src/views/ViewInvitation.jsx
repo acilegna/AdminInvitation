@@ -102,7 +102,7 @@ function Content({ toggleAudio, reproduciendo }) {
         <div className="cont-full seccion ">
           <div className="imagenes-container downup">
             <img
-              src="/sources/IMG_1505.jpg"
+              src="/sources/IMG_1696.jpg"
               alt="Fondo"
               className="img-seccion-one scale"
             />
