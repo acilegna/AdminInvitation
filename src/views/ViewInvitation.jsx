@@ -100,7 +100,8 @@ function Content({ toggleAudio, reproduciendo }) {
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
         <div className="cont-rompe">
-          <div className="contenedor-imagenes">
+
+          {/*  <div className="contenedor-imagenes">
             <div className="img-izquierda ">
               <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
             </div>
@@ -112,7 +113,7 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="img-derecha ">
               <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* FIN SECCION 2 */}
