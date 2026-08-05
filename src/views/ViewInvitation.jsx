@@ -99,15 +99,15 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-      {/*   <div className="cont-full seccion">
+        <div className="cont-full seccion ">
           <div className="imagenes-container downup">
             <img
-              src="/sources/1.jpg"
+              src="/sources/IMG_1505.jpg"
               alt="Fondo"
-              className="img-seccion-one izq"
+              className="img-seccion-one scale"
             />
           </div>
-        </div> */}
+        </div>
 
         {/* FIN SECCION 2 */}
         {/*  SECCION 3 */}
