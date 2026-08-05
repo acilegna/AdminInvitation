@@ -94,15 +94,13 @@
 /* FIN SECCION 1 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*SECCION rompecabeza SECCION 2*/
 .cont-rompe {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+  
+ position: relative;
   display: flex;
-  flex-direction: column; /* <-- Agrega esto */
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  height: 100vh;
+ 
 }
 
 /* Contenedor de imágenes */
@@ -112,6 +110,7 @@
   align-items: center;
   gap: 50px;
   flex-wrap: wrap;
+   background-color: #282323;
 }
 
 /* Imágenes */
@@ -276,7 +275,7 @@
   gap: 10px;
 
   padding: 5px 15px;
-  border: 1.5px solid #1d1c1c;
+  border: 0.3px solid #a7a6a6;
   border-radius: 10px;
 
   background: rgba(255, 255, 255, 0.75);
@@ -287,9 +286,9 @@
 
 .link-estilo:hover {
   background: #ebebeb;
-  border-color: #201f1f;
+  border-color: #a0a0a0;
   transform: translateY(-2px);
-  box-shadow: 0 3px 11px rgba(184, 157, 125, 0.25);
+  box-shadow: 0 1px 1px rgba(184, 157, 125, 0.25);
 }
 
 .link-estilo img {

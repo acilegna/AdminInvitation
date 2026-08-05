@@ -99,21 +99,14 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-        <div className="cont-rompe">
-
-          {/*  <div className="contenedor-imagenes">
-            <div className="img-izquierda ">
-              <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
-            </div>
-
-            <div className="img-centro">
-              <img src="/sources/2.jpg" alt="Fondo" className="image-piezas" />
-            </div>
-
-            <div className="img-derecha ">
-              <img src="/sources/3.jpg" alt="Fondo" className="image-piezas" />
-            </div>
-          </div> */}
+        <div className="cont-full seccion ">
+          <div className="imagenes-container downup">
+            <img
+              src="/sources/pardeja.jpg"
+              alt="Fondo"
+              className="img-seccion-one scale"
+            />
+          </div>
         </div>
 
         {/* FIN SECCION 2 */}
