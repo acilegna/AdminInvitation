@@ -107,6 +107,19 @@ function Content({ toggleAudio, reproduciendo }) {
               className="img-seccion-one scale"
             />
           </div>
+          <div className="cont-titleContador">
+            <h2>
+              <span className="text-time"> NOSOTROS</span>
+            </h2>
+            <h3 className="title-nameBA">Ana&amp; Boris</h3>
+          </div>
+          <div className="cont-text-padres">
+            <h3 className="updown">
+              <span className="text-padres">
+                Con la bendicion de nuestros padres
+              </span>
+            </h3>
+          </div>
         </div>
 
         {/* FIN SECCION 2 */}
