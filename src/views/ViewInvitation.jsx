@@ -238,20 +238,20 @@ function Content({ toggleAudio, reproduciendo }) {
                   </div>
 
                   <div className="color-item">
-                    <span className="color cafe"></span>
+                    <span className="color rosa"></span>
                   </div>
-
                   <div className="color-item">
                     <span className="color gris"></span>
                   </div>
                   <div className="color-item">
                     <span className="color amarillo"></span>
                   </div>
-                  <div className="color-item">
-                    <span className="color rosa"></span>
-                  </div>
+
                   <div className="color-item">
                     <span className="color lavanda"></span>
+                  </div>
+                  <div className="color-item">
+                    <span className="color cafe"></span>
                   </div>
                 </div>
               </div>
