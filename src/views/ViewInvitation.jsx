@@ -99,7 +99,7 @@ function Content({ toggleAudio, reproduciendo }) {
         </div>
         {/* FIN SECCION 1 */}
         {/*  SECCION 2 */}
-        <div className="cont-rompe seccion">
+        <div className="cont-rompe">
           <div className="contenedor-imagenes">
             <div className="img-izquierda ">
               <img src="/sources/1.jpg" alt="Fondo" className="image-piezas" />
