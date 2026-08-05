@@ -4,23 +4,25 @@ import { animate, inView } from "framer-motion";
 export default function useScrollSections() {
   useEffect(() => {
     inView(".seccion .scale", (element) => {
+      // aseguramos el origen de la transformación en el centro
+      element.style.transformOrigin = "center center";
+
       animate(
         element,
+        { opacity: 1, scale: [1, 1.1, 1] }, // zoom in y vuelve al centro
         {
-          opacity: [0, 1],
-          scale: [0.95, 1.08, 1],
-        },
-        {
-          duration: 2.5,
-          ease: "easeInOut",
+          duration: 3,
+          easing: [0.25, 0.1, 0.25, 1], // ease suave
         }
       );
-    }, { once: true });
 
-
-
-
-
+      return () =>
+        animate(
+          element,
+          { opacity: 0, scale: 0.8 }, // vuelve a reducirse al salir
+          { duration: 0.6 }
+        );
+    });
 
     // animacion pra titulo
     inView(".seccion h2", (element) => {
@@ -37,7 +39,7 @@ export default function useScrollSections() {
       return () => animate(element, { opacity: 0, x: -100 });
     });
 
-
+    
     inView(".seccion .izq", (element) => {
       animate(
         element,
@@ -84,10 +86,8 @@ export default function useScrollSections() {
     inView(".seccion .lados", (element) => {
       animate(
         element,
-        {
-          opacity: 1, y: [-100, 0],
-          transform: ["translateY('20px')", "translateY(40px)"]
-        }, // de abajo hacia arriba
+        { opacity: 1, y: [-100, 0]   ,
+        transform: ["translateY('20px')", "translateY(40px)"]}, // de abajo hacia arriba
         {
           duration: 3,
           // easing: [0.75],
@@ -105,34 +105,34 @@ export default function useScrollSections() {
     });
 
     //reveal de arriba hacia abajo
-    inView(".seccion .updown", (element) => {
-      // ANIMACIÓN DE ENTRADA
-      animate(
-        element,
-        {
-          transform: ["translateY('30px')", "translateY(40px)"], // de abajo hacia arriba
+ inView(".seccion .updown", (element) => {
+  // ANIMACIÓN DE ENTRADA
+  animate(
+    element,
+    {
+      transform: ["translateY('30px')", "translateY(40px)"], // de abajo hacia arriba
+      
+      opacity: [0, 1],
+    },
+    {
+      duration: 2,
+      easing: [0.17, 0.55, 0.55, 1],
+    }
+  );
 
-          opacity: [0, 1],
-        },
-        {
-          duration: 2,
-          easing: [0.17, 0.55, 0.55, 1],
-        }
-      );
-
-      // RESET CUANDO SALE DE VISTA
-      return () =>
-        animate(
-          element,
-          {
-            transform: "translateY(100%)", // vuelve a bajar
-            opacity: 0,
-          },
-          {
-            duration: 0.5,
-          }
-        );
-    }, { threshold: 0.5 });
+  // RESET CUANDO SALE DE VISTA
+  return () =>
+    animate(
+      element,
+      {
+        transform: "translateY(100%)", // vuelve a bajar
+        opacity: 0,
+      },
+      {
+        duration: 0.5,
+      }
+    );
+}, { threshold: 0.5 });
 
     inView(".seccion .downup", (element) => {
       animate(
