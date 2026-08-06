@@ -113,8 +113,12 @@ function Content({ toggleAudio, reproduciendo }) {
 
               <h2 className="title-nameBA izqicon">Ana &amp; Boris</h2>
 
-              <p className="text-padres izqicon">Con la bendición de nuestros padres</p>
-
+              <p className="text-padres izqicon">
+                Con la bendición de nuestros padres
+              </p>
+              <div className="lineanosotro">
+                <span>♡</span>
+              </div>
               <div className="row justify-content-center mt-5 w-100">
                 <div className="col-12 col-md-4 text-center mb-4 izqicon">
                   <h5>Padres de la Novia</h5>
