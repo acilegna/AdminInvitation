@@ -104,21 +104,19 @@
   width: 100%;
 }
 
-
 .title-nameBA {
   color: rgb(239, 234, 234);
   font-size: 3.4rem;
   font-family: "Italianno", cursive;
-   margin-bottom: 10px; /* separación con el siguiente texto */
- 
+  margin-bottom: 10px; /* separación con el siguiente texto */
 }
 .text-nosotros {
   font-size: 2.5rem;
   font-family: "Suranna", serif;
-  letter-spacing: 9px;   
+  letter-spacing: 9px;
   color: rgb(255, 255, 255);
   text-align: center;
-   margin-bottom: 10px; /* separación con Ana & Boris */
+  margin-bottom: 10px; /* separación con Ana & Boris */
 }
 .text-padres {
   text-align: center;
@@ -129,34 +127,29 @@
 }
 .overlay-padres {
   position: absolute;
-  inset: 0; 
+  inset: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
   text-align: center;
 
   z-index: 2;
-  background: rgba(0,0,0,.25);
+  background: rgba(0, 0, 0, 0.25);
 }
-
- 
-
- 
 
 .overlay-padres h5,
 .overlay-padres p {
   color: #fff;
 }
 
-.overlay-padres h5{
-    font-family: "Cormorant Garamond";
-    letter-spacing:2px;
-    text-transform:uppercase;
+.overlay-padres h5 {
+  font-family: "Cormorant Garamond";
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
- 
 /* FIN SECCION 2 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 /*inicio SECCION 3 ¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡ */
 .imagen-full {
@@ -1082,6 +1075,17 @@
 
   .dama {
     transform: translateX(0px);
+  }
+
+  .text-padres {
+    font-size: 1.5rem;
+  }
+
+  .title-nameBA {
+    font-size: 3rem;
+  }
+  .text-nosotros {
+    font-size: 2.5rem;
   }
 }
 
