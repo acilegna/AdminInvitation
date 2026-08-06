@@ -109,20 +109,20 @@ function Content({ toggleAudio, reproduciendo }) {
 
             {/* Todo el contenido sobre la imagen */}
             <div className="overlay-padres">
-              <span className="text-nosotros">NOSOTROS</span>
+              <span className="text-nosotros izqicon">NOSOTROS</span>
 
-              <h2 className="title-nameBA">Ana &amp; Boris</h2>
+              <h2 className="title-nameBA izqicon">Ana &amp; Boris</h2>
 
-              <p className="text-padres">Con la bendición de nuestros padres</p>
+              <p className="text-padres izqicon">Con la bendición de nuestros padres</p>
 
               <div className="row justify-content-center mt-5 w-100">
-                <div className="col-12 col-md-4 text-center mb-4">
+                <div className="col-12 col-md-4 text-center mb-4 izqicon">
                   <h5>Padres de la Novia</h5>
                   <p>José Juan Morales</p>
                   <p>Blanca Elvia Ruiz</p>
                 </div>
 
-                <div className="col-12 col-md-4 text-center ">
+                <div className="col-12 col-md-4 text-center izqicon">
                   <h5>Padres del Novio</h5>
                   <p>Aldo Calvo</p>
                   <p>Christel Alberti</p>
