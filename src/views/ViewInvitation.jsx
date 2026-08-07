@@ -365,7 +365,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
               <div className="col-8 text-itinerario der">
                 <span className="span-text">Cena</span>
-                <span className="span-hora">8:30 PM</span>
+                <span className="span-hora">8:00 PM</span>
               </div>
             </div>
 
@@ -380,7 +380,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
               <div className="col-8 text-itinerario der">
                 <span className="span-text">Vals de los Esposos</span>
-                <span className="span-hora">9:30 PM</span>
+                <span className="span-hora">9:00 PM</span>
               </div>
             </div>
 
@@ -395,7 +395,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
               <div className="col-8 text-itinerario der">
                 <span className="span-text">¡A Bailar!</span>
-                <span className="span-hora">10:00 PM</span>
+                <span className="span-hora">9:30 PM</span>
               </div>
             </div>
           </div>
