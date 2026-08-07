@@ -30,22 +30,44 @@ function Content() {
             alt="Fondo"
             className="cover-img downup"
           />
-          <div className="cover-content  ">
+          <div className="cover-content ">
             <h2 className="title-name-text ">Ana &amp; Boris</h2>
             <div className="divider">
-             <span>◆</span>
+              <span>◆</span>
             </div>
             <h4 className="title-merried-text  ">Unimos nuestras vidas</h4>
 
-            <Link
-              className="nav-link active"
-              title="Abrir Invitacion"
-              to="/AYB"
-            >
-              <button className="btn-abrir" onClick={abrirInvitacion}>
-                Ver Invitación
-              </button>
-            </Link>
+            <div className="row justify-content-center mt-5">
+              <div className="col-12 col-md-6 mb-4">
+                <Link className="text-decoration-none" to="/AYB">
+                  <div className="language-item">
+                    <button className="btn-abrir" onClick={abrirInvitacion}>
+                      <img
+                        src="/sources/001-flag.png"
+                        alt="Español"
+                        className="img-pais"
+                      />
+                      Invitación <span className="btn-lang">ES </span>
+                    </button>
+                  </div>
+                </Link>
+              </div>
+
+              <div className="col-12 col-md-6">
+                <Link className="text-decoration-none"/*  to="/AYB/fr" */>
+                  <div className="language-item">
+                    <button className="btn-abrir" /* onClick={abrirInvitacion} */>
+                      <img
+                        src="/sources/002-flag-1.png"
+                        alt="Français"
+                        className="img-pais"
+                      />
+                      Invitation<span className="btn-lang">FR </span>
+                    </button>
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       )}
