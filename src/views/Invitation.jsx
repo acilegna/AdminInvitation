@@ -35,8 +35,8 @@ function Content() {
             <div className="divider">
               <span>◆</span>
             </div>
-            <h4 className="title-merried-text  ">Unimos nuestras vidas para siempre</h4>
-             <h2 className="title-merried-text-fr  ">Nous unissons nos vies pour toujours</h2>
+            <h4 className="title-merried-text">Unimos nuestras vidas</h4>
+             <h2 className="title-merried-text-fr">Nous unissons nos vies</h2>
 
 
             <div className="row justify-content-center mt-5">
