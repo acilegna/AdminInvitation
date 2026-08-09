@@ -1181,13 +1181,24 @@
 
 .title-merried-text {
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem; /* Ajusta según el tamaño de los nombres */
+  font-size: 1.9rem; /* Ajusta según el tamaño de los nombres */
   font-weight: 400; /* Puedes probar también 500 */
   color: #fff;
   letter-spacing: 1px;
   line-height: 1.3;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
 }
+
+.title-merried-text-fr {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 1px;
+  line-height: 1.3;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.35);
+}
+
 .cover {
   position: fixed;
   inset: 0;
