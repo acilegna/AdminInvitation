@@ -25,11 +25,11 @@ function Content() {
     <>
       {!abierta && (
         <div className="cover">
-          <img
+            <img
             src="/sources/boda.jpg"
             alt="Fondo"
             className="cover-img downup"
-          />
+          />  
           <div className="cover-content ">
             <h2 className="title-name-text ">Ana &amp; Boris</h2>
             <div className="divider">
@@ -64,13 +64,15 @@ function Content() {
                         alt="Français"
                         className="img-pais"
                       />
-                      Invités en France<span className="btn-lang">FR </span>
+                      Invités de France<span className="btn-lang">FR </span>
                     </button>
                   </div>
                 </Link>
               </div>
             </div>
           </div>
+
+           
         </div>
       )}
     </>
