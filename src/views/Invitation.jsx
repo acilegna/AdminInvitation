@@ -47,7 +47,7 @@ function Content() {
                         alt="Español"
                         className="img-pais"
                       />
-                      Invitación <span className="btn-lang">ES </span>
+                     Invitados de México <span className="btn-lang">ES </span>
                     </button>
                   </div>
                 </Link>
@@ -62,7 +62,7 @@ function Content() {
                         alt="Français"
                         className="img-pais"
                       />
-                      Invitation<span className="btn-lang">FR </span>
+                      Invités en France<span className="btn-lang">FR </span>
                     </button>
                   </div>
                 </Link>
