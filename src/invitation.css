@@ -1,3 +1,11 @@
+.imagenes2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 /*SECCION general */
 .flex {
   gap: 0px;

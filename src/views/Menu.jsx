@@ -27,7 +27,7 @@ export default function Menu({ resumen , changeTitle}) {
 
 const nav = {
   width: 65,
-  backgroundColor: "#203e64",
+  backgroundColor: "#1d1d1d",
   zIndex: 5,
 };
 
@@ -49,7 +49,7 @@ const Navigation = ({ resumen,changeTitle }) => (
       className="nav-item"
       style={opc}
     >
-      <Link className="nav-link active" title="Home" to="/">
+      <Link className="nav-link active" title="Home" to="/panel/home">
         {" "}
         <i className="bi bi-house-door"></i>
       </Link>
@@ -81,7 +81,7 @@ const Navigation = ({ resumen,changeTitle }) => (
       <Link
         className="nav-item mt-3 nav-link   active"
         title="Ver Invitación"
-        /* to="https://admin-invitation-lac.vercel.app/bya" */
+          to="https://admin-invitation-lac.vercel.app/"  
       >
         <i className="bi bi-binoculars"> </i>
       </Link>
@@ -194,7 +194,7 @@ const toggleContainer = {
   width: 40,
   height: 40,
   borderRadius: "50%",
-  backgroundColor: "#203e64",
+  backgroundColor: "#1d1d1d",
 };
 
 const list = {
