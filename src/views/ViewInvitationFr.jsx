@@ -443,7 +443,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="info-icon">
                 <i className="bi bi-clock"></i>
               </div>
-              <div className="info-texto">
+              <div className="info-texto-fr">
                 <span className="info-titulo">
                   Nous vous remercions de confirmer votre présence avant le{" "}
                   <strong>30 Avril 2027,</strong>

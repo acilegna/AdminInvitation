@@ -778,6 +778,13 @@
   display: flex;
   flex-direction: column;
 }
+.info-texto-fr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
 
 .info-titulo {
   font-size: 1rem;
@@ -1018,6 +1025,9 @@
 
   .info-texto {
     text-align: left;
+  }
+ .info-texto-fr {
+     
   }
 
   .info-texto strong {
