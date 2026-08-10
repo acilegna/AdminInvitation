@@ -333,7 +333,7 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">Cocktail hour</span>
+                <span className="span-text">Cóctel</span>
                 <span className="span-hora">5:30 PM</span>
               </div>
             </div>
