@@ -444,11 +444,9 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="info-texto-fr">
                 <span className="info-titulo">
                   Nous vous remercions de confirmer votre présence avant le{" "}
-                  <strong>30 Avril 2027,</strong>
+                  <strong>30 Avril 2027,</strong> cela nous aidera à organiser au mieux cette journée.
                 </span>
-                <span className="info-titulo">
-                  cela nous aidera à organiser au mieux cette journée.
-                </span>
+                
               </div>
             </div>
           </div>
