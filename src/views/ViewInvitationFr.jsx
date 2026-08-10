@@ -419,7 +419,7 @@ function Content({ toggleAudio, reproduciendo }) {
           <div className="lineadiv">
             <span>♡</span>
           </div>
-          <p className="reservation-info izqicon">
+          <p className="reservation-info-fr izqicon">
             Dans le cadre du mariage nous avons obtenu un tarif préférentiel
             pour les invités, en chambre simple, double ou triple, afin de tous
             séjourner dans le lieux dans lequel nous célébrerons notre union.
@@ -440,9 +440,7 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="info-divider"></div>
 
             <div className="info-item">
-              <div className="info-icon">
-                <i className="bi bi-clock"></i>
-              </div>
+              
               <div className="info-texto-fr">
                 <span className="info-titulo">
                   Nous vous remercions de confirmer votre présence avant le{" "}

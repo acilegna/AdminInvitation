@@ -1,4 +1,4 @@
-.imagenes2   {
+.imagenes2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -530,6 +530,17 @@
   text-align: center;
   letter-spacing: 0.3px;
 }
+.reservation-info-fr {
+  max-width: 780px;
+  margin: 0.4rem auto 0;
+  font-size: 1rem;
+  line-height: 2;
+  
+  font-weight: 300;
+  color: #5b5b5b;
+  text-align: center;
+ 
+}
 
 .date-reserva {
   font-weight: 700;
@@ -781,9 +792,7 @@
 .info-texto-fr {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 100%;
+ 
 }
 
 .info-titulo {
@@ -955,9 +964,8 @@
     font-size: 3rem;
   }
   .text-save-date-fr {
-  font-size: 2.5rem;
-  
-}
+    font-size: 2.5rem;
+  }
 
   .text-msj {
     font-size: 1.5rem;
@@ -1026,8 +1034,7 @@
   .info-texto {
     text-align: left;
   }
- .info-texto-fr {
-     
+  .info-texto-fr {
   }
 
   .info-texto strong {
@@ -1267,56 +1274,51 @@
 .btn-abrir {
   display: flex;
   align-items: center;
-  
+
   gap: 14px;
 
   min-width: 250px;
   padding: 12px 22px;
 
-  border: 1px solid rgba(255,255,255,.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
   border-radius: 10px;
 
-  background: rgba(255,255,255,.08);
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(2px);
 
   color: #fff;
   font-family: "Cormorant Garamond", serif;
   font-size: 1rem;
 
-  transition: .35s;
+  transition: 0.35s;
 }
 
-.btn-abrir:hover{
-  background: rgba(255,255,255,.18);
+.btn-abrir:hover {
+  background: rgba(255, 255, 255, 0.18);
   transform: translateY(-3px);
 }
 
-
- 
-.btn-lang{
-    font-weight:600;
-    letter-spacing:.15em;
+.btn-lang {
+  font-weight: 600;
+  letter-spacing: 0.15em;
 }
 
- 
 /* divider */
 
-
-.language-item{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
+.language-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-.img-pais{
-    width:28px;
-    height:28px;
-    border-radius:50%;
-    object-fit:cover;
-    flex-shrink:0;
+.img-pais {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
-
 
 .divider {
   display: flex;
