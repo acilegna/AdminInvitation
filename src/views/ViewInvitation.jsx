@@ -323,6 +323,20 @@ function Content({ toggleAudio, reproduciendo }) {
                 <span className="span-hora">2:00 PM</span>
               </div>
             </div>
+              <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario izqicon">
+                <img
+                  src="/sources/005-wine-glass.png"
+                  alt="Celebración Religiosa"
+                  className="img-itinerario"
+                />
+              </div>
+
+              <div className="col-8 text-itinerario der">
+                <span className="span-text">Cocktail hour</span>
+                <span className="span-hora">5:30 PM</span>
+              </div>
+            </div>
 
             <div className="row align-items-center mb-4">
               <div className="col-4 icons-itinerario izqicon">
@@ -427,8 +441,8 @@ function Content({ toggleAudio, reproduciendo }) {
 
               <div className="info-texto izqicon">
                 <span className="info-titulo">Hospedaje</span>
-                <strong>29 de noviembre al</strong>
-                <strong>2 de diciembre de 2027</strong>
+                <strong>29 de Noviembre de 2027 al</strong>
+                <strong>2 de Diciembre de 2027</strong>
               </div>
             </div>
 
@@ -442,7 +456,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="info-texto">
                 <span className="info-titulo">Fecha límite para reservar</span>
                 <span className="info-titulo">y confirmar tu asistencia</span>
-                <strong>30 de abril de 2027</strong>
+                <strong>30 de Abril de 2027</strong>
               </div>
             </div>
           </div>

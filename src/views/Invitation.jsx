@@ -56,9 +56,9 @@ function Content() {
               </div>
 
               <div className="col-12 col-md-6">
-                <Link className="text-decoration-none"/*  to="/AYB/fr" */>
+                <Link className="text-decoration-none"   to="/AYB/fr"  >
                   <div className="language-item">
-                    <button className="btn-abrir" /* onClick={abrirInvitacion} */>
+                    <button className="btn-abrir"   onClick={abrirInvitacion}  >
                       <img
                         src="/sources/002-flag-1.png"
                         alt="Français"

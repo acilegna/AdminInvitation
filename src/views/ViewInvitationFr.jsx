@@ -82,19 +82,15 @@ function Content({ toggleAudio, reproduciendo }) {
               </button>
 
               <span className="audio-time">
-                {reproduciendo ? "Reproduciendo..." : "Pausado"}
+                {reproduciendo ? "En lecture..." : "En pause"}
               </span>
             </div>
 
             <h2 className="updown">
-              <span className="text-save-date">¡Estás Invitado!</span>
-            </h2>
-
-            <h5 className="updown">
-              <span className="text-msj">
-                Te esperamos para celebrar juntos.
+              <span className="text-save-date-fr">
+                ¡Nous sommes heureux de vous inviter à notre mariage!
               </span>
-            </h5>
+            </h2>
           </div>
         </div>
         {/* FIN SECCION 1 */}
@@ -109,25 +105,25 @@ function Content({ toggleAudio, reproduciendo }) {
 
             {/* Todo el contenido sobre la imagen */}
             <div className="overlay-padres">
-              <span className="text-nosotros izqicon">NOSOTROS</span>
+              <span className="text-nosotros izqicon">NOUS</span>
 
               <h2 className="title-nameBA izqicon">Ana &amp; Boris</h2>
 
               <p className="text-padres izqicon">
-                Con la bendición de nuestros padres
+                Avec la benediction de nos parents
               </p>
               <div className="lineanosotro">
                 <span>♡</span>
               </div>
               <div className="row justify-content-center mt-5 w-100">
                 <div className="col-12 col-md-4 text-center mb-4 izqicon">
-                  <h5>Padres de la Novia</h5>
+                  <h5>Parents de la mariée</h5>
                   <p>José Juan Morales</p>
                   <p>Blanca Elvia Ruiz</p>
                 </div>
 
                 <div className="col-12 col-md-4 text-center izqicon">
-                  <h5>Padres del Novio</h5>
+                  <h5>Parents du marié</h5>
                   <p>Aldo Calvo</p>
                   <p>Christel Alberti</p>
                 </div>
@@ -149,26 +145,26 @@ function Content({ toggleAudio, reproduciendo }) {
 
           <div className="cont-titleContador">
             <h2>
-              <span className="text-time"> APARTA LA FECHA</span>
+              <span className="text-time">NOTEZ LA DATE DANS VOS AGENDA</span>
             </h2>
           </div>
 
           <div className="time-values d-flex justify-content-center  ">
             <div className="time-box updown">
               <span className="time-number">{tiempoRestante.dias}</span>
-              <div className="time-label">Días</div>
+              <div className="time-label">JOUR </div>
             </div>
             <div className="time-box  updown">
               <span className="time-number">{tiempoRestante.horas}</span>
-              <div className="time-label">Horas</div>
+              <div className="time-label">HEURES</div>
             </div>
             <div className="time-box  updown">
               <span className="time-number">{tiempoRestante.minutos}</span>
-              <div className="time-label">Minutos</div>
+              <div className="time-label">MINUTES</div>
             </div>
             <div className="time-box  updown">
               <span className="time-number">{tiempoRestante.segundos}</span>
-              <div className="time-label">Segundos</div>
+              <div className="time-label">SECONDES</div>
             </div>
           </div>
 
@@ -187,7 +183,7 @@ function Content({ toggleAudio, reproduciendo }) {
             <div className="row mt-1 align-items-center">
               <div className="col-12 text-center">
                 <h2 className="mb-0">
-                  <span className="dress-code">Codigo de Vestimenta</span>
+                  <span className="dress-code">Code vestimentaire</span>
                 </h2>
               </div>
             </div>
@@ -199,15 +195,15 @@ function Content({ toggleAudio, reproduciendo }) {
                   alt="Caballero"
                   className="dress-icon"
                 />
-                <h3 className="text-tipo">Caballero</h3>
+                <h3 className="text-tipo">Homme</h3>
                 <div className="lineadiv">
                   <span>♡</span>
                 </div>
                 <ul className="list-unstyled">
-                  <li>Camisa de lino o algodón</li>
-                  <li>Pantalón de vestir</li>
-                  <li>Mocasines o zapatos</li>
-                  <li>Sin corbata </li>
+                  <li>Chemise légère (lin ou autre)</li>
+                  <li>Pantalon léger</li>
+                  <li>Chaussures ou mocassins </li>
+                  <li>Pas de cravate </li>
                 </ul>
               </div>
 
@@ -225,17 +221,16 @@ function Content({ toggleAudio, reproduciendo }) {
                   alt="Caballero"
                   className="dress-icon"
                 />
-                <h3 className="text-tipo">Dama</h3>
+                <h3 className="text-tipo">Femme</h3>
                 <div className="lineadiv">
                   <span>♡</span>
                 </div>
                 <ul className="list-unstyled">
-                  <li>Vestido largo o midi</li>
-                  <li>Sandalias o zapato comodo</li>
-                  <li>Accesorios discretos</li>
+                  <li>Robe longue ou midi</li>
+                  <li>Chaussures ouvertes et/ou confortables</li>
+
                   <li>
-                    Evitar el{" "}
-                    <span className="text-resaltado">Color Blanco</span>
+                    Eviter le <span className="text-resaltado">blanc</span>
                   </li>
                 </ul>
               </div>
@@ -244,7 +239,7 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="row justify-content-center  ">
                 <div className="col-12 text-center">
                   <p className="text-sugerencia">
-                    <strong> Sugerencia de colores</strong>.
+                    <strong> Couleurs suggérées </strong>.
                   </p>
                 </div>
                 <div className="color-palette">
@@ -271,11 +266,11 @@ function Content({ toggleAudio, reproduciendo }) {
                   <div className="color-item">
                     <span className="color verde"></span>
                   </div>
-                 
+
                   <div className="color-item">
                     <span className="color cafe"></span>
                   </div>
-                   <div className="color-item">
+                  <div className="color-item">
                     <span className="color lavanda"></span>
                   </div>
                 </div>
@@ -293,7 +288,7 @@ function Content({ toggleAudio, reproduciendo }) {
                       alt="Paleta de colores"
                       className="icon-estilo"
                     />
-                    <span className="text-present">Ver Inspiración</span>
+                    <span className="text-present">Voir Inspirations</span>
                   </a>
                 </div>
               </div>
@@ -306,7 +301,7 @@ function Content({ toggleAudio, reproduciendo }) {
         <div className="cont-full seccion cont-centrado" id="itinerario">
           <div className="itinerario-container">
             <h2 className="text-center mb-5">
-              <span className="title-itinerario">Itinerario</span>
+              <span className="title-itinerario">Programme</span>
             </h2>
 
             <div className="row align-items-center mb-4">
@@ -319,11 +314,24 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">Celebración Religiosa</span>
-                <span className="span-hora">2:00 PM</span>
+                <span className="span-text">Cérémonie religieuse</span>
+                <span className="span-hora">14:00 PM</span>
               </div>
             </div>
+            <div className="row align-items-center mb-4">
+              <div className="col-4 icons-itinerario izqicon">
+                <img
+                  src="/sources/005-wine-glass.png"
+                  alt="Celebración Religiosa"
+                  className="img-itinerario"
+                />
+              </div>
 
+              <div className="col-8 text-itinerario der">
+                <span className="span-text">Vin d'honneur</span>
+                <span className="span-hora">17:30 PM</span>
+              </div>
+            </div>
             <div className="row align-items-center mb-4">
               <div className="col-4 icons-itinerario izqicon">
                 <img
@@ -334,8 +342,8 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">Recepción</span>
-                <span className="span-hora">7:00 PM</span>
+                <span className="span-text">Reception</span>
+                <span className="span-hora">19:00 PM</span>
               </div>
             </div>
 
@@ -349,8 +357,8 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">Entrada de los Esposos</span>
-                <span className="span-hora">7:15 PM</span>
+                <span className="span-text">Entrée des mariés</span>
+                <span className="span-hora">19:15 PM</span>
               </div>
             </div>
 
@@ -364,8 +372,8 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">Cena</span>
-                <span className="span-hora">8:30 PM</span>
+                <span className="span-text">Dîner</span>
+                <span className="span-hora">20:00 PM</span>
               </div>
             </div>
 
@@ -379,8 +387,8 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">Vals de los Esposos</span>
-                <span className="span-hora">9:30 PM</span>
+                <span className="span-text">Première danse des mariés</span>
+                <span className="span-hora">21:00 PM</span>
               </div>
             </div>
 
@@ -394,8 +402,8 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="col-8 text-itinerario der">
-                <span className="span-text">¡A Bailar!</span>
-                <span className="span-hora">10:00 PM</span>
+                <span className="span-text">¡Fiesta!</span>
+                <span className="span-hora">21:30 PM</span>
               </div>
             </div>
           </div>
@@ -406,18 +414,15 @@ function Content({ toggleAudio, reproduciendo }) {
         <div className="cont-full seccion  cont-confirmation">
           <h2 className="text-confirmation text-center">
             {" "}
-            Realiza tu reservación{" "}
+            Réalisez votre réservation{" "}
           </h2>
           <div className="lineadiv">
             <span>♡</span>
           </div>
           <p className="reservation-info izqicon">
-            Hemos reservado un bloque de habitaciones en{" "}
-            <strong className="date-reserva">
-              {" "}
-              Grand Palladium Costa Mujeres
-            </strong>{" "}
-            con tarifa preferencial para nuestros invitados
+            Dans le cadre du mariage nous avons obtenu un tarif préférentiel
+            pour les invités, en chambre simple, double ou triple, afin de tous
+            séjourner dans le lieux dans lequel nous célébrerons notre union.
           </p>
           <div className="info-fechas izqicon">
             <div className="info-item">
@@ -426,9 +431,9 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               <div className="info-texto izqicon">
-                <span className="info-titulo">Hospedaje</span>
-                <strong>29 de noviembre al</strong>
-                <strong>2 de diciembre de 2027</strong>
+                <span className="info-titulo">Date du séjour</span>
+                <strong>29 Novembre 2027 au</strong>
+                <strong>2 Décembre 2027</strong>
               </div>
             </div>
 
@@ -438,11 +443,14 @@ function Content({ toggleAudio, reproduciendo }) {
               <div className="info-icon">
                 <i className="bi bi-clock"></i>
               </div>
-
               <div className="info-texto">
-                <span className="info-titulo">Fecha límite para reservar</span>
-                <span className="info-titulo">y confirmar tu asistencia</span>
-                <strong>30 de abril de 2027</strong>
+                <span className="info-titulo">
+                  Nous vous remercions de confirmer votre présence avant le{" "}
+                  <strong>30 Avril 2027,</strong>
+                </span>
+                <span className="info-titulo">
+                  cela nous aidera à organiser au mieux cette journée.
+                </span>
               </div>
             </div>
           </div>
@@ -457,236 +465,34 @@ function Content({ toggleAudio, reproduciendo }) {
               </div>
 
               {/* Texto */}
-              <div className="col-12 col-md-6 text-center text-md-start">
-                <h3 className="reservation-title">1. Reserva tu habitación</h3>
+              <div className="col-12 col-md-5 text-center text-md-start">
+                <h3 className="reservation-title">Réservation</h3>
 
                 <p className="reservation-description mb-0">
-                  Al finalizar recibirás tu
-                  <strong className="date-reserva"> ID de invitación</strong>,
-                  el cual necesitarás para confirmar tu asistencia.
+                  Pour confirmer votre présence et réserver votre chambre,
+                  veuillez directement contacter Boris qui vous donnera toutes
+                  les informations nécessaires. Son numéro de téléphone est le
+                  <strong className="date-reserva"> 0645658333.</strong>,
                 </p>
               </div>
 
               {/* Botón */}
-              <div className="col-12 col-md-4 text-center">
-                <a
-                  href="https://wa.link/42idk4"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-reservar bg-dark"
-                >
-                  <i className="bi bi-calendar2-check me-2 "></i>
-                  Reservar ahora
-                </a>
-
-                <div className="reservation-note mt-3">
-                  <i className="bi bi-shield-lock me-2"></i>
-                  Sitio seguro de reservación
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="reservation-card izqicon">
-            <div className="row align-items-center  gy-4">
               {/* Icono */}
               <div className="col-12 col-md-2 text-center">
                 <div className="reservation-icon ">
-                  <i className="bi bi-person-check "></i>
+                  <i className="bi bi-geo-alt"></i>
                 </div>
               </div>
-
-              {/* Texto */}
-              <div className="col-12 col-md-6 text-center text-md-start">
-                <h3 className="reservation-title">2. Confirma tu asistencia</h3>
-
-                <p className="reservation-description mb-0">
-                  Ingresa aqui tu ID.
-                </p>
-                <div className="row g-2">
-                  <div className="col-12 col-md">
-                    <input
-                      id="search"
-                      type="search"
-                      className="form-control search-input"
-                      placeholder="ID de invitación"
-                      value={inputValue}
-                      onChange={handleInput}
-                    />
-                  </div>
-                  <div className="col-12 col-md-auto ">
-                    <button
-                      className="btn btn-primary w-100 btn-search bg-dark"
-                      onClick={handleClick}
-                    >
-                      <i className="bi bi-search me-2"></i>
-                      Buscar
-                    </button>
-                  </div>
+              <div className="col-12 col-md-3 text-center text-md-start">
+                <div className="reservation-note mt-3">
+                  <strong className="date-reserva">
+                    Grand Palladium Costa Mujeres
+                  </strong>
+                  <br />
+                  Vialidad Paseo Mujeres 3<br />
+                  77400 Cancún, Mexique
                 </div>
-                {mensaje && (
-                  <h5 className="text-success text-center mt-3 info-mensaje">
-                    {mensaje}
-                  </h5>
-                )}
-                {error && (
-                  <h5 className="text-danger text-center mt-3 info-mensaje">
-                    {error}
-                  </h5>
-                )}
               </div>
-            </div>
-          </div>
-
-          <hr />
-
-          {(adultos.length > 0 || ninos.length > 0) && (
-            <div className="confirmation-section">
-              <h2 className="confirmation-title">3. Indica quien asistirà</h2>
-
-              <p className="confirmation-subtitle">
-                Selecciona <strong>Sí</strong> o <strong>No</strong> para cada
-                invitado de tu familia.
-              </p>
-            </div>
-          )}
-          <div className="confir text-center ">
-            <div className="row justify-content-evenly px-3">
-              {adultos.length > 0 && (
-                <>
-                  <div className="col-12 col-md-5 mb-4">
-                    <div className="grupo-card">
-                      <h4 className="text-center clasificacion txt-clasificacion">
-                        Adultos
-                      </h4>
-                      {adultos.map((invitadosFamily) => (
-                        <div
-                          key={invitadosFamily.id}
-                          className="mb-2 invitado-fila"
-                        >
-                          <div className="row">
-                            <div className="col-12 col-md-8 ">
-                              <strong className="me-3 mb-2 invitado-nombre">
-                                {invitadosFamily.name}{" "}
-                                {invitadosFamily.apellido}
-                              </strong>
-                            </div>
-                            <div className="col-12 col-md-4 invitado-opciones ">
-                              <div className="form-check form-check-inline ">
-                                <input
-                                  className="form-check-input radio-si"
-                                  type="radio"
-                                  name={invitadosFamily.id}
-                                  id={invitadosFamily.id}
-                                  value="Si"
-                                  onChange={handleChangeRadio}
-                                />
-                                <label
-                                  className="form-check-label label-si"
-                                  htmlFor={`si-${invitadosFamily.id}`}
-                                >
-                                  Sí
-                                </label>
-                              </div>
-
-                              <div className="form-check form-check-inline">
-                                <input
-                                  className="form-check-input radio-no"
-                                  type="radio"
-                                  name={invitadosFamily.id}
-                                  id={invitadosFamily.id}
-                                  value="No"
-                                  onChange={handleChangeRadio}
-                                />
-                                <label
-                                  className="form-check-label label-no"
-                                  htmlFor={`no-${invitadosFamily.id}`}
-                                >
-                                  No
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              )}
-              {ninos.length > 0 && (
-                <>
-                  <div className="col-12 col-md-5">
-                    <div className="grupo-card">
-                      <h4 className="text-center clasificacion txt-clasificacion">
-                        Niños
-                      </h4>
-                      {ninos.map((invitadosFamily) => (
-                        <div
-                          key={invitadosFamily.id}
-                          className="mb-2 invitado-fila"
-                        >
-                          <div className="row">
-                            <div className="col-12 col-md-8 ">
-                              <strong className="me-3 mb-2 invitado-nombre">
-                                {invitadosFamily.name}{" "}
-                                {invitadosFamily.apellido}
-                              </strong>
-                            </div>
-                            <div className="col-12 col-md-4 invitado-opciones">
-                              <div className="form-check form-check-inline">
-                                <input
-                                  className="form-check-input radio-si"
-                                  type="radio"
-                                  name={invitadosFamily.id}
-                                  id={invitadosFamily.id}
-                                  value="Si"
-                                  onChange={handleChangeRadio}
-                                />
-                                <label
-                                  className="form-check-label label-si"
-                                  htmlFor={`si-${invitadosFamily.id}`}
-                                >
-                                  Sí
-                                </label>
-                              </div>
-
-                              <div className="form-check form-check-inline">
-                                <input
-                                  className="form-check-input radio-no"
-                                  type="radio"
-                                  name={invitadosFamily.id}
-                                  id={invitadosFamily.id}
-                                  value="No"
-                                  onChange={handleChangeRadio}
-                                />
-                                <label
-                                  className="form-check-label label-no"
-                                  htmlFor={`no-${invitadosFamily.id}`}
-                                >
-                                  No
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </>
-              )}
-
-              {(adultos.length > 0 || ninos.length > 0) && (
-                <div className="text-center my-4">
-                  <button
-                    className="btn px-4  news bg-dark"
-                    onClick={confirmar}
-                    disabled={disable}
-                  >
-                    <i className="bi bi-check2-circle me-2"></i>
-                    Confirmar
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         </div>
