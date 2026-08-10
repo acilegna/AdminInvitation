@@ -145,7 +145,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
           <div className="cont-titleContador">
             <h2>
-              <span className="text-time">NOTEZ LA DATE DANS VOS AGENDA</span>
+              <span className="text-time-fr">NOTEZ LA DATE DANS VOS AGENDA</span>
             </h2>
           </div>
 

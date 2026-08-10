@@ -210,7 +210,15 @@
   color: rgb(255, 255, 255);
   text-align: center;
 }
+.text-time-fr {
+  font-size: 2.3rem;
 
+  font-family: "Suranna", serif;
+  letter-spacing: 3px;
+  line-height: 60px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
 .time-values {
   padding-top: 160px;
 }
@@ -889,9 +897,9 @@
     transform: translate(-50%, -50%);
     width: 90%;
   }
-  .text-time {
+ /*  .text-time {
     font-size: 2.1rem;
-  }
+  } */
   .cont-titleContador {
     top: 20%;
   }
@@ -976,6 +984,10 @@
   .text-time {
     font-size: 1.8rem;
   }
+
+  .text-time-fr {
+    font-size: 1.4rem;
+}
   .text-date {
     font-size: 3.2rem;
   }
