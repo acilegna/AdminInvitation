@@ -439,7 +439,7 @@ function Content({ toggleAudio, reproduciendo }) {
 
             <div className="info-divider"></div>
 
-            <div className="info-item">
+            <div className="info-item izqicon">
               
               <div className="info-texto-fr">
                 <span className="info-titulo">
