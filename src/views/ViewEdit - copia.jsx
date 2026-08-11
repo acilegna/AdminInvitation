@@ -85,47 +85,37 @@ const ViewEdit = ({
         </div>
 
         <div className="mb-3">
-          <label htmlFor="categoria" className="form-label">
-            Categoría
+          <label htmlFor="apellido" className="form-label">
+            Categoria
           </label>
 
-          <select
-             className={`form-select ${!formulario.categoria ? "select-placeholder" : ""}`}
+          <input
+            type="text"
+            className="form-control"
             id="categoria"
             name="categoria"
             value={formulario.categoria}
             onChange={handleChange}
             required
-          >
-            <option value="" className="text-danger">Selecciona una opción</option>
-            <option value="Adulto">Adulto</option>
-            <option value="Niño">Niño</option>
-          </select>
-
+          />
           {valida?.categoria && (
             <div className="alert alert-danger mt-1">{valida.categoria[0]}</div>
           )}
         </div>
 
         <div className="mb-3">
-          <label htmlFor="status" className="form-label">
+          <label htmlFor="apellido" className="form-label">
             Asistirá
           </label>
-
-          <select
-             className={`form-select ${!formulario.status ? "select-placeholder" : ""}`}
+          <input
+            type="text"
+            className="form-control"
             id="status"
             name="status"
             value={formulario.status}
             onChange={handleChange}
             required
-          >
-            <option value="" className="text-danger">Selecciona una opción</option>
-            <option value="Pendiente">Pendiente</option>
-            <option value="Si">Sí</option>
-            <option value="No">No</option>
-          </select>
-
+          />
           {valida?.status && (
             <div className="alert alert-danger mt-1">{valida.status[0]}</div>
           )}

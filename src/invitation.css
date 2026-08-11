@@ -1361,3 +1361,12 @@
   font-size: 22px;
 }
 /* fin divider  */
+
+
+.select-placeholder {
+  color: red;
+}
+
+.select-placeholder option {
+  color: black;
+}
