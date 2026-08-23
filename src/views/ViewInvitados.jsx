@@ -137,7 +137,7 @@ const ViewInvitados = ({
         highlightOnHover
         striped
         pagination
-        paginationPerPage={20}
+        paginationPerPage={10}
         paginationRowsPerPageOptions={[10, 20, 30, 50, 100]}
         paginationComponentOptions={{
           rowsPerPageText: "Filas por página:",
