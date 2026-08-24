@@ -137,14 +137,14 @@ const ViewInvitados = ({
         highlightOnHover
         striped
         pagination
-        paginationPerPage={10}
-        paginationRowsPerPageOptions={[10, 20, 30, 50, 100]}
-        paginationComponentOptions={{
-          rowsPerPageText: "Filas por página:",
+         paginationPerPage={10}  
+         paginationRowsPerPageOptions={[10, 20, 30, 50, 100]}  
+          paginationComponentOptions={{
+          rowsPerPageText: "",
           rangeSeparatorText: "de",
           selectAllRowsItem: true,
           selectAllRowsItemText: "Todos",
-        }}
+        }}  
       />
     </div>
   );
